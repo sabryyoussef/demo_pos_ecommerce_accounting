@@ -14,6 +14,12 @@
               action="action_commercial_demo_story"
               sequence="20"/>
 
+    <menuitem id="menu_commercial_demo_build_story"
+              name="Build Story Gallery"
+              parent="menu_commercial_demo_root"
+              action="action_commercial_demo_build_story"
+              sequence="25"/>
+
     <menuitem id="menu_commercial_demo_flashcards"
               name="Demo Flashcards"
               parent="menu_commercial_demo_root"

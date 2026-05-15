@@ -1,0 +1,12 @@
+.o_commercial_demo_build_story_wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 46px);
+    background: #0f1419;
+}
+
+.o_commercial_demo_build_story_iframe {
+    flex: 1 1 auto;
+    min-height: calc(100vh - 46px);
+    height: calc(100vh - 46px);
+}

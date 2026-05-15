@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="flashcard_build_story" model="commercial.demo.flashcard">
+        <field name="sequence">5</field>
+        <field name="name">Build Story Gallery (Gates A–D)</field>
+        <field name="short_text"><![CDATA[
+<p>Full implementation walkthrough: Steps 1–4, Gates A–D, final commercial phases, and <strong>86 screenshots</strong> with evidence links — same experience as the static build story page.</p>
+        ]]></field>
+        <field name="business_value">Technical deep-dive and presenter script for how the Horizon Retail demo was built and validated.</field>
+        <field name="action_xmlid">commercial_demo_story.action_commercial_demo_build_story</field>
+        <field name="icon_class">fa fa-picture-o</field>
+    </record>
     <record id="flashcard_corporate_sales" model="commercial.demo.flashcard">
         <field name="sequence">10</field>
         <field name="name">Corporate Sales Flow</field>

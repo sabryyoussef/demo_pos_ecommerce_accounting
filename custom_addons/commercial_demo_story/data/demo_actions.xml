@@ -8,6 +8,12 @@
         <field name="target">current</field>
     </record>
 
+    <record id="action_commercial_demo_build_story" model="ir.actions.client">
+        <field name="name">Build Story Gallery</field>
+        <field name="tag">commercial_demo_build_story</field>
+        <field name="target">current</field>
+    </record>
+
     <record id="action_commercial_demo_flashcards" model="ir.actions.act_window">
         <field name="name">Demo Flashcards</field>
         <field name="res_model">commercial.demo.flashcard</field>
