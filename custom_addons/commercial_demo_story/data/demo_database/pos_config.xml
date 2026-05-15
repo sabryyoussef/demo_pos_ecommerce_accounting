@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+  <record id="demo_pos_config_pos_auh_01" model="pos.config">
+    <field name="name">POS-AUH-01</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_auh_01"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_auh')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_pos_cashier_abu_dhabi_hub_shift_b'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_auh'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_dxb_01" model="pos.config">
+    <field name="name">POS-DXB-01</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_dxb_01"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_pos_cashier_dubai_flagship_shift_b'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_dxb')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_03" model="pos.config">
+    <field name="name">POS-RET-03</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l03"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_03')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_city_walk_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_city_walk_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_04" model="pos.config">
+    <field name="name">POS-RET-04</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l04"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_04')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_dubai_hills_mall_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_dubai_hills_mall_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_05" model="pos.config">
+    <field name="name">POS-RET-05</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l05"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_05')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_ibn_battuta_mall_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_ibn_battuta_mall_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_06" model="pos.config">
+    <field name="name">POS-RET-06</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l06"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_06')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_mirdif_city_centre_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_mirdif_city_centre_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_07" model="pos.config">
+    <field name="name">POS-RET-07</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l07"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_07')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_deira_city_centre_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_deira_city_centre_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_08" model="pos.config">
+    <field name="name">POS-RET-08</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l08"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_08')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_al_ghurair_centre_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_al_ghurair_centre_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_09" model="pos.config">
+    <field name="name">POS-RET-09</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l09"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_09')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_festival_city_mall_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_festival_city_mall_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_10" model="pos.config">
+    <field name="name">POS-RET-10</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l10"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_10')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_dragon_mart_2_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_dragon_mart_2_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_11" model="pos.config">
+    <field name="name">POS-RET-11</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l11"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_11')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_abu_dhabi_mall_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_abu_dhabi_mall_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_12" model="pos.config">
+    <field name="name">POS-RET-12</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l12"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_12')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_yas_mall_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_yas_mall_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_13" model="pos.config">
+    <field name="name">POS-RET-13</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l13"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_13')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_marina_mall_auh_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_marina_mall_auh_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_14" model="pos.config">
+    <field name="name">POS-RET-14</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l14"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_14')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_dalma_mall_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_dalma_mall_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_15" model="pos.config">
+    <field name="name">POS-RET-15</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l15"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_15')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_al_wahda_mall_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_al_wahda_mall_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_16" model="pos.config">
+    <field name="name">POS-RET-16</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l16"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_16')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_sharjah_city_centre_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_sharjah_city_centre_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_17" model="pos.config">
+    <field name="name">POS-RET-17</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l17"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_17')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_mega_mall_sharjah_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_mega_mall_sharjah_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_18" model="pos.config">
+    <field name="name">POS-RET-18</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l18"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_18')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_al_zahia_mall_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_al_zahia_mall_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_19" model="pos.config">
+    <field name="name">POS-RET-19</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l19"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_19')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_ajman_city_centre_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_ajman_city_centre_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_20" model="pos.config">
+    <field name="name">POS-RET-20</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l20"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_20')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_city_centre_fujairah_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_city_centre_fujairah_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_21" model="pos.config">
+    <field name="name">POS-RET-21</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l21"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_21')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_sahara_centre_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_sahara_centre_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_22" model="pos.config">
+    <field name="name">POS-RET-22</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l22"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_22')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_al_raha_mall_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_al_raha_mall_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_23" model="pos.config">
+    <field name="name">POS-RET-23</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l23"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_23')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_mushrif_mall_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_mushrif_mall_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_24" model="pos.config">
+    <field name="name">POS-RET-24</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l24"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_24')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_madinat_jumeirah_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_madinat_jumeirah_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_25" model="pos.config">
+    <field name="name">POS-RET-25</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l25"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_25')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_the_dubai_frame_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_the_dubai_frame_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_26" model="pos.config">
+    <field name="name">POS-RET-26</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l26"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_26')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_al_foah_mall_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_al_foah_mall_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_27" model="pos.config">
+    <field name="name">POS-RET-27</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l27"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_27')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_al_ain_mall_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_al_ain_mall_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_28" model="pos.config">
+    <field name="name">POS-RET-28</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l28"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_28')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_oasis_mall_al_ain_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_oasis_mall_al_ain_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_29" model="pos.config">
+    <field name="name">POS-RET-29</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l29"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_29')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_rak_city_centre_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_rak_city_centre_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+  <record id="demo_pos_config_pos_ret_30" model="pos.config">
+    <field name="name">POS-RET-30</field>
+    <field name="active" eval="True"/>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_poss"/>
+    <field name="invoice_journal_id" ref="account.1_sale"/>
+    <field name="picking_type_id" ref="commercial_demo_story.demo_stock_picking_type_pos_orders_l30"/>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="payment_method_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_pos_payment_method_pos_visa_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_mastercard_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_stripe_aed'), ref('commercial_demo_story.demo_pos_payment_method_pos_cash_aed_pos_ret_30')])]"/>
+    <field name="basic_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_uaq_city_centre_shift_a'), ref('commercial_demo_story.demo_hr_employee_pos_cashier_uaq_city_centre_shift_b')])]"/>
+    <field name="advanced_employee_ids" eval="[(6, 0, [ref('commercial_demo_story.demo_hr_employee_administrator'), ref('commercial_demo_story.demo_hr_employee_pos_manager')])]"/>
+    <field name="cash_control" eval="True"/>
+  </record>
+</odoo>

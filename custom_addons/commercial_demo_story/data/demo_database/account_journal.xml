@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+  <record id="demo_account_journal_inv" model="account.journal">
+    <field name="name">Sales</field>
+    <field name="code">INV</field>
+    <field name="type">sale</field>
+    <field name="default_account_id" ref="account.1_uae_account_500001"/>
+  </record>
+  <record id="demo_account_journal_poss" model="account.journal">
+    <field name="name">Point of Sale</field>
+    <field name="code">POSS</field>
+    <field name="type">general</field>
+  </record>
+  <record id="demo_account_journal_p003" model="account.journal">
+    <field name="name">POS Cash POS-RET-03</field>
+    <field name="code">P003</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_186"/>
+  </record>
+  <record id="demo_account_journal_p004" model="account.journal">
+    <field name="name">POS Cash POS-RET-04</field>
+    <field name="code">P004</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_187"/>
+  </record>
+  <record id="demo_account_journal_p005" model="account.journal">
+    <field name="name">POS Cash POS-RET-05</field>
+    <field name="code">P005</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_188"/>
+  </record>
+  <record id="demo_account_journal_p006" model="account.journal">
+    <field name="name">POS Cash POS-RET-06</field>
+    <field name="code">P006</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_189"/>
+  </record>
+  <record id="demo_account_journal_p007" model="account.journal">
+    <field name="name">POS Cash POS-RET-07</field>
+    <field name="code">P007</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_190"/>
+  </record>
+  <record id="demo_account_journal_p008" model="account.journal">
+    <field name="name">POS Cash POS-RET-08</field>
+    <field name="code">P008</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_191"/>
+  </record>
+  <record id="demo_account_journal_p009" model="account.journal">
+    <field name="name">POS Cash POS-RET-09</field>
+    <field name="code">P009</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_192"/>
+  </record>
+  <record id="demo_account_journal_p010" model="account.journal">
+    <field name="name">POS Cash POS-RET-10</field>
+    <field name="code">P010</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_193"/>
+  </record>
+  <record id="demo_account_journal_p011" model="account.journal">
+    <field name="name">POS Cash POS-RET-11</field>
+    <field name="code">P011</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_194"/>
+  </record>
+  <record id="demo_account_journal_p012" model="account.journal">
+    <field name="name">POS Cash POS-RET-12</field>
+    <field name="code">P012</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_195"/>
+  </record>
+  <record id="demo_account_journal_p013" model="account.journal">
+    <field name="name">POS Cash POS-RET-13</field>
+    <field name="code">P013</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_196"/>
+  </record>
+  <record id="demo_account_journal_p014" model="account.journal">
+    <field name="name">POS Cash POS-RET-14</field>
+    <field name="code">P014</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_197"/>
+  </record>
+  <record id="demo_account_journal_p015" model="account.journal">
+    <field name="name">POS Cash POS-RET-15</field>
+    <field name="code">P015</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_198"/>
+  </record>
+  <record id="demo_account_journal_p016" model="account.journal">
+    <field name="name">POS Cash POS-RET-16</field>
+    <field name="code">P016</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_199"/>
+  </record>
+  <record id="demo_account_journal_p017" model="account.journal">
+    <field name="name">POS Cash POS-RET-17</field>
+    <field name="code">P017</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_200"/>
+  </record>
+  <record id="demo_account_journal_p018" model="account.journal">
+    <field name="name">POS Cash POS-RET-18</field>
+    <field name="code">P018</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_201"/>
+  </record>
+  <record id="demo_account_journal_p019" model="account.journal">
+    <field name="name">POS Cash POS-RET-19</field>
+    <field name="code">P019</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_202"/>
+  </record>
+  <record id="demo_account_journal_p020" model="account.journal">
+    <field name="name">POS Cash POS-RET-20</field>
+    <field name="code">P020</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_203"/>
+  </record>
+  <record id="demo_account_journal_p021" model="account.journal">
+    <field name="name">POS Cash POS-RET-21</field>
+    <field name="code">P021</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_204"/>
+  </record>
+  <record id="demo_account_journal_p022" model="account.journal">
+    <field name="name">POS Cash POS-RET-22</field>
+    <field name="code">P022</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_205"/>
+  </record>
+  <record id="demo_account_journal_p023" model="account.journal">
+    <field name="name">POS Cash POS-RET-23</field>
+    <field name="code">P023</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_206"/>
+  </record>
+  <record id="demo_account_journal_p024" model="account.journal">
+    <field name="name">POS Cash POS-RET-24</field>
+    <field name="code">P024</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_207"/>
+  </record>
+  <record id="demo_account_journal_p025" model="account.journal">
+    <field name="name">POS Cash POS-RET-25</field>
+    <field name="code">P025</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_208"/>
+  </record>
+  <record id="demo_account_journal_p026" model="account.journal">
+    <field name="name">POS Cash POS-RET-26</field>
+    <field name="code">P026</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_209"/>
+  </record>
+  <record id="demo_account_journal_p027" model="account.journal">
+    <field name="name">POS Cash POS-RET-27</field>
+    <field name="code">P027</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_210"/>
+  </record>
+  <record id="demo_account_journal_p028" model="account.journal">
+    <field name="name">POS Cash POS-RET-28</field>
+    <field name="code">P028</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_211"/>
+  </record>
+  <record id="demo_account_journal_p029" model="account.journal">
+    <field name="name">POS Cash POS-RET-29</field>
+    <field name="code">P029</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_212"/>
+  </record>
+  <record id="demo_account_journal_p030" model="account.journal">
+    <field name="name">POS Cash POS-RET-30</field>
+    <field name="code">P030</field>
+    <field name="type">cash</field>
+    <field name="default_account_id" ref="account.1_cash_journal_default_account_213"/>
+  </record>
+</odoo>

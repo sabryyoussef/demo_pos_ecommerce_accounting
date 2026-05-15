@@ -141,6 +141,9 @@ def run_demo_operations(env, *, force=False):
         results[d4p2.name] = _run_shell_script_optional(env, d4p2)
         env.cr.commit()
 
+    env["ir.config_parameter"].sudo().set_param(
+        "commercial_demo_story.bootstrap_completed", "1"
+    )
     return {
         "status": "ok",
         "force": force,

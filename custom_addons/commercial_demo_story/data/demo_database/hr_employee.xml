@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+  <record id="demo_hr_employee_administrator" model="hr.employee">
+    <field name="name">Administrator</field>
+    <field name="user_id" ref="base.user_admin"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_dxb" model="hr.employee">
+    <field name="name">POS Cashier DXB</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_cashier_dxb"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_auh" model="hr.employee">
+    <field name="name">POS Cashier AUH</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_cashier_auh"/>
+  </record>
+  <record id="demo_hr_employee_pos_manager" model="hr.employee">
+    <field name="name">POS Manager</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_manager"/>
+  </record>
+  <record id="demo_hr_employee_ahmed_al_mansoori_corporate_direct" model="hr.employee">
+    <field name="name">Ahmed Al Mansoori — Corporate Direct</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_corp_sales_north"/>
+    <field name="job_title">Direct Sales — UAE North</field>
+  </record>
+  <record id="demo_hr_employee_sarah_johnson_corporate_direct" model="hr.employee">
+    <field name="name">Sarah Johnson — Corporate Direct</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_corp_sales_south"/>
+    <field name="job_title">Direct Sales — UAE South</field>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_city_walk_shift_a" model="hr.employee">
+    <field name="name">POS Cashier City Walk — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret03_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_city_walk_shift_b" model="hr.employee">
+    <field name="name">POS Cashier City Walk — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret03_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_dubai_hills_mall_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Dubai Hills Mall — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret04_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_dubai_hills_mall_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Dubai Hills Mall — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret04_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_ibn_battuta_mall_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Ibn Battuta Mall — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret05_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_ibn_battuta_mall_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Ibn Battuta Mall — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret05_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_mirdif_city_centre_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Mirdif City Centre — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret06_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_mirdif_city_centre_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Mirdif City Centre — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret06_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_deira_city_centre_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Deira City Centre — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret07_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_deira_city_centre_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Deira City Centre — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret07_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_al_ghurair_centre_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Al Ghurair Centre — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret08_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_al_ghurair_centre_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Al Ghurair Centre — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret08_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_festival_city_mall_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Festival City Mall — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret09_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_festival_city_mall_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Festival City Mall — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret09_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_dragon_mart_2_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Dragon Mart 2 — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret10_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_dragon_mart_2_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Dragon Mart 2 — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret10_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_abu_dhabi_mall_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Abu Dhabi Mall — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret11_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_abu_dhabi_mall_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Abu Dhabi Mall — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret11_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_yas_mall_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Yas Mall — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret12_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_yas_mall_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Yas Mall — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret12_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_marina_mall_auh_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Marina Mall AUH — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret13_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_marina_mall_auh_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Marina Mall AUH — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret13_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_dalma_mall_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Dalma Mall — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret14_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_dalma_mall_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Dalma Mall — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret14_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_al_wahda_mall_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Al Wahda Mall — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret15_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_al_wahda_mall_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Al Wahda Mall — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret15_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_sharjah_city_centre_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Sharjah City Centre — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret16_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_sharjah_city_centre_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Sharjah City Centre — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret16_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_mega_mall_sharjah_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Mega Mall Sharjah — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret17_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_mega_mall_sharjah_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Mega Mall Sharjah — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret17_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_al_zahia_mall_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Al Zahia Mall — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret18_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_al_zahia_mall_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Al Zahia Mall — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret18_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_ajman_city_centre_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Ajman City Centre — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret19_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_ajman_city_centre_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Ajman City Centre — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret19_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_city_centre_fujairah_shift_a" model="hr.employee">
+    <field name="name">POS Cashier City Centre Fujairah — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret20_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_city_centre_fujairah_shift_b" model="hr.employee">
+    <field name="name">POS Cashier City Centre Fujairah — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret20_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_sahara_centre_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Sahara Centre — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret21_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_sahara_centre_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Sahara Centre — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret21_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_al_raha_mall_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Al Raha Mall — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret22_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_al_raha_mall_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Al Raha Mall — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret22_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_mushrif_mall_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Mushrif Mall — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret23_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_mushrif_mall_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Mushrif Mall — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret23_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_madinat_jumeirah_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Madinat Jumeirah — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret24_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_madinat_jumeirah_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Madinat Jumeirah — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret24_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_the_dubai_frame_shift_a" model="hr.employee">
+    <field name="name">POS Cashier The Dubai Frame — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret25_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_the_dubai_frame_shift_b" model="hr.employee">
+    <field name="name">POS Cashier The Dubai Frame — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret25_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_al_foah_mall_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Al Foah Mall — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret26_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_al_foah_mall_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Al Foah Mall — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret26_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_al_ain_mall_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Al Ain Mall — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret27_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_al_ain_mall_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Al Ain Mall — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret27_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_oasis_mall_al_ain_shift_a" model="hr.employee">
+    <field name="name">POS Cashier Oasis Mall Al Ain — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret28_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_oasis_mall_al_ain_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Oasis Mall Al Ain — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret28_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_rak_city_centre_shift_a" model="hr.employee">
+    <field name="name">POS Cashier RAK City Centre — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret29_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_rak_city_centre_shift_b" model="hr.employee">
+    <field name="name">POS Cashier RAK City Centre — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret29_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_uaq_city_centre_shift_a" model="hr.employee">
+    <field name="name">POS Cashier UAQ City Centre — Shift A</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret30_a"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_uaq_city_centre_shift_b" model="hr.employee">
+    <field name="name">POS Cashier UAQ City Centre — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_ret30_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_dubai_flagship_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Dubai Flagship — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_cashier_dxb_b"/>
+  </record>
+  <record id="demo_hr_employee_pos_cashier_abu_dhabi_hub_shift_b" model="hr.employee">
+    <field name="name">POS Cashier Abu Dhabi Hub — Shift B</field>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_pos_cashier_auh_b"/>
+  </record>
+</odoo>

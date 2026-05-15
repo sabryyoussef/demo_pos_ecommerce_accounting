@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+  <record id="demo_product_product_ret_g2_rtl_bat4_56" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_rtl_bat4"/>
+    <field name="default_code">RET-G2-RTL-BAT4</field>
+  </record>
+  <record id="demo_product_product_ret_g2_rtl_bat4" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_rtl_bat4"/>
+    <field name="default_code">RET-G2-RTL-BAT4</field>
+    <field name="barcode">6290010001020</field>
+  </record>
+  <record id="demo_product_product_ret_g2_rtl_bag01" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_rtl_bag01"/>
+    <field name="default_code">RET-G2-RTL-BAG01</field>
+    <field name="barcode">6290010001019</field>
+  </record>
+  <record id="demo_product_product_ret_g2_rtl_bag01_55" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_rtl_bag01"/>
+    <field name="default_code">RET-G2-RTL-BAG01</field>
+  </record>
+  <record id="demo_product_product_ret_g2_snk_cho45" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_snk_cho45"/>
+    <field name="default_code">RET-G2-SNK-CHO45</field>
+    <field name="barcode">6290010001017</field>
+  </record>
+  <record id="demo_product_product_ret_g2_snk_cho45_53" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_snk_cho45"/>
+    <field name="default_code">RET-G2-SNK-CHO45</field>
+  </record>
+  <record id="demo_product_product_ret_g2_snk_alm100_52" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_snk_alm100"/>
+    <field name="default_code">RET-G2-SNK-ALM100</field>
+  </record>
+  <record id="demo_product_product_ret_g2_snk_alm100" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_snk_alm100"/>
+    <field name="default_code">RET-G2-SNK-ALM100</field>
+    <field name="barcode">6290010001016</field>
+  </record>
+  <record id="demo_product_product_ret_g2_srv_wrap_58" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_srv_wrap"/>
+    <field name="default_code">RET-G2-SRV-WRAP</field>
+  </record>
+  <record id="demo_product_product_ret_g2_srv_wrap" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_srv_wrap"/>
+    <field name="default_code">RET-G2-SRV-WRAP</field>
+    <field name="barcode">6290010001022</field>
+  </record>
+  <record id="demo_product_product_ret_g2_bev_tea500" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_bev_tea500"/>
+    <field name="default_code">RET-G2-BEV-TEA500</field>
+    <field name="barcode">6290010001014</field>
+  </record>
+  <record id="demo_product_product_ret_g2_bev_tea500_50" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_bev_tea500"/>
+    <field name="default_code">RET-G2-BEV-TEA500</field>
+  </record>
+  <record id="demo_product_product_ret_g2_srv_del_59" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_srv_del"/>
+    <field name="default_code">RET-G2-SRV-DEL</field>
+  </record>
+  <record id="demo_product_product_ret_g2_srv_del" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_srv_del"/>
+    <field name="default_code">RET-G2-SRV-DEL</field>
+    <field name="barcode">6290010001023</field>
+  </record>
+  <record id="demo_product_product_ret_g2_bev_oj1l" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_bev_oj1l"/>
+    <field name="default_code">RET-G2-BEV-OJ1L</field>
+    <field name="barcode">6290010001013</field>
+  </record>
+  <record id="demo_product_product_ret_g2_bev_oj1l_49" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_bev_oj1l"/>
+    <field name="default_code">RET-G2-BEV-OJ1L</field>
+  </record>
+  <record id="demo_product_product_ret_g2_snk_crp40_51" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_snk_crp40"/>
+    <field name="default_code">RET-G2-SNK-CRP40</field>
+  </record>
+  <record id="demo_product_product_ret_g2_snk_crp40" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_snk_crp40"/>
+    <field name="default_code">RET-G2-SNK-CRP40</field>
+    <field name="barcode">6290010001015</field>
+  </record>
+  <record id="demo_product_product_ret_g2_snk_oat35" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_snk_oat35"/>
+    <field name="default_code">RET-G2-SNK-OAT35</field>
+    <field name="barcode">6290010001018</field>
+  </record>
+  <record id="demo_product_product_ret_g2_snk_oat35_54" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_snk_oat35"/>
+    <field name="default_code">RET-G2-SNK-OAT35</field>
+  </record>
+  <record id="demo_product_product_ret_g2_bev_spk330_48" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_bev_spk330"/>
+    <field name="default_code">RET-G2-BEV-SPK330</field>
+  </record>
+  <record id="demo_product_product_ret_g2_bev_spk330" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_bev_spk330"/>
+    <field name="default_code">RET-G2-BEV-SPK330</field>
+    <field name="barcode">6290010001012</field>
+  </record>
+  <record id="demo_product_product_ret_g2_bev_wat500_47" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_bev_wat500"/>
+    <field name="default_code">RET-G2-BEV-WAT500</field>
+  </record>
+  <record id="demo_product_product_ret_g2_bev_wat500" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_bev_wat500"/>
+    <field name="default_code">RET-G2-BEV-WAT500</field>
+    <field name="barcode">6290010001011</field>
+  </record>
+  <record id="demo_product_product_ret_g2_rtl_usb1m" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_rtl_usb1m"/>
+    <field name="default_code">RET-G2-RTL-USB1M</field>
+    <field name="barcode">6290010001021</field>
+  </record>
+  <record id="demo_product_product_ret_g2_rtl_usb1m_57" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_ret_g2_rtl_usb1m"/>
+    <field name="default_code">RET-G2-RTL-USB1M</field>
+  </record>
+  <record id="demo_product_product_p_43" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_cotton_crew_neck_t_shirt"/>
+    <field name="default_code">RET-G2-PAR-TSH-M</field>
+    <field name="barcode">6290010001025</field>
+  </record>
+  <record id="demo_product_product_p_45" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_insulated_travel_mug_350_ml"/>
+    <field name="default_code">RET-G2-PAR-MUG350-BLA</field>
+    <field name="barcode">6290010001027</field>
+  </record>
+  <record id="demo_product_product_delivery_007_2" model="product.product">
+    <field name="product_tmpl_id" ref="delivery.product_product_delivery_product_template"/>
+    <field name="default_code">Delivery_007</field>
+  </record>
+  <record id="demo_product_product_p_46" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_insulated_travel_mug_350_ml"/>
+    <field name="default_code">RET-G2-PAR-MUG350-SIL</field>
+    <field name="barcode">6290010001028</field>
+  </record>
+  <record id="demo_product_product_p_44" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_cotton_crew_neck_t_shirt"/>
+    <field name="default_code">RET-G2-PAR-TSH-L</field>
+    <field name="barcode">6290010001026</field>
+  </record>
+  <record id="demo_product_product_p_42" model="product.product">
+    <field name="product_tmpl_id" ref="commercial_demo_story.demo_product_template_cotton_crew_neck_t_shirt"/>
+    <field name="default_code">RET-G2-PAR-TSH-S</field>
+    <field name="barcode">6290010001024</field>
+  </record>
+</odoo>

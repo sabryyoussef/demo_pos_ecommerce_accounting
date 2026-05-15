@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+  <record id="demo_sale_order_line_s00001_1" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00001"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_wat500"/>
+    <field name="price_unit" eval="2.0"/>
+    <field name="name">[RET-G2-BEV-WAT500] Still Spring Water 500 ml</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00001_2" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00001"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_snk_oat35"/>
+    <field name="price_unit" eval="2.8"/>
+    <field name="name">[RET-G2-SNK-OAT35] Soft Oat Granola Bar 35 g</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00002_3" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00002"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_wat500"/>
+    <field name="price_unit" eval="2.0"/>
+    <field name="name">[RET-G2-BEV-WAT500] Still Spring Water 500 ml</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00002_4" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00002"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_snk_oat35"/>
+    <field name="price_unit" eval="2.8"/>
+    <field name="name">[RET-G2-SNK-OAT35] Soft Oat Granola Bar 35 g</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00003_5" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00003"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_wat500"/>
+    <field name="price_unit" eval="2.0"/>
+    <field name="name">[RET-G2-BEV-WAT500] Still Spring Water 500 ml</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00003_6" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00003"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_snk_oat35"/>
+    <field name="price_unit" eval="2.8"/>
+    <field name="name">[RET-G2-SNK-OAT35] Soft Oat Granola Bar 35 g</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00003_7" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00003"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_delivery_007_2"/>
+    <field name="name">Standard delivery</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00004_8" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00004"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_wat500"/>
+    <field name="price_unit" eval="2.0"/>
+    <field name="name">[RET-G2-BEV-WAT500] Still Spring Water 500 ml</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00004_9" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00004"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_delivery_007_2"/>
+    <field name="name">Standard delivery</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00005_10" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00005"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_wat500"/>
+    <field name="price_unit" eval="2.0"/>
+    <field name="name">[RET-G2-BEV-WAT500] Still Spring Water 500 ml</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00005_11" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00005"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_delivery_007_2"/>
+    <field name="name">Standard delivery</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00006_12" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00006"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_wat500"/>
+    <field name="price_unit" eval="2.0"/>
+    <field name="name">[RET-G2-BEV-WAT500] Still Spring Water 500 ml</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00006_13" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00006"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_delivery_007_2"/>
+    <field name="name">Standard delivery</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00007_14" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00007"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_wat500"/>
+    <field name="price_unit" eval="2.0"/>
+    <field name="name">[RET-G2-BEV-WAT500] Still Spring Water 500 ml</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00007_15" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00007"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_snk_oat35"/>
+    <field name="price_unit" eval="2.8"/>
+    <field name="name">[RET-G2-SNK-OAT35] Soft Oat Granola Bar 35 g</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00007_16" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00007"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_delivery_007_2"/>
+    <field name="name">Standard delivery</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00008_17" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00008"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_wat500"/>
+    <field name="price_unit" eval="2.0"/>
+    <field name="name">[RET-G2-BEV-WAT500] Still Spring Water 500 ml</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00008_18" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00008"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_delivery_007_2"/>
+    <field name="name">Standard delivery</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00009_19" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00009"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_wat500"/>
+    <field name="price_unit" eval="2.0"/>
+    <field name="name">[RET-G2-BEV-WAT500] Still Spring Water 500 ml</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00009_20" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00009"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_snk_oat35"/>
+    <field name="price_unit" eval="2.8"/>
+    <field name="name">[RET-G2-SNK-OAT35] Soft Oat Granola Bar 35 g</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00009_21" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00009"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_delivery_007_2"/>
+    <field name="name">Standard delivery</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00010_22" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00010"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_oj1l"/>
+    <field name="price_unit" eval="8.5"/>
+    <field name="name">[RET-G2-BEV-OJ1L] Orange Juice Not From Concentrate 1 L</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00010_23" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00010"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_delivery_007_2"/>
+    <field name="name">Standard delivery</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00011_24" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00011"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_wat500"/>
+    <field name="product_uom_qty" eval="5.0"/>
+    <field name="price_unit" eval="2.0"/>
+    <field name="name">[RET-G2-BEV-WAT500] Still Spring Water 500 ml</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00011_25" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00011"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_snk_oat35"/>
+    <field name="product_uom_qty" eval="10.0"/>
+    <field name="price_unit" eval="2.8"/>
+    <field name="name">[RET-G2-SNK-OAT35] Soft Oat Granola Bar 35 g</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00012_26" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00012"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_oj1l"/>
+    <field name="product_uom_qty" eval="3.0"/>
+    <field name="price_unit" eval="8.5"/>
+    <field name="name">[RET-G2-BEV-OJ1L] Orange Juice Not From Concentrate 1 L</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00012_27" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00012"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_wat500"/>
+    <field name="product_uom_qty" eval="4.0"/>
+    <field name="price_unit" eval="2.0"/>
+    <field name="name">[RET-G2-BEV-WAT500] Still Spring Water 500 ml</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00013_28" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00013"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_p_45"/>
+    <field name="price_unit" eval="65.0"/>
+    <field name="name">[RET-G2-PAR-MUG350-BLA] Insulated Travel Mug 350 ml (Black)</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+  <record id="demo_sale_order_line_s00014_29" model="sale.order.line">
+    <field name="order_id" ref="commercial_demo_story.demo_sale_order_s00014"/>
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_p_43"/>
+    <field name="price_unit" eval="49.0"/>
+    <field name="name">[RET-G2-PAR-TSH-M] Cotton Crew Neck T-Shirt (M)</field>
+    <field name="product_uom_id" ref="uom.product_uom_unit"/>
+  </record>
+</odoo>

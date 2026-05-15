@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+  <record id="demo_sale_order_s00001" model="sale.order">
+    <field name="name">S00001</field>
+    <field name="partner_id" ref="base.public_partner"/>
+    <field name="team_id" ref="sales_team.salesteam_website_sales"/>
+    <field name="payment_term_id" ref="account.account_payment_term_immediate"/>
+  </record>
+  <record id="demo_sale_order_s00002" model="sale.order">
+    <field name="name">S00002</field>
+    <field name="partner_id" ref="base.public_partner"/>
+    <field name="team_id" ref="sales_team.salesteam_website_sales"/>
+    <field name="payment_term_id" ref="account.account_payment_term_immediate"/>
+  </record>
+  <record id="demo_sale_order_s00003" model="sale.order">
+    <field name="name">S00003</field>
+    <field name="partner_id" ref="commercial_demo_story.demo_res_partner_gate_d4_ecommerce_test"/>
+    <field name="team_id" ref="sales_team.salesteam_website_sales"/>
+    <field name="payment_term_id" ref="account.account_payment_term_immediate"/>
+  </record>
+  <record id="demo_sale_order_s00004" model="sale.order">
+    <field name="name">S00004</field>
+    <field name="partner_id" ref="commercial_demo_story.demo_res_partner_debug_pay"/>
+    <field name="team_id" ref="sales_team.salesteam_website_sales"/>
+    <field name="payment_term_id" ref="account.account_payment_term_immediate"/>
+  </record>
+  <record id="demo_sale_order_s00005" model="sale.order">
+    <field name="name">S00005</field>
+    <field name="partner_id" ref="commercial_demo_story.demo_res_partner_debug_pay"/>
+    <field name="team_id" ref="sales_team.salesteam_website_sales"/>
+    <field name="payment_term_id" ref="account.account_payment_term_immediate"/>
+  </record>
+  <record id="demo_sale_order_s00006" model="sale.order">
+    <field name="name">S00006</field>
+    <field name="partner_id" ref="commercial_demo_story.demo_res_partner_debug_pay"/>
+    <field name="team_id" ref="sales_team.salesteam_website_sales"/>
+    <field name="payment_term_id" ref="account.account_payment_term_immediate"/>
+  </record>
+  <record id="demo_sale_order_s00007" model="sale.order">
+    <field name="name">S00007</field>
+    <field name="partner_id" ref="commercial_demo_story.demo_res_partner_gate_d4_ecommerce_test"/>
+    <field name="team_id" ref="sales_team.salesteam_website_sales"/>
+    <field name="payment_term_id" ref="account.account_payment_term_immediate"/>
+  </record>
+  <record id="demo_sale_order_s00008" model="sale.order">
+    <field name="name">S00008</field>
+    <field name="partner_id" ref="commercial_demo_story.demo_res_partner_debug_pay2"/>
+    <field name="team_id" ref="sales_team.salesteam_website_sales"/>
+    <field name="payment_term_id" ref="account.account_payment_term_immediate"/>
+  </record>
+  <record id="demo_sale_order_s00009" model="sale.order">
+    <field name="name">S00009</field>
+    <field name="partner_id" ref="commercial_demo_story.demo_res_partner_gate_d4_ecommerce_test"/>
+    <field name="state">sale</field>
+    <field name="team_id" ref="sales_team.team_sales_department"/>
+    <field name="user_id" ref="base.user_admin"/>
+    <field name="payment_term_id" ref="account.account_payment_term_immediate"/>
+  </record>
+  <record id="demo_sale_order_s00010" model="sale.order">
+    <field name="name">S00010</field>
+    <field name="partner_id" ref="commercial_demo_story.demo_res_partner_gate_d4_ecommerce_test"/>
+    <field name="state">sale</field>
+    <field name="team_id" ref="sales_team.team_sales_department"/>
+    <field name="user_id" ref="base.user_admin"/>
+    <field name="payment_term_id" ref="account.account_payment_term_immediate"/>
+  </record>
+  <record id="demo_sale_order_s00011" model="sale.order">
+    <field name="name">S00011</field>
+    <field name="partner_id" ref="commercial_demo_story.demo_res_partner_fincorp_alpha"/>
+    <field name="state">sale</field>
+    <field name="team_id" ref="commercial_demo_story.demo_crm_team_corporate_direct_horizon_retail"/>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_corp_sales_north"/>
+    <field name="pricelist_id" ref="commercial_demo_story.demo_product_pricelist_default"/>
+    <field name="client_order_ref">FIN-A-NORTH-001</field>
+  </record>
+  <record id="demo_sale_order_s00012" model="sale.order">
+    <field name="name">S00012</field>
+    <field name="partner_id" ref="commercial_demo_story.demo_res_partner_fincorp_beta"/>
+    <field name="state">sale</field>
+    <field name="team_id" ref="commercial_demo_story.demo_crm_team_corporate_direct_horizon_retail"/>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_corp_sales_south"/>
+    <field name="pricelist_id" ref="commercial_demo_story.demo_product_pricelist_default"/>
+    <field name="client_order_ref">FIN-B-SOUTH-001</field>
+  </record>
+  <record id="demo_sale_order_s00013" model="sale.order">
+    <field name="name">S00013</field>
+    <field name="partner_id" ref="commercial_demo_story.demo_res_partner_debug_pay"/>
+    <field name="state">sale</field>
+    <field name="team_id" ref="sales_team.salesteam_website_sales"/>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_ecom_sales_coord"/>
+    <field name="pricelist_id" ref="commercial_demo_story.demo_product_pricelist_default"/>
+    <field name="payment_term_id" ref="account.account_payment_term_immediate"/>
+    <field name="client_order_ref">FIN-WEB-MUG</field>
+  </record>
+  <record id="demo_sale_order_s00014" model="sale.order">
+    <field name="name">S00014</field>
+    <field name="partner_id" ref="commercial_demo_story.demo_res_partner_debug_pay"/>
+    <field name="state">sale</field>
+    <field name="team_id" ref="sales_team.salesteam_website_sales"/>
+    <field name="user_id" ref="commercial_demo_story.demo_res_users_ecom_sales_coord"/>
+    <field name="pricelist_id" ref="commercial_demo_story.demo_product_pricelist_default"/>
+    <field name="payment_term_id" ref="account.account_payment_term_immediate"/>
+    <field name="client_order_ref">FIN-WEB-SHIRT</field>
+  </record>
+</odoo>

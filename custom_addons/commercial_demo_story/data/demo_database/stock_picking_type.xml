@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+  <record id="demo_stock_picking_type_pos_orders_dxb_01" model="stock.picking.type">
+    <field name="name">PoS Orders DXB-01</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">PDXB0</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_dxb_01"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_auh_01" model="stock.picking.type">
+    <field name="name">PoS Orders AUH-01</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">PAUH0</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_auh_01"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l03" model="stock.picking.type">
+    <field name="name">PoS Orders L03</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL03</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l03"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l04" model="stock.picking.type">
+    <field name="name">PoS Orders L04</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL04</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l04"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l05" model="stock.picking.type">
+    <field name="name">PoS Orders L05</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL05</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l05"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l06" model="stock.picking.type">
+    <field name="name">PoS Orders L06</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL06</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l06"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l07" model="stock.picking.type">
+    <field name="name">PoS Orders L07</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL07</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l07"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l08" model="stock.picking.type">
+    <field name="name">PoS Orders L08</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL08</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l08"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l09" model="stock.picking.type">
+    <field name="name">PoS Orders L09</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL09</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l09"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l10" model="stock.picking.type">
+    <field name="name">PoS Orders L10</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL10</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l10"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l11" model="stock.picking.type">
+    <field name="name">PoS Orders L11</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL11</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l11"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l12" model="stock.picking.type">
+    <field name="name">PoS Orders L12</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL12</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l12"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l13" model="stock.picking.type">
+    <field name="name">PoS Orders L13</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL13</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l13"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l14" model="stock.picking.type">
+    <field name="name">PoS Orders L14</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL14</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l14"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l15" model="stock.picking.type">
+    <field name="name">PoS Orders L15</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL15</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l15"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l16" model="stock.picking.type">
+    <field name="name">PoS Orders L16</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL16</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l16"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l17" model="stock.picking.type">
+    <field name="name">PoS Orders L17</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL17</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l17"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l18" model="stock.picking.type">
+    <field name="name">PoS Orders L18</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL18</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l18"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l19" model="stock.picking.type">
+    <field name="name">PoS Orders L19</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL19</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l19"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l20" model="stock.picking.type">
+    <field name="name">PoS Orders L20</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL20</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l20"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l21" model="stock.picking.type">
+    <field name="name">PoS Orders L21</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL21</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l21"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l22" model="stock.picking.type">
+    <field name="name">PoS Orders L22</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL22</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l22"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l23" model="stock.picking.type">
+    <field name="name">PoS Orders L23</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL23</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l23"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l24" model="stock.picking.type">
+    <field name="name">PoS Orders L24</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL24</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l24"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l25" model="stock.picking.type">
+    <field name="name">PoS Orders L25</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL25</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l25"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l26" model="stock.picking.type">
+    <field name="name">PoS Orders L26</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL26</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l26"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l27" model="stock.picking.type">
+    <field name="name">PoS Orders L27</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL27</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l27"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l28" model="stock.picking.type">
+    <field name="name">PoS Orders L28</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL28</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l28"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l29" model="stock.picking.type">
+    <field name="name">PoS Orders L29</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL29</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l29"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+  <record id="demo_stock_picking_type_pos_orders_l30" model="stock.picking.type">
+    <field name="name">PoS Orders L30</field>
+    <field name="code">outgoing</field>
+    <field name="warehouse_id" ref="stock.warehouse0"/>
+    <field name="sequence_code">RL30</field>
+    <field name="default_location_src_id" ref="commercial_demo_story.demo_stock_location_wh_hrg_main_pos_l30"/>
+    <field name="default_location_dest_id" ref="stock.stock_location_customers"/>
+  </record>
+</odoo>

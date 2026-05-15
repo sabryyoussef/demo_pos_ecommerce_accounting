@@ -5,18 +5,15 @@ MODULE = "commercial_demo_story"
 
 # Records created by bootstrap scripts must NOT stay in ir.model.data for this module,
 # or Odoo upgrade will DELETE them when they are absent from XML data files.
+# Models exported in data/demo_database/*.xml are NOT listed here.
 _PROTECTED_MODELS = (
-    "pos.config",
     "pos.session",
     "pos.order",
     "pos.payment",
-    "sale.order",
     "account.move",
     "account.payment",
     "stock.picking",
     "stock.move",
-    "res.users",
-    "hr.employee",
 )
 
 
@@ -33,10 +30,11 @@ def pre_init_hook(env):
 
 
 def post_init_hook(env):
-    """After first install only: run full demo bootstrap (not on every upgrade)."""
+    """Mark bootstrap complete when demo_bootstrap_transactions.xml already ran."""
     ICP = env["ir.config_parameter"].sudo()
     flag = "commercial_demo_story.bootstrap_completed"
     if ICP.get_param(flag) == "1":
         return
+    # Fallback if XML function did not run (e.g. partial install).
     env["commercial.demo.operations.loader"].run_all_phases()
     ICP.set_param(flag, "1")

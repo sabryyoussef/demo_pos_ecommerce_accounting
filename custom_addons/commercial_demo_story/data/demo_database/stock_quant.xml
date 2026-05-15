@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+  <record id="demo_stock_quant_ret_g2_bev_oj1l_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_oj1l"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="20.0"/>
+  </record>
+  <record id="demo_stock_quant_ret_g2_bev_spk330_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_spk330"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="48.0"/>
+  </record>
+  <record id="demo_stock_quant_ret_g2_bev_tea500_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_tea500"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="48.0"/>
+  </record>
+  <record id="demo_stock_quant_ret_g2_bev_wat500_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_bev_wat500"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="14.0"/>
+  </record>
+  <record id="demo_stock_quant_ret_g2_par_mug350_bla_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_p_45"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="5.0"/>
+  </record>
+  <record id="demo_stock_quant_ret_g2_par_mug350_sil_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_p_46"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="12.0"/>
+  </record>
+  <record id="demo_stock_quant_ret_g2_par_tsh_l_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_p_44"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="5.0"/>
+  </record>
+  <record id="demo_stock_quant_ret_g2_par_tsh_m_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_p_43"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="9.0"/>
+  </record>
+  <record id="demo_stock_quant_ret_g2_par_tsh_s_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_p_42"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="10.0"/>
+  </record>
+  <record id="demo_stock_quant_ret_g2_rtl_bag01_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_rtl_bag01"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="12.0"/>
+  </record>
+  <record id="demo_stock_quant_ret_g2_rtl_bat4_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_rtl_bat4"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="24.0"/>
+  </record>
+  <record id="demo_stock_quant_ret_g2_rtl_usb1m_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_rtl_usb1m"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="12.0"/>
+  </record>
+  <record id="demo_stock_quant_ret_g2_snk_alm100_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_snk_alm100"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="24.0"/>
+  </record>
+  <record id="demo_stock_quant_ret_g2_snk_cho45_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_snk_cho45"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="12.0"/>
+  </record>
+  <record id="demo_stock_quant_ret_g2_snk_crp40_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_snk_crp40"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="12.0"/>
+  </record>
+  <record id="demo_stock_quant_ret_g2_snk_oat35_5" model="stock.quant">
+    <field name="product_id" ref="commercial_demo_story.demo_product_product_ret_g2_snk_oat35"/>
+    <field name="location_id" ref="stock.stock_location_stock"/>
+    <field name="quantity" eval="13.0"/>
+  </record>
+</odoo>

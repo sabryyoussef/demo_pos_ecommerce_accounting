@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+  <record id="demo_res_users_corp_sales_north" model="res.users">
+    <field name="name">Ahmed Al Mansoori — Corporate Direct</field>
+    <field name="login">corp.sales.north</field>
+    <field name="group_ids" eval="[(6, 0, [ref('sales_team.group_sale_salesman_all_leads'), ref('base.group_user')])]"/>
+  </record>
+  <record id="demo_res_users_corp_sales_south" model="res.users">
+    <field name="name">Sarah Johnson — Corporate Direct</field>
+    <field name="login">corp.sales.south</field>
+    <field name="group_ids" eval="[(6, 0, [ref('sales_team.group_sale_salesman_all_leads'), ref('base.group_user')])]"/>
+  </record>
+</odoo>

@@ -1,0 +1,165 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+  <record id="demo_pos_payment_method_pos_cash_aed" model="pos.payment.method">
+    <field name="name">POS Cash AED</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_pcash"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_visa_aed" model="pos.payment.method">
+    <field name="name">POS Visa AED</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_pvisa"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_mastercard_aed" model="pos.payment.method">
+    <field name="name">POS Mastercard AED</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_mcard"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_stripe_aed" model="pos.payment.method">
+    <field name="name">POS Stripe AED</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_aqstr"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_auh" model="pos.payment.method">
+    <field name="name">POS Cash AED AUH</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_pcahu"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_03" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-03</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p003"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_04" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-04</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p004"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_05" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-05</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p005"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_06" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-06</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p006"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_07" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-07</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p007"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_08" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-08</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p008"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_09" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-09</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p009"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_10" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-10</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p010"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_11" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-11</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p011"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_12" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-12</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p012"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_13" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-13</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p013"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_14" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-14</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p014"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_15" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-15</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p015"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_16" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-16</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p016"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_17" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-17</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p017"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_18" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-18</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p018"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_19" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-19</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p019"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_20" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-20</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p020"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_21" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-21</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p021"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_22" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-22</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p022"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_23" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-23</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p023"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_24" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-24</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p024"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_25" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-25</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p025"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_26" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-26</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p026"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_27" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-27</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p027"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_28" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-28</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p028"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_29" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-29</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p029"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+  <record id="demo_pos_payment_method_pos_cash_aed_pos_ret_30" model="pos.payment.method">
+    <field name="name">POS Cash AED POS-RET-30</field>
+    <field name="journal_id" ref="commercial_demo_story.demo_account_journal_p030"/>
+    <field name="is_cash_count" eval="True"/>
+  </record>
+</odoo>
