@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "Commercial Demo Story",
-    "version": "19.0.1.0.9",
+    "version": "19.0.1.0.10",
     "category": "Sales",
     "summary": "Presentation dashboard, flashcards, workflow story, and safe demo helpers",
     "description": """
@@ -15,7 +15,6 @@ aggregates. Reset only removes story rows created by **Generate Demo Story**
     "author": "Horizon Retail Demo",
     "license": "LGPL-3",
     "depends": [
-        "web",
         "base",
         "analytic",
         "sale",
@@ -30,6 +29,8 @@ aggregates. Reset only removes story rows created by **Generate Demo Story**
     ],
     "data": [
         "security/ir.model.access.csv",
+        "views/build_story_views.xml",
+        "data/build_story.xml",
         "views/demo_dashboard_views.xml",
         "views/demo_flashcard_views.xml",
         "views/demo_story_views.xml",
@@ -49,13 +50,6 @@ aggregates. Reset only removes story rows created by **Generate Demo Story**
         "views/menu.xml",
         "views/menu_pos_accounting_prep.xml",
     ],
-    "assets": {
-        "web.assets_backend": [
-            "commercial_demo_story/static/src/build_story/build_story_action.xml",
-            "commercial_demo_story/static/src/build_story/build_story_action.scss",
-            "commercial_demo_story/static/src/build_story/build_story_action.js",
-        ],
-    },
     "installable": True,
     "application": False,
     "pre_init_hook": "pre_init_hook",

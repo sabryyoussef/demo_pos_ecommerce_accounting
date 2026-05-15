@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_commercial_demo_build_story_form" model="ir.ui.view">
+        <field name="name">commercial.demo.build.story.form</field>
+        <field name="model">commercial.demo.build.story</field>
+        <field name="arch" type="xml">
+            <form string="Build Story Gallery" create="false" edit="false" delete="false" class="o_commercial_demo_build_story_form">
+                <sheet class="p-0 border-0" style="max-width: none;">
+                    <iframe
+                        src="/commercial_demo_story/static/description/build_story.html"
+                        title="Horizon Retail build story"
+                        style="display: block; width: 100%; min-height: calc(100vh - 46px); height: calc(100vh - 46px); border: 0;"
+                    />
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

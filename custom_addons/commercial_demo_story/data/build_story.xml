@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="commercial_demo_build_story_main" model="commercial.demo.build.story">
+        <field name="name">Horizon Retail — Build Story</field>
+    </record>
+</odoo>

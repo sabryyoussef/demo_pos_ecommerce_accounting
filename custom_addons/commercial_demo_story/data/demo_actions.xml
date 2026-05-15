@@ -8,10 +8,15 @@
         <field name="target">current</field>
     </record>
 
-    <record id="action_commercial_demo_build_story" model="ir.actions.client">
+    <!-- Replace former ir.actions.client (JS registry) with act_window + iframe form. -->
+    <delete model="ir.actions.client" id="action_commercial_demo_build_story"/>
+
+    <record id="action_commercial_demo_build_story" model="ir.actions.act_window">
         <field name="name">Build Story Gallery</field>
-        <field name="tag">commercial_demo_build_story</field>
-        <field name="target">current</field>
+        <field name="res_model">commercial.demo.build.story</field>
+        <field name="view_mode">form</field>
+        <field name="res_id" ref="commercial_demo_build_story_main"/>
+        <field name="target">fullscreen</field>
     </record>
 
     <record id="action_commercial_demo_flashcards" model="ir.actions.act_window">

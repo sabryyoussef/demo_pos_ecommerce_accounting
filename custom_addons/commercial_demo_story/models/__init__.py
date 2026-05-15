@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from . import build_story
 from . import demo_analytic_bootstrap
 from . import demo_operations_loader
 from . import demo_dashboard
