@@ -1,0 +1,52 @@
+           k            | v  
+------------------------+----
+ product_template_total | 22
+(1 row)
+
+            k            | v  
+-------------------------+----
+ product_template_gatec2 | 15
+(1 row)
+
+                k                | v  
+---------------------------------+----
+ product_product_gatec2_variants | 18
+(1 row)
+
+ barcode | cnt 
+---------+-----
+(0 rows)
+
+ default_code | cnt 
+--------------+-----
+(0 rows)
+
+  category  | template_count 
+------------+----------------
+ BEVERAGES  |              4
+ ECOM ITEMS |              1
+ FOOD       |              4
+ RETAIL     |              4
+ SERVICES   |              2
+(5 rows)
+
+ pos_visible_gatec2_templates 
+------------------------------
+                           14
+(1 row)
+
+ website_published_gatec2 
+--------------------------
+                        8
+(1 row)
+
+        k         | count 
+------------------+-------
+ stock_move_total | 0
+(1 row)
+
+         k         | count 
+-------------------+-------
+ stock_quant_total | 0
+(1 row)
+

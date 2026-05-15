@@ -1,0 +1,104 @@
+-- Gate D4 eCommerce — SQL verification (demo_pos_accounting)
+-- Confirmed website orders: partner email + sale state
+
+\echo '=== 1) Confirmed website sale orders (Gate D4 test email, state=sale) ==='
+SELECT so.id, so.name, so.state, so.amount_untaxed, so.amount_tax, so.amount_total,
+       so.carrier_id, so.website_id
+FROM sale_order so
+JOIN res_partner rp ON rp.id = so.partner_id
+WHERE rp.email = 'gate4_ecommerce_flow@example.invalid' AND so.state = 'sale'
+ORDER BY so.id;
+
+\echo '=== 2) Sale order lines (product + delivery lines) ==='
+SELECT sol.order_id, so.name AS so_name, pp.default_code, sol.product_uom_qty,
+       sol.price_subtotal, sol.price_tax, sol.price_total
+FROM sale_order_line sol
+JOIN sale_order so ON so.id = sol.order_id
+JOIN product_product pp ON pp.id = sol.product_id
+JOIN res_partner rp ON rp.id = so.partner_id
+WHERE rp.email = 'gate4_ecommerce_flow@example.invalid' AND so.state = 'sale'
+ORDER BY sol.order_id, sol.id;
+
+\echo '=== 3) Delivery pickings (confirmed orders only) ==='
+SELECT sp.id, sp.name, sp.state, sp.sale_id, so.name AS so_name
+FROM stock_picking sp
+JOIN sale_order so ON so.id = sp.sale_id
+JOIN res_partner rp ON rp.id = so.partner_id
+WHERE rp.email = 'gate4_ecommerce_flow@example.invalid' AND so.state = 'sale'
+ORDER BY sp.id;
+
+\echo '=== 4) Stock moves (those pickings) ==='
+SELECT sm.id, sm.state, sm.product_qty, pp.default_code, sm.picking_id, sp.name AS picking_name
+FROM stock_move sm
+JOIN product_product pp ON pp.id = sm.product_id
+JOIN stock_picking sp ON sp.id = sm.picking_id
+JOIN sale_order so ON so.id = sp.sale_id
+JOIN res_partner rp ON rp.id = so.partner_id
+WHERE rp.email = 'gate4_ecommerce_flow@example.invalid' AND so.state = 'sale'
+ORDER BY sm.id;
+
+\echo '=== 5) Internal stock — net qty by product (must be >= 0) ==='
+SELECT sq.product_id, pp.default_code, SUM(sq.quantity) AS net_internal_qty
+FROM stock_quant sq
+JOIN stock_location sl ON sl.id = sq.location_id
+JOIN product_product pp ON pp.id = sq.product_id
+WHERE sl.usage = 'internal'
+  AND pp.default_code IN ('RET-G2-BEV-WAT500','RET-G2-BEV-OJ1L','RET-G2-SNK-OAT35')
+GROUP BY sq.product_id, pp.default_code
+ORDER BY pp.default_code;
+
+\echo '=== 6) Products with negative NET internal quantity (expect 0 rows) ==='
+SELECT sq.product_id, pp.default_code, SUM(sq.quantity) AS net_internal_qty
+FROM stock_quant sq
+JOIN stock_location sl ON sl.id = sq.location_id
+JOIN product_product pp ON pp.id = sq.product_id
+WHERE sl.usage = 'internal'
+GROUP BY sq.product_id, pp.default_code
+HAVING SUM(sq.quantity) < 0
+ORDER BY pp.default_code;
+
+\echo '=== 7) Posted account moves count (global) ==='
+SELECT COUNT(*) AS account_move_count FROM account_move;
+
+\echo '=== 8) Stock journal entries linked from stock moves (D4 pickings) ==='
+SELECT am.id, am.name, am.state, am.move_type, am.amount_total
+FROM account_move am
+WHERE am.id IN (
+    SELECT sm.account_move_id
+    FROM stock_move sm
+    WHERE sm.picking_id IN (
+        SELECT sp.id
+        FROM stock_picking sp
+        JOIN sale_order so ON so.id = sp.sale_id
+        JOIN res_partner rp ON rp.id = so.partner_id
+        WHERE rp.email = 'gate4_ecommerce_flow@example.invalid' AND so.state = 'sale'
+    )
+    AND sm.account_move_id IS NOT NULL
+)
+ORDER BY am.id;
+
+\echo '=== 9) Lines on those stock journal entries ==='
+SELECT aml.id, am.name AS move_name, aml.name, aml.balance, aml.product_id, pp.default_code
+FROM account_move_line aml
+JOIN account_move am ON am.id = aml.move_id
+LEFT JOIN product_product pp ON pp.id = aml.product_id
+WHERE am.id IN (
+    SELECT sm.account_move_id
+    FROM stock_move sm
+    WHERE sm.picking_id IN (
+        SELECT sp.id
+        FROM stock_picking sp
+        JOIN sale_order so ON so.id = sp.sale_id
+        JOIN res_partner rp ON rp.id = so.partner_id
+        WHERE rp.email = 'gate4_ecommerce_flow@example.invalid' AND so.state = 'sale'
+    )
+    AND sm.account_move_id IS NOT NULL
+)
+ORDER BY aml.id;
+
+\echo '=== 10) Revenue invoicing status (COD: expect to invoice until invoiced manually) ==='
+SELECT so.id, so.name, so.invoice_status, so.amount_tax, so.amount_total
+FROM sale_order so
+JOIN res_partner rp ON rp.id = so.partner_id
+WHERE rp.email = 'gate4_ecommerce_flow@example.invalid' AND so.state = 'sale'
+ORDER BY so.id;

@@ -1,0 +1,57 @@
+Gate B6 — SQL verification (demo_pos_accounting)
+
+-- Operational demo users (5)
+SELECT id, login, active FROM res_users
+WHERE login IN (
+  'pos.cashier.dxb', 'pos.cashier.auh', 'pos.manager',
+  'inventory.manager', 'finance.manager'
+)
+ORDER BY login;
+
+-- Duplicate logins (must return 0 rows)
+SELECT login, COUNT(*) c FROM res_users GROUP BY login HAVING COUNT(*) > 1;
+
+-- No unexpected Settings / Admin role on operational users (Administrator role = base.group_system)
+SELECT u.login, g.name->>'en_US' AS group_name
+FROM res_users u
+JOIN res_groups_users_rel rel ON rel.uid = u.id
+JOIN res_groups g ON g.id = rel.gid
+WHERE u.login IN (
+  'pos.cashier.dxb', 'pos.cashier.auh', 'pos.manager',
+  'inventory.manager', 'finance.manager'
+)
+AND g.id = (SELECT res_id FROM ir_model_data WHERE module = 'base' AND name = 'group_system' AND model = 'res.groups');
+
+-- Key application groups (direct res_groups_users_rel membership; implied groups may not appear)
+SELECT u.login,
+  BOOL_OR(g.id = (SELECT res_id FROM ir_model_data WHERE module='point_of_sale' AND name='group_pos_user' AND model='res.groups')) AS direct_pos_user,
+  BOOL_OR(g.id = (SELECT res_id FROM ir_model_data WHERE module='point_of_sale' AND name='group_pos_manager' AND model='res.groups')) AS direct_pos_mgr,
+  BOOL_OR(g.id = (SELECT res_id FROM ir_model_data WHERE module='stock' AND name='group_stock_manager' AND model='res.groups')) AS direct_inv_mgr,
+  BOOL_OR(g.id = (SELECT res_id FROM ir_model_data WHERE module='account' AND name='group_account_manager' AND model='res.groups')) AS direct_fin_mgr
+FROM res_users u
+JOIN res_groups_users_rel rel ON rel.uid = u.id
+JOIN res_groups g ON g.id = rel.gid
+WHERE u.login IN (
+  'pos.cashier.dxb', 'pos.cashier.auh', 'pos.manager',
+  'inventory.manager', 'finance.manager'
+)
+GROUP BY u.login
+ORDER BY u.login;
+
+-- HR ↔ user linkage for POS employees
+SELECT e.id, e.name, e.user_id, u.login FROM hr_employee e
+LEFT JOIN res_users u ON u.id = e.user_id
+WHERE e.name LIKE 'POS%' ORDER BY e.id;
+
+-- No business transactions introduced by this gate
+SELECT COUNT(*) AS pos_order FROM pos_order;
+SELECT COUNT(*) AS account_move FROM account_move;
+SELECT COUNT(*) AS stock_move FROM stock_move;
+
+================================================================================
+Executed snapshot (2026-05-14)
+================================================================================
+-- Five operational users active (ids 5–9); duplicate-login query: 0 rows.
+-- No operational login has base.group_system (query returns 0 rows).
+-- HR linkage: POS Cashier DXB-01 → pos.cashier.dxb; POS Cashier AUH-01 → pos.cashier.auh; POS Manager Demo → pos.manager.
+-- pos_order / account_move counts: 0 after Gate B6.

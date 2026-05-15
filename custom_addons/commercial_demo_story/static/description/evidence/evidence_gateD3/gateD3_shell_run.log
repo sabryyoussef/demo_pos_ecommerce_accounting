@@ -1,0 +1,27 @@
+2026-05-14 14:49:01,812 62476 INFO ? odoo: Odoo version 19.0 
+2026-05-14 14:49:01,812 62476 INFO ? odoo: Using configuration file at /mnt/sabry_backup/odoo_base/base_odoo_19/config/projects/odoo_demo_pos_accounting.conf 
+2026-05-14 14:49:01,812 62476 INFO ? odoo: addons paths: _NamespacePath(['/home/sabry3/odoo_ssd/odoo19/odoo19/odoo/addons', '/mnt/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/.filestore/addons/19.0', '/home/sabry3/odoo_ssd/odoo19/odoo19/addons', '/home/sabry3/odoo_ssd/odoo19/odoo19/enterprise']) 
+2026-05-14 14:49:01,813 62476 INFO ? odoo: database: odoo19@localhost:5432 
+2026-05-14 14:49:02,101 62476 INFO ? odoo.service.server: Initiating shutdown 
+2026-05-14 14:49:02,101 62476 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-05-14 14:49:02,133 62476 INFO demo_pos_accounting odoo.modules.loading: loading 1 modules... 
+2026-05-14 14:49:02,137 62476 INFO demo_pos_accounting odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-05-14 14:49:02,211 62476 INFO demo_pos_accounting odoo.modules.loading: loading 187 modules... 
+2026-05-14 14:49:03,081 62476 INFO demo_pos_accounting odoo.modules.loading: 187 modules loaded in 0.87s, 0 queries (+0 extra) 
+2026-05-14 14:49:03,410 62476 INFO demo_pos_accounting odoo.modules.loading: Modules loaded. 
+2026-05-14 14:49:03,504 62476 INFO demo_pos_accounting odoo.registry: Registry loaded in 1.397s 
+POS_ORDERS_OK ids=[18, 19, 20] states=done
+POS_TOTALS amount_total=127.05 amount_tax=6.05 amount_paid=127.05 sum_payments=127.05
+SESSIONS_OK dxb_move=19 auh_move=24 balanced
+POSTED_MOVE_BALANCE_OK checked_moves=[19, 20, 21, 22, 23, 24, 25, 26]
+DUPLICATE_SESSION_MAIN_MOVE_CHECK_OK
+PICKINGS_OK ids=[17, 18, 19]
+STOCK_NET_INTERNAL_OK RET-G2-BEV-WAT500=22.0
+STOCK_NET_INTERNAL_OK RET-G2-SNK-CRP40=11.0
+STOCK_NET_INTERNAL_OK RET-G2-PAR-TSH-M=9.0
+STOCK_NET_INTERNAL_OK RET-G2-PAR-MUG350-BLA=5.0
+PAY_COMBINE_LINKED visa_pay=4.35 mc_pay=68.25 visa_move=21 mc_move=20
+CASH_STATEMENT_MOVES ids=[22, 23, 25, 26]
+WROTE /home/sabry3/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/evidence_gateD3/gateD3_review_manifest.json
+REVIEW_COMPLETE_NO_DB_WRITES
+WROTE /home/sabry3/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/evidence_gateD3/gateD3_shell.txt

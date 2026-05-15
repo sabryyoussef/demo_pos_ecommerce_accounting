@@ -75,7 +75,14 @@ Use ``scripts/export_demo_database_xml.py`` via ``odoo-bin shell``.
 
 ## Screenshots
 
-86 evidence PNGs are under ``static/description/screenshots/`` (gates A–D). See ``static/description/screenshots_index.md`` and ``static/description/index.html`` for the Odoo Apps page.
+86 evidence PNGs are under ``static/description/screenshots/`` (gates A–D).
+
+**Build story gallery** (full ``collections/index.html`` in the module):
+
+- File: ``static/description/build_story.html``
+- Local: open that path in a browser (images use ``screenshots/evidence_*/*.png``).
+- With Odoo running: ``http://127.0.0.1:8025/commercial_demo_story/static/description/build_story.html`` (adjust host/port).
+- Apps summary: ``static/description/index.html`` links to the gallery.
 
 ## Install log
 

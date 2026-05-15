@@ -1,0 +1,24 @@
+Gate A — addons_path integrity (2026-05-13)
+
+CONFIG (odoo_demo_pos_accounting.conf)
+  addons_path =
+    1) …/odoo19/odoo19/addons   (community; resolves to odoo_ssd)
+    2) …/odoo19/odoo19/enterprise (enterprise; resolves to odoo_ssd)
+
+REMOVED from config (intentional)
+  projects/demo_pos_accounting/custom_addons
+  Reason: directory contained only .gitkeep (no __manifest__.py module).
+  Odoo 19 logs "invalid addons directory … skipped" for such paths.
+  Directory kept on disk for future modules; add back to addons_path when first addon exists.
+
+RUNTIME EXPANSION (from Odoo log — automatic)
+  + odoo/addons under SSD tree
+  + data_dir/addons/19.0 under project .filestore
+
+CUSTOM / LEAKED ADDONS
+  custom_addons: only .gitkeep — no third-party or other-project modules.
+  No unrelated project paths in config.
+
+DUPLICATE / SHADOWING (resolved realpaths)
+  community vs enterprise: distinct directories (no duplicate inode between the two configured roots).
+  Enterprise modules load from enterprise tree (install logs reference …/enterprise/…).

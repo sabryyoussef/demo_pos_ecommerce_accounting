@@ -1,0 +1,12 @@
+{
+  "page_errors": [],
+  "console_errors": [],
+  "console_owl": [],
+  "network_failures": [],
+  "urls": [
+    "http://127.0.0.1:8025/odoo/action-440",
+    "http://127.0.0.1:8025/odoo/action-480",
+    "http://127.0.0.1:8025/odoo/stock.location/5?model=stock.location&resId=5"
+  ],
+  "detail_loc_id": "5"
+}

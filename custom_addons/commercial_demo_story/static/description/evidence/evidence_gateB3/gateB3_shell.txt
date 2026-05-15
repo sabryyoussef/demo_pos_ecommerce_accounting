@@ -1,0 +1,29 @@
+2026-05-13 21:12:16,227 62189 INFO ? odoo: Odoo version 19.0 
+2026-05-13 21:12:16,227 62189 INFO ? odoo: Using configuration file at /mnt/sabry_backup/odoo_base/base_odoo_19/config/projects/odoo_demo_pos_accounting.conf 
+2026-05-13 21:12:16,227 62189 INFO ? odoo: addons paths: _NamespacePath(['/home/sabry3/odoo_ssd/odoo19/odoo19/odoo/addons', '/mnt/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/.filestore/addons/19.0', '/home/sabry3/odoo_ssd/odoo19/odoo19/addons', '/home/sabry3/odoo_ssd/odoo19/odoo19/enterprise']) 
+2026-05-13 21:12:16,227 62189 INFO ? odoo: database: odoo19@localhost:5432 
+2026-05-13 21:12:16,555 62189 INFO ? odoo.service.server: Initiating shutdown 
+2026-05-13 21:12:16,555 62189 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-05-13 21:12:16,585 62189 INFO demo_pos_accounting odoo.modules.loading: loading 1 modules... 
+2026-05-13 21:12:16,590 62189 INFO demo_pos_accounting odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-05-13 21:12:16,666 62189 INFO demo_pos_accounting odoo.modules.loading: loading 184 modules... 
+2026-05-13 21:12:17,696 62189 INFO demo_pos_accounting odoo.modules.loading: 184 modules loaded in 1.03s, 0 queries (+0 extra) 
+2026-05-13 21:12:18,069 62189 INFO demo_pos_accounting odoo.modules.loading: Modules loaded. 
+2026-05-13 21:12:18,163 62189 INFO demo_pos_accounting odoo.registry: Registry loaded in 1.599s 
+STOCK_LOC 5 WH-HRG-MAIN/Stock
+OK WH-HRG-MAIN/Stock id= 5
+OK WH-HRG-MAIN/ECOM-OUT id= 23
+OK WH-HRG-MAIN/SALES-OUT id= 24
+OK WH-HRG-MAIN/POS id= 25
+OK WH-HRG-MAIN/POS/DXB-01 id= 26
+OK WH-HRG-MAIN/POS/AUH-01 id= 27
+OK WH-HRG-MAIN/RET-CUSTOMER id= 28
+OK WH-HRG-MAIN/RET-ECOM id= 29
+OK WH-HRG-MAIN/RET-POS id= 30
+OK WH-HRG-MAIN/LOSS-DAMAGE id= 31
+OK WH-HRG-MAIN/ADJUSTMENT id= 32
+STOCK_MOVE_COUNT_BEFORE_AFTER 0 0
+QUANT_NONZERO_BEFORE_AFTER 0 0
+DETAIL_LOC_ID_STOCK 5
+WAREHOUSE 1 WH-HRG-MAIN HRG01
+COMMIT_OK

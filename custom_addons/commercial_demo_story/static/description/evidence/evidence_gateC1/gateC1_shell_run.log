@@ -1,0 +1,26 @@
+2026-05-14 13:15:08,827 31937 INFO ? odoo: Odoo version 19.0 
+2026-05-14 13:15:08,827 31937 INFO ? odoo: Using configuration file at /mnt/sabry_backup/odoo_base/base_odoo_19/config/projects/odoo_demo_pos_accounting.conf 
+2026-05-14 13:15:08,827 31937 INFO ? odoo: addons paths: _NamespacePath(['/home/sabry3/odoo_ssd/odoo19/odoo19/odoo/addons', '/mnt/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/.filestore/addons/19.0', '/home/sabry3/odoo_ssd/odoo19/odoo19/addons', '/home/sabry3/odoo_ssd/odoo19/odoo19/enterprise']) 
+2026-05-14 13:15:08,827 31937 INFO ? odoo: database: odoo19@localhost:5432 
+2026-05-14 13:15:09,088 31937 INFO ? odoo.service.server: Initiating shutdown 
+2026-05-14 13:15:09,088 31937 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-05-14 13:15:09,119 31937 INFO demo_pos_accounting odoo.modules.loading: loading 1 modules... 
+2026-05-14 13:15:09,124 31937 INFO demo_pos_accounting odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-05-14 13:15:09,198 31937 INFO demo_pos_accounting odoo.modules.loading: loading 187 modules... 
+2026-05-14 13:15:10,139 31937 INFO demo_pos_accounting odoo.modules.loading: 187 modules loaded in 0.94s, 0 queries (+0 extra) 
+2026-05-14 13:15:10,663 31937 INFO demo_pos_accounting odoo.modules.loading: Modules loaded. 
+2026-05-14 13:15:10,754 31937 INFO demo_pos_accounting odoo.registry: Registry loaded in 1.659s 
+BASELINE product_template=7 stock_move=0 product_value=0 account_move=0
+COMPANY_ACCOUNTS income=155 expense=81 stock_valuation=55 stock_journal=7
+CATEGORY_CREATE id=7 name='ALL PRODUCTS' valuation=real_time
+CATEGORY_CREATE id=8 name='RETAIL' valuation=real_time
+CATEGORY_CREATE id=9 name='FOOD' valuation=real_time
+CATEGORY_CREATE id=10 name='BEVERAGES' valuation=real_time
+CATEGORY_CREATE id=11 name='SERVICES' valuation=periodic
+CATEGORY_CREATE id=12 name='POS ITEMS' valuation=real_time
+CATEGORY_CREATE id=13 name='ECOM ITEMS' valuation=real_time
+COMPANY_DEFAULTS cost_method=average inventory_valuation=real_time
+VARIANT_GROUP_ALREADY_IMPLIED_ON_INTERNAL_USER
+AFTER product_template=7 stock_move=0 product_value=0 account_move=0
+COMMIT_OK
+WROTE /home/sabry3/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/evidence_gateC1/gateC1_shell.txt

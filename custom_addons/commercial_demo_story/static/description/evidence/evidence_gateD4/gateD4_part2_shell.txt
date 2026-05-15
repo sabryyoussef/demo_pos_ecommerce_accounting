@@ -1,0 +1,7 @@
+Gate D4 part 2 — delivery completion (Odoo shell)
+PICKINGS_FOUND ids=[20, 21] states=['done', 'done']
+SKIP picking id=20 state=done
+SKIP picking id=21 state=done
+COMMIT_OK_PART2_DELIVERY
+
+Note: Pickings were already validated after Gate D4 browser run; script is idempotent.

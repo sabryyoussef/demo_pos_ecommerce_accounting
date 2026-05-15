@@ -1,0 +1,65 @@
+-- Final commercial operations — SQL verification (demo_pos_accounting)
+
+\echo '=== 1) POS configs (expect 30) ==='
+SELECT COUNT(*) AS pos_config_count FROM pos_config WHERE company_id = 1;
+
+\echo '=== 2) POS employees / users (sample) ==='
+SELECT COUNT(*) AS hr_employee_count FROM hr_employee WHERE company_id = 1;
+
+\echo '=== 3) Corporate final SOs (client_order_ref FIN-%) ==='
+SELECT id, name, state, amount_total, user_id, team_id, client_order_ref
+FROM sale_order WHERE client_order_ref LIKE 'FIN-%' ORDER BY id;
+
+\echo '=== 4) Website-channel SOs (FIN-WEB or gate4 email) ==='
+SELECT so.id, so.name, so.state, so.amount_total, so.website_id, rp.email
+FROM sale_order so
+LEFT JOIN res_partner rp ON rp.id = so.partner_id
+WHERE so.client_order_ref LIKE 'FIN-WEB%' OR rp.email = 'gate4_ecommerce_flow@example.invalid'
+ORDER BY so.id;
+
+\echo '=== 5) Posted customer invoices (recent) ==='
+SELECT id, name, state, move_type, amount_total, payment_state, team_id, invoice_user_id
+FROM account_move
+WHERE move_type IN ('out_invoice', 'out_refund') AND state = 'posted'
+ORDER BY id DESC LIMIT 15;
+
+\echo '=== 6) POS orders count ==='
+SELECT COUNT(*) AS pos_order_count FROM pos_order;
+
+\echo '=== 7) CRM team invoicing target (Corporate Direct) ==='
+SELECT id, name::text AS name_json, invoiced_target
+FROM crm_team
+WHERE company_id = 1 AND name::text ILIKE '%Corporate Direct%';
+
+\echo '=== 7b) Corporate inbound payments + bank match flag ==='
+SELECT ap.id, ap.name, ap.amount, ap.state, ap.is_matched, ap.is_reconciled, rp.ref AS partner_ref
+FROM account_payment ap
+JOIN res_partner rp ON rp.id = ap.partner_id
+WHERE rp.ref IN ('FINCORP-ALPHA', 'FINCORP-BETA') AND ap.payment_type = 'inbound'
+ORDER BY ap.id;
+
+\echo '=== 7c) Simulated bank statement lines (FIN-DEMO-RECON) ==='
+SELECT absl.id, am.date, absl.amount, absl.payment_ref, aj.code AS journal_code
+FROM account_bank_statement_line absl
+JOIN account_move am ON am.id = absl.move_id
+JOIN account_journal aj ON aj.id = absl.journal_id
+WHERE absl.payment_ref LIKE 'FIN-DEMO-RECON-%'
+ORDER BY absl.id;
+
+\echo '=== 8) Net internal stock negative products (expect 0 rows) ==='
+SELECT sq.product_id, pp.default_code, SUM(sq.quantity) AS net_qty
+FROM stock_quant sq
+JOIN stock_location sl ON sl.id = sq.location_id
+JOIN product_product pp ON pp.id = sq.product_id
+WHERE sl.usage = 'internal'
+GROUP BY sq.product_id, pp.default_code
+HAVING SUM(sq.quantity) < 0;
+
+\echo '=== 9) Imbalanced posted moves (expect 0 rows) ==='
+SELECT am.id, am.name, SUM(aml.balance) AS bal
+FROM account_move am
+JOIN account_move_line aml ON aml.move_id = am.id
+WHERE am.state = 'posted'
+GROUP BY am.id, am.name
+HAVING ROUND(SUM(aml.balance)::numeric, 4) <> 0
+LIMIT 20;

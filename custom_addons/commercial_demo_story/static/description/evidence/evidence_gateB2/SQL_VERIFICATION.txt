@@ -1,0 +1,26 @@
+   metric   | value 
+------------+-------
+ PLAN_COUNT | 4
+
+    metric     | value 
+---------------+-------
+ ACCOUNT_COUNT | 8
+
+  section   | id |  plan_name   | parent_id | sequence 
+------------+----+--------------+-----------+----------
+ ROOT_PLANS |  1 | Project      |           |       10
+ ROOT_PLANS |  5 | Channel      |           |       20
+ ROOT_PLANS |  6 | POS Location |           |       30
+ ROOT_PLANS |  7 | Department   |           |       40
+
+     section      | plan_id |  plan_name   |     code      | account_name  | company_id 
+------------------+---------+--------------+---------------+---------------+------------
+ ACCOUNTS_BY_PLAN |       5 | Channel      | AN-CH-CORP    | AN-CH-CORP    |          1
+ ACCOUNTS_BY_PLAN |       5 | Channel      | AN-CH-ECOM    | AN-CH-ECOM    |          1
+ ACCOUNTS_BY_PLAN |       5 | Channel      | AN-CH-POS     | AN-CH-POS     |          1
+ ACCOUNTS_BY_PLAN |       6 | POS Location | AN-POS-AUH-01 | AN-POS-AUH-01 |          1
+ ACCOUNTS_BY_PLAN |       6 | POS Location | AN-POS-DXB-01 | AN-POS-DXB-01 |          1
+ ACCOUNTS_BY_PLAN |       7 | Department   | AN-DPT-HR     | AN-DPT-HR     |          1
+ ACCOUNTS_BY_PLAN |       7 | Department   | AN-DPT-OPS    | AN-DPT-OPS    |          1
+ ACCOUNTS_BY_PLAN |       7 | Department   | AN-DPT-SALES  | AN-DPT-SALES  |          1
+

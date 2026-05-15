@@ -1,0 +1,13 @@
+Key modules (ir_module_module.state = installed), 2026-05-13:
+
+  web_enterprise          installed
+  account_accountant      installed
+  point_of_sale           installed
+  l10n_ae                 installed
+  l10n_ae_pos             installed
+  l10n_ae_reports         installed
+
+Total installed module count at Gate A baseline: 177 (per STEP5 report).
+
+POS configuration for browser evidence:
+  pos.config id=1 name "Gate A Main" created via odoo-bin shell (see 06_pos_config_shell.log).

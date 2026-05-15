@@ -5,8 +5,3 @@
 .filestore/
 backups/*.dump
 backups/*.tar.gz
-
-__pycache__/
-*.pyc
-**/backups/*.dump
-**/backups/*.tar.gz

@@ -1,0 +1,62 @@
+ stock_quant_rows_loc5_retg2 
+-----------------------------
+                          16
+(1 row)
+
+ sum_qty_loc5_retg2 
+--------------------
+             307.00
+(1 row)
+
+ id | default_code | quantity 
+----+--------------+----------
+(0 rows)
+
+ stock_move_total 
+------------------
+               48
+(1 row)
+
+ stock_move_inventory_done 
+---------------------------
+                        48
+(1 row)
+
+ stock_valuation_layer_table_exists 
+------------------------------------
+ f
+(1 row)
+
+ product_value_total 
+---------------------
+                   0
+(1 row)
+
+ account_move_total 
+--------------------
+                  2
+(1 row)
+
+ account_move_posted 
+---------------------
+                   2
+(1 row)
+
+ account_move_line_total 
+-------------------------
+                      64
+(1 row)
+
+ aml_on_stock_valuation_account 
+--------------------------------
+                             64
+(1 row)
+
+ barcode | count 
+---------+-------
+(0 rows)
+
+ default_code | count 
+--------------+-------
+(0 rows)
+

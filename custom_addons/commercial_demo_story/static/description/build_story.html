@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Horizon Retail — demo_pos_accounting build story</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a222d;
+      --surface2: #232d3b;
+      --text: #e8eef5;
+      --muted: #9aacbd;
+      --accent: #3d9cf0;
+      --accent2: #5ce1b8;
+      --border: #2f3d4d;
+      --radius: 10px;
+      --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      font-size: 16px;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header {
+      background: linear-gradient(145deg, #15202b 0%, var(--bg) 55%);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 1.5rem 3rem;
+    }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
+    h1 {
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      font-weight: 650;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.5rem;
+    }
+    .tagline { color: var(--muted); max-width: 52ch; margin: 0; }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(15, 20, 25, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.65rem 1.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      align-items: center;
+    }
+    nav a {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+    nav a:hover { color: var(--accent2); }
+    main { padding: 2rem 0 4rem; }
+    h2 {
+      font-size: 1.35rem;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.35rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--accent2);
+    }
+    h3 { font-size: 1.1rem; margin: 1.5rem 0 0.5rem; color: #c5d6e8; }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.35rem;
+      margin-bottom: 1rem;
+    }
+    .card p { margin: 0.5rem 0 0; color: var(--muted); }
+    .card p:first-of-type { margin-top: 0; color: var(--text); }
+    .meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+    }
+    .meta a { white-space: nowrap; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
+    [data-gallery] figure {
+      position: relative;
+      overflow: visible;
+    }
+    figure {
+      margin: 0;
+      background: var(--surface2);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+      cursor: zoom-in;
+      border-radius: var(--radius) var(--radius) 0 0;
+    }
+    figcaption {
+      font-size: 0.78rem;
+      color: var(--muted);
+      padding: 0.45rem 0.55rem 0.35rem;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+    .odoo-shot-link {
+      margin: 0;
+      padding: 0 0.55rem 0.55rem;
+      font-size: 0.74rem;
+    }
+    .odoo-shot-link a {
+      color: var(--accent2);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    .odoo-shot-link a:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .odoo-hover-panel {
+      display: none;
+      position: absolute;
+      z-index: 40;
+      left: 6px;
+      right: 6px;
+      top: 6px;
+      max-height: min(240px, 55vh);
+      overflow-y: auto;
+      white-space: pre-wrap;
+      padding: 0.5rem 0.6rem;
+      font-size: 0.72rem;
+      line-height: 1.38;
+      color: var(--text);
+      background: rgba(13, 19, 26, 0.97);
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.55);
+      pointer-events: auto;
+      text-align: left;
+    }
+    [data-gallery] figure:hover .odoo-hover-panel,
+    [data-gallery] figure:focus-within .odoo-hover-panel {
+      display: block;
+    }
+    .note {
+      font-size: 0.9rem;
+      color: var(--muted);
+      border-left: 3px solid var(--accent);
+      padding: 0.5rem 0 0.5rem 1rem;
+      margin: 1rem 0;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 1.25rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+      text-align: center;
+    }
+    dialog {
+      position: relative;
+      max-width: min(96vw, 1200px);
+      max-height: 92vh;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      color: var(--text);
+      padding: 0;
+    }
+    dialog::backdrop { background: rgba(0, 0, 0, 0.75); }
+    dialog img { max-width: 100%; max-height: 85vh; display: block; }
+    dialog figcaption { padding: 0.75rem 1rem; }
+    .dlg-close {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 6px;
+      padding: 0.35rem 0.65rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Horizon Retail — how we built the demo</h1>
+      <p class="tagline">
+        Odoo 19 Enterprise project <strong>demo_pos_accounting</strong>: gated implementation,
+        SQL and shell transcripts, and Playwright UI evidence. This page summarizes the written
+        <strong>steps</strong> and on-disk <strong>evidence</strong> (including screenshots).
+      </p>
+    </div>
+  </header>
+  <nav aria-label="Page sections">
+    <div class="inner">
+      <a href="#methodology">Steps 1–4 (methodology)</a>
+      <a href="#gate-a">Gate A</a>
+      <a href="#gates-b">Gates B1–B6</a>
+      <a href="#gates-c">Gates C1–C2</a>
+      <a href="#gates-d">Gates D1–D4</a>
+      <a href="#final">Final commercial</a>
+    </div>
+  </nav>
+  <main class="wrap">
+    <section id="methodology">
+      <h2>Steps 1–4 — scope, environment, architecture, runbook</h2>
+      <p class="note">
+        These Markdown reports live under <code>steps/</code>. They record approvals, assumptions,
+        and the order of work before any Step 5 gate execution.
+      </p>
+
+      <div class="card">
+        <h3>Step 1 — Environment &amp; scope validation</h3>
+        <p>
+          Confirmed required Odoo apps (Sales, CRM, Website, POS, UAE localization, accounting enterprise,
+          inventory, analytics) exist in the local Odoo 19 tree and are feasible for the commercial plan.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP1_ENVIRONMENT_SCOPE_VALIDATION.md">STEP1_ENVIRONMENT_SCOPE_VALIDATION.md</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Step 2 — Environment setup plan</h3>
+        <p>
+          Locked demo parameters: single UAE company, AED, TRN, database <code>demo_pos_accounting</code>,
+          HTTP port <strong>8025</strong>, no sample-industry demo data, native configuration only.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP2_ENVIRONMENT_SETUP_PLAN.md">STEP2_ENVIRONMENT_SETUP_PLAN.md</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Step 3 — Master data &amp; operational structure</h3>
+        <p>
+          Architecture and governance: warehouses, returns paths, barcodes, analytics on revenue lines,
+          POS vs reservation rules, naming — documented before execution.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP3_MASTER_DATA_OPERATIONAL_STRUCTURE.md">STEP3_MASTER_DATA_OPERATIONAL_STRUCTURE.md</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Step 4 — Execution sequence blueprint</h3>
+        <p>
+          Layered runbook (fiscal core → structure → master data → channels) with rollback and
+          operational hardening notes; authorizes Step 5 when approved.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP4_EXECUTION_CONFIGURATION_SEQUENCE.md">STEP4_EXECUTION_CONFIGURATION_SEQUENCE.md</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="gate-a">
+      <h2>Step 5 — Gate A (infrastructure &amp; module baseline)</h2>
+      <div class="card">
+        <h3>What we did</h3>
+        <p>
+          Created the project database without generic demo data, installed the approved module stack
+          (accounting, stock, sales, website, POS with HR cashiers, UAE <code>l10n_ae</code>, reports),
+          enabled product variants, ran HTTP smoke tests, and captured backups plus a git tag.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP5_GATE_A_EXECUTION_REPORT.md">STEP5_GATE_A_EXECUTION_REPORT.md</a>
+          <a href="evidence/evidence_gateA/STEP5_GATE_A_EXECUTION_REPORT.md">evidence_gateA (duplicate report + logs)</a>
+          <a href="evidence/evidence_gateA_final/INDEX.md">evidence_gateA_final / INDEX.md</a>
+        </div>
+      </div>
+      <h3>UI evidence (acceptance browser pass)</h3>
+      <p class="note" style="margin-top:0.75rem;font-size:0.88rem;">
+        Under each screenshot: <strong>Open in Odoo</strong> opens the matching screen in a new tab
+        (<code>http://127.0.0.1:8025</code>, database <code>demo_pos_accounting</code>).
+        Hover the image or the link: the tooltip gives the <strong>menu location</strong> in Odoo and
+        <strong>how to open</strong> it (server, database in URL, admin login when needed).
+      </p>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_gateA_final/01_after_login_web.png" alt="After login web" /><figcaption>Web shell after login</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateA_final/02_odoo_home.png" alt="Odoo home" /><figcaption>Odoo home</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateA_final/03_home_with_banner_check.png" alt="Banner check" /><figcaption>Home + subscription banner check</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateA_final/04_accounting_dashboard.png" alt="Accounting" /><figcaption>Accounting dashboard</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateA_final/05_pos_ui.png" alt="POS UI" /><figcaption>POS entry / UI</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="gates-b">
+      <h2>Step 5 — Gates B1–B6 (fiscal core → POS rollout)</h2>
+
+      <div class="card" id="gate-b1">
+        <h3>Gate B1 — Company &amp; accounting baseline (UAE)</h3>
+        <p>
+          Horizon Retail Group LLC: AED, TRN, emirate, fiscal year; UAE taxes and VAT201 report smoke;
+          admin password rotation; validation-only POS label; Playwright evidence and backups.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP5_GATE_B1_EXECUTION_REPORT.md">STEP5_GATE_B1_EXECUTION_REPORT.md</a>
+          <a href="evidence/evidence_gateB1/SQL_VERIFICATION.txt">SQL_VERIFICATION.txt</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB1/01_accounting_dashboard.png" alt="" /><figcaption>Accounting dashboard</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB1/02_taxes.png" alt="" /><figcaption>Taxes configuration</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB1/03_tax_report_vat201.png" alt="" /><figcaption>VAT201 tax report</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB1/04_company_settings.png" alt="" /><figcaption>Company settings</figcaption></figure>
+      </div>
+
+      <div class="card" id="gate-b2">
+        <h3>Gate B2 — Analytic architecture</h3>
+        <p>
+          Analytic plans and accounts aligned to channel/location reporting; P&amp;L and analytic pivot
+          smoke in the browser.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP5_GATE_B2_EXECUTION_REPORT.md">STEP5_GATE_B2_EXECUTION_REPORT.md</a>
+          <a href="evidence/evidence_gateB2/SQL_VERIFICATION.txt">SQL_VERIFICATION.txt</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB2/01_analytic_plans.png" alt="" /><figcaption>Analytic plans</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB2/02_analytic_accounts.png" alt="" /><figcaption>Analytic accounts</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB2/03_profit_and_loss.png" alt="" /><figcaption>Profit &amp; loss</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB2/04_analytic_reporting.png" alt="" /><figcaption>Analytic reporting</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB2/05_analytic_items_pivot.png" alt="" /><figcaption>Analytic items pivot</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB2/06_analytic_account_detail.png" alt="" /><figcaption>Analytic account detail</figcaption></figure>
+      </div>
+
+      <div class="card" id="gate-b3">
+        <h3>Gate B3 — Warehouses &amp; stock locations</h3>
+        <p>
+          Warehouse graph and location forms validated for the retail network structure.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP5_GATE_B3_EXECUTION_REPORT.md">STEP5_GATE_B3_EXECUTION_REPORT.md</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB3/01_warehouses.png" alt="" /><figcaption>Warehouses</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB3/02_locations_list.png" alt="" /><figcaption>Locations list</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB3/03_location_detail_stock.png" alt="" /><figcaption>Location detail (stock)</figcaption></figure>
+      </div>
+
+      <div class="card" id="gate-b4">
+        <h3>Gate B4 — Journals &amp; POS payment methods</h3>
+        <p>
+          Accounting journals and POS payment method wiring checked in list and form views.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP5_GATE_B4_EXECUTION_REPORT.md">STEP5_GATE_B4_EXECUTION_REPORT.md</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB4/01_journals_list.png" alt="" /><figcaption>Journals list</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB4/02_journal_pos_visa_detail.png" alt="" /><figcaption>POS Visa journal detail</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB4/03_pos_payment_methods.png" alt="" /><figcaption>POS payment methods</figcaption></figure>
+      </div>
+
+      <div class="card" id="gate-b5">
+        <h3>Gate B5 — POS configurations &amp; sessions</h3>
+        <p>
+          Branch POS configs (DXB template path), frontend floor, session list, and POS settings actions.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP5_GATE_B5_EXECUTION_REPORT.md">STEP5_GATE_B5_EXECUTION_REPORT.md</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB5/01_pos_configurations_list.png" alt="" /><figcaption>POS configurations list</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB5/02_pos_config_dxb_form.png" alt="" /><figcaption>POS-DXB form</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB5/03_pos_payment_methods.png" alt="" /><figcaption>Payment methods on config</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB5/04_pos_frontend.png" alt="" /><figcaption>POS frontend</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB5/05_pos_sessions_list.png" alt="" /><figcaption>Sessions list</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB5/06_pos_settings_action.png" alt="" /><figcaption>POS settings action</figcaption></figure>
+      </div>
+
+      <div class="card" id="gate-b6">
+        <h3>Gate B6 — Users, cashiers, access control</h3>
+        <p>
+          POS cashier users vs manager: login flows, allowed POS configs per user, and separation from
+          accounting configuration. Cashier screenshots use Discuss / Calendar (allowed surfaces) instead
+          of modal access errors for a cleaner demo story.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP5_GATE_B6_EXECUTION_REPORT.md">STEP5_GATE_B6_EXECUTION_REPORT.md</a>
+          <a href="evidence/evidence_gateB6/browser_gateB6.json">browser_gateB6.json</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB6/01_users_list.png" alt="" /><figcaption>Users list</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB6/02_user_pos_cashier_dxb_form.png" alt="" /><figcaption>Cashier DXB user form</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB6/03_access_privileges_groups.png" alt="" /><figcaption>Access privileges / groups</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB6/04_cashier_chart_accounts.png" alt="" /><figcaption>Cashier: Discuss (allowed app surface, no accounting screens)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB6/05_cashier_pos_configs.png" alt="" /><figcaption>Cashier: POS configs (DXB)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB6/06_pos_frontend_login_cashier.png" alt="" /><figcaption>POS frontend — cashier DXB</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB6/06b_cashier_auh_pos_configs.png" alt="" /><figcaption>Cashier AUH POS configs</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB6/06c_pos_frontend_login_cashier_auh.png" alt="" /><figcaption>POS frontend — cashier AUH</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB6/07_cashier_settings_attempt.png" alt="" /><figcaption>Cashier: Calendar (non-admin surface; settings route avoided)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB6/08_finance_journals.png" alt="" /><figcaption>Finance journals (role check)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB6/09_inventory_operations.png" alt="" /><figcaption>Inventory operations</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateB6/10_pos_manager_configs.png" alt="" /><figcaption>POS manager configurations</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="gates-c">
+      <h2>Step 5 — Gates C1–C2 (catalog &amp; products)</h2>
+
+      <div class="card" id="gate-c1">
+        <h3>Gate C1 — Product categories &amp; accounting links</h3>
+        <p>
+          Category tree, income/expense accounts on categories, and inventory / barcode settings at
+          configuration level.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP5_GATE_C1_EXECUTION_REPORT.md">STEP5_GATE_C1_EXECUTION_REPORT.md</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_gateC1/01_product_categories_list.png" alt="" /><figcaption>Product categories</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateC1/02_category_all_products_accounting.png" alt="" /><figcaption>Category accounting</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateC1/03_settings_inventory_valuation.png" alt="" /><figcaption>Inventory valuation setting</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateC1/04_settings_barcode_product.png" alt="" /><figcaption>Barcode / product settings</figcaption></figure>
+      </div>
+
+      <div class="card" id="gate-c2">
+        <h3>Gate C2 — Products, variants, POS shop</h3>
+        <p>
+          Representative products (water, apparel variants), barcodes, and cashier-visible POS catalog.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP5_GATE_C2_EXECUTION_REPORT.md">STEP5_GATE_C2_EXECUTION_REPORT.md</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_gateC2/01_products_list.png" alt="" /><figcaption>Products list</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateC2/02_product_form_water.png" alt="" /><figcaption>Water product form</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateC2/03_product_variants_tshirt.png" alt="" /><figcaption>T-shirt variants</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateC2/04_product_barcode_general.png" alt="" /><figcaption>Barcode (general)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateC2/05_pos_shop_products.png" alt="" /><figcaption>POS shop products</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="gates-d">
+      <h2>Step 5 — Gates D1–D4 (operations &amp; eCommerce)</h2>
+
+      <div class="card" id="gate-d1">
+        <h3>Gate D1 — Inventory initialization</h3>
+        <p>
+          On-hand quantities, stock valuation moves, and journal entries on stock journals; POS sees stock.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP5_D1_INVENTORY_INITIALIZATION_REPORT.md">STEP5_D1_INVENTORY_INITIALIZATION_REPORT.md</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD1/01_inventory_quant_adjustment.png" alt="" /><figcaption>Inventory quantity adjustment</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD1/02_product_on_hand_general.png" alt="" /><figcaption>On hand (general)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD1/03_stock_move_valuation.png" alt="" /><figcaption>Stock move valuation</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD1/04_account_move_stock_journal_1.png" alt="" /><figcaption>Account move — stock journal (1)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD1/05_account_move_stock_journal_2.png" alt="" /><figcaption>Account move — stock journal (2)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD1/06_pos_products_with_stock.png" alt="" /><figcaption>POS products with stock</figcaption></figure>
+      </div>
+
+      <div class="card" id="gate-d2">
+        <h3>Gate D2 — POS sales flow (DXB &amp; AUH)</h3>
+        <p>
+          Multiple POS orders with mixed payments, closed sessions, accounting moves, pickings, and
+          inventory impact.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP5_D2_POS_SALES_FLOW_REPORT.md">STEP5_D2_POS_SALES_FLOW_REPORT.md</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD2/01_pos_order_combo_lines_payments.png" alt="" /><figcaption>POS order — combo lines &amp; payments</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD2/02_pos_order_mug_payments.png" alt="" /><figcaption>POS order — mug &amp; payments</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD2/03_pos_session_dxb_closed.png" alt="" /><figcaption>DXB session closed</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD2/04_account_move_pos_session_dxb.png" alt="" /><figcaption>Account move — POS session DXB</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD2/05_stock_picking_pos_sale.png" alt="" /><figcaption>Stock picking from POS</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD2/06_product_water_on_hand.png" alt="" /><figcaption>Water on hand after sales</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD2/07_pos_shop_floor_dxb.png" alt="" /><figcaption>POS shop floor DXB</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD2/08_pos_session_auh_closed.png" alt="" /><figcaption>AUH session closed</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD2/09_account_move_pos_session_auh.png" alt="" /><figcaption>Account move — POS session AUH</figcaption></figure>
+      </div>
+
+      <div class="card" id="gate-d3">
+        <h3>Gate D3 — Reconciliation review</h3>
+        <p>
+          Read-only pass over accounting dashboard, session journals, combined payment moves, tax return
+          action, valuation and analysis lists.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP5_D3_RECONCILIATION_REVIEW_REPORT.md">STEP5_D3_RECONCILIATION_REVIEW_REPORT.md</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD3/01_accounting_dashboard_home.png" alt="" /><figcaption>Accounting dashboard</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD3/02_pos_session_dxb_accounting.png" alt="" /><figcaption>POS session (accounting view)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD3/03_journal_entry_session_dxb.png" alt="" /><figcaption>Journal entry — session DXB</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD3/04_payment_move_combine_visa.png" alt="" /><figcaption>Payment move — Visa</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD3/05_payment_move_combine_mastercard.png" alt="" /><figcaption>Payment move — Mastercard</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD3/06_tax_return_report_action.png" alt="" /><figcaption>UAE VAT201 tax report (Tax Return client action)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD3/07_inventory_valuation_moves.png" alt="" /><figcaption>Inventory valuation moves</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD3/08_stock_moves_analysis.png" alt="" /><figcaption>Stock moves analysis</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD3/09_pos_orders_analysis.png" alt="" /><figcaption>POS orders analysis</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD3/10_sales_reporting_analysis.png" alt="" /><figcaption>Sales reporting analysis</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD3/11_journal_entries_list.png" alt="" /><figcaption>Journal entries list</figcaption></figure>
+      </div>
+
+      <div class="card" id="gate-d4">
+        <h3>Gate D4 — eCommerce flow</h3>
+        <p>
+          Website shop, product page, cart/checkout, confirmations, downstream sale orders, delivery,
+          and related journal entries.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP5_D4_ECOMMERCE_FLOW_REPORT.md">STEP5_D4_ECOMMERCE_FLOW_REPORT.md</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/01_website_shop.png" alt="" /><figcaption>Website shop</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/02_product_page_water.png" alt="" /><figcaption>Product page (water)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/cart_order_a.png" alt="" /><figcaption>Cart — order A</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/cart_order_b.png" alt="" /><figcaption>Cart — order B</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/checkout_payment_order_a.png" alt="" /><figcaption>Checkout payment — order A</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/checkout_payment_order_b.png" alt="" /><figcaption>Checkout payment — order B</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/confirmation_order_a.png" alt="" /><figcaption>Confirmation — order A</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/confirmation_order_b.png" alt="" /><figcaption>Confirmation — order B</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/10_sales_orders_list.png" alt="" /><figcaption>Sales orders list</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/11_sale_order_form.png" alt="" /><figcaption>Sale order form</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/12_stock_picking_from_so.png" alt="" /><figcaption>Stock picking from SO</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/13_journal_entries.png" alt="" /><figcaption>Journal entries</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="final">
+      <h2>Final commercial operations</h2>
+      <div class="card">
+        <h3>Integrated narrative (corporate, eCommerce, 30 POS)</h3>
+        <p>
+          Phases A–D in scripts document corporate B2B invoicing, website orders, scaled POS locations and
+          cashiers, payment repair, and bank reconciliation lines. SQL and shell logs are under
+          <code>evidence/evidence_final_commercial/</code>.
+        </p>
+        <p class="note" style="margin-top:1rem;border-color:var(--accent2);">
+          Executive presentation screenshots are indexed in
+          <a href="evidence/evidence_final_commercial/screenshots_index.md">screenshots_index.md</a>
+          (filenames for manual capture on a presenter workstation). There is no
+          <code>screenshots/</code> folder yet under final commercial evidence in this tree.
+        </p>
+        <div class="meta">
+          <a href="steps/STEP5_FINAL_COMMERCIAL_OPERATIONS_REPORT.md">STEP5_FINAL_COMMERCIAL_OPERATIONS_REPORT.md</a>
+          <a href="evidence/evidence_final_commercial/README_EXECUTION.md">README_EXECUTION.md</a>
+          <a href="evidence/evidence_final_commercial/SQL_VERIFICATION.txt">SQL_VERIFICATION.txt</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="lightbox">
+    <form method="dialog" style="margin:0;">
+      <button class="dlg-close" value="close" type="submit" aria-label="Close">Close</button>
+    </form>
+    <figure style="margin:0;">
+      <img src="" alt="" id="lightbox-img" />
+      <figcaption id="lightbox-cap"></figcaption>
+    </figure>
+  </dialog>
+
+  <script type="application/json" id="evidence-odoo-map">
+{
+  "screenshots/evidence_gateA_final/01_after_login_web.png": {
+    "href": "http://127.0.0.1:8025/odoo?db=demo_pos_accounting",
+    "tip": "Odoo web client: app home (menu grid) after login. Database demo_pos_accounting."
+  },
+  "screenshots/evidence_gateA_final/02_odoo_home.png": {
+    "href": "http://127.0.0.1:8025/odoo?db=demo_pos_accounting",
+    "tip": "Odoo web client: app home (same as main menu)."
+  },
+  "screenshots/evidence_gateA_final/03_home_with_banner_check.png": {
+    "href": "http://127.0.0.1:8025/odoo?db=demo_pos_accounting",
+    "tip": "Odoo web client: app home (subscription banner hidden in capture only)."
+  },
+  "screenshots/evidence_gateA_final/04_accounting_dashboard.png": {
+    "href": "http://127.0.0.1:8025/odoo/accounting?db=demo_pos_accounting",
+    "tip": "Accounting app: Dashboard (accounting overview)."
+  },
+  "screenshots/evidence_gateA_final/05_pos_ui.png": {
+    "href": "http://127.0.0.1:8025/pos/ui?config_id=1&db=demo_pos_accounting",
+    "tip": "Point of Sale: floor UI (first POS config id=1 as in Gate A capture)."
+  },
+  "screenshots/evidence_gateB1/01_accounting_dashboard.png": {
+    "href": "http://127.0.0.1:8025/odoo/accounting?db=demo_pos_accounting",
+    "tip": "Accounting app: Dashboard."
+  },
+  "screenshots/evidence_gateB1/02_taxes.png": {
+    "href": "http://127.0.0.1:8025/odoo/taxes?db=demo_pos_accounting",
+    "tip": "Accounting app: Configuration - Taxes."
+  },
+  "screenshots/evidence_gateB1/03_tax_report_vat201.png": {
+    "href": "http://127.0.0.1:8025/odoo/tax-report?db=demo_pos_accounting",
+    "tip": "Accounting app: Reporting - Tax report (VAT201 engine)."
+  },
+  "screenshots/evidence_gateB1/04_company_settings.png": {
+    "href": "http://127.0.0.1:8025/odoo/settings?db=demo_pos_accounting",
+    "tip": "Settings: General Settings (company)."
+  },
+  "screenshots/evidence_gateB2/01_analytic_plans.png": {
+    "href": "http://127.0.0.1:8025/odoo/analytic-plans?db=demo_pos_accounting",
+    "tip": "Accounting app: Analytic Accounting - Analytic Plans."
+  },
+  "screenshots/evidence_gateB2/02_analytic_accounts.png": {
+    "href": "http://127.0.0.1:8025/odoo/analytic-accounts?db=demo_pos_accounting",
+    "tip": "Accounting app: Analytic Accounting - Analytic Accounts."
+  },
+  "screenshots/evidence_gateB2/03_profit_and_loss.png": {
+    "href": "http://127.0.0.1:8025/odoo/profit-and-loss?db=demo_pos_accounting",
+    "tip": "Accounting app: Reporting - Profit and Loss."
+  },
+  "screenshots/evidence_gateB2/04_analytic_reporting.png": {
+    "href": "http://127.0.0.1:8025/odoo/analytic-report?db=demo_pos_accounting",
+    "tip": "Accounting app: Analytic Reporting."
+  },
+  "screenshots/evidence_gateB2/05_analytic_items_pivot.png": {
+    "href": "http://127.0.0.1:8025/odoo/analytic-items?db=demo_pos_accounting",
+    "tip": "Accounting app: Analytic Items (switch to Pivot in list if needed)."
+  },
+  "screenshots/evidence_gateB2/06_analytic_account_detail.png": {
+    "href": "http://127.0.0.1:8025/odoo/analytic-accounts/9?db=demo_pos_accounting",
+    "tip": "Accounting app: Analytic Accounts - form for analytic account id 9 (AN-CH-CORP in demo DB)."
+  },
+  "screenshots/evidence_gateB3/01_warehouses.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-440?db=demo_pos_accounting",
+    "tip": "Inventory app: Configuration - Warehouses (action 440)."
+  },
+  "screenshots/evidence_gateB3/02_locations_list.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-480?db=demo_pos_accounting",
+    "tip": "Inventory app: Configuration - Locations (action 480); search WH-HRG-MAIN in UI."
+  },
+  "screenshots/evidence_gateB3/03_location_detail_stock.png": {
+    "href": "http://127.0.0.1:8025/odoo/stock.location/5?db=demo_pos_accounting",
+    "tip": "Inventory: stock.location form id 5 (WH-HRG-MAIN/Stock in demo DB)."
+  },
+  "screenshots/evidence_gateB4/01_journals_list.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-301?db=demo_pos_accounting",
+    "tip": "Accounting app: Configuration - Journals."
+  },
+  "screenshots/evidence_gateB4/02_journal_pos_visa_detail.png": {
+    "href": "http://127.0.0.1:8025/odoo/account.journal/17?db=demo_pos_accounting",
+    "tip": "Accounting: Journal form POS-VISA-AED (id 17 in demo DB)."
+  },
+  "screenshots/evidence_gateB4/03_pos_payment_methods.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-657?db=demo_pos_accounting",
+    "tip": "Point of Sale: Configuration - Payment Methods."
+  },
+  "screenshots/evidence_gateB5/01_pos_configurations_list.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-660?db=demo_pos_accounting",
+    "tip": "Point of Sale: Configuration - Point of Sale (list)."
+  },
+  "screenshots/evidence_gateB5/02_pos_config_dxb_form.png": {
+    "href": "http://127.0.0.1:8025/odoo/pos.config/5?db=demo_pos_accounting",
+    "tip": "Point of Sale: POS-DXB-01 configuration form (id 5)."
+  },
+  "screenshots/evidence_gateB5/03_pos_payment_methods.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-657?db=demo_pos_accounting",
+    "tip": "Point of Sale: Configuration - Payment Methods."
+  },
+  "screenshots/evidence_gateB5/04_pos_frontend.png": {
+    "href": "http://127.0.0.1:8025/pos/ui?config_id=5&db=demo_pos_accounting",
+    "tip": "Point of Sale: POS floor for POS-DXB-01 (config id 5)."
+  },
+  "screenshots/evidence_gateB5/05_pos_sessions_list.png": {
+    "href": "http://127.0.0.1:8025/odoo/pos-sessions?db=demo_pos_accounting",
+    "tip": "Point of Sale: Sessions."
+  },
+  "screenshots/evidence_gateB5/06_pos_settings_action.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-640?db=demo_pos_accounting",
+    "tip": "Point of Sale: Configuration menu action 640 (POS settings)."
+  },
+  "screenshots/evidence_gateB6/01_users_list.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-70?db=demo_pos_accounting",
+    "tip": "Settings: Users and Companies - Users (action 70)."
+  },
+  "screenshots/evidence_gateB6/02_user_pos_cashier_dxb_form.png": {
+    "href": "http://127.0.0.1:8025/odoo/res.users/5?db=demo_pos_accounting",
+    "tip": "Settings: Users - form for user id 5 (pos.cashier.dxb in demo DB)."
+  },
+  "screenshots/evidence_gateB6/03_access_privileges_groups.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-67?db=demo_pos_accounting",
+    "tip": "Settings: Users - Access Rights tab / groups (action 67 context)."
+  },
+  "screenshots/evidence_gateB6/04_cashier_chart_accounts.png": {
+    "href": "http://127.0.0.1:8025/odoo/discuss?db=demo_pos_accounting",
+    "tip": "Discuss app: Inbox (captured as cashier-safe surface; login as pos.cashier.dxb to match)."
+  },
+  "screenshots/evidence_gateB6/05_cashier_pos_configs.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-660?db=demo_pos_accounting",
+    "tip": "Point of Sale: Configuration - Point of Sale (cashier view)."
+  },
+  "screenshots/evidence_gateB6/06_pos_frontend_login_cashier.png": {
+    "href": "http://127.0.0.1:8025/pos/ui/5/login?config_id=5&db=demo_pos_accounting",
+    "tip": "Point of Sale: POS-DXB-01 login screen (cashier)."
+  },
+  "screenshots/evidence_gateB6/06b_cashier_auh_pos_configs.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-660?db=demo_pos_accounting",
+    "tip": "Point of Sale: Configuration - Point of Sale (cashier AUH)."
+  },
+  "screenshots/evidence_gateB6/06c_pos_frontend_login_cashier_auh.png": {
+    "href": "http://127.0.0.1:8025/pos/ui/6/login?config_id=6&db=demo_pos_accounting",
+    "tip": "Point of Sale: POS-AUH-01 login screen (config id 6)."
+  },
+  "screenshots/evidence_gateB6/07_cashier_settings_attempt.png": {
+    "href": "http://127.0.0.1:8025/odoo/calendar?db=demo_pos_accounting",
+    "tip": "Calendar app: Week view (captured as cashier-safe surface)."
+  },
+  "screenshots/evidence_gateB6/08_finance_journals.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-301?db=demo_pos_accounting",
+    "tip": "Accounting app: Configuration - Journals (finance.manager user)."
+  },
+  "screenshots/evidence_gateB6/09_inventory_operations.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-444?db=demo_pos_accounting",
+    "tip": "Inventory app: Operations - Transfers (action 444); or Products if capture used fallback."
+  },
+  "screenshots/evidence_gateB6/10_pos_manager_configs.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-660?db=demo_pos_accounting",
+    "tip": "Point of Sale: Configuration - Point of Sale (pos.manager user)."
+  },
+  "screenshots/evidence_gateC1/01_product_categories_list.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-214?db=demo_pos_accounting",
+    "tip": "Inventory app: Products - Product Categories."
+  },
+  "screenshots/evidence_gateC1/02_category_all_products_accounting.png": {
+    "href": "http://127.0.0.1:8025/odoo/product.category/7?db=demo_pos_accounting",
+    "tip": "Inventory: Product category form All (id 7)."
+  },
+  "screenshots/evidence_gateC1/03_settings_inventory_valuation.png": {
+    "href": "http://127.0.0.1:8025/odoo/settings?db=demo_pos_accounting",
+    "tip": "Settings: Inventory section (inventory valuation options)."
+  },
+  "screenshots/evidence_gateC1/04_settings_barcode_product.png": {
+    "href": "http://127.0.0.1:8025/odoo/settings?db=demo_pos_accounting",
+    "tip": "Settings: Products / barcodes options (navigate Product tab)."
+  },
+  "screenshots/evidence_gateC2/01_products_list.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-207?db=demo_pos_accounting",
+    "tip": "Inventory app: Products - Product variants or templates list."
+  },
+  "screenshots/evidence_gateC2/02_product_form_water.png": {
+    "href": "http://127.0.0.1:8025/odoo/product.template/25?db=demo_pos_accounting",
+    "tip": "Inventory: Product template Water (id 25)."
+  },
+  "screenshots/evidence_gateC2/03_product_variants_tshirt.png": {
+    "href": "http://127.0.0.1:8025/odoo/product.template/38?db=demo_pos_accounting",
+    "tip": "Inventory: T-shirt template (id 38) Variants tab."
+  },
+  "screenshots/evidence_gateC2/04_product_barcode_general.png": {
+    "href": "http://127.0.0.1:8025/odoo/product.template/25?db=demo_pos_accounting",
+    "tip": "Inventory: Product template 25 General tab (barcode)."
+  },
+  "screenshots/evidence_gateC2/05_pos_shop_products.png": {
+    "href": "http://127.0.0.1:8025/pos/ui/5/login?config_id=5&db=demo_pos_accounting",
+    "tip": "Point of Sale: POS shop floor POS-DXB-01 as cashier."
+  },
+  "screenshots/evidence_gateD1/01_inventory_quant_adjustment.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-436?db=demo_pos_accounting",
+    "tip": "Inventory: Physical Inventory / quantity adjustment (action 436)."
+  },
+  "screenshots/evidence_gateD1/02_product_on_hand_general.png": {
+    "href": "http://127.0.0.1:8025/odoo/product.template/25?db=demo_pos_accounting",
+    "tip": "Inventory: Product template 25 (on-hand / quantity)."
+  },
+  "screenshots/evidence_gateD1/03_stock_move_valuation.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-574?db=demo_pos_accounting",
+    "tip": "Inventory: Stock moves or valuation-related list (action 574)."
+  },
+  "screenshots/evidence_gateD1/04_account_move_stock_journal_1.png": {
+    "href": "http://127.0.0.1:8025/odoo/account.move/1?db=demo_pos_accounting",
+    "tip": "Accounting: Journal entry id 1 (stock journal in demo DB)."
+  },
+  "screenshots/evidence_gateD1/05_account_move_stock_journal_2.png": {
+    "href": "http://127.0.0.1:8025/odoo/account.move/2?db=demo_pos_accounting",
+    "tip": "Accounting: Journal entry id 2 (stock journal in demo DB)."
+  },
+  "screenshots/evidence_gateD1/06_pos_products_with_stock.png": {
+    "href": "http://127.0.0.1:8025/pos/ui/5/login?config_id=5&db=demo_pos_accounting",
+    "tip": "Point of Sale: POS shop as cashier (stock visible)."
+  },
+  "screenshots/evidence_gateD2/01_pos_order_combo_lines_payments.png": {
+    "href": "http://127.0.0.1:8025/odoo/pos.order/18?db=demo_pos_accounting",
+    "tip": "Point of Sale: Orders - POS order id 18 (combo lines)."
+  },
+  "screenshots/evidence_gateD2/02_pos_order_mug_payments.png": {
+    "href": "http://127.0.0.1:8025/odoo/pos.order/20?db=demo_pos_accounting",
+    "tip": "Point of Sale: Orders - POS order id 20 (mug)."
+  },
+  "screenshots/evidence_gateD2/03_pos_session_dxb_closed.png": {
+    "href": "http://127.0.0.1:8025/odoo/pos.session/18?db=demo_pos_accounting",
+    "tip": "Point of Sale: Session id 18 (POS-DXB-01 closed)."
+  },
+  "screenshots/evidence_gateD2/04_account_move_pos_session_dxb.png": {
+    "href": "http://127.0.0.1:8025/odoo/account.move/19?db=demo_pos_accounting",
+    "tip": "Accounting: Journal entry id 19 (POS session DXB)."
+  },
+  "screenshots/evidence_gateD2/05_stock_picking_pos_sale.png": {
+    "href": "http://127.0.0.1:8025/odoo/stock.picking/17?db=demo_pos_accounting",
+    "tip": "Inventory: Transfer / picking id 17."
+  },
+  "screenshots/evidence_gateD2/06_product_water_on_hand.png": {
+    "href": "http://127.0.0.1:8025/odoo/product.template/25?db=demo_pos_accounting",
+    "tip": "Inventory: Product template 25 Inventory tab after POS sales."
+  },
+  "screenshots/evidence_gateD2/07_pos_shop_floor_dxb.png": {
+    "href": "http://127.0.0.1:8025/pos/ui/5/login?config_id=5&db=demo_pos_accounting",
+    "tip": "Point of Sale: POS-DXB-01 floor (cashier)."
+  },
+  "screenshots/evidence_gateD2/08_pos_session_auh_closed.png": {
+    "href": "http://127.0.0.1:8025/odoo/pos.session/19?db=demo_pos_accounting",
+    "tip": "Point of Sale: Session id 19 (POS-AUH-01 closed)."
+  },
+  "screenshots/evidence_gateD2/09_account_move_pos_session_auh.png": {
+    "href": "http://127.0.0.1:8025/odoo/account.move/24?db=demo_pos_accounting",
+    "tip": "Accounting: Journal entry id 24 (POS session AUH)."
+  },
+  "screenshots/evidence_gateD3/01_accounting_dashboard_home.png": {
+    "href": "http://127.0.0.1:8025/odoo?db=demo_pos_accounting",
+    "tip": "Odoo app home (opened before accounting drill-down in capture)."
+  },
+  "screenshots/evidence_gateD3/02_pos_session_dxb_accounting.png": {
+    "href": "http://127.0.0.1:8025/odoo/pos.session/18?db=demo_pos_accounting",
+    "tip": "Point of Sale: Session 18 accounting view."
+  },
+  "screenshots/evidence_gateD3/03_journal_entry_session_dxb.png": {
+    "href": "http://127.0.0.1:8025/odoo/account.move/19?db=demo_pos_accounting",
+    "tip": "Accounting: Journal entry 19 (session DXB)."
+  },
+  "screenshots/evidence_gateD3/04_payment_move_combine_visa.png": {
+    "href": "http://127.0.0.1:8025/odoo/account.move/21?db=demo_pos_accounting",
+    "tip": "Accounting: Journal entry 21 (Visa combine payment)."
+  },
+  "screenshots/evidence_gateD3/05_payment_move_combine_mastercard.png": {
+    "href": "http://127.0.0.1:8025/odoo/account.move/20?db=demo_pos_accounting",
+    "tip": "Accounting: Journal entry 20 (Mastercard combine payment)."
+  },
+  "screenshots/evidence_gateD3/06_tax_return_report_action.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-598?db=demo_pos_accounting",
+    "tip": "Accounting: Tax Return client action (VAT201 form)."
+  },
+  "screenshots/evidence_gateD3/07_inventory_valuation_moves.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-574?db=demo_pos_accounting",
+    "tip": "Inventory: Valuation / stock layer reporting (action 574)."
+  },
+  "screenshots/evidence_gateD3/08_stock_moves_analysis.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-443?db=demo_pos_accounting",
+    "tip": "Inventory: Stock moves analysis (action 443)."
+  },
+  "screenshots/evidence_gateD3/09_pos_orders_analysis.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-665?db=demo_pos_accounting",
+    "tip": "Point of Sale: Orders analysis (action 665)."
+  },
+  "screenshots/evidence_gateD3/10_sales_reporting_analysis.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-679?db=demo_pos_accounting",
+    "tip": "Sales: Reporting analysis (action 679)."
+  },
+  "screenshots/evidence_gateD3/11_journal_entries_list.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-292?db=demo_pos_accounting",
+    "tip": "Accounting: Journal entries list (action 292)."
+  },
+  "screenshots/evidence_gateD4/01_website_shop.png": {
+    "href": "http://127.0.0.1:8025/shop?db=demo_pos_accounting",
+    "tip": "Website: Shop catalog (frontend)."
+  },
+  "screenshots/evidence_gateD4/02_product_page_water.png": {
+    "href": "http://127.0.0.1:8025/shop/ret-g2-bev-wat500-still-spring-water-500-ml-25?db=demo_pos_accounting",
+    "tip": "Website: Product page RET-G2-BEV-WAT500."
+  },
+  "screenshots/evidence_gateD4/cart_order_a.png": {
+    "href": "http://127.0.0.1:8025/shop/cart?db=demo_pos_accounting",
+    "tip": "Website: Shopping cart (rebuild order A flow if empty)."
+  },
+  "screenshots/evidence_gateD4/cart_order_b.png": {
+    "href": "http://127.0.0.1:8025/shop/cart?db=demo_pos_accounting",
+    "tip": "Website: Shopping cart (rebuild order B flow if empty)."
+  },
+  "screenshots/evidence_gateD4/checkout_payment_order_a.png": {
+    "href": "http://127.0.0.1:8025/shop/payment?db=demo_pos_accounting",
+    "tip": "Website: Checkout payment step."
+  },
+  "screenshots/evidence_gateD4/checkout_payment_order_b.png": {
+    "href": "http://127.0.0.1:8025/shop/payment?db=demo_pos_accounting",
+    "tip": "Website: Checkout payment step."
+  },
+  "screenshots/evidence_gateD4/confirmation_order_a.png": {
+    "href": "http://127.0.0.1:8025/shop/confirmation?db=demo_pos_accounting",
+    "tip": "Website: Order confirmation (requires completed checkout session)."
+  },
+  "screenshots/evidence_gateD4/confirmation_order_b.png": {
+    "href": "http://127.0.0.1:8025/shop/confirmation?db=demo_pos_accounting",
+    "tip": "Website: Order confirmation (requires completed checkout session)."
+  },
+  "screenshots/evidence_gateD4/10_sales_orders_list.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-694?db=demo_pos_accounting",
+    "tip": "Sales app: Orders / Quotations list (action 694)."
+  },
+  "screenshots/evidence_gateD4/11_sale_order_form.png": {
+    "href": "http://127.0.0.1:8025/odoo/sale.order/14?db=demo_pos_accounting",
+    "tip": "Sales: Order S00014 form (id 14 in demo DB)."
+  },
+  "screenshots/evidence_gateD4/12_stock_picking_from_so.png": {
+    "href": "http://127.0.0.1:8025/odoo/stock.picking/25?db=demo_pos_accounting",
+    "tip": "Inventory: Delivery / picking id 25 (eCommerce SO in demo DB)."
+  },
+  "screenshots/evidence_gateD4/13_journal_entries.png": {
+    "href": "http://127.0.0.1:8025/odoo/action-292?db=demo_pos_accounting",
+    "tip": "Accounting: Journal entries (action 292)."
+  }
+}
+  </script>
+
+  <footer>
+    <div class="wrap">
+      Open this file from the module: <code>commercial_demo_story/static/description/build_story.html</code> so relative links resolve.
+      Screenshots: <code>screenshots/</code> · Step docs: see repo <code>collections/steps/</code>
+      <br /><span style="display:inline-block;margin-top:0.6rem">Odoo deep links use port <strong>8025</strong> and database <code>demo_pos_accounting</code> (see <code>config/projects/odoo_demo_pos_accounting.conf</code>).</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var dlg = document.getElementById("lightbox");
+      var img = document.getElementById("lightbox-img");
+      var cap = document.getElementById("lightbox-cap");
+      var mapEl = document.getElementById("evidence-odoo-map");
+      var shotMap = mapEl ? JSON.parse(mapEl.textContent) : {};
+
+      function odooOpenHelp(href) {
+        var base =
+          "How to open: start Odoo on 127.0.0.1:8025 (see config/projects/odoo_demo_pos_accounting.conf), then click Open in Odoo. ";
+        var db = "The URL includes db=demo_pos_accounting so the correct database is selected. ";
+        var auth =
+          "If a login page appears, use user admin and password admin, then you should land on the screen below the capture. ";
+        if (href && href.indexOf("/shop") !== -1) {
+          return (
+            base +
+            db +
+            "This is the public website / shop; you may stay logged out until checkout or redirects ask for a user."
+          );
+        }
+        return base + db + auth;
+      }
+
+      function fullOdooTooltip(entry) {
+        var where = entry.tip || "Linked Odoo screen.";
+        return where + " — " + odooOpenHelp(entry.href);
+      }
+
+      function injectOdooLinks() {
+        document.querySelectorAll("[data-gallery] figure").forEach(function (fig, idx) {
+          if (fig.querySelector(".odoo-shot-link")) return;
+          var im = fig.querySelector("img");
+          if (!im) return;
+          var src = im.getAttribute("src");
+          var entry = shotMap[src];
+          if (!entry || !entry.href) return;
+          var tt = fullOdooTooltip(entry);
+          im.removeAttribute("title");
+
+          var panel = document.createElement("div");
+          panel.className = "odoo-hover-panel";
+          panel.setAttribute("role", "tooltip");
+          var tipId = "odoo-evidence-tip-" + idx;
+          panel.id = tipId;
+          panel.textContent = tt;
+
+          var p = document.createElement("p");
+          p.className = "odoo-shot-link";
+          var a = document.createElement("a");
+          a.href = entry.href;
+          a.target = "_blank";
+          a.rel = "noopener noreferrer";
+          a.setAttribute("aria-describedby", tipId);
+          a.textContent = "Open in Odoo";
+          p.appendChild(a);
+          fig.appendChild(p);
+          fig.appendChild(panel);
+        });
+      }
+
+      injectOdooLinks();
+
+      document.querySelectorAll("[data-gallery] img").forEach(function (el) {
+        el.addEventListener("click", function () {
+          img.src = el.getAttribute("src");
+          img.alt = el.getAttribute("alt") || "";
+          var fig = el.closest("figure");
+          cap.textContent = fig ? fig.querySelector("figcaption").textContent : "";
+          dlg.showModal();
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

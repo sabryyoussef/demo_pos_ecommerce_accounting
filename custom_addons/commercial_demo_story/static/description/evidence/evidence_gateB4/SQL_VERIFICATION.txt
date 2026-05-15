@@ -1,0 +1,48 @@
+Gate B4 — SQL verification (demo_pos_accounting)
+Generated: 2026-05-13
+
+-- Journals for company_id=1 (baseline + Gate B4)
+SELECT id, name->>'en_US' AS name, code, type, currency_id
+FROM account_journal WHERE company_id = 1 ORDER BY id;
+
+-- POS payment methods
+SELECT id, name->>'en_US' AS name, journal_id FROM pos_payment_method ORDER BY id;
+
+-- Duplicate journal codes per company (must be 0 rows)
+SELECT code, company_id, COUNT(*) AS c
+FROM account_journal GROUP BY code, company_id HAVING COUNT(*) > 1;
+
+-- No accounting transactions (must be 0)
+SELECT COUNT(*) AS account_move FROM account_move;
+SELECT COUNT(*) AS account_move_line FROM account_move_line;
+SELECT COUNT(*) AS account_bank_statement FROM account_bank_statement;
+SELECT COUNT(*) AS account_bank_statement_line FROM account_bank_statement_line;
+SELECT COUNT(*) AS account_payment FROM account_payment;
+
+-- Stripe-related config parameters (must be empty for live keys)
+SELECT key, length(value) AS value_len FROM ir_config_parameter
+WHERE key IN ('payment_stripe.publishable_key', 'payment_stripe.secret_key');
+
+-- Summary counts (expected after Gate B4)
+-- account_journal company 1: 15 rows (10 default + 5 Gate B4)
+-- pos_payment_method: 4 rows
+-- dupes: 0
+-- moves/lines/statements/payments: 0
+
+================================================================================
+Executed snapshot (2026-05-13)
+================================================================================
+
+-- Journals (company_id=1): 15 rows; Gate B4 codes BMAIN, PCASH, PVISA, MCARD, AQSTR with currency_id=128 (AED).
+
+-- pos_payment_method: 4 rows (ids 7–10) linked to journals 16–19.
+
+-- Duplicate (code, company_id): 0 rows.
+
+-- account_move / account_move_line / account_bank_statement / account_bank_statement_line / account_payment: all 0.
+
+-- ir_config_parameter keys payment_stripe.publishable_key / payment_stripe.secret_key: not present (no rows).
+
+-- product_template count: 7 (pre-existing Odoo/POS defaults from earlier gates; Gate B4 script did not create products.)
+
+-- pos_config: 0 (no POS branch/session configuration in this gate).

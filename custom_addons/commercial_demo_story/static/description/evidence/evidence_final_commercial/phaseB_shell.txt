@@ -1,0 +1,4 @@
+ECOM_USER id=12 EMP id=9
+WEB_SO id=13 name='S00013' ref=FIN-WEB-MUG total=68.25 state=sale
+WEB_SO id=14 name='S00014' ref=FIN-WEB-SHIRT total=51.45 state=sale
+COMMIT_OK_PHASE_B

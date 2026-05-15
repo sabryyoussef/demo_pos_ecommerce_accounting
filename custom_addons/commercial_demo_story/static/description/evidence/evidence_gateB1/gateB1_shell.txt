@@ -1,0 +1,20 @@
+2026-05-13 19:29:56,867 37076 INFO ? odoo: Odoo version 19.0 
+2026-05-13 19:29:56,867 37076 INFO ? odoo: Using configuration file at /mnt/sabry_backup/odoo_base/base_odoo_19/config/projects/odoo_demo_pos_accounting.conf 
+2026-05-13 19:29:56,867 37076 INFO ? odoo: addons paths: _NamespacePath(['/home/sabry3/odoo_ssd/odoo19/odoo19/odoo/addons', '/mnt/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/.filestore/addons/19.0', '/home/sabry3/odoo_ssd/odoo19/odoo19/addons', '/home/sabry3/odoo_ssd/odoo19/odoo19/enterprise']) 
+2026-05-13 19:29:56,868 37076 INFO ? odoo: database: odoo19@localhost:5432 
+2026-05-13 19:29:57,211 37076 INFO ? odoo.service.server: Initiating shutdown 
+2026-05-13 19:29:57,211 37076 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-05-13 19:29:57,244 37076 INFO demo_pos_accounting odoo.modules.loading: loading 1 modules... 
+2026-05-13 19:29:57,247 37076 INFO demo_pos_accounting odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-05-13 19:29:57,324 37076 INFO demo_pos_accounting odoo.modules.loading: loading 184 modules... 
+2026-05-13 19:29:58,350 37076 INFO demo_pos_accounting odoo.modules.loading: 184 modules loaded in 1.03s, 0 queries (+0 extra) 
+2026-05-13 19:29:58,827 37076 INFO demo_pos_accounting odoo.modules.loading: Modules loaded. 
+2026-05-13 19:29:58,922 37076 INFO demo_pos_accounting odoo.registry: Registry loaded in 1.704s 
+COMPANY Horizon Retail Group LLC AED 100345678900003 12 31
+TAX_SALE_5_COUNT 8
+TAX_SALE_0_COUNT 4
+TAX_EXEMPT_LIKE ['0% EX', '0% EXT', 'Out of Scope']
+CHART_ACCOUNTS 177
+FISCAL_POSITIONS 8 ['Dubai', 'Abu Dhabi', 'Sharjah', 'Ajman', 'Umm Al Quwain', 'Ras Al-Khaima', 'Fujairah', 'Non-UAE']
+VAT201_LINES 24
+ADMIN_PASSWORD_ROTATED admin

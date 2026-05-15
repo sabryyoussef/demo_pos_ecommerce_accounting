@@ -1,0 +1,224 @@
+2026-05-13 18:16:19,071 17167 WARNING ? odoo.tools.config: option addons_path, invalid addons directory '/mnt/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/custom_addons', skipped 
+2026-05-13 18:16:19,071 17167 INFO ? odoo: Odoo version 19.0 
+2026-05-13 18:16:19,072 17167 INFO ? odoo: Using configuration file at /mnt/sabry_backup/odoo_base/base_odoo_19/config/projects/odoo_demo_pos_accounting.conf 
+2026-05-13 18:16:19,072 17167 INFO ? odoo: addons paths: _NamespacePath(['/home/sabry3/odoo_ssd/odoo19/odoo19/odoo/addons', '/mnt/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/.filestore/addons/19.0', '/home/sabry3/odoo_ssd/odoo19/odoo19/addons', '/home/sabry3/odoo_ssd/odoo19/odoo19/enterprise']) 
+2026-05-13 18:16:19,072 17167 INFO ? odoo: database: odoo19@localhost:5432 
+2026-05-13 18:16:19,342 17167 INFO ? odoo.service.server: HTTP service (werkzeug) running on localhost:8025 
+2026-05-13 18:16:19,361 17167 INFO demo_pos_accounting odoo.modules.loading: loading 1 modules... 
+2026-05-13 18:16:19,365 17167 INFO demo_pos_accounting odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-05-13 18:16:19,436 17167 INFO demo_pos_accounting odoo.modules.loading: loading 177 modules... 
+2026-05-13 18:16:20,198 17167 INFO demo_pos_accounting odoo.modules.loading: 177 modules loaded in 0.76s, 0 queries (+0 extra) 
+2026-05-13 18:16:20,487 17167 INFO demo_pos_accounting odoo.modules.loading: Modules loaded. 
+2026-05-13 18:16:20,545 17167 INFO demo_pos_accounting odoo.registry: Registry loaded in 1.201s 
+2026-05-13 18:16:37,234 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_http: Generating routing map for key 1 
+2026-05-13 18:16:37,281 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:16:37] "GET /web HTTP/1.1" 303 - 9 0.007 0.059
+2026-05-13 18:16:38,016 17167 INFO demo_pos_accounting odoo.http: Session expired 
+2026-05-13 18:16:38,017 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:16:38] "GET /pos/ui HTTP/1.1" 303 - 4 0.003 0.012
+2026-05-13 18:17:20,676 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) starting 
+2026-05-13 18:17:21,484 17167 INFO demo_pos_accounting odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-05-13 18:17:21,531 17167 INFO demo_pos_accounting odoo.addons.api_doc.models.ir_attachment: GC'd 0 /doc cached index 
+2026-05-13 18:17:21,589 17167 INFO demo_pos_accounting odoo.addons.base.models.res_users: GC 'res.users.apikeys' delete 0 entries 
+2026-05-13 18:17:21,600 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Notification: Delete Notifications older than 6 Months' (5) starting 
+2026-05-13 18:17:21,632 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Notification: Delete Notifications older than 6 Months' (5) fully done (#loop 1; done 0; remaining 0; duration 0.03s) 
+2026-05-13 18:17:21,642 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Mail: Post scheduled messages' (7) starting 
+2026-05-13 18:17:21,651 17167 INFO demo_pos_accounting odoo.addons.mail.models.mail_scheduled_message: Posting 0 scheduled messages 
+2026-05-13 18:17:21,654 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Mail: Post scheduled messages' (7) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:21,658 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Notification: Notify scheduled messages' (8) starting 
+2026-05-13 18:17:21,671 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Notification: Notify scheduled messages' (8) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:21,675 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Mail: send web push notification' (9) starting 
+2026-05-13 18:17:21,685 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Mail: send web push notification' (9) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:21,690 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Discuss: channel member unmute' (10) starting 
+2026-05-13 18:17:21,700 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Discuss: channel member unmute' (10) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:21,704 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (12) starting 
+2026-05-13 18:17:21,715 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'SMS: SMS Queue Manager' (12) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:21,720 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (13) starting 
+2026-05-13 18:17:21,730 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Snailmail: process letters queue' (13) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:21,735 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'AI Embedding: Generate Embeddings' (14) starting 
+2026-05-13 18:17:21,746 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'AI Embedding: Generate Embeddings' (14) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:21,750 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'AI Agent Sources: Process Sources' (15) starting 
+2026-05-13 18:17:21,765 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'AI Agent Sources: Process Sources' (15) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:21,770 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'AI Fields: Compute AI fields' (16) starting 
+2026-05-13 18:17:21,780 17167 INFO demo_pos_accounting odoo.addons.ai_fields.models.ir_model_fields: AI Fields cron skipped, openAI key is missing 
+2026-05-13 18:17:21,783 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'AI Fields: Compute AI fields' (16) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:21,787 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Calendar: Event Reminder' (17) starting 
+2026-05-13 18:17:21,799 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Calendar: Event Reminder' (17) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:21,803 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Product Images: Get product images from Barcode Lookup' (18) starting 
+2026-05-13 18:17:21,820 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Product Images: Get product images from Barcode Lookup' (18) fully done (#loop 1; done 0; remaining 0; duration 0.02s) 
+2026-05-13 18:17:21,824 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Payment: Post-process transactions' (20) starting 
+2026-05-13 18:17:21,835 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Payment: Post-process transactions' (20) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:21,843 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Send invoices automatically' (22) starting 
+2026-05-13 18:17:21,858 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Send invoices automatically' (22) fully done (#loop 1; done 0; remaining 0; duration 0.02s) 
+2026-05-13 18:17:21,862 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'HR Employee: Notify Expiring Contract or Work Permit' (25) starting 
+2026-05-13 18:17:21,877 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'HR Employee: Notify Expiring Contract or Work Permit' (25) fully done (#loop 1; done 0; remaining 0; duration 0.02s) 
+2026-05-13 18:17:21,882 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'HR Employee: Update Current Version' (26) starting 
+2026-05-13 18:17:21,885 17167 INFO demo_pos_accounting odoo.addons.base.models.res_users: GC 'auth_totp.device' delete 0 entries 
+2026-05-13 18:17:21,896 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'HR Employee: Update Current Version' (26) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:21,900 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Procurement: run scheduler' (27) starting 
+2026-05-13 18:17:21,902 17167 INFO demo_pos_accounting odoo.addons.sms.models.sms_sms: GC'd 0 sms marked for deletion 
+2026-05-13 18:17:21,944 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Procurement: run scheduler' (27) fully done (#loop 1; done 4; remaining 0; duration 0.04s) 
+2026-05-13 18:17:21,955 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Disable unused snippets assets' (28) starting 
+2026-05-13 18:17:22,088 17167 INFO demo_pos_accounting odoo.addons.base.models.res_users: GC'd 0 user log entries 
+2026-05-13 18:17:22,248 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_attachment: filestore gc 430 checked, 0 removed 
+2026-05-13 18:17:22,315 17167 INFO demo_pos_accounting odoo.addons.base.models.res_device: GC device logs delete 0 entries 
+2026-05-13 18:17:22,354 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Base: Auto-vacuum internal data' (1) fully done (#loop 1; done 169; remaining 0; duration 1.68s) 
+2026-05-13 18:17:22,377 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Website Visitor : clean inactive visitors' (29) starting 
+2026-05-13 18:17:22,391 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Website Visitor : clean inactive visitors' (29) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,394 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Try to reconcile automatically your statement lines' (30) starting 
+2026-05-13 18:17:22,401 17167 INFO demo_pos_accounting odoo.addons.account_accountant.models.account_bank_statement: _cron_try_auto_reconcile_statement_lines found 0 statement lines 
+2026-05-13 18:17:22,403 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Try to reconcile automatically your statement lines' (30) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,408 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Currency: rate update' (31) starting 
+2026-05-13 18:17:22,421 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Currency: rate update' (31) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,424 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Skills: Add an activity to employees with missing or expiring certifications' (32) starting 
+2026-05-13 18:17:22,434 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Skills: Add an activity to employees with missing or expiring certifications' (32) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,438 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Purchase reminder' (33) starting 
+2026-05-13 18:17:22,465 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Purchase reminder' (33) fully done (#loop 1; done 0; remaining 0; duration 0.03s) 
+2026-05-13 18:17:22,471 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Stock Account: Inventory Valuation Closing' (34) starting 
+2026-05-13 18:17:22,480 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Stock Account: Inventory Valuation Closing' (34) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,484 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Account: Journal online sync' (35) starting 
+2026-05-13 18:17:22,493 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Account: Journal online sync' (35) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,497 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Account: Journal online sync reminder' (37) starting 
+2026-05-13 18:17:22,507 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Account: Journal online sync reminder' (37) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,520 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Account: Journal online sync cleanup unused connections' (38) starting 
+2026-05-13 18:17:22,530 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Account: Journal online sync cleanup unused connections' (38) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,533 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Send account reports automatically' (39) starting 
+2026-05-13 18:17:22,543 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Send account reports automatically' (39) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,546 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Generate or refresh account return for every companies' (40) starting 
+2026-05-13 18:17:22,555 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Generate or refresh account return for every companies' (40) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,559 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'CRM: enrich leads (IAP)' (41) starting 
+2026-05-13 18:17:22,574 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'CRM: enrich leads (IAP)' (41) fully done (#loop 1; done 0; remaining 0; duration 0.02s) 
+2026-05-13 18:17:22,581 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Invoice OCR: Update All Status' (46) starting 
+2026-05-13 18:17:22,592 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Invoice OCR: Update All Status' (46) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,596 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Invoice OCR: Validate Invoices' (47) starting 
+2026-05-13 18:17:22,605 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Invoice OCR: Validate Invoices' (47) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,611 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Sale Pdf Quote Builder: assign form fields to documents post upgrade' (48) starting 
+2026-05-13 18:17:22,623 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Sale Pdf Quote Builder: assign form fields to documents post upgrade' (48) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,627 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'eCommerce: send email to customers about their abandoned cart' (49) starting 
+2026-05-13 18:17:22,637 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'eCommerce: send email to customers about their abandoned cart' (49) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,641 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Product: send email regarding products availability' (50) starting 
+2026-05-13 18:17:22,656 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Product: send email regarding products availability' (50) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,659 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) starting 
+2026-05-13 18:17:22,669 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Mail: Email Queue Manager' (3) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,673 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Users: Notify About Unregistered Users' (11) starting 
+2026-05-13 18:17:22,684 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Users: Notify About Unregistered Users' (11) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:17:22,695 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) starting 
+2026-05-13 18:17:22,711 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Base: Portal Users Deletion' (2) fully done (#loop 1; done 0; remaining 0; duration 0.02s) 
+2026-05-13 18:17:23,435 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Disable unused snippets assets' (28) fully done (#loop 1; done 0; remaining 0; duration 1.48s) 
+2026-05-13 18:24:23,013 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Payment: Post-process transactions' (20) starting 
+2026-05-13 18:24:23,025 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Payment: Post-process transactions' (20) fully done (#loop 1; done 0; remaining 0; duration 0.01s) 
+2026-05-13 18:34:23,546 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Payment: Post-process transactions' (20) starting 
+2026-05-13 18:34:23,645 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Payment: Post-process transactions' (20) fully done (#loop 1; done 0; remaining 0; duration 0.10s) 
+2026-05-13 18:43:50,875 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Payment: Post-process transactions' (20) starting 
+2026-05-13 18:43:50,983 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Payment: Post-process transactions' (20) fully done (#loop 1; done 0; remaining 0; duration 0.11s) 
+2026-05-13 18:51:47,023 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:51:47] "GET / HTTP/1.1" 200 - 81 0.054 0.458
+2026-05-13 18:51:47,133 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:51:47] "GET /web/static/src/libs/fontawesome/fonts/fontawesome-webfont.woff2?v=4.7.0 HTTP/1.1" 200 - 1 0.003 0.039
+2026-05-13 18:51:47,165 17167 INFO demo_pos_accounting odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/1/c01cb9a/web.assets_frontend_minimal.min.js (id:734) 
+2026-05-13 18:51:47,171 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:51:47] "GET /web/assets/1/c01cb9a/web.assets_frontend_minimal.min.js HTTP/1.1" 200 - 12 0.008 0.071
+2026-05-13 18:51:48,889 17167 INFO demo_pos_accounting odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/1/4947673/web.assets_frontend.min.css (id:735) 
+2026-05-13 18:51:48,897 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:51:48] "GET /web/assets/1/4947673/web.assets_frontend.min.css HTTP/1.1" 200 - 10 0.031 1.775
+2026-05-13 18:51:48,935 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:51:48] "GET /web/image/website/1/favicon?unique=da84f5b HTTP/1.1" 200 - 7 0.004 0.021
+2026-05-13 18:51:49,318 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:51:49] "GET /web/static/lib/odoo_ui_icons/fonts/odoo_ui_icons.woff2 HTTP/1.1" 200 - 1 0.002 0.049
+2026-05-13 18:51:49,329 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:51:49] "GET /web/static/img/odoo_logo_tiny.png HTTP/1.1" 200 - 1 0.004 0.048
+2026-05-13 18:51:49,334 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:51:49] "GET /web/image/website/1/logo/My%20Website?unique=da84f5b HTTP/1.1" 200 - 5 0.009 0.049
+2026-05-13 18:51:50,115 17167 INFO demo_pos_accounting odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/1/4306927/web.assets_frontend_lazy.min.js (id:736) 
+2026-05-13 18:51:50,121 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:51:50] "GET /web/assets/1/4306927/web.assets_frontend_lazy.min.js HTTP/1.1" 200 - 10 0.007 0.771
+2026-05-13 18:51:50,494 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:51:50] "GET /website/translations?hash=&lang=en_US HTTP/1.1" 200 - 3 0.004 0.022
+2026-05-13 18:51:51,683 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:51:51] "GET /web/login HTTP/1.1" 200 - 27 0.022 0.077
+2026-05-13 18:51:51,953 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:51:51] "GET /website/translations?hash=b9a25a209bf9e2fb68fd6445184c644983a33ff7&lang=en_US HTTP/1.1" 200 - 2 0.002 0.014
+2026-05-13 18:51:55,299 17167 INFO demo_pos_accounting odoo.addons.base.models.res_users: Login successful for login:admin from 127.0.0.1 
+2026-05-13 18:51:55,354 17167 INFO demo_pos_accounting odoo.registry: Caches invalidated, signaling through the database: ['default'] 
+2026-05-13 18:51:55,359 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:51:55] "POST /web/login HTTP/1.1" 303 - 77 0.040 0.551
+2026-05-13 18:51:55,382 17167 INFO demo_pos_accounting odoo.addons.base.models.res_device: User 2 inserts device log (KfWqB2OTDJo-TKB5I9Q57vUj0CXTIKu0IrQp3JLIbY) 
+2026-05-13 18:51:55,884 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:51:55] "GET /odoo HTTP/1.1" 200 - 127 0.041 0.465
+2026-05-13 18:51:57,945 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:51:57] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.011 0.061
+2026-05-13 18:51:58,005 17167 INFO demo_pos_accounting odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/b48119d/web.assets_web.min.css (id:737) 
+2026-05-13 18:51:58,024 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:51:58] "GET /web/assets/b48119d/web.assets_web.min.css HTTP/1.1" 200 - 31 0.038 2.077
+2026-05-13 18:52:00,355 17167 INFO demo_pos_accounting odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/7bd3505/web.assets_web.min.js (id:738) 
+2026-05-13 18:52:00,377 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:00] "GET /web/assets/7bd3505/web.assets_web.min.js HTTP/1.1" 200 - 30 0.023 4.446
+2026-05-13 18:52:00,402 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:52:00] "GET /mail/static/lib/idb-keyval/idb-keyval.js HTTP/1.1" 200 - 0 0.000 0.003
+2026-05-13 18:52:00,462 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:00] "GET /web/webclient/load_menus HTTP/1.1" 200 - 24 0.023 0.042
+2026-05-13 18:52:00,492 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:00] "GET /odoo/offline HTTP/1.1" 200 - 6 0.014 0.048
+2026-05-13 18:52:00,494 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:00] "GET /odoo HTTP/1.1" 200 - 28 0.035 0.030
+2026-05-13 18:52:02,310 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:52:02] "GET /web/static/img/favicon.ico HTTP/1.1" 200 - 0 0.000 0.044
+2026-05-13 18:52:02,315 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:52:02] "GET /web/static/img/odoo-icon-ios.png HTTP/1.1" 200 - 0 0.000 0.055
+2026-05-13 18:52:02,328 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:02] "GET /web/service-worker.js HTTP/1.1" 200 - 1 0.003 0.048
+2026-05-13 18:52:02,339 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:02] "GET /web/webclient/translations?hash=&lang=en_US HTTP/1.1" 200 - 1 0.010 0.052
+2026-05-13 18:52:02,361 17167 INFO demo_pos_accounting odoo.addons.partner_autocomplete.models.res_company: Starting enrich of company My Company (1) 
+2026-05-13 18:52:03,728 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:52:03] "GET /ai/static/description/icon.png HTTP/1.1" 200 - 0 0.000 1.216
+2026-05-13 18:52:03,758 17167 INFO demo_pos_accounting odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/824499b/web.assets_web_print.min.css (id:739) 
+2026-05-13 18:52:03,781 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:03] "GET /web/bundle/web_tour.interactive?lang=en_US HTTP/1.1" 200 - 3 0.008 1.411
+2026-05-13 18:52:03,823 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:03] "GET /web/image/res.partner/3/avatar_128?unique=1778687514000 HTTP/1.1" 200 - 14 0.024 0.051
+2026-05-13 18:52:03,830 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:52:03] "GET /web_enterprise/static/img/background-light.svg HTTP/1.1" 200 - 0 0.000 0.045
+2026-05-13 18:52:03,837 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:03] "GET /web/assets/824499b/web.assets_web_print.min.css HTTP/1.1" 200 - 27 0.051 3.388
+2026-05-13 18:52:03,841 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:03] "POST /web/dataset/call_kw/res.company/iap_enrich_auto#res.company.iap_enrich_auto HTTP/1.1" 200 - 26 0.039 1.456
+2026-05-13 18:52:03,930 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:03] "GET /web/image?model=res.users&field=avatar_128&id=2 HTTP/1.1" 200 - 8 0.055 0.037
+2026-05-13 18:52:03,940 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:03] "POST /mail/data HTTP/1.1" 200 - 33 0.113 1.331
+2026-05-13 18:52:03,966 17167 INFO demo_pos_accounting odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/b2739e6/bus.websocket_worker_assets.min.js (id:740) 
+2026-05-13 18:52:03,984 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:03] "GET /bus/websocket_worker_bundle?v=19.0-2 HTTP/1.1" 200 - 8 0.036 1.452
+2026-05-13 18:52:03,995 17167 INFO demo_pos_accounting odoo.addons.base.models.assetsbundle: Generating a new asset bundle attachment /web/assets/33a5876/web_tour.interactive.min.js (id:741) 
+2026-05-13 18:52:04,008 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:04] "GET /web/assets/33a5876/web_tour.interactive.min.js HTTP/1.1" 200 - 10 0.027 0.156
+2026-05-13 18:52:04,037 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:04] "GET /websocket?version=19.0-2 HTTP/1.1" 101 - 1 0.002 0.014
+2026-05-13 18:52:04,396 17167 INFO ? odoo.addons.bus.models.bus: Bus.loop listen imbus on db postgres 
+2026-05-13 18:52:04,538 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:04] "POST /mail/data HTTP/1.1" 200 - 42 0.041 0.052
+2026-05-13 18:52:04,606 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:04] "POST /web/dataset/call_kw/discuss.channel/channel_fetched#discuss.channel.channel_fetched HTTP/1.1" 200 - 12 0.009 0.025
+2026-05-13 18:52:06,656 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:06] "POST /web/action/load HTTP/1.1" 200 - 10 0.017 0.027
+2026-05-13 18:52:06,776 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:06] "POST /web/dataset/call_kw/pos.config/get_views#pos.config.get_views HTTP/1.1" 200 - 50 0.029 0.044
+2026-05-13 18:52:06,794 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:06] "POST /web/dataset/call_kw/pos.config/web_search_read#pos.config.web_search_read HTTP/1.1" 200 - 2 0.001 0.004
+2026-05-13 18:52:06,800 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:06] "POST /web/dataset/call_kw/pos.config/get_pos_kanban_view_state#pos.config.get_pos_kanban_view_state HTTP/1.1" 200 - 7 0.003 0.006
+2026-05-13 18:52:06,880 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:52:06] "GET /point_of_sale/static/img/furniture-icon.png HTTP/1.1" 200 - 0 0.000 0.003
+2026-05-13 18:52:06,881 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:52:06] "GET /point_of_sale/static/img/clothes-icon.png HTTP/1.1" 200 - 0 0.000 0.005
+2026-05-13 18:52:06,888 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:52:06] "GET /point_of_sale/static/img/bakery-icon.png HTTP/1.1" 200 - 0 0.000 0.008
+2026-05-13 18:52:06,889 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:52:06] "GET /point_of_sale/static/img/cocktail-icon.png HTTP/1.1" 200 - 0 0.000 0.007
+2026-05-13 18:52:06,889 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:52:06] "GET /point_of_sale/static/img/restaurant-icon.png HTTP/1.1" 200 - 0 0.000 0.008
+2026-05-13 18:52:06,889 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:52:06] "GET /point_of_sale/static/img/retail-icon.png HTTP/1.1" 200 - 0 0.000 0.005
+2026-05-13 18:52:11,627 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:11] "POST /web/action/load HTTP/1.1" 200 - 9 0.011 0.023
+2026-05-13 18:52:11,730 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:11] "POST /web/dataset/call_kw/pos.order/get_views#pos.order.get_views HTTP/1.1" 200 - 49 0.021 0.062
+2026-05-13 18:52:11,756 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:11] "POST /web/dataset/call_kw/pos.order/web_search_read#pos.order.web_search_read HTTP/1.1" 200 - 6 0.004 0.007
+2026-05-13 18:52:11,814 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:11] "POST /web/dataset/call_kw/res.currency/read#res.currency.read HTTP/1.1" 200 - 10 0.008 0.013
+2026-05-13 18:52:11,859 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:11] "POST /web/dataset/call_kw/res.users/has_group#res.users.has_group HTTP/1.1" 200 - 1 0.001 0.003
+2026-05-13 18:52:11,891 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:52:11] "GET /web/static/img/empty_folder.svg HTTP/1.1" 200 - 0 0.000 0.003
+2026-05-13 18:52:11,945 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:11] "GET /web/image/hr.employee/1/avatar_128 HTTP/1.1" 200 - 10 0.012 0.015
+2026-05-13 18:52:11,950 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:11] "GET /web/image/hr.employee/3/avatar_128 HTTP/1.1" 200 - 5 0.007 0.024
+2026-05-13 18:52:11,952 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:11] "GET /web/image/hr.employee/5/avatar_128 HTTP/1.1" 200 - 6 0.006 0.028
+2026-05-13 18:52:11,954 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:11] "GET /web/image/hr.employee/4/avatar_128 HTTP/1.1" 200 - 5 0.008 0.027
+2026-05-13 18:52:11,955 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:52:11] "GET /web/image/hr.employee/2/avatar_128 HTTP/1.1" 200 - 5 0.006 0.030
+2026-05-13 18:53:11,087 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:11] "POST /web/action/load HTTP/1.1" 200 - 9 0.004 0.011
+2026-05-13 18:53:11,637 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:11] "POST /web/dataset/call_kw/res.config.settings/get_views#res.config.settings.get_views HTTP/1.1" 200 - 404 0.096 0.428
+2026-05-13 18:53:11,788 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:11] "POST /web/dataset/call_kw/res.config.settings/onchange#res.config.settings.onchange HTTP/1.1" 200 - 238 0.046 0.068
+2026-05-13 18:53:11,997 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:11] "POST /base_setup/demo_active HTTP/1.1" 200 - 3 0.003 0.003
+2026-05-13 18:53:12,011 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:12] "POST /base_setup/data HTTP/1.1" 200 - 6 0.003 0.003
+2026-05-13 18:53:12,064 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:53:12] "GET /base/static/description/settings.png HTTP/1.1" 200 - 0 0.000 0.006
+2026-05-13 18:53:12,066 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:53:12] "GET /website/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.005
+2026-05-13 18:53:12,067 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:53:12] "GET /crm/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.008
+2026-05-13 18:53:12,068 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:53:12] "GET /sale_management/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.008
+2026-05-13 18:53:12,069 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:53:12] "GET /calendar/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.008
+2026-05-13 18:53:12,070 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:53:12] "GET /purchase/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.008
+2026-05-13 18:53:12,075 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:53:12] "GET /account/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.004
+2026-05-13 18:53:12,076 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:53:12] "GET /stock/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.007
+2026-05-13 18:53:12,076 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:53:12] "GET /hr/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.004
+2026-05-13 18:53:12,079 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:53:12] "GET /point_of_sale/static/description/icon.png HTTP/1.1" 200 - 0 0.000 0.006
+2026-05-13 18:53:16,339 17167 INFO demo_pos_accounting odoo.registry: Caches invalidated, signaling through the database: ['default'] 
+2026-05-13 18:53:16,344 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:16] "POST /web/dataset/call_kw/res.config.settings/web_save#res.config.settings.web_save HTTP/1.1" 200 - 190 0.053 0.091
+2026-05-13 18:53:16,407 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:16] "POST /web/action/load HTTP/1.1" 200 - 14 0.004 0.006
+2026-05-13 18:53:16,652 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:16] "POST /web/dataset/call_kw/res.company/get_views#res.company.get_views HTTP/1.1" 200 - 429 0.081 0.152
+2026-05-13 18:53:16,669 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:16] "POST /web/dataset/call_kw/res.company/web_search_read#res.company.web_search_read HTTP/1.1" 200 - 5 0.002 0.006
+2026-05-13 18:53:16,705 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:53:16] "GET /web/static/img/openhand.cur HTTP/1.1" 200 - 0 0.000 0.003
+2026-05-13 18:53:18,002 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:18] "POST /web/dataset/call_kw/res.company/web_read#res.company.web_read HTTP/1.1" 200 - 11 0.006 0.018
+2026-05-13 18:53:18,053 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:53:18] "GET /partner_autocomplete/static/lib/jsvat.js HTTP/1.1" 200 - 0 0.000 0.001
+2026-05-13 18:53:18,142 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:18] "POST /mail/thread/messages HTTP/1.1" 200 - 9 0.007 0.008
+2026-05-13 18:53:18,160 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:18] "POST /mail/data HTTP/1.1" 200 - 27 0.016 0.018
+2026-05-13 18:53:23,834 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:23] "POST /web/action/load HTTP/1.1" 200 - 12 0.007 0.013
+2026-05-13 18:53:24,047 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:24] "POST /web/dataset/call_kw/sale.order/get_views#sale.order.get_views HTTP/1.1" 200 - 99 0.048 0.140
+2026-05-13 18:53:24,077 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:24] "POST /web/dataset/call_kw/sale.order/web_search_read#sale.order.web_search_read HTTP/1.1" 200 - 6 0.006 0.009
+2026-05-13 18:53:24,248 17167 INFO ? werkzeug: 127.0.0.1 - - [13/May/2026 18:53:24] "GET /sale/static/src/img/sales_quotation_thumbnail.webp HTTP/1.1" 200 - 0 0.000 0.002
+2026-05-13 18:53:24,292 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:24] "GET /web/image/res.users/5/avatar_128 HTTP/1.1" 200 - 6 0.007 0.036
+2026-05-13 18:53:24,316 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:24] "GET /web/image/res.users/3/avatar_128 HTTP/1.1" 200 - 16 0.033 0.028
+2026-05-13 18:53:24,317 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:24] "GET /web/image/res.users/1/avatar_128 HTTP/1.1" 200 - 16 0.029 0.032
+2026-05-13 18:53:24,319 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:24] "GET /web/image/res.users/2/avatar_128 HTTP/1.1" 200 - 12 0.031 0.029
+2026-05-13 18:53:58,535 17167 INFO demo_pos_accounting odoo.http: Session expired 
+2026-05-13 18:53:58,535 17167 INFO demo_pos_accounting werkzeug: 127.0.0.1 - - [13/May/2026 18:53:58] "HEAD /pos/ui HTTP/1.1" 303 - 4 0.003 0.015
+2026-05-13 18:54:01,658 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Payment: Post-process transactions' (20) starting 
+2026-05-13 18:54:01,693 17167 INFO demo_pos_accounting odoo.addons.base.models.ir_cron: Job 'Payment: Post-process transactions' (20) fully done (#loop 1; done 0; remaining 0; duration 0.03s) 
+2026-05-13 18:54:07,738 17167 INFO demo_pos_accounting odoo.service.server: Initiating shutdown 
+2026-05-13 18:54:07,738 17167 INFO demo_pos_accounting odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-05-13 18:54:08,102 17167 INFO demo_pos_accounting odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 8 connections  
+2026-05-13 18:54:08,104 17167 INFO ? odoo.service.server: cron0 max age (0s) reached, releasing connection. 

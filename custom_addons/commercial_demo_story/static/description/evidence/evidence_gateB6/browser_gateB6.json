@@ -1,0 +1,43 @@
+{
+  "page_errors": [],
+  "console_errors": [],
+  "console_owl": [],
+  "network_failures": [],
+  "tests": [
+    {
+      "user": "pos.cashier.dxb",
+      "url": "discuss",
+      "access_denied_text": false
+    },
+    {
+      "user": "pos.cashier.dxb",
+      "url": "action-660",
+      "ok": true
+    },
+    {
+      "user": "pos.cashier.dxb",
+      "url": "calendar_settings_proxy",
+      "access_denied_text": false
+    },
+    {
+      "user": "pos.cashier.auh",
+      "url": "action-660",
+      "ok": true
+    },
+    {
+      "user": "finance.manager",
+      "url": "action-301",
+      "ok": true
+    },
+    {
+      "user": "inventory.manager",
+      "url": "action-444",
+      "ok": true
+    },
+    {
+      "user": "pos.manager",
+      "url": "action-660",
+      "ok": true
+    }
+  ]
+}
