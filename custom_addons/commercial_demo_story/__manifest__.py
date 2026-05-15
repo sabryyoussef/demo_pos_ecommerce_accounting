@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "Commercial Demo Story",
-    "version": "19.0.1.0.5",
+    "version": "19.0.1.0.6",
     "category": "Sales",
     "summary": "Presentation dashboard, flashcards, workflow story, and safe demo helpers",
     "description": """
@@ -49,6 +49,6 @@ aggregates. Reset only removes story rows created by **Generate Demo Story**
     ],
     "installable": True,
     "application": False,
-    "pre_init_hook": "hooks.pre_init_hook",
-    "post_init_hook": "hooks.post_init_hook",
+    "pre_init_hook": "pre_init_hook",
+    "post_init_hook": "post_init_hook",
 }

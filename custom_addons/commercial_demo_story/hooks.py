@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """Module install hooks (Odoo.sh-safe: no pos.config deletion on upgrade)."""
 
-from odoo import SUPERUSER_ID, api
-
 MODULE = "commercial_demo_story"
 
 # Records created by bootstrap scripts must NOT stay in ir.model.data for this module,
@@ -29,15 +27,13 @@ def _unlink_module_xmlids(env, models):
         stale.unlink()
 
 
-def pre_init_hook(cr):
-    """Before install/upgrade: drop stale xmlids so Odoo won't DELETE live demo rows."""
-    env = api.Environment(cr, SUPERUSER_ID, {})
+def pre_init_hook(env):
+    """Before install: drop stale xmlids so Odoo won't DELETE live demo rows."""
     _unlink_module_xmlids(env, _PROTECTED_MODELS)
 
 
-def post_init_hook(cr, registry):
+def post_init_hook(env):
     """After first install only: run full demo bootstrap (not on every upgrade)."""
-    env = api.Environment(cr, SUPERUSER_ID, {})
     ICP = env["ir.config_parameter"].sudo()
     flag = "commercial_demo_story.bootstrap_completed"
     if ICP.get_param(flag) == "1":
