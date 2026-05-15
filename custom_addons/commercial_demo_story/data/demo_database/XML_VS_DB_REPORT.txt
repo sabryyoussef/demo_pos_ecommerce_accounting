@@ -1,0 +1,30 @@
+========================================================================
+XML vs DATABASE — commercial_demo_story/data/demo_database/
+========================================================================
+XML records parsed: 34
+Match (all compared fields): 34
+Field mismatches: 0
+XML id not in DB: 0
+
+
+--- DB records by domain key NOT fully represented in XML ---
+
+product.template RET-G2: DB=13 XML=13
+
+res.partner FINCORP: count=4 (XML file has partial export)
+
+crm.team Corporate Direct: count=2 (XML file has partial export)
+
+account.analytic.account AN-*: count=16 (XML file has partial export)
+
+pos.config POS-*: count=30 (XML file has partial export)
+
+--- Transactional demo in DB (not in demo_database XML) ---
+  pos.config: 30
+  pos.order: 9
+  sale.order (non-cancel): 14
+  account.move posted: 27
+  account.payment: 4
+  stock.quant qty>0: 22
+
+--- Analytic accounts: XML name field vs DB ---

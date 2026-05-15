@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="commercial_demo_story.BuildStoryAction">
+        <div class="o_commercial_demo_build_story_wrap h-100 w-100">
+            <iframe
+                class="o_commercial_demo_build_story_iframe w-100 border-0"
+                t-att-src="iframeSrc"
+                title="Horizon Retail build story"
+            />
+        </div>
+    </t>
+</templates>
