@@ -1,0 +1,48 @@
+  section   
+------------
+ WAREHOUSES
+(1 row)
+
+ id |    name     | code  | view_location_id | lot_stock_id 
+----+-------------+-------+------------------+--------------
+  1 | WH-HRG-MAIN | HRG01 |                4 |            5
+(1 row)
+
+          metric           | count 
+---------------------------+-------
+ LOCATION_COUNT_UNDER_ROOT | 13
+(1 row)
+
+    section     |        complete_name        | id |   usage   
+----------------+-----------------------------+----+-----------
+ EXPECTED_PATHS | WH-HRG-MAIN/ADJUSTMENT      | 32 | inventory
+ EXPECTED_PATHS | WH-HRG-MAIN/ECOM-OUT        | 23 | internal
+ EXPECTED_PATHS | WH-HRG-MAIN/Input           |  6 | internal
+ EXPECTED_PATHS | WH-HRG-MAIN/LOSS-DAMAGE     | 31 | internal
+ EXPECTED_PATHS | WH-HRG-MAIN/Output          |  8 | internal
+ EXPECTED_PATHS | WH-HRG-MAIN/Packing Zone    |  9 | internal
+ EXPECTED_PATHS | WH-HRG-MAIN/POS             | 25 | internal
+ EXPECTED_PATHS | WH-HRG-MAIN/POS/AUH-01      | 27 | internal
+ EXPECTED_PATHS | WH-HRG-MAIN/POS/DXB-01      | 26 | internal
+ EXPECTED_PATHS | WH-HRG-MAIN/Quality Control |  7 | internal
+ EXPECTED_PATHS | WH-HRG-MAIN/RET-CUSTOMER    | 28 | internal
+ EXPECTED_PATHS | WH-HRG-MAIN/RET-ECOM        | 29 | internal
+ EXPECTED_PATHS | WH-HRG-MAIN/RET-POS         | 30 | internal
+ EXPECTED_PATHS | WH-HRG-MAIN/SALES-OUT       | 24 | internal
+ EXPECTED_PATHS | WH-HRG-MAIN/Stock           |  5 | internal
+(15 rows)
+
+ section | complete_name | count 
+---------+---------------+-------
+(0 rows)
+
+      metric      | count 
+------------------+-------
+ STOCK_MOVE_TOTAL | 0
+(1 row)
+
+       metric        | count 
+---------------------+-------
+ STOCK_QUANT_NONZERO | 0
+(1 row)
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_commercial_demo_dashboard" model="ir.actions.act_window">
+        <field name="name">Commercial Demo Dashboard</field>
+        <field name="res_model">commercial.demo.dashboard</field>
+        <field name="view_mode">form</field>
+        <field name="res_id" ref="commercial_demo_dashboard_main"/>
+        <field name="target">current</field>
+    </record>
+
+    <record id="action_commercial_demo_flashcards" model="ir.actions.act_window">
+        <field name="name">Demo Flashcards</field>
+        <field name="res_model">commercial.demo.flashcard</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <record id="action_commercial_demo_story" model="ir.actions.act_window">
+        <field name="name">Demo Story</field>
+        <field name="res_model">commercial.demo.story.step</field>
+        <field name="view_mode">list,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <record id="action_commercial_demo_scenarios" model="ir.actions.act_window">
+        <field name="name">Demo Scenarios</field>
+        <field name="res_model">commercial.demo.scenario</field>
+        <field name="view_mode">list,form</field>
+        <field name="target">current</field>
+    </record>
+</odoo>

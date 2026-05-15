@@ -1,0 +1,12 @@
+# Gate A secrets and runtime artifacts — do not commit
+.gateA_admin_secret.txt
+.gateB1_web_admin_password.txt
+.gateB6_demo_passwords.txt
+.filestore/
+backups/*.dump
+backups/*.tar.gz
+
+__pycache__/
+*.pyc
+**/backups/*.dump
+**/backups/*.tar.gz

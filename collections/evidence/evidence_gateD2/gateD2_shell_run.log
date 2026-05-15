@@ -1,0 +1,39 @@
+2026-05-14 14:35:07,301 56119 INFO ? odoo: Odoo version 19.0 
+2026-05-14 14:35:07,301 56119 INFO ? odoo: Using configuration file at /mnt/sabry_backup/odoo_base/base_odoo_19/config/projects/odoo_demo_pos_accounting.conf 
+2026-05-14 14:35:07,301 56119 INFO ? odoo: addons paths: _NamespacePath(['/home/sabry3/odoo_ssd/odoo19/odoo19/odoo/addons', '/mnt/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/.filestore/addons/19.0', '/home/sabry3/odoo_ssd/odoo19/odoo19/addons', '/home/sabry3/odoo_ssd/odoo19/odoo19/enterprise']) 
+2026-05-14 14:35:07,301 56119 INFO ? odoo: database: odoo19@localhost:5432 
+2026-05-14 14:35:07,572 56119 INFO ? odoo.service.server: Initiating shutdown 
+2026-05-14 14:35:07,572 56119 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-05-14 14:35:07,602 56119 INFO demo_pos_accounting odoo.modules.loading: loading 1 modules... 
+2026-05-14 14:35:07,608 56119 INFO demo_pos_accounting odoo.modules.loading: 1 modules loaded in 0.01s, 0 queries (+0 extra) 
+2026-05-14 14:35:07,683 56119 INFO demo_pos_accounting odoo.modules.loading: loading 187 modules... 
+2026-05-14 14:35:08,633 56119 INFO demo_pos_accounting odoo.modules.loading: 187 modules loaded in 0.95s, 0 queries (+0 extra) 
+2026-05-14 14:35:09,010 56119 INFO demo_pos_accounting odoo.modules.loading: Modules loaded. 
+2026-05-14 14:35:09,124 56119 INFO demo_pos_accounting odoo.registry: Registry loaded in 1.543s 
+2026-05-14 14:35:09,295 56119 INFO demo_pos_accounting odoo.models.unlink: User #2 deleted mail.message records with IDs: [458] 
+2026-05-14 14:35:09,307 56119 INFO demo_pos_accounting odoo.models.unlink: User #2 deleted pos.session records with IDs: [3] 
+2026-05-14 14:35:09,317 56119 INFO demo_pos_accounting odoo.models.unlink: User #2 deleted mail.followers records with IDs: [1] 
+2026-05-14 14:35:09,471 56119 INFO demo_pos_accounting odoo.models.unlink: User #2 deleted mail.message records with IDs: [472] 
+2026-05-14 14:35:09,483 56119 INFO demo_pos_accounting odoo.models.unlink: User #2 deleted pos.session records with IDs: [4] 
+2026-05-14 14:35:09,487 56119 INFO demo_pos_accounting odoo.models.unlink: User #2 deleted mail.followers records with IDs: [2] 
+BASELINE pos_order=0 stock_move=48 account_move=2
+SESSION_OPEN dxb_id=18 name='POS-DXB-01/00016' auh_id=19 name='POS-AUH-01/00017'
+ORDER_1_DXB_COMBO id=18 name='POS-DXB-01 - 000001' total=7.35 tax=0.35 payments=[('POS Visa AED', 4.35), ('POS Cash AED', 3.0)] pickings=[17]
+ORDER_2_AUH_APPAREL id=19 name='POS-AUH-01 - 000001' total=51.45 tax=2.45 payments=[('POS Cash AED AUH', 51.45)] pickings=[18]
+ORDER_3_DXB_MUG id=20 name='POS-DXB-01 - 000002' total=68.25 tax=3.25 payments=[('POS Mastercard AED', 68.25)] pickings=[19]
+ON_HAND_INTERNAL_SUM code='RET-G2-BEV-WAT500' qty=22.0
+ON_HAND_INTERNAL_SUM code='RET-G2-SNK-CRP40' qty=11.0
+ON_HAND_INTERNAL_SUM code='RET-G2-PAR-TSH-M' qty=9.0
+ON_HAND_INTERNAL_SUM code='RET-G2-PAR-MUG350-BLA' qty=5.0
+PICKINGS_ALL_DONE
+COST_METHOD_AVCO_OK
+SESSION_CLOSED_DXB session_id=18 move_id=19 tax_related_lines=2
+SESSION_CLOSED_AUH session_id=19 move_id=24 tax_related_lines=2
+PAY id=24 method='POS Visa AED' type='bank' amount=4.35 account_move_id=False
+PAY id=23 method='POS Cash AED' type='cash' amount=3.0 account_move_id=False
+PAY id=25 method='POS Cash AED AUH' type='cash' amount=51.45 account_move_id=False
+PAY id=26 method='POS Mastercard AED' type='bank' amount=68.25 account_move_id=False
+AFTER pos_order=3 (+3) stock_move=52 (+4) account_move=10 (+8)
+WROTE_MANIFEST /home/sabry3/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/evidence_gateD2/gateD2_manifest.json
+COMMIT_OK_ICP_FLAG_SET
+WROTE /home/sabry3/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/evidence_gateD2/gateD2_shell.txt

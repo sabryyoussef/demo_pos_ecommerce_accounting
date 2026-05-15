@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_commercial_demo_flashcard_kanban" model="ir.ui.view">
+        <field name="name">commercial.demo.flashcard.kanban</field>
+        <field name="model">commercial.demo.flashcard</field>
+        <field name="arch" type="xml">
+            <kanban create="false" delete="false" class="o_kanban_small_column">
+                <field name="id"/>
+                <field name="name"/>
+                <field name="short_text"/>
+                <field name="business_value"/>
+                <field name="icon_class"/>
+                <field name="action_xmlid"/>
+                <templates>
+                    <t t-name="card">
+                        <main class="p-2">
+                            <div class="d-flex align-items-center mb-2">
+                                <i t-att-class="record.icon_class.raw_value + ' me-2'" title="Icon"/>
+                                <field name="name" class="fw-bold"/>
+                            </div>
+                            <div class="text-muted small mb-2">
+                                <field name="short_text" widget="html"/>
+                            </div>
+                            <div class="small mb-2">
+                                <field name="business_value"/>
+                            </div>
+                            <footer>
+                                <button type="object" name="action_open_related" string="Open related" class="btn btn-sm btn-secondary" t-if="record.action_xmlid.raw_value"/>
+                            </footer>
+                        </main>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_commercial_demo_flashcard_list" model="ir.ui.view">
+        <field name="name">commercial.demo.flashcard.list</field>
+        <field name="model">commercial.demo.flashcard</field>
+        <field name="arch" type="xml">
+            <list string="Flashcards" create="false" delete="false">
+                <field name="sequence"/>
+                <field name="name"/>
+                <field name="icon_class"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_commercial_demo_flashcard_form" model="ir.ui.view">
+        <field name="name">commercial.demo.flashcard.form</field>
+        <field name="model">commercial.demo.flashcard</field>
+        <field name="arch" type="xml">
+            <form string="Flashcard" create="false" delete="false">
+                <header>
+                    <button name="action_open_related" type="object" string="Open related action" invisible="not action_xmlid"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="sequence"/>
+                        <field name="icon_class"/>
+                        <field name="action_xmlid"/>
+                    </group>
+                    <group>
+                        <field name="short_text" colspan="2"/>
+                        <field name="business_value" colspan="2"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

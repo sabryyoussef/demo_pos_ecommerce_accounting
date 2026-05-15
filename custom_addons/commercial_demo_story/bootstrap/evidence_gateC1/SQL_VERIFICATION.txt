@@ -1,0 +1,40 @@
+# Gate C1 — SQL verification (demo_pos_accounting)
+# Run: PGPASSWORD=odoo19 psql -h localhost -U odoo19 -d demo_pos_accounting -f this_file
+# Captured: 2026-05-14
+
+-- 1) Gate C1 category names present (7 rows)
+SELECT 'gate_c1_categories' AS check_name, COUNT(*) AS cnt
+FROM product_category
+WHERE name IN ('ALL PRODUCTS','RETAIL','FOOD','BEVERAGES','SERVICES','POS ITEMS','ECOM ITEMS');
+-- Expected: 7
+
+-- 2) product.template count unchanged by gate (no new products)
+SELECT COUNT(*) AS product_template_total FROM product_template;
+-- Expected: 7 (before and after Gate C1)
+
+-- 3) No stock moves
+SELECT COUNT(*) AS stock_move_total FROM stock_move;
+-- Expected: 0
+
+-- 4) No product_value rows (Odoo 19 valuation table; no SVL table in this DB)
+SELECT COUNT(*) AS product_value_total FROM product_value;
+-- Expected: 0
+
+-- 5) No accounting moves created by gate
+SELECT COUNT(*) AS account_move_total FROM account_move;
+-- Expected: 0
+
+-- 6) Company default costing / valuation (AVCO + perpetual baseline)
+SELECT cost_method, inventory_valuation FROM res_company WHERE id = 1;
+-- Expected: average | real_time
+
+-- 7) Category-level costing (AVCO) and valuation (real_time except SERVICES = periodic)
+SELECT id, name, parent_id,
+       property_cost_method::text,
+       property_valuation::text
+FROM product_category
+WHERE id >= 7
+ORDER BY id;
+
+-- 8) stock_valuation_layer table does not exist in this deployment (verified via information_schema)
+-- SELECT COUNT(*) FROM stock_valuation_layer;  -- N/A

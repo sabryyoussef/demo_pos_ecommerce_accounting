@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="commercial_demo_dashboard_main" model="commercial.demo.dashboard">
+        <field name="name">Commercial Demo</field>
+    </record>
+</odoo>

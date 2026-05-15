@@ -1,0 +1,16 @@
+Localization — UAE / POS — 2026-05-13
+
+MODULES
+  l10n_ae           installed
+  l10n_ae_pos       installed
+  l10n_ae_reports   installed
+
+TAXES (sample)
+  account_tax: 18 rows for company scope (UAE chart–style labels e.g. 5%, 0%, EX, Out of Scope).
+
+INSTALL LOG (evidence_gateA/02_install_gateA_modules.log)
+  grep Traceback / "^.* ERROR " : no matches.
+  l10n_ae, l10n_gcc_*, l10n_ae_pos, l10n_ae_reports load lines present without ERROR.
+
+RUNTIME LOG (evidence_gateA_final/runtime_odoo_8025.log, post-restart window)
+  grep Traceback / ERROR : no matches in sampled check.

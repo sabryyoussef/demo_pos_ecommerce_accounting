@@ -1,0 +1,25 @@
+2026-05-13 20:55:14,884 55538 INFO ? odoo: Odoo version 19.0 
+2026-05-13 20:55:14,884 55538 INFO ? odoo: Using configuration file at /mnt/sabry_backup/odoo_base/base_odoo_19/config/projects/odoo_demo_pos_accounting.conf 
+2026-05-13 20:55:14,884 55538 INFO ? odoo: addons paths: _NamespacePath(['/home/sabry3/odoo_ssd/odoo19/odoo19/odoo/addons', '/mnt/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/.filestore/addons/19.0', '/home/sabry3/odoo_ssd/odoo19/odoo19/addons', '/home/sabry3/odoo_ssd/odoo19/odoo19/enterprise']) 
+2026-05-13 20:55:14,884 55538 INFO ? odoo: database: odoo19@localhost:5432 
+2026-05-13 20:55:15,208 55538 INFO ? odoo.service.server: Initiating shutdown 
+2026-05-13 20:55:15,208 55538 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-05-13 20:55:15,237 55538 INFO demo_pos_accounting odoo.modules.loading: loading 1 modules... 
+2026-05-13 20:55:15,242 55538 INFO demo_pos_accounting odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-05-13 20:55:15,319 55538 INFO demo_pos_accounting odoo.modules.loading: loading 184 modules... 
+2026-05-13 20:55:16,309 55538 INFO demo_pos_accounting odoo.modules.loading: 184 modules loaded in 0.99s, 0 queries (+0 extra) 
+2026-05-13 20:55:16,727 55538 INFO demo_pos_accounting odoo.modules.loading: Modules loaded. 
+2026-05-13 20:55:16,816 55538 INFO demo_pos_accounting odoo.registry: Registry loaded in 1.602s 
+PLANS 5 Channel | 6 POS Location | 7 Department
+ACCOUNT AN-CH-CORP -> plan Channel (id=5)
+ACCOUNT AN-CH-ECOM -> plan Channel (id=5)
+ACCOUNT AN-CH-POS -> plan Channel (id=5)
+ACCOUNT AN-POS-DXB-01 -> plan POS Location (id=6)
+ACCOUNT AN-POS-AUH-01 -> plan POS Location (id=6)
+ACCOUNT AN-DPT-SALES -> plan Department (id=7)
+ACCOUNT AN-DPT-OPS -> plan Department (id=7)
+ACCOUNT AN-DPT-HR -> plan Department (id=7)
+ACCOUNT_TOTAL_COMPANY 8
+VAT201_LINES 24
+GET_RELEVANT_PLANS_KEYS <class 'list'>
+COMMIT_OK

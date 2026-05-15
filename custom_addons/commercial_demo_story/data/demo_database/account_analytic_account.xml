@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+  <record id="demo_account_analytic_account_an_ch_corp" model="account.analytic.account">
+    <field name="name">AN-CH-CORP</field>
+    <field name="code">AN-CH-CORP</field>
+    <field name="plan_id" ref="commercial_demo_story.demo_account_analytic_plan_channel"/>
+  </record>
+  <record id="demo_account_analytic_account_an_ch_ecom" model="account.analytic.account">
+    <field name="name">AN-CH-ECOM</field>
+    <field name="code">AN-CH-ECOM</field>
+    <field name="plan_id" ref="commercial_demo_story.demo_account_analytic_plan_channel"/>
+  </record>
+  <record id="demo_account_analytic_account_an_ch_pos" model="account.analytic.account">
+    <field name="name">AN-CH-POS</field>
+    <field name="code">AN-CH-POS</field>
+    <field name="plan_id" ref="commercial_demo_story.demo_account_analytic_plan_channel"/>
+  </record>
+  <record id="demo_account_analytic_account_an_pos_dxb_01" model="account.analytic.account">
+    <field name="name">AN-POS-DXB-01</field>
+    <field name="code">AN-POS-DXB-01</field>
+    <field name="plan_id" ref="commercial_demo_story.demo_account_analytic_plan_pos_location"/>
+  </record>
+  <record id="demo_account_analytic_account_an_pos_auh_01" model="account.analytic.account">
+    <field name="name">AN-POS-AUH-01</field>
+    <field name="code">AN-POS-AUH-01</field>
+    <field name="plan_id" ref="commercial_demo_story.demo_account_analytic_plan_pos_location"/>
+  </record>
+  <record id="demo_account_analytic_account_an_dpt_sales" model="account.analytic.account">
+    <field name="name">AN-DPT-SALES</field>
+    <field name="code">AN-DPT-SALES</field>
+    <field name="plan_id" ref="commercial_demo_story.demo_account_analytic_plan_department"/>
+  </record>
+  <record id="demo_account_analytic_account_an_dpt_ops" model="account.analytic.account">
+    <field name="name">AN-DPT-OPS</field>
+    <field name="code">AN-DPT-OPS</field>
+    <field name="plan_id" ref="commercial_demo_story.demo_account_analytic_plan_department"/>
+  </record>
+  <record id="demo_account_analytic_account_an_dpt_hr" model="account.analytic.account">
+    <field name="name">AN-DPT-HR</field>
+    <field name="code">AN-DPT-HR</field>
+    <field name="plan_id" ref="commercial_demo_story.demo_account_analytic_plan_department"/>
+  </record>
+</odoo>

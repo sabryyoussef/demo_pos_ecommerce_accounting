@@ -1,0 +1,15 @@
+{
+  "page_errors": [],
+  "console_errors": [],
+  "console_owl": [],
+  "network_failures": [],
+  "urls": [
+    "http://127.0.0.1:8025/odoo/action-660",
+    "http://127.0.0.1:8025/odoo/pos.config/5",
+    "http://127.0.0.1:8025/odoo/action-657",
+    "http://127.0.0.1:8025/pos/ui/5/login?config_id=5",
+    "http://127.0.0.1:8025/odoo/pos-sessions",
+    "http://127.0.0.1:8025/odoo/action-640"
+  ],
+  "pos_config_dxb_id": "5"
+}

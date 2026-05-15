@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_commercial_demo_dashboard_form" model="ir.ui.view">
+        <field name="name">commercial.demo.dashboard.form</field>
+        <field name="model">commercial.demo.dashboard</field>
+        <field name="arch" type="xml">
+            <form string="Commercial Demo" create="false" delete="false">
+                <header>
+                    <button name="action_refresh_kpis" type="object" string="Refresh KPIs" class="btn-primary"/>
+                    <button name="action_generate_demo_story" type="object" string="Generate Demo Story" class="btn-secondary"/>
+                    <button name="action_reset_demo_story" type="object" string="Reset Demo Story" class="btn-secondary" groups="base.group_system"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>Commercial Demo Dashboard</h1>
+                        <p class="text-muted">Read-only KPIs from live data. Reset removes only COMM-DEMO generated story rows.</p>
+                    </div>
+                    <group>
+                        <group string="Channel KPIs">
+                            <field name="kpi_corporate_so_count" readonly="1"/>
+                            <field name="kpi_ecommerce_so_count" readonly="1"/>
+                            <field name="kpi_pos_order_count" readonly="1"/>
+                            <field name="kpi_pos_location_count" readonly="1"/>
+                            <field name="kpi_cashier_user_count" readonly="1"/>
+                            <field name="kpi_product_count" readonly="1"/>
+                        </group>
+                        <group string="Finance KPIs">
+                            <field name="currency_id" invisible="1"/>
+                            <field name="kpi_paid_invoice_count" readonly="1"/>
+                            <field name="kpi_reconciled_payment_count" readonly="1"/>
+                            <field name="kpi_total_revenue" widget="monetary" readonly="1"/>
+                            <field name="kpi_top_product_label" readonly="1"/>
+                            <field name="kpi_top_pos_location_label" readonly="1"/>
+                            <field name="kpi_top_salesperson_label" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Navigation">
+                        <group>
+                            <button name="action_open_pos" type="object" string="Open POS" class="btn-link"/>
+                            <button name="action_open_website_shop" type="object" string="Open Website Shop" class="btn-link"/>
+                            <button name="action_open_sales" type="object" string="Open Sales Orders" class="btn-link"/>
+                            <button name="action_open_ecommerce_orders" type="object" string="Open eCommerce Orders" class="btn-link"/>
+                        </group>
+                        <group>
+                            <button name="action_open_invoices" type="object" string="Open Invoices" class="btn-link"/>
+                            <button name="action_open_inventory" type="object" string="Open Inventory" class="btn-link"/>
+                            <button name="action_open_accounting_reports" type="object" string="Open Accounting Reports (P/L)" class="btn-link"/>
+                            <button name="action_open_pos_sessions" type="object" string="Open POS Sessions" class="btn-link"/>
+                            <button name="action_open_dashboard_reports" type="object" string="Open Executive Summary" class="btn-link"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

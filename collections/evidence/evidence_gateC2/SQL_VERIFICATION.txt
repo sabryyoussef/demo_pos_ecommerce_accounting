@@ -1,0 +1,55 @@
+-- Gate C2 — SQL verification (demo_pos_accounting)
+-- Captured after catalog load (prefix RET-G2-).
+
+-- 1) Product template counts
+SELECT 'product_template_total' AS k, COUNT(*)::text AS v FROM product_template;
+SELECT 'product_template_gatec2' AS k, COUNT(*)::text AS v FROM product_template pt
+WHERE EXISTS (
+  SELECT 1 FROM product_product pp
+  WHERE pp.product_tmpl_id = pt.id AND pp.default_code ILIKE 'RET-G2%'
+);
+
+-- 2) Variant (product.product) count for Gate C2 SKUs
+SELECT 'product_product_gatec2_variants' AS k, COUNT(*)::text AS v FROM product_product WHERE default_code ILIKE 'RET-G2%';
+
+-- 3) Barcode duplicates (should return 0 rows)
+SELECT barcode, COUNT(*) AS cnt FROM product_product
+WHERE barcode IS NOT NULL AND barcode != ''
+GROUP BY barcode HAVING COUNT(*) > 1;
+
+-- 4) default_code duplicates (non-empty; should return 0 rows)
+SELECT default_code, COUNT(*) AS cnt FROM product_product
+WHERE default_code IS NOT NULL AND TRIM(default_code) != ''
+GROUP BY default_code HAVING COUNT(*) > 1;
+
+-- 5) Gate C2 products by product category (name)
+SELECT pc.name AS category, COUNT(*) AS template_count
+FROM product_template pt
+JOIN product_category pc ON pc.id = pt.categ_id
+WHERE EXISTS (
+  SELECT 1 FROM product_product pp
+  WHERE pp.product_tmpl_id = pt.id AND pp.default_code ILIKE 'RET-G2%'
+)
+GROUP BY pc.name ORDER BY pc.name;
+
+-- 6) POS-visible Gate C2 templates (core POS filters)
+SELECT COUNT(*) AS pos_visible_gatec2_templates
+FROM product_template pt
+WHERE pt.available_in_pos IS TRUE AND pt.sale_ok IS TRUE
+AND EXISTS (
+  SELECT 1 FROM product_product pp
+  WHERE pp.product_tmpl_id = pt.id AND pp.default_code ILIKE 'RET-G2%'
+);
+
+-- 7) Website published (eCom) Gate C2 templates
+SELECT COUNT(*) AS website_published_gatec2
+FROM product_template pt
+WHERE pt.is_published IS TRUE
+AND EXISTS (
+  SELECT 1 FROM product_product pp
+  WHERE pp.product_tmpl_id = pt.id AND pp.default_code ILIKE 'RET-G2%'
+);
+
+-- 8) No stock moves / no inventory quants (Gate C2 must not load quantities)
+SELECT 'stock_move_total' AS k, COUNT(*)::text FROM stock_move;
+SELECT 'stock_quant_total' AS k, COUNT(*)::text FROM stock_quant;

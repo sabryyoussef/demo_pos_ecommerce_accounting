@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="story_step_01" model="commercial.demo.story.step">
+        <field name="sequence">10</field>
+        <field name="name">Executive opens dashboard</field>
+        <field name="description">Start from Commercial Demo → Demo Dashboard to frame the session.</field>
+        <field name="presenter_script">Welcome the audience and explain that KPIs are live aggregates from this company database.</field>
+        <field name="related_model_name">commercial.demo.dashboard</field>
+        <field name="action_xmlid">commercial_demo_story.action_commercial_demo_dashboard</field>
+        <field name="story_source">module</field>
+    </record>
+    <record id="story_step_02" model="commercial.demo.story.step">
+        <field name="sequence">20</field>
+        <field name="name">Review total commercial performance</field>
+        <field name="description">Scan revenue, paid invoices, and channel counters on the dashboard.</field>
+        <field name="presenter_script">Connect corporate, ecommerce, and POS to one chart of accounts in one sentence.</field>
+        <field name="related_model_name">commercial.demo.dashboard</field>
+        <field name="action_xmlid">account_reports.action_account_report_pl</field>
+        <field name="story_source">module</field>
+    </record>
+    <record id="story_step_03" model="commercial.demo.story.step">
+        <field name="sequence">30</field>
+        <field name="name">Open corporate sales quotation</field>
+        <field name="description">Show how B2B deals begin with a quotation and salesperson ownership.</field>
+        <field name="presenter_script">Filter quotations and pick a realistic B2B example if available.</field>
+        <field name="related_model_name">sale.order</field>
+        <field name="action_xmlid">sale.action_quotations</field>
+        <field name="story_source">module</field>
+    </record>
+    <record id="story_step_04" model="commercial.demo.story.step">
+        <field name="sequence">40</field>
+        <field name="name">Confirm sales order</field>
+        <field name="description">Demonstrate confirmation and downstream delivery reservation.</field>
+        <field name="presenter_script">Highlight delivery status without editing historical posted documents.</field>
+        <field name="related_model_name">sale.order</field>
+        <field name="action_xmlid">sale.action_orders</field>
+        <field name="story_source">module</field>
+    </record>
+    <record id="story_step_05" model="commercial.demo.story.step">
+        <field name="sequence">50</field>
+        <field name="name">Review invoice and payment</field>
+        <field name="description">Posted customer invoices and bank-registered receipts.</field>
+        <field name="presenter_script">Emphasize audit trail: invoice → payment → liquidity line (no deletions in demo).</field>
+        <field name="related_model_name">account.move</field>
+        <field name="action_xmlid">account.action_move_out_invoice_type</field>
+        <field name="story_source">module</field>
+    </record>
+    <record id="story_step_06" model="commercial.demo.story.step">
+        <field name="sequence">60</field>
+        <field name="name">Open eCommerce order</field>
+        <field name="description">Website orders sharing warehouse, tax, and product master data.</field>
+        <field name="presenter_script">Contrast web channel tagging with corporate orders on the same company.</field>
+        <field name="related_model_name">sale.order</field>
+        <field name="action_xmlid">website_sale.action_orders_ecommerce</field>
+        <field name="story_source">module</field>
+    </record>
+    <record id="story_step_07" model="commercial.demo.story.step">
+        <field name="sequence">70</field>
+        <field name="name">Review delivery and stock movement</field>
+        <field name="description">Outgoing deliveries tying sales to inventory valuation.</field>
+        <field name="presenter_script">Mention AVCO briefly when showing valuation impact.</field>
+        <field name="related_model_name">stock.picking</field>
+        <field name="action_xmlid">stock.action_picking_tree_outgoing</field>
+        <field name="story_source">module</field>
+    </record>
+    <record id="story_step_08" model="commercial.demo.story.step">
+        <field name="sequence">80</field>
+        <field name="name">Open POS session or order</field>
+        <field name="description">Branch-level retail with sessions, cashiers, and tenders.</field>
+        <field name="presenter_script">Pick a flagship store and a paid ticket; mention mixed card/cash if present.</field>
+        <field name="related_model_name">pos.order</field>
+        <field name="action_xmlid">point_of_sale.action_pos_pos_form</field>
+        <field name="story_source">module</field>
+    </record>
+    <record id="story_step_09" model="commercial.demo.story.step">
+        <field name="sequence">90</field>
+        <field name="name">Review payment journals</field>
+        <field name="description">POS cash journals and card methods mapped into accounting.</field>
+        <field name="presenter_script">Explain per-branch traceability without drilling every journal line.</field>
+        <field name="related_model_name">account.journal</field>
+        <field name="action_xmlid">account.action_account_journal_form</field>
+        <field name="story_source">module</field>
+    </record>
+    <record id="story_step_10" model="commercial.demo.story.step">
+        <field name="sequence">100</field>
+        <field name="name">Review bank reconciliation</field>
+        <field name="description">Statement lines matched to inbound liquidity.</field>
+        <field name="presenter_script">If FIN-DEMO-RECON lines exist, show how they cleared customer payments.</field>
+        <field name="related_model_name">account.bank.statement.line</field>
+        <field name="action_xmlid">account.action_bank_statement_tree</field>
+        <field name="story_source">module</field>
+    </record>
+    <record id="story_step_11" model="commercial.demo.story.step">
+        <field name="sequence">110</field>
+        <field name="name">Review targets vs actual</field>
+        <field name="description">CRM sales teams and invoicing targets compared to performance.</field>
+        <field name="presenter_script">Position targets as leadership instrumentation, not accounting truth.</field>
+        <field name="related_model_name">crm.team</field>
+        <field name="action_xmlid">sales_team.crm_team_action_pipeline</field>
+        <field name="story_source">module</field>
+    </record>
+    <record id="story_step_12" model="commercial.demo.story.step">
+        <field name="sequence">120</field>
+        <field name="name">Review top POS locations, products, salespersons</field>
+        <field name="description">Close with analysis views that reinforce the KPI section.</field>
+        <field name="presenter_script">Tie back to dashboard headline numbers for a clean finish.</field>
+        <field name="related_model_name">pos.order</field>
+        <field name="action_xmlid">point_of_sale.action_report_pos_order_all</field>
+        <field name="story_source">module</field>
+    </record>
+</odoo>

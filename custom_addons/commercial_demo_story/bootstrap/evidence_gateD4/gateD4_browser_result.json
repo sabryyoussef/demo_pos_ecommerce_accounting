@@ -1,0 +1,17 @@
+{
+  "page_errors": [],
+  "console_errors": [],
+  "console_owl": [],
+  "orders": [
+    {
+      "tag": "order_a",
+      "sale_order_name": "S00009",
+      "url": "http://127.0.0.1:8025/shop/confirmation"
+    },
+    {
+      "tag": "order_b",
+      "sale_order_name": "S00010",
+      "url": "http://127.0.0.1:8025/shop/confirmation"
+    }
+  ]
+}

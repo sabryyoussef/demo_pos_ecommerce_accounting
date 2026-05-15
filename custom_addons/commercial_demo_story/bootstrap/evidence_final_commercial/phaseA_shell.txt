@@ -1,0 +1,12 @@
+USERS corp.sales.north id=10  corp.sales.south id=11
+TEAM id=4 invoiced_target=44000.0
+PARTNERS 28 29
+SO_CONFIRMED id=11 name='S00011' user=corp.sales.north total=38.0
+DELIVERIES_DONE so='S00011' pickings=['done']
+INVOICES_POSTED [('INV/2026/00001', 38.0, 'not_paid')]
+PAYMENTS_REGISTERED [('INV/2026/00001', 'in_payment')]
+SO_CONFIRMED id=12 name='S00012' user=corp.sales.south total=33.5
+DELIVERIES_DONE so='S00012' pickings=['done']
+INVOICES_POSTED [('INV/2026/00002', 33.5, 'not_paid')]
+PAYMENTS_REGISTERED [('INV/2026/00002', 'in_payment')]
+COMMIT_OK_PHASE_A

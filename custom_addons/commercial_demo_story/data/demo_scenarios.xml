@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="scenario_executive_walkthrough" model="commercial.demo.scenario">
+        <field name="name">Executive walkthrough (20 minutes)</field>
+        <field name="description">Dashboard → corporate → ecommerce → POS → accounting → reconciliation → KPI wrap-up.</field>
+    </record>
+    <record id="scenario_technical_deep_dive" model="commercial.demo.scenario">
+        <field name="name">Technical deep-dive</field>
+        <field name="description">Inventory valuation, AVCO layers, journals per POS branch, payment matching details.</field>
+    </record>
+</odoo>

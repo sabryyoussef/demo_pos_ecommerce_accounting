@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+  <record id="demo_product_template_ret_g2_bev_wat500" model="product.template">
+    <field name="name">Still Spring Water 500 ml</field>
+    <field name="default_code">RET-G2-BEV-WAT500</field>
+    <field name="list_price" eval="2.0"/>
+    <field name="standard_price" eval="0.9"/>
+    <field name="categ_id" ref="commercial_demo_story.demo_product_category_beverages"/>
+    <field name="is_storable" eval="True"/>
+  </record>
+  <record id="demo_product_template_ret_g2_bev_spk330" model="product.template">
+    <field name="name">Sparkling Mineral Water 330 ml</field>
+    <field name="default_code">RET-G2-BEV-SPK330</field>
+    <field name="list_price" eval="2.5"/>
+    <field name="standard_price" eval="1.1"/>
+    <field name="categ_id" ref="commercial_demo_story.demo_product_category_beverages"/>
+    <field name="is_storable" eval="True"/>
+  </record>
+  <record id="demo_product_template_ret_g2_bev_oj1l" model="product.template">
+    <field name="name">Orange Juice Not From Concentrate 1 L</field>
+    <field name="default_code">RET-G2-BEV-OJ1L</field>
+    <field name="list_price" eval="8.5"/>
+    <field name="standard_price" eval="4.2"/>
+    <field name="categ_id" ref="commercial_demo_story.demo_product_category_beverages"/>
+    <field name="is_storable" eval="True"/>
+  </record>
+  <record id="demo_product_template_ret_g2_bev_tea500" model="product.template">
+    <field name="name">Lemon Flavour Iced Tea 500 ml</field>
+    <field name="default_code">RET-G2-BEV-TEA500</field>
+    <field name="list_price" eval="3.5"/>
+    <field name="standard_price" eval="1.5"/>
+    <field name="categ_id" ref="commercial_demo_story.demo_product_category_beverages"/>
+    <field name="is_storable" eval="True"/>
+  </record>
+  <record id="demo_product_template_ret_g2_snk_crp40" model="product.template">
+    <field name="name">Salted Potato Crisps 40 g</field>
+    <field name="default_code">RET-G2-SNK-CRP40</field>
+    <field name="list_price" eval="3.0"/>
+    <field name="standard_price" eval="1.4"/>
+    <field name="categ_id" ref="commercial_demo_story.demo_product_category_food"/>
+    <field name="is_storable" eval="True"/>
+  </record>
+  <record id="demo_product_template_ret_g2_snk_alm100" model="product.template">
+    <field name="name">Dry Roasted Almonds 100 g</field>
+    <field name="default_code">RET-G2-SNK-ALM100</field>
+    <field name="list_price" eval="12.0"/>
+    <field name="standard_price" eval="6.5"/>
+    <field name="categ_id" ref="commercial_demo_story.demo_product_category_food"/>
+    <field name="is_storable" eval="True"/>
+  </record>
+  <record id="demo_product_template_ret_g2_snk_cho45" model="product.template">
+    <field name="name">Dark Chocolate Tablet 45 g</field>
+    <field name="default_code">RET-G2-SNK-CHO45</field>
+    <field name="list_price" eval="4.5"/>
+    <field name="standard_price" eval="2.0"/>
+    <field name="categ_id" ref="commercial_demo_story.demo_product_category_food"/>
+    <field name="is_storable" eval="True"/>
+  </record>
+  <record id="demo_product_template_ret_g2_snk_oat35" model="product.template">
+    <field name="name">Soft Oat Granola Bar 35 g</field>
+    <field name="default_code">RET-G2-SNK-OAT35</field>
+    <field name="list_price" eval="2.8"/>
+    <field name="standard_price" eval="1.2"/>
+    <field name="categ_id" ref="commercial_demo_story.demo_product_category_food"/>
+    <field name="is_storable" eval="True"/>
+  </record>
+  <record id="demo_product_template_ret_g2_rtl_bag01" model="product.template">
+    <field name="name">Cotton Carry Bag</field>
+    <field name="default_code">RET-G2-RTL-BAG01</field>
+    <field name="list_price" eval="1.5"/>
+    <field name="standard_price" eval="0.5"/>
+    <field name="categ_id" ref="commercial_demo_story.demo_product_category_retail"/>
+    <field name="is_storable" eval="True"/>
+  </record>
+  <record id="demo_product_template_ret_g2_rtl_bat4" model="product.template">
+    <field name="name">Alkaline AA Batteries 4-Pack</field>
+    <field name="default_code">RET-G2-RTL-BAT4</field>
+    <field name="list_price" eval="6.0"/>
+    <field name="standard_price" eval="3.2"/>
+    <field name="categ_id" ref="commercial_demo_story.demo_product_category_retail"/>
+    <field name="is_storable" eval="True"/>
+  </record>
+  <record id="demo_product_template_ret_g2_rtl_usb1m" model="product.template">
+    <field name="name">USB-C Sync Cable 1 m</field>
+    <field name="default_code">RET-G2-RTL-USB1M</field>
+    <field name="list_price" eval="18.0"/>
+    <field name="standard_price" eval="7.5"/>
+    <field name="categ_id" ref="commercial_demo_story.demo_product_category_ecom_items"/>
+    <field name="is_storable" eval="True"/>
+  </record>
+  <record id="demo_product_template_ret_g2_srv_wrap" model="product.template">
+    <field name="name">Gift Wrapping</field>
+    <field name="default_code">RET-G2-SRV-WRAP</field>
+    <field name="type">service</field>
+    <field name="list_price" eval="5.0"/>
+    <field name="categ_id" ref="commercial_demo_story.demo_product_category_services"/>
+    <field name="purchase_ok" eval="False"/>
+    <field name="supplier_taxes_id" eval="[(6, 0, [])]"/>
+  </record>
+  <record id="demo_product_template_ret_g2_srv_del" model="product.template">
+    <field name="name">Local Same-Day Delivery</field>
+    <field name="default_code">RET-G2-SRV-DEL</field>
+    <field name="type">service</field>
+    <field name="list_price" eval="15.0"/>
+    <field name="categ_id" ref="commercial_demo_story.demo_product_category_services"/>
+    <field name="purchase_ok" eval="False"/>
+    <field name="supplier_taxes_id" eval="[(6, 0, [])]"/>
+  </record>
+</odoo>

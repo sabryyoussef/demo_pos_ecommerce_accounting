@@ -1,0 +1,452 @@
+2026-05-13 18:12:31,532 15357 WARNING ? odoo.tools.config: option --without-demo: since 19.0, invalid boolean value: 'all', assume True 
+2026-05-13 18:12:31,533 15357 WARNING ? odoo.tools.config: option addons_path, invalid addons directory '/mnt/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/custom_addons', skipped 
+2026-05-13 18:12:31,534 15357 INFO ? odoo: Odoo version 19.0 
+2026-05-13 18:12:31,534 15357 INFO ? odoo: Using configuration file at /mnt/sabry_backup/odoo_base/base_odoo_19/config/projects/odoo_demo_pos_accounting.conf 
+2026-05-13 18:12:31,534 15357 INFO ? odoo: addons paths: _NamespacePath(['/home/sabry3/odoo_ssd/odoo19/odoo19/odoo/addons', '/mnt/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/.filestore/addons/19.0', '/home/sabry3/odoo_ssd/odoo19/odoo19/addons', '/home/sabry3/odoo_ssd/odoo19/odoo19/enterprise']) 
+2026-05-13 18:12:31,534 15357 INFO ? odoo: database: odoo19@localhost:5432 
+2026-05-13 18:12:32,028 15357 INFO demo_pos_accounting odoo.modules.loading: Initializing database demo_pos_accounting 
+2026-05-13 18:12:35,048 15357 INFO demo_pos_accounting odoo.modules.loading: loading 1 modules... 
+2026-05-13 18:12:35,049 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module base (1/1) 
+2026-05-13 18:12:35,074 15357 INFO demo_pos_accounting odoo.registry: module base: creating or updating database tables 
+2026-05-13 18:12:35,716 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.module.module.menus_by_module 
+2026-05-13 18:12:35,716 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.module.module.reports_by_module 
+2026-05-13 18:12:35,716 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.module.module.views_by_module 
+2026-05-13 18:12:35,898 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.partner.user_id 
+2026-05-13 18:12:35,898 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.partner.commercial_partner_id 
+2026-05-13 18:12:35,898 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.partner.complete_name 
+2026-05-13 18:12:35,898 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.partner.lang 
+2026-05-13 18:12:35,898 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.partner.company_registry 
+2026-05-13 18:12:35,898 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.partner.commercial_company_name 
+2026-05-13 18:12:35,898 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.partner.properties 
+2026-05-13 18:12:35,899 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.partner.partner_share 
+2026-05-13 18:12:35,946 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.currency.decimal_places 
+2026-05-13 18:12:35,983 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.company.uses_default_logo 
+2026-05-13 18:12:35,983 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.company.logo_web 
+2026-05-13 18:12:35,988 15357 INFO demo_pos_accounting odoo.models: Computing parent_path for table res_company... 
+2026-05-13 18:12:36,035 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.users.signature 
+2026-05-13 18:12:36,035 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.users.share 
+2026-05-13 18:12:37,544 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/res_bank.xml 
+2026-05-13 18:12:37,550 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/res.lang.csv 
+2026-05-13 18:12:37,583 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/res_lang_data.xml 
+2026-05-13 18:12:37,616 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/res_partner_data.xml 
+2026-05-13 18:12:37,659 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/res_currency_data.xml 
+2026-05-13 18:12:38,040 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/res_company_data.xml 
+2026-05-13 18:12:38,048 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/res_users_data.xml 
+2026-05-13 18:12:39,023 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/report_paperformat_data.xml 
+2026-05-13 18:12:39,033 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/res_country_data.xml 
+2026-05-13 18:12:39,568 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/ir_demo_data.xml 
+2026-05-13 18:12:39,583 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/security/base_groups.xml 
+2026-05-13 18:12:39,746 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/security/base_security.xml 
+2026-05-13 18:12:39,901 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/wizard/wizard_ir_model_menu_create_views.xml 
+2026-05-13 18:12:39,918 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/base_menus.xml 
+2026-05-13 18:12:39,988 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/decimal_precision_views.xml 
+2026-05-13 18:12:40,013 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/res_config_views.xml 
+2026-05-13 18:12:40,023 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/res.country.state.csv 
+2026-05-13 18:12:40,324 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_actions_views.xml 
+2026-05-13 18:12:40,475 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_asset_views.xml 
+2026-05-13 18:12:40,492 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_config_parameter_views.xml 
+2026-05-13 18:12:40,515 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_cron_views.xml 
+2026-05-13 18:12:40,546 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_cron_trigger_views.xml 
+2026-05-13 18:12:40,567 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_filters_views.xml 
+2026-05-13 18:12:40,593 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_mail_server_views.xml 
+2026-05-13 18:12:40,617 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_model_views.xml 
+2026-05-13 18:12:40,753 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_attachment_views.xml 
+2026-05-13 18:12:40,774 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_rule_views.xml 
+2026-05-13 18:12:40,793 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_sequence_views.xml 
+2026-05-13 18:12:40,814 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_ui_menu_views.xml 
+2026-05-13 18:12:40,833 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_ui_view_views.xml 
+2026-05-13 18:12:40,877 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_default_views.xml 
+2026-05-13 18:12:40,894 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/ir_config_parameter_data.xml 
+2026-05-13 18:12:40,897 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/ir_cron_data.xml 
+2026-05-13 18:12:40,909 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/report/ir_model_report.xml 
+2026-05-13 18:12:40,913 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/report/ir_model_templates.xml 
+2026-05-13 18:12:40,921 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_logging_views.xml 
+2026-05-13 18:12:40,940 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_qweb_widget_templates.xml 
+2026-05-13 18:12:40,953 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_module_views.xml 
+2026-05-13 18:12:41,000 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/ir_module_category_data.xml 
+2026-05-13 18:12:41,035 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/ir_module_module.xml 
+2026-05-13 18:12:41,061 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/report/ir_module_reports.xml 
+2026-05-13 18:12:41,064 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/report/ir_module_report_templates.xml 
+2026-05-13 18:12:41,071 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/wizard/base_module_update_views.xml 
+2026-05-13 18:12:41,084 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/wizard/base_language_install_views.xml 
+2026-05-13 18:12:41,098 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/wizard/base_import_language_views.xml 
+2026-05-13 18:12:41,112 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/wizard/base_module_upgrade_views.xml 
+2026-05-13 18:12:41,131 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/wizard/base_module_uninstall_views.xml 
+2026-05-13 18:12:41,141 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/wizard/base_export_language_views.xml 
+2026-05-13 18:12:41,159 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/wizard/base_partner_merge_views.xml 
+2026-05-13 18:12:41,174 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/data/ir_demo_failure_data.xml 
+2026-05-13 18:12:41,189 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/ir_profile_views.xml 
+2026-05-13 18:12:41,210 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/res_company_views.xml 
+2026-05-13 18:12:41,229 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/res_lang_views.xml 
+2026-05-13 18:12:41,247 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/res_partner_views.xml 
+2026-05-13 18:12:41,321 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/res_bank_views.xml 
+2026-05-13 18:12:41,350 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/res_country_views.xml 
+2026-05-13 18:12:41,387 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/res_currency_views.xml 
+2026-05-13 18:12:41,421 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/res_groups_views.xml 
+2026-05-13 18:12:41,462 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/res_users_views.xml 
+2026-05-13 18:12:41,542 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/res_users_apikeys_views.xml 
+2026-05-13 18:12:41,549 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/res_device_views.xml 
+2026-05-13 18:12:41,568 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/res_users_identitycheck_views.xml 
+2026-05-13 18:12:41,575 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/res_config_settings_views.xml 
+2026-05-13 18:12:41,583 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/views/report_paperformat_views.xml 
+2026-05-13 18:12:41,604 15357 INFO demo_pos_accounting odoo.modules.loading: loading base/security/ir.model.access.csv 
+2026-05-13 18:12:41,721 15357 INFO demo_pos_accounting odoo.modules.loading: Module base loaded in 6.67s, 8340 queries (+8340 other) 
+2026-05-13 18:12:41,721 15357 INFO demo_pos_accounting odoo.modules.loading: 1 modules loaded in 6.67s, 8340 queries (+8340 extra) 
+2026-05-13 18:12:41,724 15357 INFO demo_pos_accounting odoo.modules.loading: updating modules list 
+2026-05-13 18:12:41,725 15357 INFO demo_pos_accounting odoo.addons.base.models.ir_module: ALLOW access to module.update_list on [] to user __system__ #1 via n/a 
+2026-05-13 18:12:43,461 15357 INFO demo_pos_accounting odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['Discuss', 'Contacts'] to user __system__ #1 via n/a 
+2026-05-13 18:12:43,556 15357 INFO demo_pos_accounting odoo.modules.loading: loading 39 modules... 
+2026-05-13 18:12:43,556 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module rpc (2/39) 
+2026-05-13 18:12:43,572 15357 INFO demo_pos_accounting odoo.modules.loading: Module rpc loaded in 0.02s, 9 queries (+9 other) 
+2026-05-13 18:12:43,572 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module web (3/39) 
+2026-05-13 18:12:43,602 15357 INFO demo_pos_accounting odoo.registry: module web: creating or updating database tables 
+2026-05-13 18:12:44,004 15357 INFO demo_pos_accounting odoo.modules.loading: loading web/security/ir.model.access.csv 
+2026-05-13 18:12:44,010 15357 INFO demo_pos_accounting odoo.modules.loading: loading web/security/web_security.xml 
+2026-05-13 18:12:44,022 15357 INFO demo_pos_accounting odoo.modules.loading: loading web/views/webclient_templates.xml 
+2026-05-13 18:12:44,068 15357 INFO demo_pos_accounting odoo.modules.loading: loading web/views/report_templates.xml 
+2026-05-13 18:12:44,150 15357 INFO demo_pos_accounting odoo.modules.loading: loading web/views/base_document_layout_views.xml 
+2026-05-13 18:12:44,164 15357 INFO demo_pos_accounting odoo.modules.loading: loading web/views/partner_view.xml 
+2026-05-13 18:12:44,171 15357 INFO demo_pos_accounting odoo.modules.loading: loading web/views/speedscope_template.xml 
+2026-05-13 18:12:44,176 15357 INFO demo_pos_accounting odoo.modules.loading: loading web/views/memory_template.xml 
+2026-05-13 18:12:44,182 15357 INFO demo_pos_accounting odoo.modules.loading: loading web/views/speedscope_config_wizard.xml 
+2026-05-13 18:12:44,189 15357 INFO demo_pos_accounting odoo.modules.loading: loading web/views/neutralize_views.xml 
+2026-05-13 18:12:44,197 15357 INFO demo_pos_accounting odoo.modules.loading: loading web/views/ir_ui_view_views.xml 
+2026-05-13 18:12:44,206 15357 INFO demo_pos_accounting odoo.modules.loading: loading web/data/ir_attachment.xml 
+2026-05-13 18:12:44,210 15357 INFO demo_pos_accounting odoo.modules.loading: loading web/data/report_layout.xml 
+2026-05-13 18:12:44,250 15357 INFO demo_pos_accounting odoo.modules.loading: Module web loaded in 0.68s, 1228 queries (+1228 other) 
+2026-05-13 18:12:44,250 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module api_doc (4/39) 
+2026-05-13 18:12:44,257 15357 INFO demo_pos_accounting odoo.registry: module api_doc: creating or updating database tables 
+2026-05-13 18:12:44,272 15357 INFO demo_pos_accounting odoo.modules.loading: loading api_doc/security/res_groups.xml 
+2026-05-13 18:12:44,292 15357 INFO demo_pos_accounting odoo.modules.loading: loading api_doc/views/docclient.xml 
+2026-05-13 18:12:44,310 15357 INFO demo_pos_accounting odoo.modules.loading: Module api_doc loaded in 0.06s, 63 queries (+63 other) 
+2026-05-13 18:12:44,310 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module auth_totp (5/39) 
+2026-05-13 18:12:44,335 15357 INFO demo_pos_accounting odoo.registry: module auth_totp: creating or updating database tables 
+2026-05-13 18:12:44,410 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_totp/security/security.xml 
+2026-05-13 18:12:44,430 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_totp/security/ir.model.access.csv 
+2026-05-13 18:12:44,437 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_totp/data/ir_action_data.xml 
+2026-05-13 18:12:44,443 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_totp/views/res_users_views.xml 
+2026-05-13 18:12:44,470 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_totp/views/templates.xml 
+2026-05-13 18:12:44,475 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_totp/wizard/auth_totp_wizard_views.xml 
+2026-05-13 18:12:44,496 15357 INFO demo_pos_accounting odoo.modules.loading: Module auth_totp loaded in 0.19s, 214 queries (+214 other) 
+2026-05-13 18:12:44,496 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module base_import (6/39) 
+2026-05-13 18:12:44,530 15357 INFO demo_pos_accounting odoo.registry: module base_import: creating or updating database tables 
+2026-05-13 18:12:44,923 15357 INFO demo_pos_accounting odoo.modules.loading: loading base_import/security/ir.model.access.csv 
+2026-05-13 18:12:44,942 15357 INFO demo_pos_accounting odoo.modules.loading: Module base_import loaded in 0.45s, 956 queries (+956 other) 
+2026-05-13 18:12:44,942 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module base_import_module (7/39) 
+2026-05-13 18:12:44,952 15357 INFO demo_pos_accounting odoo.registry: module base_import_module: creating or updating database tables 
+2026-05-13 18:12:45,028 15357 INFO demo_pos_accounting odoo.modules.loading: loading base_import_module/security/ir.model.access.csv 
+2026-05-13 18:12:45,035 15357 INFO demo_pos_accounting odoo.modules.loading: loading base_import_module/views/base_import_module_view.xml 
+2026-05-13 18:12:45,055 15357 INFO demo_pos_accounting odoo.modules.loading: loading base_import_module/views/ir_module_views.xml 
+2026-05-13 18:12:45,097 15357 INFO demo_pos_accounting odoo.modules.loading: Module base_import_module loaded in 0.16s, 172 queries (+172 other) 
+2026-05-13 18:12:45,097 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module base_setup (8/39) 
+2026-05-13 18:12:45,109 15357 INFO demo_pos_accounting odoo.registry: module base_setup: creating or updating database tables 
+2026-05-13 18:12:45,154 15357 INFO demo_pos_accounting odoo.modules.loading: loading base_setup/data/base_setup_data.xml 
+2026-05-13 18:12:45,159 15357 INFO demo_pos_accounting odoo.modules.loading: loading base_setup/views/res_config_settings_views.xml 
+2026-05-13 18:12:45,196 15357 INFO demo_pos_accounting odoo.modules.loading: loading base_setup/views/res_partner_views.xml 
+2026-05-13 18:12:45,213 15357 INFO demo_pos_accounting odoo.modules.loading: Module base_setup loaded in 0.12s, 152 queries (+152 other) 
+2026-05-13 18:12:45,213 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module bus (9/39) 
+2026-05-13 18:12:45,235 15357 INFO demo_pos_accounting odoo.registry: module bus: creating or updating database tables 
+2026-05-13 18:12:45,377 15357 INFO demo_pos_accounting odoo.modules.loading: loading bus/security/ir.model.access.csv 
+2026-05-13 18:12:45,389 15357 INFO demo_pos_accounting odoo.modules.loading: Module bus loaded in 0.18s, 152 queries (+152 other) 
+2026-05-13 18:12:45,389 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module web_cohort (10/39) 
+2026-05-13 18:12:45,427 15357 INFO demo_pos_accounting odoo.registry: module web_cohort: creating or updating database tables 
+2026-05-13 18:12:45,821 15357 INFO demo_pos_accounting odoo.modules.loading: Module web_cohort loaded in 0.43s, 942 queries (+942 other) 
+2026-05-13 18:12:45,821 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module web_gantt (11/39) 
+2026-05-13 18:12:45,862 15357 INFO demo_pos_accounting odoo.registry: module web_gantt: creating or updating database tables 
+2026-05-13 18:12:46,363 15357 INFO demo_pos_accounting odoo.modules.loading: Module web_gantt loaded in 0.54s, 938 queries (+938 other) 
+2026-05-13 18:12:46,363 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module web_grid (12/39) 
+2026-05-13 18:12:46,405 15357 INFO demo_pos_accounting odoo.registry: module web_grid: creating or updating database tables 
+2026-05-13 18:12:46,870 15357 INFO demo_pos_accounting odoo.modules.loading: Module web_grid loaded in 0.51s, 938 queries (+938 other) 
+2026-05-13 18:12:46,870 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module web_tour (13/39) 
+2026-05-13 18:12:46,878 15357 INFO demo_pos_accounting odoo.registry: module web_tour: creating or updating database tables 
+2026-05-13 18:12:46,882 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.users.tour_enabled 
+2026-05-13 18:12:46,959 15357 INFO demo_pos_accounting odoo.modules.loading: loading web_tour/security/ir.model.access.csv 
+2026-05-13 18:12:46,967 15357 INFO demo_pos_accounting odoo.modules.loading: loading web_tour/views/tour_views.xml 
+2026-05-13 18:12:47,004 15357 INFO demo_pos_accounting odoo.modules.loading: Module web_tour loaded in 0.13s, 176 queries (+176 other) 
+2026-05-13 18:12:47,005 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module auth_passkey (14/39) 
+2026-05-13 18:12:47,056 15357 INFO demo_pos_accounting odoo.registry: module auth_passkey: creating or updating database tables 
+2026-05-13 18:12:47,124 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_passkey/views/auth_passkey_key_views.xml 
+2026-05-13 18:12:47,143 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_passkey/views/auth_passkey_login_templates.xml 
+2026-05-13 18:12:47,154 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_passkey/views/res_users_identitycheck_views.xml 
+2026-05-13 18:12:47,163 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_passkey/views/res_users_views.xml 
+2026-05-13 18:12:47,183 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_passkey/security/ir.model.access.csv 
+2026-05-13 18:12:47,189 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_passkey/security/security.xml 
+2026-05-13 18:12:47,215 15357 INFO demo_pos_accounting odoo.modules.loading: Module auth_passkey loaded in 0.21s, 218 queries (+218 other) 
+2026-05-13 18:12:47,215 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module html_editor (15/39) 
+2026-05-13 18:12:47,415 15357 INFO demo_pos_accounting odoo.registry: module html_editor: creating or updating database tables 
+2026-05-13 18:12:47,860 15357 INFO demo_pos_accounting odoo.modules.loading: loading html_editor/security/ir.model.access.csv 
+2026-05-13 18:12:47,874 15357 INFO demo_pos_accounting odoo.modules.loading: Module html_editor loaded in 0.66s, 1030 queries (+1030 other) 
+2026-05-13 18:12:47,874 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module iap (16/39) 
+2026-05-13 18:12:47,878 15357 INFO demo_pos_accounting odoo.registry: module iap: creating or updating database tables 
+2026-05-13 18:12:47,966 15357 INFO demo_pos_accounting odoo.modules.loading: loading iap/data/services.xml 
+2026-05-13 18:12:47,970 15357 INFO demo_pos_accounting odoo.modules.loading: loading iap/security/ir.model.access.csv 
+2026-05-13 18:12:47,977 15357 INFO demo_pos_accounting odoo.modules.loading: loading iap/security/ir_rule.xml 
+2026-05-13 18:12:47,984 15357 INFO demo_pos_accounting odoo.modules.loading: loading iap/views/iap_views.xml 
+2026-05-13 18:12:48,007 15357 INFO demo_pos_accounting odoo.modules.loading: loading iap/views/res_config_settings.xml 
+2026-05-13 18:12:48,030 15357 INFO demo_pos_accounting odoo.modules.loading: Module iap loaded in 0.16s, 182 queries (+182 other) 
+2026-05-13 18:12:48,030 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module web_enterprise (17/39) 
+2026-05-13 18:12:48,040 15357 INFO demo_pos_accounting odoo.registry: module web_enterprise: creating or updating database tables 
+2026-05-13 18:12:48,074 15357 INFO demo_pos_accounting odoo.modules.loading: loading web_enterprise/views/webclient_templates.xml 
+2026-05-13 18:12:48,085 15357 INFO demo_pos_accounting odoo.modules.loading: loading web_enterprise/views/res_users_views.xml 
+2026-05-13 18:12:48,112 15357 INFO demo_pos_accounting odoo.modules.loading: Module web_enterprise loaded in 0.08s, 113 queries (+113 other) 
+2026-05-13 18:12:48,112 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module web_map (18/39) 
+2026-05-13 18:12:48,152 15357 INFO demo_pos_accounting odoo.registry: module web_map: creating or updating database tables 
+2026-05-13 18:12:48,164 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.partner.contact_address_complete 
+2026-05-13 18:12:48,559 15357 INFO demo_pos_accounting odoo.modules.loading: loading web_map/views/res_config_settings.xml 
+2026-05-13 18:12:48,584 15357 INFO demo_pos_accounting odoo.modules.loading: loading web_map/views/res_partner_views.xml 
+2026-05-13 18:12:48,619 15357 INFO demo_pos_accounting odoo.modules.loading: Module web_map loaded in 0.51s, 1059 queries (+1059 other) 
+2026-05-13 18:12:48,619 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module mail (19/39) 
+2026-05-13 18:12:48,715 15357 INFO demo_pos_accounting odoo.registry: module mail: creating or updating database tables 
+2026-05-13 18:12:49,272 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.partner_ids 
+2026-05-13 18:12:49,272 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.activity_user_id 
+2026-05-13 18:12:49,272 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.activity_type_id 
+2026-05-13 18:12:49,272 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.template_id 
+2026-05-13 18:12:49,272 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range 
+2026-05-13 18:12:49,272 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.activity_summary 
+2026-05-13 18:12:49,272 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.followers_type 
+2026-05-13 18:12:49,273 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.followers_partner_field_name 
+2026-05-13 18:12:49,273 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.mail_post_method 
+2026-05-13 18:12:49,273 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.activity_date_deadline_range_type 
+2026-05-13 18:12:49,273 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.activity_user_type 
+2026-05-13 18:12:49,273 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.activity_user_field_name 
+2026-05-13 18:12:49,273 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.activity_note 
+2026-05-13 18:12:49,273 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.mail_post_autofollow 
+2026-05-13 18:12:49,370 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.users.notification_type 
+2026-05-13 18:12:49,499 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.partner.email_normalized 
+2026-05-13 18:12:50,901 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/data/mail_groups.xml 
+2026-05-13 18:12:50,925 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/wizard/mail_activity_schedule_views.xml 
+2026-05-13 18:12:50,942 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/wizard/mail_blacklist_remove_views.xml 
+2026-05-13 18:12:50,950 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/wizard/mail_compose_message_views.xml 
+2026-05-13 18:12:50,973 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/wizard/mail_template_preview_views.xml 
+2026-05-13 18:12:50,983 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/wizard/mail_followers_edit_views.xml 
+2026-05-13 18:12:50,994 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/wizard/mail_template_reset_views.xml 
+2026-05-13 18:12:51,003 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/fetchmail_views.xml 
+2026-05-13 18:12:51,021 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/ir_cron_views.xml 
+2026-05-13 18:12:51,035 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/ir_filters_views.xml 
+2026-05-13 18:12:51,057 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/ir_mail_server_views.xml 
+2026-05-13 18:12:51,071 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_message_subtype_views.xml 
+2026-05-13 18:12:51,090 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_tracking_value_views.xml 
+2026-05-13 18:12:51,104 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_notification_views.xml 
+2026-05-13 18:12:51,120 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_message_views.xml 
+2026-05-13 18:12:51,151 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_message_schedule_views.xml 
+2026-05-13 18:12:51,171 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_mail_views.xml 
+2026-05-13 18:12:51,201 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_followers_views.xml 
+2026-05-13 18:12:51,216 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_ice_server_views.xml 
+2026-05-13 18:12:51,241 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/discuss_channel_member_views.xml 
+2026-05-13 18:12:51,257 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/discuss_channel_rtc_session_views.xml 
+2026-05-13 18:12:51,273 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_link_preview_views.xml 
+2026-05-13 18:12:51,290 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/discuss/discuss_gif_favorite_views.xml 
+2026-05-13 18:12:51,302 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/discuss_channel_views.xml 
+2026-05-13 18:12:51,336 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_canned_response_views.xml 
+2026-05-13 18:12:51,362 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/res_role_views.xml 
+2026-05-13 18:12:51,379 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_activity_views.xml 
+2026-05-13 18:12:51,468 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_activity_plan_views.xml 
+2026-05-13 18:12:51,508 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_activity_plan_template_views.xml 
+2026-05-13 18:12:51,520 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/res_config_settings_views.xml 
+2026-05-13 18:12:51,544 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/data/ir_config_parameter_data.xml 
+2026-05-13 18:12:51,551 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/data/res_partner_data.xml 
+2026-05-13 18:12:51,608 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/data/mail_message_subtype_data.xml 
+2026-05-13 18:12:51,616 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/data/mail_templates_chatter.xml 
+2026-05-13 18:12:51,637 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/data/mail_templates_email_layouts.xml 
+2026-05-13 18:12:51,657 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/data/mail_templates_mailgateway.xml 
+2026-05-13 18:12:51,676 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/data/discuss_channel_data.xml 
+2026-05-13 18:12:51,726 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/data/mail_activity_type_data.xml 
+2026-05-13 18:12:51,737 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/data/security_notifications_templates.xml 
+2026-05-13 18:12:51,742 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/data/ir_cron_data.xml 
+2026-05-13 18:12:51,842 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/data/ir_actions_client.xml 
+2026-05-13 18:12:51,847 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/security/mail_security.xml 
+2026-05-13 18:12:52,012 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/security/ir.model.access.csv 
+2026-05-13 18:12:52,069 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/discuss_public_templates.xml 
+2026-05-13 18:12:52,076 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_alias_domain_views.xml 
+2026-05-13 18:12:52,097 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_alias_views.xml 
+2026-05-13 18:12:52,119 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_gateway_allowed_views.xml 
+2026-05-13 18:12:52,132 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_guest_views.xml 
+2026-05-13 18:12:52,145 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_message_reaction_views.xml 
+2026-05-13 18:12:52,160 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_templates_public.xml 
+2026-05-13 18:12:52,171 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/res_users_views.xml 
+2026-05-13 18:12:52,203 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/res_users_settings_views.xml 
+2026-05-13 18:12:52,220 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_template_views.xml 
+2026-05-13 18:12:52,246 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/ir_actions_server_views.xml 
+2026-05-13 18:12:52,270 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/ir_model_views.xml 
+2026-05-13 18:12:52,308 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/res_partner_views.xml 
+2026-05-13 18:12:52,363 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_blacklist_views.xml 
+2026-05-13 18:12:52,385 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_menus.xml 
+2026-05-13 18:12:52,525 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/discuss/discuss_menus.xml 
+2026-05-13 18:12:52,532 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/discuss/discuss_call_history_views.xml 
+2026-05-13 18:12:52,549 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/res_company_views.xml 
+2026-05-13 18:12:52,560 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/views/mail_scheduled_message_views.xml 
+2026-05-13 18:12:52,569 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/data/mail_canned_response_data.xml 
+2026-05-13 18:12:52,578 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/data/mail_templates_invite.xml 
+2026-05-13 18:12:52,593 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail/data/web_tour_tour.xml 
+2026-05-13 18:12:52,653 15357 INFO demo_pos_accounting odoo.modules.loading: Module mail loaded in 4.03s, 4972 queries (+4973 other) 
+2026-05-13 18:12:52,653 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module web_mobile (20/39) 
+2026-05-13 18:12:52,669 15357 INFO demo_pos_accounting odoo.registry: module web_mobile: creating or updating database tables 
+2026-05-13 18:12:52,738 15357 INFO demo_pos_accounting odoo.modules.loading: loading web_mobile/views/views.xml 
+2026-05-13 18:12:52,778 15357 INFO demo_pos_accounting odoo.modules.loading: Module web_mobile loaded in 0.12s, 94 queries (+94 other) 
+2026-05-13 18:12:52,778 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module web_unsplash (21/39) 
+2026-05-13 18:12:52,801 15357 INFO demo_pos_accounting odoo.registry: module web_unsplash: creating or updating database tables 
+2026-05-13 18:12:52,893 15357 INFO demo_pos_accounting odoo.modules.loading: loading web_unsplash/views/res_config_settings_view.xml 
+2026-05-13 18:12:52,944 15357 INFO demo_pos_accounting odoo.modules.loading: Module web_unsplash loaded in 0.17s, 112 queries (+112 other) 
+2026-05-13 18:12:52,944 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module ai_auto_install (22/39) 
+2026-05-13 18:12:52,999 15357 INFO demo_pos_accounting odoo.addons.base.models.ir_module: ALLOW access to module.button_install on ['AI'] to user __system__ #1 via n/a 
+2026-05-13 18:12:53,094 15357 INFO demo_pos_accounting odoo.modules.loading: Module ai_auto_install loaded in 0.15s, 47 queries (+47 other) 
+2026-05-13 18:12:53,094 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module auth_signup (23/39) 
+2026-05-13 18:12:53,110 15357 INFO demo_pos_accounting odoo.registry: module auth_signup: creating or updating database tables 
+2026-05-13 18:12:53,178 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_signup/data/ir_config_parameter_data.xml 
+2026-05-13 18:12:53,184 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_signup/data/ir_cron_data.xml 
+2026-05-13 18:12:53,205 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_signup/data/mail_template_data.xml 
+2026-05-13 18:12:53,293 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_signup/views/res_config_settings_views.xml 
+2026-05-13 18:12:53,308 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_signup/views/res_users_views.xml 
+2026-05-13 18:12:53,332 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_signup/views/auth_signup_login_templates.xml 
+2026-05-13 18:12:53,351 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_signup/views/auth_signup_templates_email.xml 
+2026-05-13 18:12:53,357 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_signup/views/webclient_templates.xml 
+2026-05-13 18:12:53,383 15357 INFO demo_pos_accounting odoo.modules.loading: Module auth_signup loaded in 0.29s, 255 queries (+255 other) 
+2026-05-13 18:12:53,383 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module auth_totp_mail (24/39) 
+2026-05-13 18:12:53,395 15357 INFO demo_pos_accounting odoo.registry: module auth_totp_mail: creating or updating database tables 
+2026-05-13 18:12:53,436 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_totp_mail/data/ir_action_data.xml 
+2026-05-13 18:12:53,458 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_totp_mail/data/mail_template_data.xml 
+2026-05-13 18:12:53,496 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_totp_mail/data/security_notifications_template.xml 
+2026-05-13 18:12:53,503 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_totp_mail/views/res_config_settings_views.xml 
+2026-05-13 18:12:53,519 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_totp_mail/views/res_users_views.xml 
+2026-05-13 18:12:53,537 15357 INFO demo_pos_accounting odoo.modules.loading: loading auth_totp_mail/views/templates.xml 
+2026-05-13 18:12:53,556 15357 INFO demo_pos_accounting odoo.modules.loading: Module auth_totp_mail loaded in 0.17s, 185 queries (+185 other) 
+2026-05-13 18:12:53,556 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module base_install_request (25/39) 
+2026-05-13 18:12:53,563 15357 INFO demo_pos_accounting odoo.registry: module base_install_request: creating or updating database tables 
+2026-05-13 18:12:53,622 15357 INFO demo_pos_accounting odoo.modules.loading: loading base_install_request/security/ir.model.access.csv 
+2026-05-13 18:12:53,632 15357 INFO demo_pos_accounting odoo.modules.loading: loading base_install_request/wizard/base_module_install_request_views.xml 
+2026-05-13 18:12:53,648 15357 INFO demo_pos_accounting odoo.modules.loading: loading base_install_request/data/mail_template_data.xml 
+2026-05-13 18:12:53,653 15357 INFO demo_pos_accounting odoo.modules.loading: loading base_install_request/data/mail_templates_module_install.xml 
+2026-05-13 18:12:53,658 15357 INFO demo_pos_accounting odoo.modules.loading: loading base_install_request/views/ir_module_module_views.xml 
+2026-05-13 18:12:53,680 15357 INFO demo_pos_accounting odoo.modules.loading: Module base_install_request loaded in 0.12s, 154 queries (+154 other) 
+2026-05-13 18:12:53,680 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module contacts (26/39) 
+2026-05-13 18:12:53,693 15357 INFO demo_pos_accounting odoo.registry: module contacts: creating or updating database tables 
+2026-05-13 18:12:53,745 15357 INFO demo_pos_accounting odoo.modules.loading: loading contacts/views/contact_views.xml 
+2026-05-13 18:12:53,807 15357 INFO demo_pos_accounting odoo.modules.loading: Module contacts loaded in 0.13s, 207 queries (+207 other) 
+2026-05-13 18:12:53,807 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module google_gmail (27/39) 
+2026-05-13 18:12:53,821 15357 INFO demo_pos_accounting odoo.registry: module google_gmail: creating or updating database tables 
+2026-05-13 18:12:53,878 15357 INFO demo_pos_accounting odoo.modules.loading: loading google_gmail/views/fetchmail_server_views.xml 
+2026-05-13 18:12:53,893 15357 INFO demo_pos_accounting odoo.modules.loading: loading google_gmail/views/ir_mail_server_views.xml 
+2026-05-13 18:12:53,904 15357 INFO demo_pos_accounting odoo.modules.loading: loading google_gmail/views/res_config_settings_views.xml 
+2026-05-13 18:12:53,922 15357 INFO demo_pos_accounting odoo.modules.loading: loading google_gmail/views/templates.xml 
+2026-05-13 18:12:53,934 15357 INFO demo_pos_accounting odoo.modules.loading: Module google_gmail loaded in 0.13s, 155 queries (+155 other) 
+2026-05-13 18:12:53,934 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module iap_mail (28/39) 
+2026-05-13 18:12:53,940 15357 INFO demo_pos_accounting odoo.registry: module iap_mail: creating or updating database tables 
+2026-05-13 18:12:53,971 15357 INFO demo_pos_accounting odoo.modules.loading: loading iap_mail/data/mail_templates.xml 
+2026-05-13 18:12:53,980 15357 INFO demo_pos_accounting odoo.modules.loading: loading iap_mail/views/iap_views.xml 
+2026-05-13 18:12:53,999 15357 INFO demo_pos_accounting odoo.modules.loading: Module iap_mail loaded in 0.06s, 66 queries (+66 other) 
+2026-05-13 18:12:53,999 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module mail_bot (29/39) 
+2026-05-13 18:12:54,010 15357 INFO demo_pos_accounting odoo.registry: module mail_bot: creating or updating database tables 
+2026-05-13 18:12:54,056 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail_bot/views/res_users_views.xml 
+2026-05-13 18:12:54,073 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail_bot/data/mailbot_data.xml 
+2026-05-13 18:12:54,085 15357 INFO demo_pos_accounting odoo.modules.loading: Module mail_bot loaded in 0.09s, 109 queries (+109 other) 
+2026-05-13 18:12:54,085 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module mail_enterprise (30/39) 
+2026-05-13 18:12:54,091 15357 INFO demo_pos_accounting odoo.registry: module mail_enterprise: creating or updating database tables 
+2026-05-13 18:12:54,111 15357 INFO demo_pos_accounting odoo.modules.loading: Module mail_enterprise loaded in 0.03s, 19 queries (+19 other) 
+2026-05-13 18:12:54,111 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module microsoft_outlook (31/39) 
+2026-05-13 18:12:54,125 15357 INFO demo_pos_accounting odoo.registry: module microsoft_outlook: creating or updating database tables 
+2026-05-13 18:12:54,180 15357 INFO demo_pos_accounting odoo.modules.loading: loading microsoft_outlook/views/fetchmail_server_views.xml 
+2026-05-13 18:12:54,196 15357 INFO demo_pos_accounting odoo.modules.loading: loading microsoft_outlook/views/ir_mail_server_views.xml 
+2026-05-13 18:12:54,206 15357 INFO demo_pos_accounting odoo.modules.loading: loading microsoft_outlook/views/res_config_settings_views.xml 
+2026-05-13 18:12:54,227 15357 INFO demo_pos_accounting odoo.modules.loading: loading microsoft_outlook/views/templates.xml 
+2026-05-13 18:12:54,238 15357 INFO demo_pos_accounting odoo.modules.loading: Module microsoft_outlook loaded in 0.13s, 158 queries (+158 other) 
+2026-05-13 18:12:54,238 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module phone_validation (32/39) 
+2026-05-13 18:12:54,315 15357 INFO demo_pos_accounting odoo.registry: module phone_validation: creating or updating database tables 
+2026-05-13 18:12:54,333 15357 INFO demo_pos_accounting odoo.models: Prepare computation of res.partner.phone_sanitized 
+2026-05-13 18:12:55,004 15357 INFO demo_pos_accounting odoo.modules.loading: loading phone_validation/security/ir.model.access.csv 
+2026-05-13 18:12:55,012 15357 INFO demo_pos_accounting odoo.modules.loading: loading phone_validation/views/phone_blacklist_views.xml 
+2026-05-13 18:12:55,038 15357 INFO demo_pos_accounting odoo.modules.loading: loading phone_validation/views/res_partner_views.xml 
+2026-05-13 18:12:55,049 15357 INFO demo_pos_accounting odoo.modules.loading: loading phone_validation/wizard/phone_blacklist_remove_view.xml 
+2026-05-13 18:12:55,066 15357 INFO demo_pos_accounting odoo.modules.loading: Module phone_validation loaded in 0.83s, 1628 queries (+1628 other) 
+2026-05-13 18:12:55,066 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module privacy_lookup (33/39) 
+2026-05-13 18:12:55,082 15357 INFO demo_pos_accounting odoo.registry: module privacy_lookup: creating or updating database tables 
+2026-05-13 18:12:55,189 15357 INFO demo_pos_accounting odoo.modules.loading: loading privacy_lookup/wizard/privacy_lookup_wizard_views.xml 
+2026-05-13 18:12:55,238 15357 INFO demo_pos_accounting odoo.modules.loading: loading privacy_lookup/views/privacy_log_views.xml 
+2026-05-13 18:12:55,255 15357 INFO demo_pos_accounting odoo.modules.loading: loading privacy_lookup/security/ir.model.access.csv 
+2026-05-13 18:12:55,267 15357 INFO demo_pos_accounting odoo.modules.loading: loading privacy_lookup/data/ir_actions_server_data.xml 
+2026-05-13 18:12:55,305 15357 INFO demo_pos_accounting odoo.modules.loading: Module privacy_lookup loaded in 0.24s, 285 queries (+285 other) 
+2026-05-13 18:12:55,305 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module contacts_enterprise (34/39) 
+2026-05-13 18:12:55,314 15357 INFO demo_pos_accounting odoo.modules.loading: loading contacts_enterprise/views/contact_views.xml 
+2026-05-13 18:12:55,343 15357 INFO demo_pos_accounting odoo.modules.loading: Module contacts_enterprise loaded in 0.04s, 32 queries (+32 other) 
+2026-05-13 18:12:55,343 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module iap_extract (35/39) 
+2026-05-13 18:12:55,350 15357 INFO demo_pos_accounting odoo.registry: module iap_extract: creating or updating database tables 
+2026-05-13 18:12:55,376 15357 INFO demo_pos_accounting odoo.modules.loading: loading iap_extract/data/config_parameter_endpoint.xml 
+2026-05-13 18:12:55,380 15357 INFO demo_pos_accounting odoo.modules.loading: loading iap_extract/data/iap_service_data.xml 
+2026-05-13 18:12:55,384 15357 INFO demo_pos_accounting odoo.modules.loading: loading iap_extract/data/mail_template_data.xml 
+2026-05-13 18:12:55,396 15357 INFO demo_pos_accounting odoo.modules.loading: Module iap_extract loaded in 0.05s, 52 queries (+52 other) 
+2026-05-13 18:12:55,396 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module mail_mobile (36/39) 
+2026-05-13 18:12:55,421 15357 INFO demo_pos_accounting odoo.registry: module mail_mobile: creating or updating database tables 
+2026-05-13 18:12:55,522 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail_mobile/data/mail_mobile_data.xml 
+2026-05-13 18:12:55,528 15357 INFO demo_pos_accounting odoo.modules.loading: loading mail_mobile/views/res_config_settings_views.xml 
+2026-05-13 18:12:55,555 15357 INFO demo_pos_accounting odoo.modules.loading: Module mail_mobile loaded in 0.16s, 208 queries (+208 other) 
+2026-05-13 18:12:55,555 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module partner_autocomplete (37/39) 
+2026-05-13 18:12:55,582 15357 INFO demo_pos_accounting odoo.registry: module partner_autocomplete: creating or updating database tables 
+2026-05-13 18:12:55,654 15357 INFO demo_pos_accounting odoo.modules.loading: loading partner_autocomplete/views/res_company_views.xml 
+2026-05-13 18:12:55,668 15357 INFO demo_pos_accounting odoo.modules.loading: loading partner_autocomplete/views/res_config_settings_views.xml 
+2026-05-13 18:12:55,682 15357 INFO demo_pos_accounting odoo.modules.loading: loading partner_autocomplete/data/iap_service_data.xml 
+2026-05-13 18:12:55,693 15357 INFO demo_pos_accounting odoo.modules.loading: Module partner_autocomplete loaded in 0.14s, 141 queries (+141 other) 
+2026-05-13 18:12:55,693 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module sms (38/39) 
+2026-05-13 18:12:55,781 15357 INFO demo_pos_accounting odoo.registry: module sms: creating or updating database tables 
+2026-05-13 18:12:55,790 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.sms_template_id 
+2026-05-13 18:12:55,790 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.sms_method 
+2026-05-13 18:12:56,643 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/data/iap_service_data.xml 
+2026-05-13 18:12:56,647 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/data/ir_cron_data.xml 
+2026-05-13 18:12:56,668 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/wizard/sms_account_code_views.xml 
+2026-05-13 18:12:56,679 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/wizard/sms_account_phone_views.xml 
+2026-05-13 18:12:56,685 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/wizard/sms_account_sender_views.xml 
+2026-05-13 18:12:56,691 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/wizard/sms_composer_views.xml 
+2026-05-13 18:12:56,702 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/wizard/sms_template_preview_views.xml 
+2026-05-13 18:12:56,711 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/wizard/sms_template_reset_views.xml 
+2026-05-13 18:12:56,723 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/views/ir_actions_server_views.xml 
+2026-05-13 18:12:56,739 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/views/mail_notification_views.xml 
+2026-05-13 18:12:56,753 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/views/res_config_settings_views.xml 
+2026-05-13 18:12:56,767 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/views/res_partner_views.xml 
+2026-05-13 18:12:56,782 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/views/iap_account_views.xml 
+2026-05-13 18:12:56,793 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/views/sms_sms_views.xml 
+2026-05-13 18:12:56,817 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/views/sms_template_views.xml 
+2026-05-13 18:12:56,835 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/security/ir.model.access.csv 
+2026-05-13 18:12:56,856 15357 INFO demo_pos_accounting odoo.modules.loading: loading sms/security/sms_security.xml 
+2026-05-13 18:12:56,878 15357 INFO demo_pos_accounting odoo.modules.loading: Module sms loaded in 1.19s, 2045 queries (+2045 other) 
+2026-05-13 18:12:56,878 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module snailmail (39/39) 
+2026-05-13 18:12:57,001 15357 INFO demo_pos_accounting odoo.registry: module snailmail: creating or updating database tables 
+2026-05-13 18:12:57,200 15357 INFO demo_pos_accounting odoo.modules.loading: loading snailmail/data/iap_service_data.xml 
+2026-05-13 18:12:57,204 15357 INFO demo_pos_accounting odoo.modules.loading: loading snailmail/data/snailmail_data.xml 
+2026-05-13 18:12:57,229 15357 INFO demo_pos_accounting odoo.modules.loading: loading snailmail/views/report_assets.xml 
+2026-05-13 18:12:57,240 15357 INFO demo_pos_accounting odoo.modules.loading: loading snailmail/views/snailmail_views.xml 
+2026-05-13 18:12:57,259 15357 INFO demo_pos_accounting odoo.modules.loading: loading snailmail/security/ir.model.access.csv 
+2026-05-13 18:12:57,282 15357 INFO demo_pos_accounting odoo.modules.loading: Module snailmail loaded in 0.40s, 419 queries (+419 other) 
+2026-05-13 18:12:57,282 15357 INFO demo_pos_accounting odoo.modules.loading: 39 modules loaded in 13.73s, 19885 queries (+19886 extra) 
+2026-05-13 18:12:57,283 15357 INFO demo_pos_accounting odoo.modules.loading: loading 42 modules... 
+2026-05-13 18:12:57,284 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module ai (40/42) 
+2026-05-13 18:12:57,376 15357 INFO demo_pos_accounting odoo.registry: module ai: creating or updating database tables 
+2026-05-13 18:12:57,503 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.ai_tool_schema 
+2026-05-13 18:12:57,504 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.actions.server.use_in_ai 
+2026-05-13 18:12:58,313 15357 INFO demo_pos_accounting odoo.modules.loading: loading ai/data/ir_actions_server_data.xml 
+2026-05-13 18:12:58,406 15357 INFO demo_pos_accounting odoo.modules.loading: loading ai/data/ai_topic_data.xml 
+2026-05-13 18:12:58,415 15357 INFO demo_pos_accounting odoo.modules.loading: loading ai/security/ir.model.access.csv 
+2026-05-13 18:12:58,439 15357 INFO demo_pos_accounting odoo.modules.loading: loading ai/views/res_config_settings_views.xml 
+2026-05-13 18:12:58,458 15357 INFO demo_pos_accounting odoo.modules.loading: loading ai/views/ir_actions_server_views.xml 
+2026-05-13 18:12:58,473 15357 INFO demo_pos_accounting odoo.modules.loading: loading ai/views/mail_scheduled_message_views.xml 
+2026-05-13 18:12:58,481 15357 INFO demo_pos_accounting odoo.modules.loading: loading ai/views/mail_template_views.xml 
+2026-05-13 18:12:58,491 15357 INFO demo_pos_accounting odoo.modules.loading: loading ai/views/templates.xml 
+2026-05-13 18:12:58,496 15357 INFO demo_pos_accounting odoo.modules.loading: loading ai/data/ir_cron.xml 
+2026-05-13 18:12:58,528 15357 INFO demo_pos_accounting odoo.modules.loading: loading ai/data/ai_agent_data.xml 
+2026-05-13 18:12:58,566 15357 INFO demo_pos_accounting odoo.modules.loading: loading ai/data/ai_composer_data.xml 
+2026-05-13 18:12:58,603 15357 INFO demo_pos_accounting odoo.modules.loading: loading ai/wizard/mail_compose_message_views.xml 
+2026-05-13 18:12:58,656 15357 INFO demo_pos_accounting odoo.modules.loading: Module ai loaded in 1.37s, 2248 queries (+2248 other) 
+2026-05-13 18:12:58,656 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module ai_fields (41/42) 
+2026-05-13 18:12:58,738 15357 INFO demo_pos_accounting odoo.registry: module ai_fields: creating or updating database tables 
+2026-05-13 18:12:58,744 15357 INFO demo_pos_accounting odoo.models: Prepare computation of ir.model.fields.ai_domain 
+2026-05-13 18:12:59,716 15357 INFO demo_pos_accounting odoo.modules.loading: loading ai_fields/data/ir_cron_data.xml 
+2026-05-13 18:12:59,741 15357 INFO demo_pos_accounting odoo.modules.loading: loading ai_fields/views/ir_model_views.xml 
+2026-05-13 18:12:59,783 15357 INFO demo_pos_accounting odoo.modules.loading: Module ai_fields loaded in 1.13s, 1730 queries (+1730 other) 
+2026-05-13 18:12:59,783 15357 INFO demo_pos_accounting odoo.modules.loading: Loading module ai_server_actions (42/42) 
+2026-05-13 18:12:59,795 15357 INFO demo_pos_accounting odoo.registry: module ai_server_actions: creating or updating database tables 
+2026-05-13 18:12:59,833 15357 INFO demo_pos_accounting odoo.modules.loading: loading ai_server_actions/views/ir_actions_server_views.xml 
+2026-05-13 18:12:59,860 15357 INFO demo_pos_accounting odoo.modules.loading: Module ai_server_actions loaded in 0.08s, 86 queries (+86 other) 
+2026-05-13 18:12:59,860 15357 INFO demo_pos_accounting odoo.modules.loading: 42 modules loaded in 2.58s, 4064 queries (+4064 extra) 
+2026-05-13 18:13:00,210 15357 INFO demo_pos_accounting odoo.modules.loading: Modules loaded. 
+2026-05-13 18:13:00,217 15357 INFO demo_pos_accounting odoo.registry: Registry changed, signaling through the database 
+2026-05-13 18:13:00,219 15357 INFO demo_pos_accounting odoo.registry: Registry loaded in 28.237s 
+2026-05-13 18:13:00,219 15357 INFO demo_pos_accounting odoo.service.server: Initiating shutdown 
+2026-05-13 18:13:00,219 15357 INFO demo_pos_accounting odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-05-13 18:13:00,219 15357 INFO demo_pos_accounting odoo.sql_db: ConnectionPool(read/write;used=0/count=0/max=64): Closed 1 connections  

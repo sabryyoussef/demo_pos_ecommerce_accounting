@@ -1,0 +1,7 @@
+ALREADY_PUBLISHED tmpl_id=25
+ALREADY_PUBLISHED tmpl_id=27
+ALREADY_PUBLISHED tmpl_id=32
+ALREADY_PUBLISHED tmpl_id=38
+ALREADY_PUBLISHED tmpl_id=39
+WROTE_MANIFEST /home/sabry3/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/evidence_gateD4/gateD4_manifest.json
+COMMIT_OK_PART1_PUBLICATION

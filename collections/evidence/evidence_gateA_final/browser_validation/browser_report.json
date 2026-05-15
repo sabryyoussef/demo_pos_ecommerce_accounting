@@ -1,0 +1,41 @@
+{
+  "base_url": "http://127.0.0.1:8025",
+  "console": [
+    {
+      "type": "log",
+      "text": "click .o_app[data-menu-xmlid=\"crm.crm_menu_root\"]"
+    },
+    {
+      "type": "log",
+      "text": "click .o_app[data-menu-xmlid=\"crm.crm_menu_root\"]"
+    },
+    {
+      "type": "log",
+      "text": "click .o_app[data-menu-xmlid=\"crm.crm_menu_root\"]"
+    },
+    {
+      "type": "log",
+      "text": "click .o_app[data-menu-xmlid=\"crm.crm_menu_root\"]"
+    },
+    {
+      "type": "log",
+      "text": "click .o_app[data-menu-xmlid=\"crm.crm_menu_root\"]"
+    }
+  ],
+  "page_errors": [],
+  "network_failures": [],
+  "subscription_panel": {
+    "count": 1,
+    "outer_html_snippet": "<a href=\"#\" class=\"oe_instance_hide_panel float-end alert-link\" aria-label=\"Dismiss\">\u00d7</a><span class=\"oe_instance_register\">This database will expire in 1 month. <a class=\"oe_instance_register_show alert-link text-decoration-underline\" href=\"#\">Register your subscription</a> or <a class=\"oe_instance_buy alert-link text-decoration-underline\" href=\"#\">buy a subscription</a>. </span>",
+    "class": "database_expiration_panel alert o-hidden-ios text-center mt-4 alert-info"
+  },
+  "urls_visited": [
+    "http://127.0.0.1:8025/odoo",
+    "http://127.0.0.1:8025/odoo",
+    "http://127.0.0.1:8025/odoo/accounting",
+    "http://127.0.0.1:8025/odoo/action-point_of_sale.action_client_pos_menu"
+  ],
+  "authenticated": true,
+  "blocking_subscription": false,
+  "owl_console_lines": []
+}

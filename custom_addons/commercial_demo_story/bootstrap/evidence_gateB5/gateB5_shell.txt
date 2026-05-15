@@ -1,0 +1,20 @@
+2026-05-14 10:46:40,016 196735 INFO ? odoo: Odoo version 19.0 
+2026-05-14 10:46:40,016 196735 INFO ? odoo: Using configuration file at /mnt/sabry_backup/odoo_base/base_odoo_19/config/projects/odoo_demo_pos_accounting.conf 
+2026-05-14 10:46:40,016 196735 INFO ? odoo: addons paths: _NamespacePath(['/home/sabry3/odoo_ssd/odoo19/odoo19/odoo/addons', '/mnt/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/.filestore/addons/19.0', '/home/sabry3/odoo_ssd/odoo19/odoo19/addons', '/home/sabry3/odoo_ssd/odoo19/odoo19/enterprise']) 
+2026-05-14 10:46:40,016 196735 INFO ? odoo: database: odoo19@localhost:5432 
+2026-05-14 10:46:40,270 196735 INFO ? odoo.service.server: Initiating shutdown 
+2026-05-14 10:46:40,270 196735 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-05-14 10:46:40,303 196735 INFO demo_pos_accounting odoo.modules.loading: loading 1 modules... 
+2026-05-14 10:46:40,308 196735 INFO demo_pos_accounting odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-05-14 10:46:40,376 196735 INFO demo_pos_accounting odoo.modules.loading: loading 187 modules... 
+2026-05-14 10:46:41,263 196735 INFO demo_pos_accounting odoo.modules.loading: 187 modules loaded in 0.89s, 0 queries (+0 extra) 
+2026-05-14 10:46:41,644 196735 INFO demo_pos_accounting odoo.modules.loading: Modules loaded. 
+2026-05-14 10:46:41,737 196735 INFO demo_pos_accounting odoo.registry: Registry loaded in 1.460s 
+PICKING_TYPES 12 PDXB0 13 PAUH0
+POS_CONFIG 5 6
+SESSION_CREATE POS-DXB-01 1 opening_control
+SESSION_CLOSE_COUNTS POS-DXB-01 move 0 0 stock_move 0 0 pos_order 0 0
+SESSION_CREATE POS-AUH-01 2 opening_control
+SESSION_CLOSE_COUNTS POS-AUH-01 move 0 0 stock_move 0 0 pos_order 0 0
+TOTAL_COUNTS move 0 0 stock_move 0 0 sale_order 0 0 pos_order 0 0
+COMMIT_OK

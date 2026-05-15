@@ -1,0 +1,50 @@
+-- Gate D1 — SQL verification (demo_pos_accounting)
+-- After opening inventory at WH-HRG-MAIN/Stock (location id 5).
+
+-- stock.quant rows at main stock for RET-G2 physical goods
+SELECT COUNT(*) AS stock_quant_rows_loc5_retg2
+FROM stock_quant sq
+JOIN product_product pp ON pp.id = sq.product_id
+WHERE sq.location_id = 5 AND pp.default_code ILIKE 'RET-G2%' AND sq.quantity != 0;
+
+-- Total on-hand units (expected 307 for Gate D1 plan)
+SELECT COALESCE(SUM(sq.quantity), 0) AS sum_qty_loc5_retg2
+FROM stock_quant sq
+JOIN product_product pp ON pp.id = sq.product_id
+WHERE sq.location_id = 5 AND pp.default_code ILIKE 'RET-G2%';
+
+-- Negative stock check (must return 0 rows)
+SELECT sq.id, pp.default_code, sq.quantity
+FROM stock_quant sq
+JOIN product_product pp ON pp.id = sq.product_id
+WHERE sq.location_id = 5 AND pp.default_code ILIKE 'RET-G2%' AND sq.quantity < 0;
+
+-- stock_move totals
+SELECT COUNT(*) AS stock_move_total FROM stock_move;
+SELECT COUNT(*) AS stock_move_inventory_done
+FROM stock_move WHERE state = 'done' AND is_inventory IS TRUE;
+
+-- stock_valuation_layer (Odoo 19: table may not exist; use product_value as alternative)
+SELECT EXISTS (
+  SELECT 1 FROM information_schema.tables WHERE table_name = 'stock_valuation_layer'
+) AS stock_valuation_layer_table_exists;
+
+SELECT COUNT(*) AS product_value_total FROM product_value;
+
+-- account_move / lines (perpetual valuation posting)
+SELECT COUNT(*) AS account_move_total FROM account_move;
+SELECT COUNT(*) AS account_move_posted FROM account_move WHERE state = 'posted';
+
+SELECT COUNT(*) AS account_move_line_total FROM account_move_line;
+
+-- Valuation account (company stock valuation id = 55 in this DB) — line count on posted moves
+SELECT COUNT(*) AS aml_on_stock_valuation_account
+FROM account_move_line aml
+JOIN account_move am ON am.id = aml.move_id
+WHERE am.state = 'posted' AND aml.account_id = (
+  SELECT account_stock_valuation_id FROM res_company WHERE id = 1 LIMIT 1
+);
+
+-- Duplicate barcode / SKU (sanity; should be empty)
+SELECT barcode, COUNT(*) FROM product_product WHERE barcode IS NOT NULL AND barcode != '' GROUP BY barcode HAVING COUNT(*) > 1;
+SELECT default_code, COUNT(*) FROM product_product WHERE default_code IS NOT NULL AND TRIM(default_code) != '' GROUP BY default_code HAVING COUNT(*) > 1;

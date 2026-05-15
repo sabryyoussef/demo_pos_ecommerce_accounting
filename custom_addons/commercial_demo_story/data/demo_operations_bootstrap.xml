@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Deprecated: bootstrap runs via hooks.post_init_hook on first install only.
+  Kept empty so upgrades do not re-trigger <function> during data load (avoids
+  pos.config FK errors and duplicate demo creation).
+-->
+<odoo/>

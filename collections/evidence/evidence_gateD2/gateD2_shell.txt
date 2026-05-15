@@ -1,0 +1,20 @@
+BASELINE pos_order=0 stock_move=48 account_move=2
+SESSION_OPEN dxb_id=18 name='POS-DXB-01/00016' auh_id=19 name='POS-AUH-01/00017'
+ORDER_1_DXB_COMBO id=18 name='POS-DXB-01 - 000001' total=7.35 tax=0.35 payments=[('POS Visa AED', 4.35), ('POS Cash AED', 3.0)] pickings=[17]
+ORDER_2_AUH_APPAREL id=19 name='POS-AUH-01 - 000001' total=51.45 tax=2.45 payments=[('POS Cash AED AUH', 51.45)] pickings=[18]
+ORDER_3_DXB_MUG id=20 name='POS-DXB-01 - 000002' total=68.25 tax=3.25 payments=[('POS Mastercard AED', 68.25)] pickings=[19]
+ON_HAND_INTERNAL_SUM code='RET-G2-BEV-WAT500' qty=22.0
+ON_HAND_INTERNAL_SUM code='RET-G2-SNK-CRP40' qty=11.0
+ON_HAND_INTERNAL_SUM code='RET-G2-PAR-TSH-M' qty=9.0
+ON_HAND_INTERNAL_SUM code='RET-G2-PAR-MUG350-BLA' qty=5.0
+PICKINGS_ALL_DONE
+COST_METHOD_AVCO_OK
+SESSION_CLOSED_DXB session_id=18 move_id=19 tax_related_lines=2
+SESSION_CLOSED_AUH session_id=19 move_id=24 tax_related_lines=2
+PAY id=24 method='POS Visa AED' type='bank' amount=4.35 account_move_id=False
+PAY id=23 method='POS Cash AED' type='cash' amount=3.0 account_move_id=False
+PAY id=25 method='POS Cash AED AUH' type='cash' amount=51.45 account_move_id=False
+PAY id=26 method='POS Mastercard AED' type='bank' amount=68.25 account_move_id=False
+AFTER pos_order=3 (+3) stock_move=52 (+4) account_move=10 (+8)
+WROTE_MANIFEST /home/sabry3/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/evidence_gateD2/gateD2_manifest.json
+COMMIT_OK_ICP_FLAG_SET

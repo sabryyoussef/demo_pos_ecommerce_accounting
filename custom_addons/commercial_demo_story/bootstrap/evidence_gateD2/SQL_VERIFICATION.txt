@@ -1,0 +1,82 @@
+-- Gate D2 — SQL verification (demo_pos_accounting) after controlled POS sales.
+
+-- 1) POS orders (expect 3 for first D2 run; re-run skips shell but SQL still valid)
+SELECT 'pos_order_count' AS k, COUNT(*)::text AS v FROM pos_order;
+
+SELECT id, name, state, session_id, amount_total, amount_tax, amount_paid, company_id
+FROM pos_order ORDER BY id;
+
+-- 2) POS payments (methods + amounts)
+SELECT ppay.id, po.name AS pos_order, pm.name AS method, ppay.amount
+FROM pos_payment ppay
+JOIN pos_order po ON po.id = ppay.pos_order_id
+JOIN pos_payment_method pm ON pm.id = ppay.payment_method_id
+ORDER BY ppay.id;
+
+-- 3) Account moves: count and recent refs
+SELECT 'account_move_count' AS k, COUNT(*)::text FROM account_move;
+
+SELECT id, name, state, journal_id, ref, date
+FROM account_move
+WHERE ref ILIKE 'POS-%' OR ref ILIKE '%/000%'
+ORDER BY id DESC LIMIT 15;
+
+-- 4) Session closing moves (from Gate D2 manifest: expect posted moves linked to pos.session)
+SELECT ps.id AS session_id, ps.name AS session_name, ps.state, ps.move_id, am.name AS move_name, am.state AS move_state
+FROM pos_session ps
+LEFT JOIN account_move am ON am.id = ps.move_id
+WHERE ps.state = 'closed'
+ORDER BY ps.id DESC LIMIT 10;
+
+-- 5) Journal entry balance check (all posted moves — sum line balance should be 0)
+SELECT am.id, am.name, SUM(aml.balance) AS balance_sum
+FROM account_move am
+JOIN account_move_line aml ON aml.move_id = am.id
+WHERE am.state = 'posted'
+GROUP BY am.id, am.name
+HAVING ABS(SUM(aml.balance)) > 0.00001
+ORDER BY am.id DESC;
+
+-- 6) Tax lines on session moves (tax_line_id set)
+SELECT am.id AS move_id, COUNT(*) AS tax_line_count
+FROM account_move_line aml
+JOIN account_move am ON am.id = aml.move_id
+WHERE aml.tax_line_id IS NOT NULL AND am.id IN (SELECT move_id FROM pos_session WHERE move_id IS NOT NULL)
+GROUP BY am.id;
+
+-- 7) Stock moves linked to Gate D2 pickings (ids from manifest or last 10 pickings)
+SELECT sp.id, sp.name, sp.state, sp.pos_session_id, COUNT(sm.id) AS move_lines
+FROM stock_picking sp
+LEFT JOIN stock_move sm ON sm.picking_id = sp.id
+WHERE sp.pos_session_id IS NOT NULL
+GROUP BY sp.id, sp.name, sp.state, sp.pos_session_id
+ORDER BY sp.id DESC LIMIT 15;
+
+-- 8) Stock quants: net internal quantity per sold SKU (must be >= 0)
+SELECT pp.default_code, SUM(sq.quantity) AS net_internal_qty
+FROM stock_quant sq
+JOIN stock_location sl ON sl.id = sq.location_id
+JOIN product_product pp ON pp.id = sq.product_id
+WHERE sl.usage = 'internal'
+  AND pp.default_code IN (
+    'RET-G2-BEV-WAT500', 'RET-G2-SNK-CRP40', 'RET-G2-PAR-TSH-M', 'RET-G2-PAR-MUG350-BLA'
+  )
+GROUP BY pp.default_code
+ORDER BY pp.default_code;
+
+-- 9) No negative net internal quantity for any product (should return 0 rows)
+SELECT pp.id, pp.default_code, SUM(sq.quantity) AS net_internal_qty
+FROM stock_quant sq
+JOIN stock_location sl ON sl.id = sq.location_id
+JOIN product_product pp ON pp.id = sq.product_id
+WHERE sl.usage = 'internal'
+GROUP BY pp.id, pp.default_code
+HAVING SUM(sq.quantity) < 0
+ORDER BY net_internal_qty
+LIMIT 50;
+
+-- 10) stock_valuation_layer (may be absent in some DBs)
+SELECT to_regclass('public.stock_valuation_layer') AS svl_table_exists;
+
+-- 11) product.value rows (valuation layer substitute in this project)
+SELECT 'product_value_count' AS k, COUNT(*)::text FROM product_value;

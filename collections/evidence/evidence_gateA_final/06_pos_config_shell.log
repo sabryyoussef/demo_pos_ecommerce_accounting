@@ -1,0 +1,13 @@
+2026-05-13 — odoo-bin shell: create minimal pos.config for Gate A browser evidence
+
+Command (cwd: base_odoo_19):
+  ./venv19/bin/python3 odoo19/odoo19/odoo-bin shell -c config/projects/odoo_demo_pos_accounting.conf -d demo_pos_accounting <<'PY'
+  pc = env['pos.config'].create({'name': 'Gate A Main'})
+  print("pos.config", pc.id, pc.name)
+  PY
+
+Result:
+  pos.config 1 Gate A Main
+
+Odoo log excerpt (addons paths confirms SSD + filestore expansion):
+  addons paths: _NamespacePath([... odoo/addons ..., .filestore/addons/19.0, .../addons, .../enterprise])

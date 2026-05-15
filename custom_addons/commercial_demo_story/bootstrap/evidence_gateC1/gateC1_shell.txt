@@ -1,0 +1,14 @@
+BASELINE product_template=7 stock_move=0 product_value=0 account_move=0
+COMPANY_ACCOUNTS income=155 expense=81 stock_valuation=55 stock_journal=7
+CATEGORY_UPDATE id=7 name='ALL PRODUCTS' valuation=real_time
+CATEGORY_UPDATE id=8 name='RETAIL' valuation=real_time
+CATEGORY_UPDATE id=9 name='FOOD' valuation=real_time
+CATEGORY_UPDATE id=10 name='BEVERAGES' valuation=real_time
+CATEGORY_UPDATE id=11 name='SERVICES' valuation=periodic
+CATEGORY_UPDATE id=12 name='POS ITEMS' valuation=real_time
+CATEGORY_UPDATE id=13 name='ECOM ITEMS' valuation=real_time
+COMPANY_DEFAULTS cost_method=average inventory_valuation=real_time
+SERVICES_ENFORCED_PERIODIC
+VARIANT_GROUP_ALREADY_IMPLIED_ON_INTERNAL_USER
+AFTER product_template=7 stock_move=0 product_value=0 account_move=0
+COMMIT_OK

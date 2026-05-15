@@ -1,0 +1,24 @@
+Gate B2 — analytic naming conventions (English-safe, scalable to 30+ branches)
+
+GENERAL
+  - Prefix analytic accounts with dimension code: AN-<DIM>-<TOKEN>
+  - Use ASCII uppercase letters, digits, hyphen only (no spaces in codes).
+  - `name` and `code` match for these baseline rows so lists and exports stay aligned.
+
+DIMENSION: CHANNEL (plan: "Channel")
+  AN-CH-CORP   Corporate / HQ reporting slice
+  AN-CH-ECOM   eCommerce channel
+  AN-CH-POS    POS aggregate channel (non-location)
+
+DIMENSION: POS LOCATION (plan: "POS Location")
+  AN-POS-<AIRPORT-CITY>-NN   Airport/city IATA-style token + two-digit branch index
+  Examples: AN-POS-DXB-01, AN-POS-AUH-01
+  Scale: add AN-POS-DXB-02 … AN-POS-XXX-30 without renaming existing keys.
+
+DIMENSION: DEPARTMENT (plan: "Department")
+  AN-DPT-<DEPT>   Functional department bucket
+  Examples: AN-DPT-SALES, AN-DPT-OPS, AN-DPT-HR
+
+PLAN DISPLAY NAMES
+  - Plans use plain English titles in UI: Channel, POS Location, Department.
+  - Keep plan names unique among root plans (siblings of the default Project plan).

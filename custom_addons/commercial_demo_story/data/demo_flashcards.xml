@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="flashcard_corporate_sales" model="commercial.demo.flashcard">
+        <field name="sequence">10</field>
+        <field name="name">Corporate Sales Flow</field>
+        <field name="short_text"><![CDATA[<p>Quotation → confirmed order → delivery → customer invoice → bank receipt.</p>]]></field>
+        <field name="business_value">Demonstrates B2B cycle with salesperson ownership and posted accounting.</field>
+        <field name="action_xmlid">sale.action_quotations</field>
+        <field name="icon_class">fa fa-briefcase</field>
+    </record>
+    <record id="flashcard_ecommerce" model="commercial.demo.flashcard">
+        <field name="sequence">20</field>
+        <field name="name">eCommerce Flow</field>
+        <field name="short_text"><![CDATA[<p>Website cart → web order → stock and taxes aligned with the same catalogue.</p>]]></field>
+        <field name="business_value">Shows omnichannel consistency without duplicate product masters.</field>
+        <field name="action_xmlid">website_sale.action_orders_ecommerce</field>
+        <field name="icon_class">fa fa-shopping-cart</field>
+    </record>
+    <record id="flashcard_pos_30" model="commercial.demo.flashcard">
+        <field name="sequence">30</field>
+        <field name="name">POS 30 Locations Flow</field>
+        <field name="short_text"><![CDATA[<p>Many branches, dedicated cash journals, shared card rails, cashier HR on sessions.</p>]]></field>
+        <field name="business_value">Retail scale with controlled reconciliation and traceable tenders.</field>
+        <field name="action_xmlid">point_of_sale.action_pos_config_kanban</field>
+        <field name="icon_class">fa fa-building</field>
+    </record>
+    <record id="flashcard_inventory_avco" model="commercial.demo.flashcard">
+        <field name="sequence">40</field>
+        <field name="name">Inventory and AVCO Flow</field>
+        <field name="short_text"><![CDATA[<p>Stock moves from SO, POS, and transfers roll into valuation at average cost.</p>]]></field>
+        <field name="business_value">Finance and operations share one inventory truth.</field>
+        <field name="action_xmlid">stock.action_picking_tree_outgoing</field>
+        <field name="icon_class">fa fa-cubes</field>
+    </record>
+    <record id="flashcard_accounting" model="commercial.demo.flashcard">
+        <field name="sequence">50</field>
+        <field name="name">Accounting Flow</field>
+        <field name="short_text"><![CDATA[<p>Revenue recognition, tax lines, receivable clearing, and liquidity on bank journals.</p>]]></field>
+        <field name="business_value">Clean chart of accounts narrative for auditors and executives.</field>
+        <field name="action_xmlid">account.action_move_out_invoice_type</field>
+        <field name="icon_class">fa fa-book</field>
+    </record>
+    <record id="flashcard_bank_recon" model="commercial.demo.flashcard">
+        <field name="sequence">60</field>
+        <field name="name">Bank Reconciliation Flow</field>
+        <field name="short_text"><![CDATA[<p>Statement lines matched to payment liquidity; outstanding review in banking workspace.</p>]]></field>
+        <field name="business_value">Closes the loop between POS/card receipts and bank reality.</field>
+        <field name="action_xmlid">account.action_bank_statement_tree</field>
+        <field name="icon_class">fa fa-university</field>
+    </record>
+    <record id="flashcard_targets" model="commercial.demo.flashcard">
+        <field name="sequence">70</field>
+        <field name="name">Sales Targets vs Actual</field>
+        <field name="short_text"><![CDATA[<p>CRM teams carry invoicing targets; compare to realized revenue in reporting.</p>]]></field>
+        <field name="business_value">Connects leadership KPIs to operational sales motions.</field>
+        <field name="action_xmlid">sales_team.crm_team_action_pipeline</field>
+        <field name="icon_class">fa fa-line-chart</field>
+    </record>
+    <record id="flashcard_top_rankings" model="commercial.demo.flashcard">
+        <field name="sequence">80</field>
+        <field name="name">Top Products / Top Locations</field>
+        <field name="short_text"><![CDATA[<p>Use POS analysis and sales reports to highlight winners by branch and SKU.</p>]]></field>
+        <field name="business_value">Grounds the story in measurable performance.</field>
+        <field name="action_xmlid">point_of_sale.action_report_pos_order_all</field>
+        <field name="icon_class">fa fa-trophy</field>
+    </record>
+    <record id="flashcard_executive_dashboard" model="commercial.demo.flashcard">
+        <field name="sequence">90</field>
+        <field name="name">Executive Dashboard</field>
+        <field name="short_text"><![CDATA[<p>Combine native accounting dashboards with this Commercial Demo Dashboard for anchors.</p>]]></field>
+        <field name="business_value">Keeps the presenter on-script with live numbers.</field>
+        <field name="action_xmlid">commercial_demo_story.action_commercial_demo_dashboard</field>
+        <field name="icon_class">fa fa-dashboard</field>
+    </record>
+    <record id="flashcard_production_readiness" model="commercial.demo.flashcard">
+        <field name="sequence">100</field>
+        <field name="name">Production Readiness</field>
+        <field name="short_text"><![CDATA[<p>This database is a controlled demo: rotate passwords, remove synthetic partners, and re-run legal setup before production.</p>]]></field>
+        <field name="business_value">Sets expectations for go-live versus workshop sandboxes.</field>
+        <field name="action_xmlid">sale.action_sale_config_settings</field>
+        <field name="icon_class">fa fa-shield</field>
+    </record>
+</odoo>

@@ -1,0 +1,27 @@
+{
+  "pos_order_ids": [
+    18,
+    19,
+    20
+  ],
+  "pos_session_ids": {
+    "POS-DXB-01": 18,
+    "POS-AUH-01": 19
+  },
+  "session_account_move_ids": {
+    "POS-DXB-01": 19,
+    "POS-AUH-01": 24
+  },
+  "stock_picking_ids": [
+    17,
+    18,
+    19
+  ],
+  "water_product_id": 29,
+  "water_template_id": 25,
+  "stock_location_id": 5,
+  "config_ids": {
+    "POS-DXB-01": 5,
+    "POS-AUH-01": 6
+  }
+}

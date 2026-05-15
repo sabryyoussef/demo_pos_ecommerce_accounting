@@ -1,0 +1,20 @@
+{
+  "page_errors": [],
+  "console_errors": [],
+  "console_owl": [],
+  "network_failures": [],
+  "urls": [
+    "http://127.0.0.1:8025/odoo/analytic-plans",
+    "http://127.0.0.1:8025/odoo",
+    "http://127.0.0.1:8025/odoo/profit-and-loss",
+    "http://127.0.0.1:8025/odoo/analytic-report"
+  ],
+  "ui_checks": {
+    "pnl_text_has_analytic_hint": false,
+    "accounts_action_has_AN_CH": false,
+    "accounts_list_has_AN_CH_CORP": false,
+    "account_form_html_has_AN_CH_CORP": false,
+    "account_form_has_AN_CH_CORP": false,
+    "analytic_items_pivot_visible": true
+  }
+}

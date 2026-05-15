@@ -1,0 +1,36 @@
+2026-05-14 13:58:11,916 45873 INFO ? odoo: Odoo version 19.0 
+2026-05-14 13:58:11,916 45873 INFO ? odoo: Using configuration file at /mnt/sabry_backup/odoo_base/base_odoo_19/config/projects/odoo_demo_pos_accounting.conf 
+2026-05-14 13:58:11,916 45873 INFO ? odoo: addons paths: _NamespacePath(['/home/sabry3/odoo_ssd/odoo19/odoo19/odoo/addons', '/mnt/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/.filestore/addons/19.0', '/home/sabry3/odoo_ssd/odoo19/odoo19/addons', '/home/sabry3/odoo_ssd/odoo19/odoo19/enterprise']) 
+2026-05-14 13:58:11,916 45873 INFO ? odoo: database: odoo19@localhost:5432 
+2026-05-14 13:58:12,232 45873 INFO ? odoo.service.server: Initiating shutdown 
+2026-05-14 13:58:12,232 45873 INFO ? odoo.service.server: Hit CTRL-C again or send a second signal to force the shutdown. 
+2026-05-14 13:58:12,263 45873 INFO demo_pos_accounting odoo.modules.loading: loading 1 modules... 
+2026-05-14 13:58:12,268 45873 INFO demo_pos_accounting odoo.modules.loading: 1 modules loaded in 0.00s, 0 queries (+0 extra) 
+2026-05-14 13:58:12,340 45873 INFO demo_pos_accounting odoo.modules.loading: loading 187 modules... 
+2026-05-14 13:58:13,275 45873 INFO demo_pos_accounting odoo.modules.loading: 187 modules loaded in 0.94s, 0 queries (+0 extra) 
+2026-05-14 13:58:13,670 45873 INFO demo_pos_accounting odoo.modules.loading: Modules loaded. 
+2026-05-14 13:58:13,767 45873 INFO demo_pos_accounting odoo.registry: Registry loaded in 1.527s 
+BASELINE stock_move=0 stock_quant=0 account_move=0 product_value=0
+LOCATION id=5 name='WH-HRG-MAIN/Stock'
+IS_STORABLE_TRUE templates=[25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 38, 39]
+INV_SET code=RET-G2-BEV-OJ1L qty=24.0 quant_id=3
+INV_SET code=RET-G2-BEV-SPK330 qty=48.0 quant_id=4
+INV_SET code=RET-G2-BEV-TEA500 qty=48.0 quant_id=5
+INV_SET code=RET-G2-BEV-WAT500 qty=24.0 quant_id=6
+INV_SET code=RET-G2-PAR-MUG350-BLA qty=6.0 quant_id=7
+INV_SET code=RET-G2-PAR-MUG350-SIL qty=12.0 quant_id=8
+INV_SET code=RET-G2-PAR-TSH-L qty=5.0 quant_id=9
+INV_SET code=RET-G2-PAR-TSH-M qty=10.0 quant_id=10
+INV_SET code=RET-G2-PAR-TSH-S qty=10.0 quant_id=11
+INV_SET code=RET-G2-RTL-BAG01 qty=12.0 quant_id=12
+INV_SET code=RET-G2-RTL-BAT4 qty=24.0 quant_id=13
+INV_SET code=RET-G2-RTL-USB1M qty=12.0 quant_id=14
+INV_SET code=RET-G2-SNK-ALM100 qty=24.0 quant_id=15
+INV_SET code=RET-G2-SNK-CHO45 qty=12.0 quant_id=16
+INV_SET code=RET-G2-SNK-CRP40 qty=12.0 quant_id=17
+INV_SET code=RET-G2-SNK-OAT35 qty=24.0 quant_id=18
+AFTER stock_move=16 (+16) stock_quant=32 (+32)
+AFTER account_move=0 (+0) product_value=0 (+0)
+POS_VISIBLE_TEMPLATES config=5 count=14
+COMMIT_OK_ICP_FLAG_SET
+WROTE /home/sabry3/sabry_backup/odoo_base/base_odoo_19/projects/demo_pos_accounting/evidence_gateD1/gateD1_shell.txt

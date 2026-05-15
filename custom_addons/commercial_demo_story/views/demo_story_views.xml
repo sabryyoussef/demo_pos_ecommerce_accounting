@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_commercial_demo_story_step_list" model="ir.ui.view">
+        <field name="name">commercial.demo.story.step.list</field>
+        <field name="model">commercial.demo.story.step</field>
+        <field name="arch" type="xml">
+            <list string="Demo story" create="false" delete="false">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="story_source" optional="show"/>
+                <button name="action_open_step_action" type="object" string="Open" class="btn-link" invisible="not action_xmlid"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_commercial_demo_story_step_form" model="ir.ui.view">
+        <field name="name">commercial.demo.story.step.form</field>
+        <field name="model">commercial.demo.story.step</field>
+        <field name="arch" type="xml">
+            <form string="Story step" create="false">
+                <header>
+                    <button name="action_open_step_action" type="object" string="Open step action" class="btn-primary" invisible="not action_xmlid"/>
+                    <button name="action_open_related_record" type="object" string="Open related record" invisible="not related_record_ref"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="sequence"/>
+                        <field name="name"/>
+                        <field name="story_source"/>
+                        <field name="related_model_name"/>
+                        <field name="related_record_ref"/>
+                        <field name="action_xmlid"/>
+                    </group>
+                    <group string="Presenter">
+                        <field name="description" colspan="2"/>
+                        <field name="presenter_script" colspan="2"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_commercial_demo_scenario_list" model="ir.ui.view">
+        <field name="name">commercial.demo.scenario.list</field>
+        <field name="model">commercial.demo.scenario</field>
+        <field name="arch" type="xml">
+            <list string="Scenarios" create="false" delete="false">
+                <field name="name"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_commercial_demo_scenario_form" model="ir.ui.view">
+        <field name="name">commercial.demo.scenario.form</field>
+        <field name="model">commercial.demo.scenario</field>
+        <field name="arch" type="xml">
+            <form string="Scenario" create="false" delete="false">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="active"/>
+                        <field name="description" colspan="2"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

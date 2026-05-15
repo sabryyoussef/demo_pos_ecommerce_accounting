@@ -1,0 +1,22 @@
+Commercial Demo Story — install log
+====================================
+
+Date: 2026-05-14  
+Database: demo_pos_accounting  
+Command (example):
+
+  odoo-bin -c config/projects/odoo_demo_pos_accounting.conf -d demo_pos_accounting \\
+    -i commercial_demo_story --stop-after-init --log-level=warn
+
+Result: **installed** (module state `installed` in `ir_module_module`).
+
+Post-install smoke (Odoo shell, admin):
+
+- `_compute_kpis()` on `commercial.demo.dashboard`: OK (no traceback).
+- `action_open_sales()`: returns valid `ir.actions.act_window` dict.
+- `action_generate_demo_story()` then `action_reset_demo_story()`: generated row count 0 → 12 → 0; module story rows preserved.
+
+Notes:
+
+- Addons path must include `projects/demo_pos_accounting/custom_addons` (updated in `odoo_demo_pos_accounting.conf` for this repo).
+- UI (Owl) was not exercised in a browser in this run; open **Commercial Demo → Demo Dashboard** locally to confirm layout.

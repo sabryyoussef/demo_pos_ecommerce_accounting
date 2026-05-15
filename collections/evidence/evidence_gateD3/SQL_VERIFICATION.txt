@@ -1,0 +1,90 @@
+-- Gate D3 — reconciliation SQL (read-only). Scope: D2 POS orders 18–20, sessions 18–19, related moves.
+
+-- 1) POS order totals vs payments
+SELECT 'pos_order_sum_total' AS k, SUM(amount_total)::text AS v FROM pos_order WHERE id IN (18, 19, 20);
+SELECT 'pos_order_sum_tax' AS k, SUM(amount_tax)::text AS v FROM pos_order WHERE id IN (18, 19, 20);
+SELECT 'pos_payment_sum' AS k, SUM(amount)::text AS v
+FROM pos_payment WHERE pos_order_id IN (18, 19, 20);
+
+-- 2) POS orders detail
+SELECT id, name, state, session_id, amount_total, amount_tax, amount_paid
+FROM pos_order WHERE id IN (18, 19, 20) ORDER BY id;
+
+-- 3) Sessions + session accounting moves
+SELECT id, name, state, move_id FROM pos_session WHERE id IN (18, 19);
+
+-- 4) Journal balance: all posted moves linked to D2 POS (session ref + statement lines + combine refs)
+SELECT am.id, am.name, am.ref, SUM(aml.balance) AS balance_sum
+FROM account_move am
+JOIN account_move_line aml ON aml.move_id = am.id
+WHERE am.state = 'posted'
+  AND (
+    am.ref IN ('POS-DXB-01/00016', 'POS-AUH-01/00017')
+    OR am.ref ILIKE '%POS-DXB-01/00016%'
+    OR am.ref ILIKE '%POS-AUH-01/00017%'
+    OR am.id IN (SELECT move_id FROM account_bank_statement_line WHERE pos_session_id IN (18, 19) AND move_id IS NOT NULL)
+  )
+GROUP BY am.id, am.name, am.ref
+HAVING ABS(SUM(aml.balance)) > 0.00001
+ORDER BY am.id;
+
+-- 5) Tax lines on session moves (POSS)
+SELECT aml.move_id, COUNT(*) AS lines_with_tax_line_id
+FROM account_move_line aml
+WHERE aml.tax_line_id IS NOT NULL AND aml.move_id IN (19, 24)
+GROUP BY aml.move_id;
+
+-- 6) Duplicate main session refs (expect 0 rows beyond single POSS per ref)
+SELECT ref, COUNT(*) AS cnt FROM account_move
+WHERE state = 'posted' AND ref IN ('POS-DXB-01/00016', 'POS-AUH-01/00017')
+GROUP BY ref HAVING COUNT(*) > 1;
+
+-- 7) Orphan move lines
+SELECT COUNT(*) AS orphan_aml FROM account_move_line WHERE move_id IS NULL;
+
+-- 8) Stock pickings D2
+SELECT id, name, state, pos_session_id FROM stock_picking WHERE id IN (17, 18, 19) ORDER BY id;
+
+-- 9) Stock moves from those pickings (qty_done / product_uom_qty)
+SELECT sm.id, sm.picking_id, sm.product_id, pp.default_code, sm.product_uom_qty, sm.state
+FROM stock_move sm
+JOIN product_product pp ON pp.id = sm.product_id
+WHERE sm.picking_id IN (17, 18, 19)
+ORDER BY sm.picking_id, sm.id;
+
+-- 10) Net internal quantity D2 SKUs (>= 0)
+SELECT pp.default_code, SUM(sq.quantity) AS net_internal
+FROM stock_quant sq
+JOIN stock_location sl ON sl.id = sq.location_id
+JOIN product_product pp ON pp.id = sq.product_id
+WHERE sl.usage = 'internal'
+  AND pp.default_code IN ('RET-G2-BEV-WAT500','RET-G2-SNK-CRP40','RET-G2-PAR-TSH-M','RET-G2-PAR-MUG350-BLA')
+GROUP BY pp.default_code
+ORDER BY pp.default_code;
+
+-- 11) Any product with net negative internal (expect 0 rows)
+SELECT pp.id, pp.default_code, SUM(sq.quantity) AS net_internal
+FROM stock_quant sq
+JOIN stock_location sl ON sl.id = sq.location_id
+JOIN product_product pp ON pp.id = sq.product_id
+WHERE sl.usage = 'internal'
+GROUP BY pp.id, pp.default_code
+HAVING SUM(sq.quantity) < 0
+ORDER BY net_internal
+LIMIT 20;
+
+-- 12) Combine card moves vs pos_payment bank amounts (DXB session 18 orders 18+20)
+SELECT 'visa_pos_payment' AS k, SUM(amount)::text FROM pos_payment ppay
+JOIN pos_payment_method pm ON pm.id = ppay.payment_method_id
+WHERE ppay.pos_order_id IN (18, 20) AND pm.name::text ILIKE '%Visa%';
+SELECT 'mc_pos_payment' AS k, SUM(amount)::text FROM pos_payment ppay
+JOIN pos_payment_method pm ON pm.id = ppay.payment_method_id
+WHERE ppay.pos_order_id IN (18, 20) AND pm.name::text ILIKE '%Mastercard%';
+
+SELECT id, name, amount_total_signed FROM account_move WHERE id IN (20, 21);
+
+-- 13) stock_valuation_layer presence
+SELECT to_regclass('public.stock_valuation_layer') AS svl_table;
+
+-- 14) product_value count
+SELECT 'product_value_count' AS k, COUNT(*)::text FROM product_value;

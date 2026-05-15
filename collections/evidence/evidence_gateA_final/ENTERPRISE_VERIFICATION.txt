@@ -1,0 +1,18 @@
+Enterprise verification — 2026-05-13
+
+INSTALLED
+  web_enterprise, account_accountant, and other enterprise dependencies are in state "installed" (see MODULE_VERIFICATION.txt).
+
+RUNTIME / CODE
+  Enterprise addons load from:
+    /home/sabry3/odoo_ssd/odoo19/odoo19/enterprise
+  (confirmed in module install logs and startup addons paths line.)
+
+BROWSER (Playwright, internal user admin)
+  .database_expiration_panel: present with class "… alert-info" (informational).
+  Message: database will expire in 1 month; register or buy subscription; dismissible.
+  blocking_subscription (alert-danger / alert-warning on panel): NO.
+
+DEGRADED MODE
+  No alert-danger subscription lock observed in automated session.
+  Residual: production subscription registration remains an operational task; not a Gate A stack failure.

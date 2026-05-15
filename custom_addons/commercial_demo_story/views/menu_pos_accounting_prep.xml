@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Second demo hub: quick navigation for POS + accounting preparation work (branches, journals, stock, reports). -->
+    <menuitem id="menu_pos_accounting_prep_root" name="POS and Accounting Prep" sequence="82"/>
+
+    <!-- POS -->
+    <menuitem id="menu_pos_accounting_prep_pos_group" name="POS" parent="menu_pos_accounting_prep_root" sequence="10"/>
+    <menuitem id="menu_pos_accounting_prep_pos_configs"
+              name="POS configurations"
+              parent="menu_pos_accounting_prep_pos_group"
+              action="point_of_sale.action_pos_config_kanban"
+              sequence="10"/>
+    <menuitem id="menu_pos_accounting_prep_pos_orders"
+              name="POS orders"
+              parent="menu_pos_accounting_prep_pos_group"
+              action="point_of_sale.action_pos_pos_form"
+              sequence="20"/>
+    <menuitem id="menu_pos_accounting_prep_pos_sessions"
+              name="POS sessions"
+              parent="menu_pos_accounting_prep_pos_group"
+              action="point_of_sale.action_pos_session"
+              sequence="30"/>
+    <menuitem id="menu_pos_accounting_prep_pos_payments"
+              name="POS payment methods"
+              parent="menu_pos_accounting_prep_pos_group"
+              action="point_of_sale.action_payment_methods_tree"
+              sequence="40"/>
+    <menuitem id="menu_pos_accounting_prep_pos_payment_lines"
+              name="POS payments"
+              parent="menu_pos_accounting_prep_pos_group"
+              action="point_of_sale.action_pos_payment_form"
+              sequence="50"/>
+    <menuitem id="menu_pos_accounting_prep_pos_open"
+              name="Open POS (front-end)"
+              parent="menu_pos_accounting_prep_pos_group"
+              action="point_of_sale.action_client_pos_menu"
+              sequence="60"/>
+
+    <!-- Accounting -->
+    <menuitem id="menu_pos_accounting_prep_accounting_group" name="Accounting" parent="menu_pos_accounting_prep_root" sequence="20"/>
+    <menuitem id="menu_pos_accounting_prep_journals"
+              name="Journals"
+              parent="menu_pos_accounting_prep_accounting_group"
+              action="account.action_account_journal_form"
+              sequence="10"/>
+    <menuitem id="menu_pos_accounting_prep_invoices"
+              name="Customer invoices"
+              parent="menu_pos_accounting_prep_accounting_group"
+              action="account.action_move_out_invoice_type"
+              sequence="20"/>
+    <menuitem id="menu_pos_accounting_prep_payments"
+              name="Payments"
+              parent="menu_pos_accounting_prep_accounting_group"
+              action="account.action_account_payments"
+              sequence="30"/>
+    <menuitem id="menu_pos_accounting_prep_bank_statements"
+              name="Bank statements"
+              parent="menu_pos_accounting_prep_accounting_group"
+              action="account.action_bank_statement_tree"
+              sequence="40"/>
+
+    <!-- Inventory & products -->
+    <menuitem id="menu_pos_accounting_prep_stock_group" name="Inventory and products" parent="menu_pos_accounting_prep_root" sequence="30"/>
+    <menuitem id="menu_pos_accounting_prep_products"
+              name="Products"
+              parent="menu_pos_accounting_prep_stock_group"
+              action="sale.product_template_action"
+              sequence="10"/>
+    <menuitem id="menu_pos_accounting_prep_transfers"
+              name="Transfers"
+              parent="menu_pos_accounting_prep_stock_group"
+              action="stock.action_picking_tree_all"
+              sequence="20"/>
+    <menuitem id="menu_pos_accounting_prep_outgoing"
+              name="Outgoing deliveries"
+              parent="menu_pos_accounting_prep_stock_group"
+              action="stock.action_picking_tree_outgoing"
+              sequence="30"/>
+    <menuitem id="menu_pos_accounting_prep_stock_moves"
+              name="Stock moves"
+              parent="menu_pos_accounting_prep_stock_group"
+              action="stock.stock_move_action"
+              sequence="40"/>
+
+    <!-- Analysis -->
+    <menuitem id="menu_pos_accounting_prep_analysis_group" name="Analysis" parent="menu_pos_accounting_prep_root" sequence="40"/>
+    <menuitem id="menu_pos_accounting_prep_pos_analysis"
+              name="POS orders analysis"
+              parent="menu_pos_accounting_prep_analysis_group"
+              action="point_of_sale.action_report_pos_order_all"
+              sequence="10"/>
+    <menuitem id="menu_pos_accounting_prep_pl"
+              name="Profit and loss"
+              parent="menu_pos_accounting_prep_analysis_group"
+              action="account_reports.action_account_report_pl"
+              sequence="20"/>
+    <menuitem id="menu_pos_accounting_prep_ar"
+              name="Aged receivable"
+              parent="menu_pos_accounting_prep_analysis_group"
+              action="account_reports.action_account_report_ar"
+              sequence="30"/>
+
+    <!-- Bridge back to executive demo hub -->
+    <menuitem id="menu_pos_accounting_prep_bridge_group" name="Commercial demo hub" parent="menu_pos_accounting_prep_root" sequence="90"/>
+    <menuitem id="menu_pos_accounting_prep_open_demo_dashboard"
+              name="Commercial Demo dashboard"
+              parent="menu_pos_accounting_prep_bridge_group"
+              action="commercial_demo_story.action_commercial_demo_dashboard"
+              sequence="10"/>
+    <menuitem id="menu_pos_accounting_prep_open_demo_story"
+              name="Commercial Demo story"
+              parent="menu_pos_accounting_prep_bridge_group"
+              action="commercial_demo_story.action_commercial_demo_story"
+              sequence="20"/>
+    <menuitem id="menu_pos_accounting_prep_open_demo_flashcards"
+              name="Commercial Demo flashcards"
+              parent="menu_pos_accounting_prep_bridge_group"
+              action="commercial_demo_story.action_commercial_demo_flashcards"
+              sequence="30"/>
+</odoo>

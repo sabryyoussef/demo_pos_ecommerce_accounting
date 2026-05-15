@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_commercial_demo_dashboard_user,commercial.demo.dashboard user,model_commercial_demo_dashboard,base.group_user,1,1,1,0
+access_commercial_demo_flashcard_user,commercial.demo.flashcard user,model_commercial_demo_flashcard,base.group_user,1,0,0,0
+access_commercial_demo_scenario_user,commercial.demo.scenario user,model_commercial_demo_scenario,base.group_user,1,0,0,0
+access_commercial_demo_story_step_user,commercial.demo.story.step user,model_commercial_demo_story_step,base.group_user,1,1,1,0
+access_commercial_demo_story_step_system,commercial.demo.story.step system,model_commercial_demo_story_step,base.group_system,1,1,1,1

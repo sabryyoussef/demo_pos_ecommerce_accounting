@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo noupdate="1">
+  <record id="demo_product_category_all_products" model="product.category">
+    <field name="name">ALL PRODUCTS</field>
+  </record>
+  <record id="demo_product_category_retail" model="product.category">
+    <field name="name">RETAIL</field>
+    <field name="parent_id" ref="commercial_demo_story.demo_product_category_all_products"/>
+  </record>
+  <record id="demo_product_category_services" model="product.category">
+    <field name="name">SERVICES</field>
+    <field name="parent_id" ref="commercial_demo_story.demo_product_category_all_products"/>
+    <field name="property_valuation">periodic</field>
+  </record>
+  <record id="demo_product_category_pos_items" model="product.category">
+    <field name="name">POS ITEMS</field>
+    <field name="parent_id" ref="commercial_demo_story.demo_product_category_all_products"/>
+  </record>
+  <record id="demo_product_category_ecom_items" model="product.category">
+    <field name="name">ECOM ITEMS</field>
+    <field name="parent_id" ref="commercial_demo_story.demo_product_category_all_products"/>
+  </record>
+  <record id="demo_product_category_food" model="product.category">
+    <field name="name">FOOD</field>
+    <field name="parent_id" ref="commercial_demo_story.demo_product_category_retail"/>
+  </record>
+  <record id="demo_product_category_beverages" model="product.category">
+    <field name="name">BEVERAGES</field>
+    <field name="parent_id" ref="commercial_demo_story.demo_product_category_retail"/>
+  </record>
+</odoo>

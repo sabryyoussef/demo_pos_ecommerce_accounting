@@ -1,0 +1,33 @@
+Gate B5 — SQL verification (demo_pos_accounting)
+
+-- POS configurations (expect 2: POS-DXB-01, POS-AUH-01)
+SELECT id, name, warehouse_id, picking_type_id, module_pos_hr, restrict_price_control,
+       set_maximum_difference, amount_authorized_diff, order_edit_tracking
+FROM pos_config WHERE company_id = 1 ORDER BY id;
+
+-- Payment methods on each config (cash methods must differ per Odoo constraint)
+SELECT c.name AS config, pm.id AS pm_id, pm.name->>'en_US' AS pm_name, pm.journal_id
+FROM pos_config_pos_payment_method_rel rel
+JOIN pos_config c ON c.id = rel.pos_config_id
+JOIN pos_payment_method pm ON pm.id = rel.pos_payment_method_id
+ORDER BY c.id, pm.id;
+
+-- Sessions created during validation (closed, no orders)
+SELECT id, name, config_id, state FROM pos_session ORDER BY id;
+
+-- Core “no transactions” checks
+SELECT COUNT(*) AS pos_order FROM pos_order;
+SELECT COUNT(*) AS account_move FROM account_move;
+SELECT COUNT(*) AS stock_move FROM stock_move;
+SELECT COUNT(*) AS sale_order FROM sale_order;
+
+-- Cashiers (separate employees, PIN set — not stored in plaintext in DB after hash in some paths; pin column exists on hr_employee)
+SELECT id, name, user_id FROM hr_employee WHERE company_id = 1 AND name LIKE 'POS Cashier%' ORDER BY id;
+
+-- Branch picking types source locations
+SELECT spt.id, spt.name->>'en_US' AS name, spt.sequence_code, sl.complete_name AS src
+FROM stock_picking_type spt
+JOIN stock_location sl ON sl.id = spt.default_location_src_id
+WHERE spt.id IN (SELECT DISTINCT picking_type_id FROM pos_config WHERE company_id = 1);
+
+Executed snapshot (see live psql in gate playbook): pos_order=0, account_move=0, stock_move=0, sale_order=0 after Gate B5 shell.

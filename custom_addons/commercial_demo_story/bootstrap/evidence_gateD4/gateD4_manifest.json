@@ -1,0 +1,31 @@
+{
+  "gate": "D4_part1",
+  "test_email": "gate4_ecommerce_flow@example.invalid",
+  "product_template_ids": [
+    25,
+    27,
+    32,
+    38,
+    39
+  ],
+  "product_slugs_paths": {
+    "RET-G2-BEV-WAT500": "/shop/ret-g2-bev-wat500-still-spring-water-500-ml-25",
+    "RET-G2-BEV-OJ1L": "/shop/ret-g2-bev-oj1l-orange-juice-not-from-concentrate-1-l-27",
+    "RET-G2-SNK-OAT35": "/shop/ret-g2-snk-oat35-soft-oat-granola-bar-35-g-32",
+    "RET-G2-PAR-TSH-M": "/shop/cotton-crew-neck-t-shirt-38?attribute_values=14",
+    "RET-G2-PAR-MUG350-BLA": "/shop/insulated-travel-mug-350-ml-39?attribute_values=16"
+  },
+  "shop_paths": {
+    "water": "/shop/ret-g2-bev-wat500-still-spring-water-500-ml-25",
+    "oj": "/shop/ret-g2-bev-oj1l-orange-juice-not-from-concentrate-1-l-27",
+    "oat": "/shop/ret-g2-snk-oat35-soft-oat-granola-bar-35-g-32"
+  },
+  "baseline_sale_order_max_id": 0,
+  "baseline_sale_order_count": 0,
+  "baseline_account_move_count": 10,
+  "baseline_stock_move_count": 52,
+  "payment_cod_provider_id": 22,
+  "payment_cod_method_radio_id_hint": 215,
+  "country_ae_id": 2,
+  "state_dubai_id": 548
+}

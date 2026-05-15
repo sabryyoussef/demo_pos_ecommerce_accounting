@@ -1,0 +1,12 @@
+{
+  "page_errors": [],
+  "console_errors": [],
+  "console_owl": [],
+  "network_failures": [],
+  "urls": [
+    "http://127.0.0.1:8025/odoo/action-301",
+    "http://127.0.0.1:8025/odoo/account.journal/17",
+    "http://127.0.0.1:8025/odoo/action-657"
+  ],
+  "journal_detail_id": "17"
+}
