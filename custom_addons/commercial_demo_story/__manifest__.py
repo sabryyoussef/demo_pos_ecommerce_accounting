@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "Commercial Demo Story",
-    "version": "19.0.1.0.34",
+    "version": "19.0.1.0.35",
     "category": "Sales",
     "summary": "Presentation dashboard, flashcards, workflow story, and safe demo helpers",
     "description": "Executive navigation and narration for a multi-channel retail demo (B2B, eCommerce, POS, accounting). KPIs are read-only. Reset removes only generated COMM-DEMO story steps, never live transactions.",
@@ -25,6 +25,7 @@
         "sales_team",
     ],
     "data": [
+        "data/module_description_sync.xml",
         "security/ir.model.access.csv",
         "views/build_story_views.xml",
         "views/presentation_views.xml",

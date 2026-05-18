@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     "name": "POS Close All Sessions",
-    "version": "19.0.1.0.1",
+    "version": "19.0.1.0.2",
     "category": "Sales/Point of Sale",
     "summary": "Close every open POS session in one click",
     "description": "Wizard under Point of Sale to close all non-closed sessions (opening, open, or closing control). Optionally cancel draft orders first.",

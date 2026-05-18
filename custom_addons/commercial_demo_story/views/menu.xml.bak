@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_commercial_demo_root" name="Commercial Demo" sequence="80"/>
+
+    <menuitem id="menu_commercial_demo_dashboard"
+              name="Demo Dashboard"
+              parent="menu_commercial_demo_root"
+              action="action_commercial_demo_dashboard"
+              sequence="10"/>
+
+    <menuitem id="menu_commercial_demo_story"
+              name="Demo Story"
+              parent="menu_commercial_demo_root"
+              action="action_commercial_demo_story"
+              sequence="20"/>
+
+    <menuitem id="menu_commercial_demo_presentation"
+              name="Demo Presentation"
+              parent="menu_commercial_demo_root"
+              action="action_commercial_demo_presentation"
+              sequence="22"/>
+
+    <menuitem id="menu_commercial_demo_build_story"
+              name="Build Story Gallery"
+              parent="menu_commercial_demo_root"
+              action="action_commercial_demo_build_story"
+              sequence="25"/>
+
+    <menuitem id="menu_commercial_demo_flashcards"
+              name="Demo Flashcards"
+              parent="menu_commercial_demo_root"
+              action="action_commercial_demo_flashcards"
+              sequence="30"/>
+
+    <menuitem id="menu_commercial_demo_scenarios"
+              name="Demo Scenarios"
+              parent="menu_commercial_demo_root"
+              action="action_commercial_demo_scenarios"
+              sequence="40"/>
+</odoo>
