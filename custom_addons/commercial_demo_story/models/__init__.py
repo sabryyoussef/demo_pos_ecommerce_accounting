@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from . import ir_module
 from . import build_story
 from . import demo_presentation
 from . import demo_analytic_bootstrap

@@ -31,6 +31,7 @@ def pre_init_hook(env):
 
 def post_init_hook(env):
     """Mark bootstrap complete when demo_bootstrap_transactions.xml already ran."""
+    env["ir.module.module"]._commercial_demo_sync_module_descriptions()
     ICP = env["ir.config_parameter"].sudo()
     flag = "commercial_demo_story.bootstrap_completed"
     if ICP.get_param(flag) == "1":
