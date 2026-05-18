@@ -1,17 +1,10 @@
 # -*- coding: utf-8 -*-
 {
     "name": "Commercial Demo Story",
-    "version": "19.0.1.0.33",
+    "version": "19.0.1.0.34",
     "category": "Sales",
     "summary": "Presentation dashboard, flashcards, workflow story, and safe demo helpers",
-    "description": """
-Commercial Demo Story
-=====================
-Executive-friendly navigation and narration helpers for a completed multi-channel
-retail demo (corporate sales, ecommerce, POS, accounting). KPIs are read-only
-aggregates. Reset only removes story rows created by **Generate Demo Story**
-(marked COMM-DEMO / generated source), never posted accounting or live orders.
-    """,
+    "description": "Executive navigation and narration for a multi-channel retail demo (B2B, eCommerce, POS, accounting). KPIs are read-only. Reset removes only generated COMM-DEMO story steps, never live transactions.",
     "author": "Horizon Retail Demo",
     "license": "LGPL-3",
     "depends": [

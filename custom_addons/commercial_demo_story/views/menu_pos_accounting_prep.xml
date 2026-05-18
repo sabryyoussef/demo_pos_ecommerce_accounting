@@ -118,9 +118,6 @@
               action="account_reports.action_account_report_ar"
               sequence="30"/>
 
-    <delete model="ir.ui.menu" id="menu_pos_accounting_prep_open_demo_story"/>
-    <delete model="ir.ui.menu" id="menu_pos_accounting_prep_open_demo_flashcards"/>
-
     <!-- Bridge to Commercial Demo (aligned names; no duplicate story/flashcards) -->
     <menuitem id="menu_pos_accounting_prep_bridge_group" name="Commercial Demo" parent="menu_pos_accounting_prep_root" sequence="90"/>
     <menuitem id="menu_pos_accounting_prep_open_demo_presentation"
@@ -129,7 +126,7 @@
               action="commercial_demo_story.action_commercial_demo_presentation"
               sequence="10"/>
     <menuitem id="menu_pos_accounting_prep_open_demo_dashboard"
-              name="KPI Dashboard"
+              name="Demo Command Center"
               parent="menu_pos_accounting_prep_bridge_group"
               action="commercial_demo_story.action_commercial_demo_dashboard"
               sequence="20"/>
