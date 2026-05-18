@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="commercial_demo_presentation_main" model="commercial.demo.presentation">
+        <field name="name">Horizon Retail — Demo Presentation</field>
+    </record>
+</odoo>

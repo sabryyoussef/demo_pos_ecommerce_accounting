@@ -4,49 +4,182 @@
         <field name="name">commercial.demo.dashboard.form</field>
         <field name="model">commercial.demo.dashboard</field>
         <field name="arch" type="xml">
-            <form string="Commercial Demo" create="false" delete="false">
+            <form string="Demo Command Center" create="false" delete="false" class="o_commercial_demo_dashboard">
                 <header>
-                    <button name="action_refresh_kpis" type="object" string="Refresh KPIs" class="btn-primary"/>
-                    <button name="action_generate_demo_story" type="object" string="Generate Demo Story" class="btn-secondary"/>
-                    <button name="action_reset_demo_story" type="object" string="Reset Demo Story" class="btn-secondary" groups="base.group_system"/>
+                    <button name="action_refresh_kpis" type="object" string="Refresh KPIs"
+                            class="btn-primary" icon="fa-refresh"
+                            title="Reload all figures from the database"/>
+                    <button name="action_open_client_presentation" type="object"
+                            string="Client Presentation" class="btn-secondary" icon="fa-desktop"/>
+                    <button name="action_generate_demo_story" type="object" string="Generate Demo Story"
+                            class="btn-secondary" groups="base.group_system"/>
+                    <button name="action_reset_demo_story" type="object" string="Reset Demo Story"
+                            class="btn-secondary" groups="base.group_system"/>
                 </header>
                 <sheet>
-                    <div class="oe_title">
-                        <h1>Commercial Demo Dashboard</h1>
-                        <p class="text-muted">Read-only KPIs from live data. Reset removes only COMM-DEMO generated story rows.</p>
+                    <field name="currency_id" invisible="1"/>
+                    <field name="refresh_token" invisible="1"/>
+                    <field name="kpi_open_pos_sessions" invisible="1"/>
+
+                    <div class="oe_button_box" name="button_box">
+                        <button type="object" name="action_open_pos_scale_390"
+                                class="oe_stat_button" icon="fa-store">
+                            <field name="kpi_pos_location_count" widget="statinfo" string="POS Shops"/>
+                        </button>
+                        <button type="object" name="action_open_pos_orders"
+                                class="oe_stat_button" icon="fa-shopping-cart">
+                            <field name="kpi_pos_order_count" widget="statinfo" string="POS Tickets"/>
+                        </button>
+                        <button type="object" name="action_open_sales"
+                                class="oe_stat_button" icon="fa-briefcase">
+                            <field name="kpi_corporate_so_count" widget="statinfo" string="B2B Orders"/>
+                        </button>
+                        <button type="object" name="action_open_ecommerce_orders"
+                                class="oe_stat_button" icon="fa-globe">
+                            <field name="kpi_ecommerce_so_count" widget="statinfo" string="eCommerce"/>
+                        </button>
+                        <button type="object" name="action_open_invoices"
+                                class="oe_stat_button" icon="fa-pencil-square-o">
+                            <field name="kpi_paid_invoice_count" widget="statinfo" string="Paid Invoices"/>
+                        </button>
+                        <button type="object" name="action_open_pos_sessions"
+                                class="oe_stat_button" icon="fa-desktop"
+                                invisible="kpi_open_pos_sessions == 0">
+                            <field name="kpi_open_pos_sessions" widget="statinfo" string="Open Sessions"/>
+                        </button>
+                        <button type="object" name="action_open_close_all_sessions"
+                                class="oe_stat_button" icon="fa-power-off"
+                                invisible="kpi_open_pos_sessions == 0">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">Close Sessions</span>
+                            </div>
+                        </button>
                     </div>
+
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1" class="oe_inline"/>
+                        </h1>
+                        <p class="text-muted">
+                            Presenter hub — click a counter above to drill down. Scroll for PIN demo and shortcuts.
+                        </p>
+                    </div>
+
                     <group>
-                        <group string="Channel KPIs">
+                        <group>
+                            <field name="kpi_total_revenue" widget="monetary" readonly="1"
+                                   class="oe_inline fw-bold"/>
+                        </group>
+                        <group>
+                            <field name="kpi_pos_teams_pos_sales_label" readonly="1" string="Regional POS targets"/>
+                        </group>
+                    </group>
+
+                    <separator string="Presenter guide"/>
+                    <field name="dashboard_presenter_html" nolabel="1" colspan="2"/>
+
+                    <separator string="PIN cashier demo — 5 shops (employee + PIN, no Odoo user)"/>
+                    <field name="pin_cashier_presentation_html" nolabel="1" colspan="2"/>
+                    <group>
+                        <group col="4">
+                            <button name="action_open_pos_pin_demo" type="object"
+                                    string="Dubai Flagship · 3001" class="btn-primary"
+                                    context="{'pos_config_id': 5}"/>
+                            <button name="action_open_pos_pin_demo" type="object"
+                                    string="Dubai Hills · 3002" class="btn-primary"
+                                    context="{'pos_config_id': 8}"/>
+                        </group>
+                        <group col="4">
+                            <button name="action_open_pos_pin_demo" type="object"
+                                    string="Abu Dhabi Mall · 3003" class="btn-primary"
+                                    context="{'pos_config_id': 15}"/>
+                            <button name="action_open_pos_pin_demo" type="object"
+                                    string="Sharjah · 3004" class="btn-primary"
+                                    context="{'pos_config_id': 20}"/>
+                        </group>
+                        <group col="4">
+                            <button name="action_open_pos_pin_demo" type="object"
+                                    string="Madinat Jumeirah · 3005" class="btn-primary"
+                                    context="{'pos_config_id': 28}"/>
+                            <button name="action_open_pos_orders" type="object"
+                                    string="Review POS orders" class="btn-secondary"/>
+                        </group>
+                    </group>
+
+                    <separator string="Quick navigation"/>
+                    <group>
+                        <group string="Present &amp; scale" col="4">
+                            <button name="action_open_client_presentation" type="object"
+                                    string="Client Presentation" class="btn-link" icon="fa-desktop"/>
+                            <button name="action_open_pos_scale_390" type="object"
+                                    string="All 390 POS shops" class="btn-link" icon="fa-store"/>
+                            <button name="action_open_my_pos_hierarchy" type="object"
+                                    string="Manager hierarchy" class="btn-link" icon="fa-sitemap"/>
+                            <button name="action_open_flashcards" type="object"
+                                    string="Flashcards" class="btn-link" icon="fa-clone"/>
+                            <button name="action_open_demo_story" type="object"
+                                    string="Demo story" class="btn-link" icon="fa-list-ol"/>
+                        </group>
+                        <group string="Point of Sale" col="4">
+                            <button name="action_open_pos" type="object"
+                                    string="POS app" class="btn-link" icon="fa-shopping-cart"/>
+                            <button name="action_open_pos_orders" type="object"
+                                    string="POS orders" class="btn-link"/>
+                            <button name="action_open_pos_sessions" type="object"
+                                    string="POS sessions" class="btn-link"/>
+                            <button name="action_open_close_all_sessions" type="object"
+                                    string="Close all sessions" class="btn-link" icon="fa-power-off"/>
+                            <button name="action_open_pos_employee_report" type="object"
+                                    string="Sales by cashier" class="btn-link"/>
+                            <button name="action_open_pos_sales_teams" type="object"
+                                    string="Regional teams" class="btn-link"/>
+                        </group>
+                        <group string="Finance &amp; channels" col="4">
+                            <button name="action_open_sales" type="object"
+                                    string="B2B orders" class="btn-link"/>
+                            <button name="action_open_ecommerce_orders" type="object"
+                                    string="eCommerce orders" class="btn-link"/>
+                            <button name="action_open_website_shop" type="object"
+                                    string="Website shop" class="btn-link" icon="fa-globe"/>
+                            <button name="action_open_invoices" type="object"
+                                    string="Invoices" class="btn-link"/>
+                            <button name="action_open_inventory" type="object"
+                                    string="Stock" class="btn-link"/>
+                            <button name="action_open_accounting_reports" type="object"
+                                    string="Profit &amp; loss" class="btn-link"/>
+                            <button name="action_open_dashboard_reports" type="object"
+                                    string="Executive summary" class="btn-link"/>
+                        </group>
+                    </group>
+
+                    <separator string="All metrics (detail)"/>
+                    <group>
+                        <group string="Channels">
                             <field name="kpi_corporate_so_count" readonly="1"/>
                             <field name="kpi_ecommerce_so_count" readonly="1"/>
                             <field name="kpi_pos_order_count" readonly="1"/>
                             <field name="kpi_pos_location_count" readonly="1"/>
+                            <field name="kpi_open_pos_sessions" readonly="1"/>
                             <field name="kpi_cashier_user_count" readonly="1"/>
-                            <field name="kpi_product_count" readonly="1"/>
                         </group>
-                        <group string="Finance KPIs">
-                            <field name="currency_id" invisible="1"/>
+                        <group string="Finance &amp; catalog">
                             <field name="kpi_paid_invoice_count" readonly="1"/>
                             <field name="kpi_reconciled_payment_count" readonly="1"/>
                             <field name="kpi_total_revenue" widget="monetary" readonly="1"/>
+                            <field name="kpi_product_count" readonly="1"/>
+                            <field name="kpi_pos_teams_invoiced_label" readonly="1"/>
+                        </group>
+                    </group>
+                    <group string="Highlights">
+                        <group>
                             <field name="kpi_top_product_label" readonly="1"/>
                             <field name="kpi_top_pos_location_label" readonly="1"/>
                             <field name="kpi_top_salesperson_label" readonly="1"/>
                         </group>
-                    </group>
-                    <group string="Navigation">
                         <group>
-                            <button name="action_open_pos" type="object" string="Open POS" class="btn-link"/>
-                            <button name="action_open_website_shop" type="object" string="Open Website Shop" class="btn-link"/>
-                            <button name="action_open_sales" type="object" string="Open Sales Orders" class="btn-link"/>
-                            <button name="action_open_ecommerce_orders" type="object" string="Open eCommerce Orders" class="btn-link"/>
-                        </group>
-                        <group>
-                            <button name="action_open_invoices" type="object" string="Open Invoices" class="btn-link"/>
-                            <button name="action_open_inventory" type="object" string="Open Inventory" class="btn-link"/>
-                            <button name="action_open_accounting_reports" type="object" string="Open Accounting Reports (P/L)" class="btn-link"/>
-                            <button name="action_open_pos_sessions" type="object" string="Open POS Sessions" class="btn-link"/>
-                            <button name="action_open_dashboard_reports" type="object" string="Open Executive Summary" class="btn-link"/>
+                            <field name="kpi_top_pos_cashier_label" readonly="1"/>
+                            <field name="kpi_top_pos_team_label" readonly="1"/>
+                            <field name="kpi_pos_teams_pos_sales_label" readonly="1"/>
                         </group>
                     </group>
                 </sheet>

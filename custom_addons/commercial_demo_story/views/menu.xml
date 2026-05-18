@@ -2,33 +2,178 @@
 <odoo>
     <menuitem id="menu_commercial_demo_root" name="Commercial Demo" sequence="80"/>
 
-    <menuitem id="menu_commercial_demo_dashboard"
-              name="Demo Dashboard"
-              parent="menu_commercial_demo_root"
-              action="action_commercial_demo_dashboard"
+    <!-- Present: client walkthrough + live KPIs -->
+    <menuitem id="menu_commercial_demo_present" name="Present" parent="menu_commercial_demo_root" sequence="10"/>
+
+    <menuitem id="menu_commercial_demo_presentation"
+              name="Client Presentation"
+              parent="menu_commercial_demo_present"
+              action="action_commercial_demo_presentation"
               sequence="10"/>
 
-    <menuitem id="menu_commercial_demo_story"
-              name="Demo Story"
-              parent="menu_commercial_demo_root"
-              action="action_commercial_demo_story"
+    <menuitem id="menu_commercial_demo_dashboard"
+              name="Demo Command Center"
+              parent="menu_commercial_demo_present"
+              action="action_commercial_demo_dashboard"
               sequence="20"/>
 
-    <menuitem id="menu_commercial_demo_build_story"
-              name="Build Story Gallery"
-              parent="menu_commercial_demo_root"
-              action="action_commercial_demo_build_story"
-              sequence="25"/>
+    <!-- Guide: presenter tools -->
+    <menuitem id="menu_commercial_demo_guide" name="Guide" parent="menu_commercial_demo_root" sequence="20"/>
+
+    <menuitem id="menu_commercial_demo_story"
+              name="Presenter Script"
+              parent="menu_commercial_demo_guide"
+              action="action_commercial_demo_story"
+              sequence="10"/>
 
     <menuitem id="menu_commercial_demo_flashcards"
-              name="Demo Flashcards"
-              parent="menu_commercial_demo_root"
+              name="Quick Links"
+              parent="menu_commercial_demo_guide"
               action="action_commercial_demo_flashcards"
+              sequence="20"/>
+
+    <menuitem id="menu_commercial_demo_analysis" name="POS filters" parent="menu_commercial_demo_guide" sequence="25"/>
+
+    <menuitem id="menu_pos_hierarchy" name="Manager hierarchy" parent="menu_commercial_demo_analysis" sequence="3"/>
+
+    <menuitem id="menu_pos_hierarchy_my_shops"
+              name="My shops (logged-in manager)"
+              parent="menu_pos_hierarchy"
+              action="action_pos_config_my_hierarchy"
+              sequence="5"/>
+    <menuitem id="menu_pos_hierarchy_my_orders"
+              name="My orders"
+              parent="menu_pos_hierarchy"
+              action="action_pos_orders_my_hierarchy"
+              sequence="10"/>
+
+    <menuitem id="menu_pos_hierarchy_dubai" name="Dubai" parent="menu_pos_hierarchy" sequence="20"/>
+    <menuitem id="menu_pos_hierarchy_dubai_region"
+              name="All Dubai shops"
+              parent="menu_pos_hierarchy_dubai"
+              action="action_pos_config_region_team_dxb"
+              sequence="10"/>
+    <menuitem id="menu_pos_hierarchy_dubai_c1" name="Cluster DXB 1" parent="menu_pos_hierarchy_dubai"
+              action="action_pos_config_cluster_dxb_1" sequence="20"/>
+    <menuitem id="menu_pos_hierarchy_dubai_c2" name="Cluster DXB 2" parent="menu_pos_hierarchy_dubai"
+              action="action_pos_config_cluster_dxb_2" sequence="30"/>
+    <menuitem id="menu_pos_hierarchy_dubai_c3" name="Cluster DXB 3" parent="menu_pos_hierarchy_dubai"
+              action="action_pos_config_cluster_dxb_3" sequence="40"/>
+    <menuitem id="menu_pos_hierarchy_dubai_c4" name="Cluster DXB 4" parent="menu_pos_hierarchy_dubai"
+              action="action_pos_config_cluster_dxb_4" sequence="50"/>
+
+    <menuitem id="menu_pos_hierarchy_auh" name="Abu Dhabi" parent="menu_pos_hierarchy" sequence="30"/>
+    <menuitem id="menu_pos_hierarchy_auh_region"
+              name="All Abu Dhabi shops"
+              parent="menu_pos_hierarchy_auh"
+              action="action_pos_config_region_team_auh"
+              sequence="10"/>
+    <menuitem id="menu_pos_hierarchy_auh_c1" name="Cluster AUH 1" parent="menu_pos_hierarchy_auh"
+              action="action_pos_config_cluster_auh_1" sequence="20"/>
+    <menuitem id="menu_pos_hierarchy_auh_c2" name="Cluster AUH 2" parent="menu_pos_hierarchy_auh"
+              action="action_pos_config_cluster_auh_2" sequence="30"/>
+    <menuitem id="menu_pos_hierarchy_auh_c3" name="Cluster AUH 3" parent="menu_pos_hierarchy_auh"
+              action="action_pos_config_cluster_auh_3" sequence="40"/>
+    <menuitem id="menu_pos_hierarchy_auh_c4" name="Cluster AUH 4" parent="menu_pos_hierarchy_auh"
+              action="action_pos_config_cluster_auh_4" sequence="50"/>
+
+    <menuitem id="menu_pos_hierarchy_shj" name="Northern UAE" parent="menu_pos_hierarchy" sequence="40"/>
+    <menuitem id="menu_pos_hierarchy_shj_region"
+              name="All Northern shops"
+              parent="menu_pos_hierarchy_shj"
+              action="action_pos_config_region_team_shj"
+              sequence="10"/>
+    <menuitem id="menu_pos_hierarchy_shj_c1" name="Cluster SHJ 1" parent="menu_pos_hierarchy_shj"
+              action="action_pos_config_cluster_shj_1" sequence="20"/>
+    <menuitem id="menu_pos_hierarchy_shj_c2" name="Cluster SHJ 2" parent="menu_pos_hierarchy_shj"
+              action="action_pos_config_cluster_shj_2" sequence="30"/>
+    <menuitem id="menu_pos_hierarchy_shj_c3" name="Cluster SHJ 3" parent="menu_pos_hierarchy_shj"
+              action="action_pos_config_cluster_shj_3" sequence="40"/>
+    <menuitem id="menu_pos_hierarchy_shj_c4" name="Cluster SHJ 4" parent="menu_pos_hierarchy_shj"
+              action="action_pos_config_cluster_shj_4" sequence="50"/>
+
+    <menuitem id="menu_pos_demo_scale" name="Scale (390 shops)" parent="menu_commercial_demo_analysis" sequence="5"/>
+
+    <menuitem id="menu_pos_demo_scale_all"
+              name="All 390 — by region"
+              parent="menu_pos_demo_scale"
+              action="action_pos_config_scale_all"
+              sequence="10"/>
+    <menuitem id="menu_pos_demo_scale_dubai"
+              name="Dubai — by cluster manager"
+              parent="menu_pos_demo_scale"
+              action="action_pos_config_region_dubai"
+              sequence="20"/>
+    <menuitem id="menu_pos_demo_scale_auh"
+              name="Abu Dhabi — by cluster manager"
+              parent="menu_pos_demo_scale"
+              action="action_pos_config_region_abu_dhabi"
+              sequence="30"/>
+    <menuitem id="menu_pos_demo_scale_northern"
+              name="Northern UAE — by cluster manager"
+              parent="menu_pos_demo_scale"
+              action="action_pos_config_region_northern"
+              sequence="40"/>
+    <menuitem id="menu_pos_demo_scale_warehouse"
+              name="By regional warehouse"
+              parent="menu_pos_demo_scale"
+              action="action_pos_config_by_warehouse"
+              sequence="50"/>
+    <menuitem id="menu_pos_demo_scale_format"
+              name="By store format"
+              parent="menu_pos_demo_scale"
+              action="action_pos_config_by_format"
+              sequence="60"/>
+    <menuitem id="menu_pos_demo_scale_flagships"
+              name="Flagships only"
+              parent="menu_pos_demo_scale"
+              action="action_pos_config_flagships"
+              sequence="70"/>
+
+    <menuitem id="menu_pos_demo_five_shops"
+              name="Shops — Demo (5)"
+              parent="menu_commercial_demo_analysis"
+              action="action_pos_config_demo_five"
+              sequence="10"/>
+    <menuitem id="menu_pos_demo_orders_five"
+              name="Orders — Demo (5)"
+              parent="menu_commercial_demo_analysis"
+              action="action_pos_orders_demo_five"
+              sequence="20"/>
+    <menuitem id="menu_pos_demo_orders_cashiers"
+              name="Orders — PIN cashiers"
+              parent="menu_commercial_demo_analysis"
+              action="action_pos_orders_demo_cashiers"
+              sequence="30"/>
+    <menuitem id="menu_pos_demo_analysis_five"
+              name="Sales analysis — Demo (5)"
+              parent="menu_commercial_demo_analysis"
+              action="action_report_pos_demo_analysis"
+              sequence="40"/>
+    <menuitem id="menu_pos_demo_region_dubai"
+              name="Shops — Dubai region"
+              parent="menu_commercial_demo_analysis"
+              action="action_pos_config_region_dubai"
+              sequence="50"/>
+
+    <!-- Technical: auditors / implementers (admin only) -->
+    <menuitem id="menu_commercial_demo_technical"
+              name="Technical"
+              parent="menu_commercial_demo_root"
+              groups="base.group_system"
               sequence="30"/>
 
+    <menuitem id="menu_commercial_demo_build_story"
+              name="Technical Evidence"
+              parent="menu_commercial_demo_technical"
+              action="action_commercial_demo_build_story"
+              groups="base.group_system"
+              sequence="10"/>
+
     <menuitem id="menu_commercial_demo_scenarios"
-              name="Demo Scenarios"
-              parent="menu_commercial_demo_root"
+              name="Scenarios"
+              parent="menu_commercial_demo_technical"
               action="action_commercial_demo_scenarios"
-              sequence="40"/>
+              groups="base.group_system"
+              sequence="20"/>
 </odoo>

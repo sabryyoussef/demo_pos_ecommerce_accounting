@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_pos_config_demo_five" model="ir.actions.act_window">
+        <field name="name">POS shops — Demo (5)</field>
+        <field name="res_model">pos.config</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="point_of_sale.view_pos_config_search"/>
+        <field name="context">{'search_default_filter_demo_five_shops': 1}</field>
+    </record>
+
+    <record id="action_pos_config_scale_all" model="ir.actions.act_window">
+        <field name="name">POS shops — All 390</field>
+        <field name="res_model">pos.config</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="point_of_sale.view_pos_config_search"/>
+        <field name="context">{'search_default_group_by_crm_team': 1}</field>
+    </record>
+
+    <record id="action_pos_config_region_dubai" model="ir.actions.act_window">
+        <field name="name">POS shops — Dubai region</field>
+        <field name="res_model">pos.config</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="point_of_sale.view_pos_config_search"/>
+        <field name="context">{'search_default_filter_region_dubai': 1, 'search_default_group_by_cluster_manager': 1}</field>
+    </record>
+
+    <record id="action_pos_config_region_abu_dhabi" model="ir.actions.act_window">
+        <field name="name">POS shops — Abu Dhabi region</field>
+        <field name="res_model">pos.config</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="point_of_sale.view_pos_config_search"/>
+        <field name="context">{'search_default_filter_region_abu_dhabi': 1, 'search_default_group_by_cluster_manager': 1}</field>
+    </record>
+
+    <record id="action_pos_config_region_northern" model="ir.actions.act_window">
+        <field name="name">POS shops — Northern UAE</field>
+        <field name="res_model">pos.config</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="point_of_sale.view_pos_config_search"/>
+        <field name="context">{'search_default_filter_region_northern': 1, 'search_default_group_by_cluster_manager': 1}</field>
+    </record>
+
+    <record id="action_pos_config_by_warehouse" model="ir.actions.act_window">
+        <field name="name">POS shops — By regional warehouse</field>
+        <field name="res_model">pos.config</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="point_of_sale.view_pos_config_search"/>
+        <field name="context">{'search_default_group_by_demo_wh': 1}</field>
+    </record>
+
+    <record id="action_pos_config_by_format" model="ir.actions.act_window">
+        <field name="name">POS shops — By store format</field>
+        <field name="res_model">pos.config</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="point_of_sale.view_pos_config_search"/>
+        <field name="context">{'search_default_group_by_store_format': 1}</field>
+    </record>
+
+    <record id="action_pos_config_flagships" model="ir.actions.act_window">
+        <field name="name">POS shops — Flagships</field>
+        <field name="res_model">pos.config</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="point_of_sale.view_pos_config_search"/>
+        <field name="context">{'search_default_filter_format_flagship': 1}</field>
+    </record>
+
+    <record id="action_pos_orders_demo_five" model="ir.actions.act_window">
+        <field name="name">POS orders — Demo (5 shops)</field>
+        <field name="res_model">pos.order</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="point_of_sale.view_pos_order_filter"/>
+        <field name="context">{'search_default_filter_demo_five_shops': 1, 'search_default_config_id': 1}</field>
+    </record>
+
+    <record id="action_pos_orders_demo_cashiers" model="ir.actions.act_window">
+        <field name="name">POS orders — Demo PIN cashiers</field>
+        <field name="res_model">pos.order</field>
+        <field name="view_mode">list,form</field>
+        <field name="search_view_id" ref="point_of_sale.view_pos_order_filter"/>
+        <field name="context">{'search_default_filter_demo_cashiers': 1, 'search_default_group_by_employee': 1}</field>
+    </record>
+
+    <record id="action_report_pos_demo_analysis" model="ir.actions.act_window">
+        <field name="name">POS sales analysis — Demo (5)</field>
+        <field name="res_model">report.pos.order</field>
+        <field name="view_mode">pivot,graph,list</field>
+        <field name="search_view_id" ref="point_of_sale.view_report_pos_order_search"/>
+        <field name="context">{'search_default_filter_demo_five_shops': 1, 'search_default_not_cancelled': 1, 'search_default_pos': 1}</field>
+    </record>
+</odoo>

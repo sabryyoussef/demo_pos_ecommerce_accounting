@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="crm_team_salesteams_view_form_pos_target" model="ir.ui.view">
+        <field name="name">crm.team.form.pos.sales.target</field>
+        <field name="model">crm.team</field>
+        <field name="inherit_id" ref="sale.crm_team_salesteams_view_form"/>
+        <field name="arch" type="xml">
+            <div id="invoiced_target" position="after">
+                <label for="pos_sales_target" string="POS sales target"/>
+                <div class="o_row">
+                    <field name="pos_sales_target" widget="monetary" options="{'currency_field': 'currency_id'}" class="oe_inline"/>
+                    <span class="flex-grow-1">/ Month (POS channel)</span>
+                </div>
+                <label for="pos_sales_month" string="POS achieved this month"/>
+                <div class="o_row">
+                    <field name="pos_sales_month" widget="monetary" readonly="1" class="oe_inline"/>
+                    <span class="text-muted ms-2">
+                        (<field name="pos_sales_achievement_pct" readonly="1" class="oe_inline"/>% of POS target)
+                    </span>
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>

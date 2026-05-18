@@ -17,14 +17,18 @@ Copied from `collections/evidence/*/screenshots/` for README and documentation.
 | `evidence_gateD2/` | POS sales flow | 9 |
 | `evidence_gateD3/` | POS reconciliation review | 11 |
 | `evidence_gateD4/` | eCommerce publish & checkout | 12 |
+| `evidence_pos_hierarchy/` | POS teams, HR hierarchy, contacts, competition | 11 |
 
-**Total:** 86 PNG files under `static/description/screenshots/`.
+**Total:** 97 PNG files under `static/description/screenshots/`.
 
 Regenerate from collections after new captures:
 
 ```bash
 SRC=projects/demo_pos_accounting/collections
 DEST=projects/demo_pos_accounting/custom_addons/commercial_demo_story/static/description/screenshots
+# POS hierarchy captures (Playwright):
+# cp -f bootstrap/evidence_pos_hierarchy/screenshots/*.png "$DEST/evidence_pos_hierarchy/"
+
 find "$SRC/evidence" -type f -iname '*.png' | while read -r f; do
   subdir=$(dirname "$f" | sed "s|$SRC/evidence/||;s|/screenshots||")
   mkdir -p "$DEST/$subdir"

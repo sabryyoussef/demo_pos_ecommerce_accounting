@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_pos_config_tree_demo" model="ir.ui.view">
+        <field name="name">pos.config.list.demo</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_config_tree"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="demo_mall_name" optional="show"/>
+                <field name="demo_store_format" optional="show"/>
+                <field name="crm_team_id" optional="show"/>
+                <field name="demo_regional_warehouse_id" optional="show"/>
+                <field name="demo_cluster_manager_id" optional="show"/>
+                <field name="demo_regional_manager_id" optional="hide"/>
+                <field name="demo_emirate" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_pos_config_form_demo" model="ir.ui.view">
+        <field name="name">pos.config.form.demo</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <group name="demo_classification">
+                    <group>
+                        <field name="demo_mall_name"/>
+                        <field name="demo_store_format"/>
+                        <field name="demo_emirate"/>
+                    </group>
+                    <group>
+                        <field name="crm_team_id"/>
+                        <field name="demo_regional_warehouse_id"/>
+                        <field name="demo_cluster_manager_id"/>
+                        <field name="demo_location_partner_id"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Kanban inherit removed: custom fields inside POS kanban break Odoo 19 OWL parser. -->
+    <delete model="ir.ui.view" id="view_pos_config_kanban_demo"/>
+</odoo>

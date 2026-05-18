@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+  <!-- Child addresses for Contacts tab / location kanban on company partners -->
+
+  <!-- Final Demo Corporate Alpha LLC -->
+  <record id="demo_partner_alpha_contact_ahmed" model="res.partner">
+    <field name="parent_id" ref="demo_res_partner_fincorp_alpha"/>
+    <field name="type">contact</field>
+    <field name="name">Ahmed Al Mansoori</field>
+    <field name="function">Procurement Director</field>
+    <field name="email">ahmed.mansoori@fincorp-alpha.example.invalid</field>
+    <field name="phone">+971 4 123 4501</field>
+    <field name="street">Gate Village Building 3, Level 12</field>
+    <field name="city">Dubai</field>
+    <field name="zip">50667</field>
+    <field name="state_id" ref="base.state_ae_du"/>
+    <field name="country_id" ref="base.ae"/>
+  </record>
+  <record id="demo_partner_alpha_invoice" model="res.partner">
+    <field name="parent_id" ref="demo_res_partner_fincorp_alpha"/>
+    <field name="type">invoice</field>
+    <field name="name">Alpha — Accounts Payable (DIFC)</field>
+    <field name="street">Unit 1204, Index Tower, DIFC</field>
+    <field name="city">Dubai</field>
+    <field name="zip">507211</field>
+    <field name="state_id" ref="base.state_ae_du"/>
+    <field name="country_id" ref="base.ae"/>
+  </record>
+  <record id="demo_partner_alpha_delivery_jafza" model="res.partner">
+    <field name="parent_id" ref="demo_res_partner_fincorp_alpha"/>
+    <field name="type">delivery</field>
+    <field name="name">Alpha — JAFZA Warehouse Gate 4</field>
+    <field name="street">Jebel Ali Free Zone, South Zone, WH-4</field>
+    <field name="city">Dubai</field>
+    <field name="zip">17000</field>
+    <field name="state_id" ref="base.state_ae_du"/>
+    <field name="country_id" ref="base.ae"/>
+  </record>
+  <record id="demo_partner_alpha_delivery_mall" model="res.partner">
+    <field name="parent_id" ref="demo_res_partner_fincorp_alpha"/>
+    <field name="type">delivery</field>
+    <field name="name">Alpha — Dubai Mall B2B Dock</field>
+    <field name="street">Financial Center Road, Loading Bay B2</field>
+    <field name="city">Dubai</field>
+    <field name="zip">113114</field>
+    <field name="state_id" ref="base.state_ae_du"/>
+    <field name="country_id" ref="base.ae"/>
+  </record>
+  <record id="demo_partner_alpha_other_showroom" model="res.partner">
+    <field name="parent_id" ref="demo_res_partner_fincorp_alpha"/>
+    <field name="type">other</field>
+    <field name="name">Alpha — Jumeirah Showroom</field>
+    <field name="street">Jumeirah Beach Road, Villa 18</field>
+    <field name="city">Dubai</field>
+    <field name="zip">00000</field>
+    <field name="state_id" ref="base.state_ae_du"/>
+    <field name="country_id" ref="base.ae"/>
+  </record>
+
+  <!-- Final Demo Trading Beta FZ-LLC -->
+  <record id="demo_partner_beta_contact_sarah" model="res.partner">
+    <field name="parent_id" ref="demo_res_partner_fincorp_beta"/>
+    <field name="type">contact</field>
+    <field name="name">Sarah Mitchell</field>
+    <field name="function">Head of Supply Chain</field>
+    <field name="email">sarah.mitchell@fincorp-beta.example.invalid</field>
+    <field name="phone">+971 2 678 9100</field>
+    <field name="street">Al Maryah Island, ADGM Square</field>
+    <field name="city">Abu Dhabi</field>
+    <field name="zip">00000</field>
+    <field name="state_id" ref="base.state_ae_az"/>
+    <field name="country_id" ref="base.ae"/>
+  </record>
+  <record id="demo_partner_beta_invoice" model="res.partner">
+    <field name="parent_id" ref="demo_res_partner_fincorp_beta"/>
+    <field name="type">invoice</field>
+    <field name="name">Beta — Central Billing Office</field>
+    <field name="street">Khalifa Street, Horizon Tower, Floor 8</field>
+    <field name="city">Abu Dhabi</field>
+    <field name="zip">00000</field>
+    <field name="state_id" ref="base.state_ae_az"/>
+    <field name="country_id" ref="base.ae"/>
+  </record>
+  <record id="demo_partner_beta_delivery_mussafah" model="res.partner">
+    <field name="parent_id" ref="demo_res_partner_fincorp_beta"/>
+    <field name="type">delivery</field>
+    <field name="name">Beta — Mussafah Industrial DC</field>
+    <field name="street">Mussafah M-37, Plot 112</field>
+    <field name="city">Abu Dhabi</field>
+    <field name="zip">00000</field>
+    <field name="state_id" ref="base.state_ae_az"/>
+    <field name="country_id" ref="base.ae"/>
+  </record>
+  <record id="demo_partner_beta_delivery_yas" model="res.partner">
+    <field name="parent_id" ref="demo_res_partner_fincorp_beta"/>
+    <field name="type">delivery</field>
+    <field name="name">Beta — Yas Mall Back-of-House</field>
+    <field name="street">Yas Island, Retail Services Gate 2</field>
+    <field name="city">Abu Dhabi</field>
+    <field name="zip">00000</field>
+    <field name="state_id" ref="base.state_ae_az"/>
+    <field name="country_id" ref="base.ae"/>
+  </record>
+  <record id="demo_partner_beta_delivery_sharjah" model="res.partner">
+    <field name="parent_id" ref="demo_res_partner_fincorp_beta"/>
+    <field name="type">delivery</field>
+    <field name="name">Beta — Sharjah Cross-Dock</field>
+    <field name="street">Sharjah Industrial Area 10, Warehouse 7</field>
+    <field name="city">Sharjah</field>
+    <field name="zip">00000</field>
+    <field name="state_id" ref="base.state_ae_sh"/>
+    <field name="country_id" ref="base.ae"/>
+  </record>
+</odoo>

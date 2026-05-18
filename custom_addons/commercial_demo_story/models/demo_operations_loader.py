@@ -35,8 +35,17 @@ COMPLETE_DEMO_SCRIPTS = [
     ("evidence_final_commercial", "phaseA_corporate_sales.py"),
     ("evidence_final_commercial", "phaseB_ecommerce_ops.py"),
     ("evidence_final_commercial", "phaseC_pos_30_locations.py"),
+    ("evidence_final_commercial", "phaseC_scale_390.py"),
     ("evidence_final_commercial", "phaseC2_dxb_auh_second_cashier.py"),
     ("evidence_final_commercial", "phaseD_bank_reconciliation.py"),
+    ("evidence_final_commercial", "phaseE_partner_contact_locations.py"),
+    ("evidence_final_commercial", "phaseE_contacts_full_demo.py"),
+    ("evidence_final_commercial", "phaseF_pos_sales_hierarchy.py"),
+    ("evidence_final_commercial", "phaseG3_classify_390_pos.py"),
+    ("evidence_final_commercial", "phaseG_team_targets_invoiced.py"),
+    ("evidence_final_commercial", "phaseG2_pos_targets_achieved.py"),
+    ("evidence_final_commercial", "phaseH_kitchen_display.py"),
+    ("evidence_final_commercial", "phaseH_table_preparation.py"),
 ]
 
 DEMO_ICP_PREFIXES = (
@@ -166,3 +175,8 @@ class CommercialDemoOperationsLoader(models.AbstractModel):
     def run_all_phases_force(self):
         """Re-run entire pipeline (clears demo_pos_accounting.* ICP flags first)."""
         return run_demo_operations(self.env, force=True)
+
+    @api.model
+    def run_classify_pos_390(self, *, force=False):
+        """Classify mall names, regions, warehouses, cluster managers on all POS shops."""
+        return self.env["commercial.demo.pos.classifier"].run_classify_390(force=force)

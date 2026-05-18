@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+  <!-- Enrich flagship accounts (see phaseE_contacts_full_demo.py on existing DBs) -->
+  <record id="demo_res_partner_fincorp_alpha" model="res.partner">
+    <field name="phone">+971 4 390 1100</field>
+    <field name="website">https://alpha-demo.horizon-retail.example</field>
+    <field name="street">Index Tower, DIFC</field>
+    <field name="city">Dubai</field>
+    <field name="zip">507211</field>
+    <field name="state_id" ref="base.state_ae_du"/>
+    <field name="vat">100345678900003</field>
+    <field name="company_registry">CR-ALPHA-2024</field>
+    <field name="industry_id" ref="base.res_partner_industry_G"/>
+    <field name="category_id" eval="[(6, 0, [ref('demo_partner_tag_b2b'), ref('demo_partner_tag_vip')])]"/>
+    <field name="property_payment_term_id" ref="account.account_payment_term_30days"/>
+    <field name="partner_latitude">25.2117</field>
+    <field name="partner_longitude">55.2813</field>
+    <field name="credit_limit">250000</field>
+    <field name="customer_rank" eval="5"/>
+  </record>
+  <record id="demo_res_partner_fincorp_beta" model="res.partner">
+    <field name="phone">+971 2 678 9000</field>
+    <field name="website">https://beta-demo.horizon-retail.example</field>
+    <field name="street">Khalifa Street, Horizon Tower</field>
+    <field name="city">Abu Dhabi</field>
+    <field name="state_id" ref="base.state_ae_az"/>
+    <field name="vat">100987654300001</field>
+    <field name="company_registry">CR-BETA-2024</field>
+    <field name="industry_id" ref="base.res_partner_industry_G"/>
+    <field name="category_id" eval="[(6, 0, [ref('demo_partner_tag_b2b')])]"/>
+    <field name="property_payment_term_id" ref="account.account_payment_term_15days"/>
+    <field name="partner_latitude">24.4539</field>
+    <field name="partner_longitude">54.3773</field>
+    <field name="credit_limit">180000</field>
+    <field name="customer_rank" eval="4"/>
+  </record>
+
+  <record id="demo_res_partner_gamma" model="res.partner">
+    <field name="name">Horizon Franchise Gamma LLC</field>
+    <field name="ref">DEMO-CUST-GAMMA</field>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="country_id" ref="base.ae"/>
+    <field name="is_company" eval="True"/>
+    <field name="customer_rank" eval="3"/>
+    <field name="email">gamma@franchise-demo.example.invalid</field>
+    <field name="phone">+971 4 552 8800</field>
+    <field name="street">Business Bay, Bay Square 3</field>
+    <field name="city">Dubai</field>
+    <field name="state_id" ref="base.state_ae_du"/>
+    <field name="category_id" eval="[(6, 0, [ref('demo_partner_tag_franchise'), ref('demo_partner_tag_ecom')])]"/>
+    <field name="partner_latitude">25.1868</field>
+    <field name="partner_longitude">55.2660</field>
+  </record>
+  <record id="demo_res_partner_delta" model="res.partner">
+    <field name="name">Delta Hospitality Supplies FZE</field>
+    <field name="ref">DEMO-CUST-DELTA</field>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="country_id" ref="base.ae"/>
+    <field name="is_company" eval="True"/>
+    <field name="customer_rank" eval="2"/>
+    <field name="email">orders@delta-hosp.example.invalid</field>
+    <field name="category_id" eval="[(6, 0, [ref('demo_partner_tag_vip'), ref('demo_partner_tag_b2b')])]"/>
+    <field name="city">Sharjah</field>
+    <field name="state_id" ref="base.state_ae_sh"/>
+  </record>
+  <record id="demo_res_partner_hassan" model="res.partner">
+    <field name="name">Hassan Farouk</field>
+    <field name="ref">DEMO-PERSON-HASSAN</field>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="country_id" ref="base.ae"/>
+    <field name="is_company" eval="False"/>
+    <field name="customer_rank" eval="1"/>
+    <field name="email">hassan.farouk@example.invalid</field>
+    <field name="city">Dubai</field>
+    <field name="state_id" ref="base.state_ae_du"/>
+    <field name="category_id" eval="[(6, 0, [ref('demo_partner_tag_ecom')])]"/>
+  </record>
+  <record id="demo_res_partner_vend_emirates" model="res.partner">
+    <field name="name">Emirates Packaging LLC</field>
+    <field name="ref">DEMO-VEND-EMIRATES</field>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="country_id" ref="base.ae"/>
+    <field name="is_company" eval="True"/>
+    <field name="supplier_rank" eval="3"/>
+    <field name="category_id" eval="[(6, 0, [ref('demo_partner_tag_supplier')])]"/>
+    <field name="email">ap@emirates-pack.example.invalid</field>
+  </record>
+  <record id="demo_res_partner_legacy" model="res.partner">
+    <field name="name">Legacy Retail Partner (Archived)</field>
+    <field name="ref">DEMO-CUST-LEGACY</field>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="country_id" ref="base.ae"/>
+    <field name="is_company" eval="True"/>
+    <field name="customer_rank" eval="1"/>
+    <field name="active" eval="False"/>
+  </record>
+</odoo>

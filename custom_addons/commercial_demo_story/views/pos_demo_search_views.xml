@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- POS dashboard (390 shops): filters + group by sales team -->
+    <record id="view_pos_config_search_demo_filters" model="ir.ui.view">
+        <field name="name">pos.config.search.demo.filters</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_config_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="after">
+                <separator/>
+                <filter name="filter_demo_five_shops" string="Demo — 5 walkthrough shops"
+                        domain="[('name', 'in', ['POS-DXB-01', 'POS-RET-04', 'POS-RET-11', 'POS-RET-16', 'POS-RET-24'])]"/>
+                <filter name="filter_dubai_flagship" string="Dubai — Flagship (DXB-01)"
+                        domain="[('name', '=', 'POS-DXB-01')]"/>
+                <filter name="filter_dubai_malls" string="Dubai — Malls (POS-RET)"
+                        domain="[('name', '=like', 'POS-RET%'), ('crm_team_id', '=', %(commercial_demo_story.demo_crm_team_pos_dubai)d)]"/>
+                <separator/>
+                <filter name="filter_region_dubai" string="Region — Dubai"
+                        domain="[('crm_team_id', '=', %(commercial_demo_story.demo_crm_team_pos_dubai)d)]"/>
+                <filter name="filter_region_abu_dhabi" string="Region — Abu Dhabi"
+                        domain="[('crm_team_id', '=', %(commercial_demo_story.demo_crm_team_pos_abu_dhabi)d)]"/>
+                <filter name="filter_region_northern" string="Region — Northern UAE"
+                        domain="[('crm_team_id', '=', %(commercial_demo_story.demo_crm_team_pos_northern)d)]"/>
+                <filter name="filter_session_open" string="Has open session"
+                        domain="[('session_ids.state', 'in', ['opened', 'opening_control', 'closing_control'])]"/>
+                <separator/>
+                <filter name="filter_hierarchy_regional_dxb" string="Manager — Regional Dubai (Khalid)"
+                        domain="[('demo_regional_manager_id.name', 'ilike', 'Regional POS Manager Dubai')]"/>
+                <filter name="filter_hierarchy_regional_auh" string="Manager — Regional Abu Dhabi (Fatima)"
+                        domain="[('demo_regional_manager_id.name', 'ilike', 'Regional POS Manager Abu Dhabi')]"/>
+                <filter name="filter_hierarchy_regional_shj" string="Manager — Regional Northern (Omar)"
+                        domain="[('demo_regional_manager_id.name', 'ilike', 'Regional POS Manager Northern')]"/>
+                <separator/>
+                <filter name="filter_hierarchy_cluster_dxb_1" string="Manager — Cluster DXB 1"
+                        domain="[('demo_cluster_manager_id.name', '=', 'Cluster Manager DXB 1')]"/>
+                <filter name="filter_hierarchy_cluster_dxb_2" string="Manager — Cluster DXB 2"
+                        domain="[('demo_cluster_manager_id.name', '=', 'Cluster Manager DXB 2')]"/>
+                <filter name="filter_hierarchy_cluster_dxb_3" string="Manager — Cluster DXB 3"
+                        domain="[('demo_cluster_manager_id.name', '=', 'Cluster Manager DXB 3')]"/>
+                <filter name="filter_hierarchy_cluster_dxb_4" string="Manager — Cluster DXB 4"
+                        domain="[('demo_cluster_manager_id.name', '=', 'Cluster Manager DXB 4')]"/>
+                <filter name="filter_hierarchy_cluster_auh_1" string="Manager — Cluster AUH 1"
+                        domain="[('demo_cluster_manager_id.name', '=', 'Cluster Manager AUH 1')]"/>
+                <filter name="filter_hierarchy_cluster_auh_2" string="Manager — Cluster AUH 2"
+                        domain="[('demo_cluster_manager_id.name', '=', 'Cluster Manager AUH 2')]"/>
+                <filter name="filter_hierarchy_cluster_auh_3" string="Manager — Cluster AUH 3"
+                        domain="[('demo_cluster_manager_id.name', '=', 'Cluster Manager AUH 3')]"/>
+                <filter name="filter_hierarchy_cluster_auh_4" string="Manager — Cluster AUH 4"
+                        domain="[('demo_cluster_manager_id.name', '=', 'Cluster Manager AUH 4')]"/>
+                <filter name="filter_hierarchy_cluster_shj_1" string="Manager — Cluster SHJ 1"
+                        domain="[('demo_cluster_manager_id.name', '=', 'Cluster Manager SHJ 1')]"/>
+                <filter name="filter_hierarchy_cluster_shj_2" string="Manager — Cluster SHJ 2"
+                        domain="[('demo_cluster_manager_id.name', '=', 'Cluster Manager SHJ 2')]"/>
+                <filter name="filter_hierarchy_cluster_shj_3" string="Manager — Cluster SHJ 3"
+                        domain="[('demo_cluster_manager_id.name', '=', 'Cluster Manager SHJ 3')]"/>
+                <filter name="filter_hierarchy_cluster_shj_4" string="Manager — Cluster SHJ 4"
+                        domain="[('demo_cluster_manager_id.name', '=', 'Cluster Manager SHJ 4')]"/>
+            </xpath>
+            <xpath expr="//filter[@name='inactive']" position="after">
+                <separator/>
+                <filter name="filter_format_flagship" string="Format — Flagship"
+                        domain="[('demo_store_format', '=', 'flagship')]"/>
+                <filter name="filter_format_mall" string="Format — Mall"
+                        domain="[('demo_store_format', '=', 'mall')]"/>
+                <filter name="filter_format_kiosk" string="Format — Kiosk"
+                        domain="[('demo_store_format', '=', 'kiosk')]"/>
+                <filter name="filter_format_outlet" string="Format — Outlet"
+                        domain="[('demo_store_format', '=', 'outlet')]"/>
+            </xpath>
+            <xpath expr="//search" position="inside">
+                <group>
+                    <filter string="Sales Team (region)" name="group_by_crm_team" context="{'group_by': 'crm_team_id'}"/>
+                    <filter string="Regional warehouse" name="group_by_demo_wh"
+                            context="{'group_by': 'demo_regional_warehouse_id'}"/>
+                    <filter string="Store format" name="group_by_store_format"
+                            context="{'group_by': 'demo_store_format'}"/>
+                    <filter string="Cluster manager" name="group_by_cluster_manager"
+                            context="{'group_by': 'demo_cluster_manager_id'}"/>
+                    <filter string="Regional manager" name="group_by_regional_manager"
+                            context="{'group_by': 'demo_regional_manager_id'}"/>
+                    <filter string="Emirate" name="group_by_emirate" context="{'group_by': 'demo_emirate'}"/>
+                    <filter string="Warehouse (stock)" name="group_by_warehouse" context="{'group_by': 'warehouse_id'}"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- POS orders -->
+    <record id="view_pos_order_search_demo_filters" model="ir.ui.view">
+        <field name="name">pos.order.search.demo.filters</field>
+        <field name="model">pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_order_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='cancelled']" position="after">
+                <separator/>
+                <filter name="filter_demo_five_shops" string="Demo — 5 shops"
+                        domain="[('config_id.name', 'in', ['POS-DXB-01', 'POS-RET-04', 'POS-RET-11', 'POS-RET-16', 'POS-RET-24'])]"/>
+                <filter name="filter_demo_cashiers" string="Demo PIN cashiers"
+                        domain="[('employee_id.name', 'ilike', 'Demo Cashier%')]"/>
+                <filter name="filter_phase_i_orders" string="Phase I sample orders"
+                        domain="[('floating_order_name', 'ilike', 'DEMO-PHASEI%')]"/>
+                <separator/>
+                <filter name="filter_region_dubai" string="Region — Dubai"
+                        domain="[('config_id.crm_team_id', '=', %(commercial_demo_story.demo_crm_team_pos_dubai)d)]"/>
+                <filter name="filter_region_abu_dhabi" string="Region — Abu Dhabi"
+                        domain="[('config_id.crm_team_id', '=', %(commercial_demo_story.demo_crm_team_pos_abu_dhabi)d)]"/>
+                <filter name="filter_region_northern" string="Region — Northern UAE"
+                        domain="[('config_id.crm_team_id', '=', %(commercial_demo_story.demo_crm_team_pos_northern)d)]"/>
+            </xpath>
+            <xpath expr="//search/group" position="inside">
+                <filter string="Sales Team (region)" name="group_by_crm_team"
+                        context="{'group_by': 'config_crm_team_id'}"/>
+                <filter string="Cluster manager" name="group_by_config_cluster"
+                        context="{'group_by': 'config_demo_cluster_manager_id'}"/>
+                <filter string="Regional manager" name="group_by_config_regional"
+                        context="{'group_by': 'config_demo_regional_manager_id'}"/>
+                <filter string="Cashier (employee)" name="group_by_employee"
+                        context="{'group_by': 'employee_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- POS sessions -->
+    <record id="view_pos_session_search_demo_filters" model="ir.ui.view">
+        <field name="name">pos.session.search.demo.filters</field>
+        <field name="model">pos.session</field>
+        <field name="inherit_id" ref="point_of_sale.view_pos_session_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='open_sessions']" position="after">
+                <separator/>
+                <filter name="filter_demo_five_shops" string="Demo — 5 shops"
+                        domain="[('config_id.name', 'in', ['POS-DXB-01', 'POS-RET-04', 'POS-RET-11', 'POS-RET-16', 'POS-RET-24'])]"/>
+                <filter name="filter_region_dubai" string="Region — Dubai"
+                        domain="[('config_id.crm_team_id', '=', %(commercial_demo_story.demo_crm_team_pos_dubai)d)]"/>
+                <filter name="filter_region_abu_dhabi" string="Region — Abu Dhabi"
+                        domain="[('config_id.crm_team_id', '=', %(commercial_demo_story.demo_crm_team_pos_abu_dhabi)d)]"/>
+                <filter name="filter_region_northern" string="Region — Northern UAE"
+                        domain="[('config_id.crm_team_id', '=', %(commercial_demo_story.demo_crm_team_pos_northern)d)]"/>
+            </xpath>
+            <xpath expr="//search/group" position="inside">
+                <filter string="Sales Team (region)" name="group_by_crm_team"
+                        context="{'group_by': 'config_crm_team_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Sales analysis -->
+    <record id="view_report_pos_order_search_demo_filters" model="ir.ui.view">
+        <field name="name">report.pos.order.search.demo.filters</field>
+        <field name="model">report.pos.order</field>
+        <field name="inherit_id" ref="point_of_sale.view_report_pos_order_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='not_cancelled']" position="after">
+                <separator/>
+                <filter name="filter_demo_five_shops" string="Demo — 5 shops"
+                        domain="[('config_id.name', 'in', ['POS-DXB-01', 'POS-RET-04', 'POS-RET-11', 'POS-RET-16', 'POS-RET-24'])]"/>
+                <filter name="filter_region_dubai" string="Region — Dubai"
+                        domain="[('config_id.crm_team_id', '=', %(commercial_demo_story.demo_crm_team_pos_dubai)d)]"/>
+                <filter name="filter_region_abu_dhabi" string="Region — Abu Dhabi"
+                        domain="[('config_id.crm_team_id', '=', %(commercial_demo_story.demo_crm_team_pos_abu_dhabi)d)]"/>
+                <filter name="filter_region_northern" string="Region — Northern UAE"
+                        domain="[('config_id.crm_team_id', '=', %(commercial_demo_story.demo_crm_team_pos_northern)d)]"/>
+            </xpath>
+            <xpath expr="//search/group" position="inside">
+                <filter string="Sales Team (region)" name="group_by_crm_team"
+                        context="{'group_by': 'config_crm_team_id'}"/>
+                <filter string="Cashier (employee)" name="group_by_employee"
+                        context="{'group_by': 'employee_id'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

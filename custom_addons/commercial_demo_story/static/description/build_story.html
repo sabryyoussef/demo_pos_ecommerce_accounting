@@ -165,6 +165,37 @@
       padding: 0.5rem 0 0.5rem 1rem;
       margin: 1rem 0;
     }
+    .demo-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 0.5rem;
+      font-size: 0.92rem;
+    }
+    .demo-table th,
+    .demo-table td {
+      border: 1px solid var(--border);
+      padding: 0.55rem 0.65rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .demo-table th {
+      background: var(--surface2);
+      color: var(--accent2);
+      font-weight: 600;
+    }
+    .demo-table code {
+      font-size: 0.88em;
+      color: #b8d4f0;
+    }
+    .demo-table a {
+      word-break: break-all;
+    }
+    ol.present-steps {
+      margin: 0.75rem 0 0;
+      padding-left: 1.25rem;
+      color: var(--muted);
+    }
+    ol.present-steps li { margin: 0.35rem 0; }
     footer {
       border-top: 1px solid var(--border);
       padding: 2rem 1.25rem;
@@ -217,7 +248,13 @@
       <a href="#gates-b">Gates B1–B6</a>
       <a href="#gates-c">Gates C1–C2</a>
       <a href="#gates-d">Gates D1–D4</a>
-      <a href="#final">Final commercial</a>
+      <a href="#gate-pos-hierarchy">POS &amp; contacts</a>
+      <a href="#gate-team-targets">Team targets</a>
+      <a href="#gate-pos-sales-targets">POS sales targets</a>
+      <a href="#gate-kitchen-display">Kitchen display</a>
+      <a href="#gate-table-prep">Table preparation</a>
+      <a href="#gate-pin-cashiers-no-user">PIN cashiers (no user)</a>
+      <a href="#final">Phases A–H</a>
     </div>
   </nav>
   <main class="wrap">
@@ -399,6 +436,8 @@
           POS cashier users vs manager: login flows, allowed POS configs per user, and separation from
           accounting configuration. Cashier screenshots use Discuss / Calendar (allowed surfaces) instead
           of modal access errors for a cleaner demo story.
+          For <strong>employee + PIN only</strong> (no <code>res.users</code> per cashier), see
+          <a href="#gate-pin-cashiers-no-user">PIN cashiers — no system user</a> (Phase I).
         </p>
         <div class="meta">
           <a href="steps/STEP5_GATE_B6_EXECUTION_REPORT.md">STEP5_GATE_B6_EXECUTION_REPORT.md</a>
@@ -552,28 +591,269 @@
       </div>
     </section>
 
-    <section id="final">
-      <h2>Final commercial operations</h2>
-      <div class="card">
-        <h3>Integrated narrative (corporate, eCommerce, 30 POS)</h3>
+    <section id="gate-pos-hierarchy">
+      <h2>POS hierarchy, contacts &amp; competition</h2>
+      <div class="card" id="gate-pos-hierarchy-card">
+        <h3>Scaled retail network (390 POS) + sales teams + contacts demo</h3>
         <p>
-          Phases A–D in scripts document corporate B2B invoicing, website orders, scaled POS locations and
-          cashiers, payment repair, and bank reconciliation lines. SQL and shell logs are under
-          <code>evidence/evidence_final_commercial/</code>.
+          Regional <strong>crm.team</strong> targets (Dubai, Abu Dhabi, Northern UAE), HR cluster managers,
+          employees on each <code>pos.config</code>, cashier attribution on <code>pos.order</code>,
+          FINCORP contact locations, <code>DEMO-*</code> partners and tags (Phase E), corporate B2B team (Phase A),
+          and Commercial Demo dashboard KPIs. See <a href="#gate-team-targets">Team targets</a> for Phase G invoiced actual.
         </p>
-        <p class="note" style="margin-top:1rem;border-color:var(--accent2);">
-          Executive presentation screenshots are indexed in
-          <a href="evidence/evidence_final_commercial/screenshots_index.md">screenshots_index.md</a>
-          (filenames for manual capture on a presenter workstation). There is no
-          <code>screenshots/</code> folder yet under final commercial evidence in this tree.
+        <div class="meta">
+          <a href="../../bootstrap/evidence_pos_hierarchy/README.md">evidence_pos_hierarchy README</a>
+          <a href="../../bootstrap/evidence_pos_hierarchy/browser_pos_hierarchy.json">browser_pos_hierarchy.json</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/01_commercial_demo_dashboard.png" alt="" /><figcaption>Commercial Demo dashboard (POS competition KPIs)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/02_crm_teams_pos_list.png" alt="" /><figcaption>CRM sales teams — POS regions</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/03_crm_team_dubai_form.png" alt="" /><figcaption>POS — Dubai team (targets)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/04_crm_team_abu_dhabi_form.png" alt="" /><figcaption>POS — Abu Dhabi team</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/05_partner_alpha_contacts_tab.png" alt="" /><figcaption>FINCORP Alpha — Contacts / locations</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/06_hr_cluster_managers_list.png" alt="" /><figcaption>HR cluster managers</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/07_pos_config_dxb_form.png" alt="" /><figcaption>POS-DXB-01 configuration</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/08_pos_config_dxb_employees.png" alt="" /><figcaption>POS-DXB-01 — employees &amp; sales team</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/09_pos_configs_list.png" alt="" /><figcaption>POS configurations (390 shops)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/10_pos_sales_report.png" alt="" /><figcaption>POS sales reporting</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/11_pos_orders_list.png" alt="" /><figcaption>POS orders (cashier attribution)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/12_crm_team_northern_form.png" alt="" /><figcaption>POS — Northern UAE team</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/13_contacts_demo_customers.png" alt="" /><figcaption>Contacts — DEMO partners (B2B, franchise, vendors)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/14_partner_tags_categories.png" alt="" /><figcaption>Partner tags (Demo B2B, VIP, Supplier…)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/15_crm_team_corporate_direct.png" alt="" /><figcaption>Corporate Direct — Horizon Retail (Phase A)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/16_sale_order_corporate_fin_a.png" alt="" /><figcaption>Corporate SO — FIN-A-NORTH-001</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="gate-team-targets">
+      <h2>CRM team targets vs invoiced actual</h2>
+      <div class="card" id="gate-team-targets-card">
+        <h3>Phase G — regional POS sales teams (Option C)</h3>
+        <p>
+          Posted B2B wholesale invoices on <strong>POS — Dubai</strong>, <strong>Abu Dhabi</strong>, and
+          <strong>Northern UAE</strong> teams (~70% / 85% / 60% of monthly <code>invoiced_target</code>).
+          Visible on CRM team forms, Sales reporting, Spreadsheet Sales dashboard, and Commercial Demo KPI tile.
+        </p>
+        <div class="meta">
+          <a href="../../bootstrap/evidence_team_targets/README.md">evidence_team_targets README</a>
+          <a href="../../bootstrap/evidence_final_commercial/phaseG_TEAM_TARGETS_README.md">phase G bootstrap notes</a>
+          <a href="../../bootstrap/evidence_team_targets/browser_team_targets.json">browser_team_targets.json</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_team_targets/01_demo_dashboard_team_targets_kpi.png" alt="" /><figcaption>Demo dashboard — POS teams invoiced vs target</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_team_targets/02_crm_team_dubai_target_vs_invoiced.png" alt="" /><figcaption>POS — Dubai — target vs invoiced</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_team_targets/03_crm_team_abu_dhabi_target_vs_invoiced.png" alt="" /><figcaption>POS — Abu Dhabi — target vs invoiced</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_team_targets/04_crm_team_northern_target_vs_invoiced.png" alt="" /><figcaption>POS — Northern UAE — target vs invoiced</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_team_targets/05_sale_orders_pos_wholesale.png" alt="" /><figcaption>Sale orders — DEMO-POS-INV wholesale</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_team_targets/06_sales_reporting.png" alt="" /><figcaption>Sales → Reporting</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_team_targets/07_spreadsheet_sales_dashboard.png" alt="" /><figcaption>Spreadsheet — Sales dashboard</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="gate-pos-sales-targets">
+      <h2>POS sales target vs achieved (Phase G2)</h2>
+      <div class="card">
+        <h3>Retail POS channel — separate from B2B invoicing</h3>
+        <p>
+          Custom fields on regional <strong>crm.team</strong>: <code>pos_sales_target</code>,
+          <code>pos_sales_month</code>, achievement %. Bootstrap
+          <code>phaseG2_pos_targets_achieved.py</code> tops up paid POS tickets (~75% / 88% / 63%).
+          Dashboard: <strong>POS teams — POS sales vs target</strong> (next to B2B invoiced).
+        </p>
+        <div class="meta">
+          <a href="../../bootstrap/evidence_commercial_phases/browser_commercial_phases.json">browser_commercial_phases.json</a>
+          <a href="../../bootstrap/evidence_final_commercial/phaseG2_pos_targets_achieved.py">phaseG2_pos_targets_achieved.py</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_commercial_phases/g2_01_dashboard_dual_targets_kpi.png" alt="" /><figcaption>Dashboard — B2B invoiced + POS sales KPIs</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_commercial_phases/g2_02_team_dubai_pos_sales_target.png" alt="" /><figcaption>POS — Dubai — POS sales target vs achieved</figcaption></figure>
+      </div>
+    </section>
+    <section id="gate-kitchen-display">
+      <h2>Kitchen / preparation display (Phase H)</h2>
+      <div class="card">
+        <h3>Enterprise prep displays on POS-DXB-01 &amp; POS-AUH-01</h3>
+        <p>
+          Three screens: <strong>Kitchen — Hot Prep</strong>, <strong>Bar — Beverages</strong>,
+          <strong>Expo — All Items</strong>. Restaurant floor <em>Mall Food Court — DXB</em>.
+          Bootstrap: <code>phaseH_kitchen_display.py</code>.
+        </p>
+        <div class="meta">
+          <a href="../../bootstrap/evidence_final_commercial/phaseH_kitchen_display.py">phaseH_kitchen_display.py</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_commercial_phases/h_01_prep_displays_list.png" alt="" /><figcaption>Preparation displays list</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_commercial_phases/h_05_prep_display_kitchen_form.png" alt="" /><figcaption>Kitchen — Hot Prep (configuration)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_commercial_phases/h_04_pos_dxb_restaurant_config.png" alt="" /><figcaption>POS-DXB-01 — restaurant mode</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_commercial_phases/h_02_kitchen_display_hot_prep.png" alt="" /><figcaption>Kitchen display UI</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_commercial_phases/h_03_bar_display_beverages.png" alt="" /><figcaption>Bar display UI</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="gate-table-prep">
+      <h2>Table preparation demo (Phase H2)</h2>
+      <div class="card">
+        <h3>Open table orders + kitchen tickets</h3>
+        <p>
+          Draft orders on tables 2, 4, 6 with fired courses; paid table orders on 1, 3, 5.
+          Mixed prep stages (To prepare / Ready / Completed). Bootstrap:
+          <code>phaseH_table_preparation.py</code>.
+        </p>
+        <div class="meta">
+          <a href="../../bootstrap/evidence_final_commercial/phaseH_table_preparation.py">phaseH_table_preparation.py</a>
+        </div>
+      </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_commercial_phases/h2_01_pos_restaurant_floor_tables.png" alt="" /><figcaption>POS — restaurant floor (tables 1–6)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_commercial_phases/h2_03_pos_orders_table_prep.png" alt="" /><figcaption>POS orders — Table-* demo tickets</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_commercial_phases/h2_02_kitchen_table_tickets.png" alt="" /><figcaption>Kitchen display — table tickets</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="gate-pin-cashiers-no-user">
+      <h2>No system user for cashiers — PIN-only POS (Phase I)</h2>
+      <div class="card">
+        <h3>Why this matters in the presentation</h3>
+        <p>
+          In Gate B6, each cashier had an Odoo <strong>user</strong> (<code>pos.cashier.*</code>) plus an employee record.
+          In Phase I we show the retail pattern many chains prefer: cashiers exist only as
+          <strong><code>hr.employee</code></strong> with a <strong>PIN</strong> on the till — no mailbox, no backend login,
+          no extra user licence per shift worker. One <strong>admin</strong> (<code>admin</code>) reviews consolidated sales in the backend.
+        </p>
+        <p class="note">
+          Database <code>demo_pos_accounting</code> · HTTP port <strong>8025</strong> · Bootstrap:
+          <code>scripts/phaseI_five_cashiers_demo.py</code> · Full runbook:
+          <a href="../../docs/DEMO_SCENARIO_POS_5_EMPLOYEES_ADMIN.md">DEMO_SCENARIO_POS_5_EMPLOYEES_ADMIN.md</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Live presentation guide (5 shops, 5 cashiers)</h3>
+        <p>
+          Open each POS link in a separate browser tab (or kiosk). On the employee screen, pick the cashier name and enter the PIN.
+          No Odoo user/password is required for the cashier.
+        </p>
+        <ol class="present-steps">
+          <li><strong>Admin (optional opener):</strong> <a href="http://127.0.0.1:8025/web/login?db=demo_pos_accounting">Backend login</a> as <code>admin</code> → Commercial Demo dashboard.</li>
+          <li><strong>Per shop:</strong> open the POS UI link below → select employee → enter PIN → sell 2–3 items → payment.</li>
+          <li><strong>Close:</strong> return to backend → Point of Sale → Orders or Sales Details — filter by <strong>Employee</strong> and <strong>Point of Sale</strong>.</li>
+        </ol>
+
+        <table class="demo-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Shop</th>
+              <th>Employee (select on POS)</th>
+              <th>PIN</th>
+              <th>POS UI link</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>POS-DXB-01 — Dubai Flagship</td>
+              <td>Demo Cashier — Dubai Flagship</td>
+              <td><code>3001</code></td>
+              <td><a href="http://127.0.0.1:8025/pos/ui?config_id=5" target="_blank" rel="noopener">Open POS (config 5)</a></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>POS-RET-04 — Dubai Hills</td>
+              <td>Demo Cashier — Dubai Hills</td>
+              <td><code>3002</code></td>
+              <td><a href="http://127.0.0.1:8025/pos/ui?config_id=8" target="_blank" rel="noopener">Open POS (config 8)</a></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>POS-RET-11 — Abu Dhabi Mall</td>
+              <td>Demo Cashier — Abu Dhabi Mall</td>
+              <td><code>3003</code></td>
+              <td><a href="http://127.0.0.1:8025/pos/ui?config_id=15" target="_blank" rel="noopener">Open POS (config 15)</a></td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>POS-RET-16 — Sharjah City Centre</td>
+              <td>Demo Cashier — Sharjah City Centre</td>
+              <td><code>3004</code></td>
+              <td><a href="http://127.0.0.1:8025/pos/ui?config_id=20" target="_blank" rel="noopener">Open POS (config 20)</a></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>POS-RET-24 — Madinat Jumeirah</td>
+              <td>Demo Cashier — Madinat Jumeirah</td>
+              <td><code>3005</code></td>
+              <td><a href="http://127.0.0.1:8025/pos/ui?config_id=28" target="_blank" rel="noopener">Open POS (config 28)</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p style="margin-top:1rem;color:var(--muted);font-size:0.9rem;">
+          Sample paid tickets (optional evidence): <code>DEMO-PHASEI-POS-*</code> orders attributed to each cashier.
+          POS-DXB-01 may keep an open session with Phase H2 draft table orders — that is intentional.
+        </p>
+        <div class="meta">
+          <a href="../../custom_addons/commercial_demo_story/scripts/phaseI_five_cashiers_demo.py">phaseI_five_cashiers_demo.py</a>
+          <a href="../../docs/phaseI_five_cashiers_shell.txt">phaseI_five_cashiers_shell.txt</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Gate B6 vs Phase I (talking points)</h3>
+        <table class="demo-table">
+          <thead>
+            <tr><th>Topic</th><th>Gate B6 (users)</th><th>Phase I (PIN employees)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Cashier identity</td><td><code>res.users</code> + employee</td><td><code>hr.employee</code> only, <code>user_id</code> empty</td></tr>
+            <tr><td>POS login</td><td>Odoo user session</td><td>Employee picker + PIN on POS</td></tr>
+            <tr><td>Licences / IT</td><td>One user per cashier login</td><td>No user account per shift cashier</td></tr>
+            <tr><td>Supervisor</td><td><code>pos.manager</code> user</td><td><code>admin</code> / POS Manager in backend; regional managers on advanced POS list (core <code>pos_hr</code>)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="final">
+      <h2>Final commercial operations (Phases A–H)</h2>
+      <div class="card">
+        <h3>Integrated narrative — corporate, eCommerce, 390 POS, targets, kitchen</h3>
+        <p>
+          Bootstrap scripts under <code>bootstrap/evidence_final_commercial/</code>: corporate B2B (A), website orders (B),
+          30 → 390 POS (C), bank reconciliation (D), contacts demo (E), POS hierarchy (F), team invoiced actual (G),
+          POS sales targets (G2), kitchen display (H), table preparation (H2),
+          PIN-only five-cashier presentation (I).
         </p>
         <div class="meta">
           <a href="steps/STEP5_FINAL_COMMERCIAL_OPERATIONS_REPORT.md">STEP5_FINAL_COMMERCIAL_OPERATIONS_REPORT.md</a>
           <a href="evidence/evidence_final_commercial/README_EXECUTION.md">README_EXECUTION.md</a>
           <a href="evidence/evidence_final_commercial/SQL_VERIFICATION.txt">SQL_VERIFICATION.txt</a>
+          <a href="evidence/evidence_final_commercial/screenshots_index.md">screenshots_index.md</a>
         </div>
       </div>
+      <div class="grid" data-gallery>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/15_crm_team_corporate_direct.png" alt="" /><figcaption>Phase A — Corporate CRM team &amp; target</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/16_sale_order_corporate_fin_a.png" alt="" /><figcaption>Phase A — Corporate sale order (FIN-A)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/13_journal_entries.png" alt="" /><figcaption>Phase A/D — Posted journal entries</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/01_website_shop.png" alt="" /><figcaption>Phase B — eCommerce shop</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/confirmation_order_a.png" alt="" /><figcaption>Phase B — Website order confirmation</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD4/10_sales_orders_list.png" alt="" /><figcaption>Phase B — Sales orders (web + corporate)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/09_pos_configs_list.png" alt="" /><figcaption>Phase C — 390 POS configurations</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/11_pos_orders_list.png" alt="" /><figcaption>Phase C — POS orders at scale</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_gateD3/11_journal_entries_list.png" alt="" /><figcaption>Phase D — Accounting / journal trail</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/13_contacts_demo_customers.png" alt="" /><figcaption>Phase E — Contacts demo (DEMO partners)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_pos_hierarchy/02_crm_teams_pos_list.png" alt="" /><figcaption>Phase F — POS regional CRM teams</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_team_targets/05_sale_orders_pos_wholesale.png" alt="" /><figcaption>Phase G — Regional wholesale (DEMO-POS-INV)</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_commercial_phases/g2_01_dashboard_dual_targets_kpi.png" alt="" /><figcaption>Phase G2 — Dashboard dual target KPIs</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_commercial_phases/h2_01_pos_restaurant_floor_tables.png" alt="" /><figcaption>Phase H/H2 — Restaurant floor &amp; table prep</figcaption></figure>
+        <figure><img loading="lazy" src="screenshots/evidence_team_targets/07_spreadsheet_sales_dashboard.png" alt="" /><figcaption>Phase G — Spreadsheet Sales dashboard</figcaption></figure>
+      </div>
     </section>
+
   </main>
 
   <dialog id="lightbox">
@@ -931,6 +1211,138 @@
   "screenshots/evidence_gateD4/13_journal_entries.png": {
     "href": "/odoo/action-292?db=demo_pos_accounting",
     "tip": "Accounting: Journal entries (action 292)."
+  },
+  "screenshots/evidence_pos_hierarchy/01_commercial_demo_dashboard.png": {
+    "href": "/odoo/action-792/1",
+    "tip": "Commercial Demo Story: dashboard with POS competition KPIs (top cashier, top team)."
+  },
+  "screenshots/evidence_pos_hierarchy/02_crm_teams_pos_list.png": {
+    "href": "/odoo/crm.team",
+    "tip": "Sales app: CRM Teams filtered to POS — Dubai / Abu Dhabi / Northern UAE."
+  },
+  "screenshots/evidence_pos_hierarchy/03_crm_team_dubai_form.png": {
+    "href": "/odoo/crm.team/7",
+    "tip": "Sales: POS — Dubai team form (monthly invoicing target, members)."
+  },
+  "screenshots/evidence_pos_hierarchy/04_crm_team_abu_dhabi_form.png": {
+    "href": "/odoo/crm.team/8",
+    "tip": "Sales: POS — Abu Dhabi team form."
+  },
+  "screenshots/evidence_pos_hierarchy/05_partner_alpha_contacts_tab.png": {
+    "href": "/odoo/res.partner/89",
+    "tip": "Contacts: FINCORP Alpha — open Contacts tab for delivery/invoice child addresses."
+  },
+  "screenshots/evidence_pos_hierarchy/06_hr_cluster_managers_list.png": {
+    "href": "/odoo/hr.employee",
+    "tip": "Employees: cluster managers (search Cluster Manager); org chart via HR."
+  },
+  "screenshots/evidence_pos_hierarchy/07_pos_config_dxb_form.png": {
+    "href": "/odoo/pos.config/5",
+    "tip": "Point of Sale: POS-DXB-01 configuration (sales team, HR employees)."
+  },
+  "screenshots/evidence_pos_hierarchy/08_pos_config_dxb_employees.png": {
+    "href": "/odoo/pos.config/5",
+    "tip": "Point of Sale: POS-DXB-01 — Employees tab (allowed / advanced cashiers)."
+  },
+  "screenshots/evidence_pos_hierarchy/09_pos_configs_list.png": {
+    "href": "/odoo/pos.config",
+    "tip": "Point of Sale: Configuration — all POS shops (390 in scaled demo)."
+  },
+  "screenshots/evidence_pos_hierarchy/10_pos_sales_report.png": {
+    "href": "/odoo/action-665",
+    "tip": "Point of Sale: Reporting — Sales Details (group by Employee or Point of Sale)."
+  },
+  "screenshots/evidence_pos_hierarchy/11_pos_orders_list.png": {
+    "href": "/odoo/pos.order",
+    "tip": "Point of Sale: Orders list with cashier (employee_id) per ticket."
+  },
+  "screenshots/evidence_team_targets/01_demo_dashboard_team_targets_kpi.png": {
+    "href": "/odoo/action-792",
+    "tip": "Commercial Demo dashboard — POS teams invoiced vs target KPI tile."
+  },
+  "screenshots/evidence_team_targets/02_crm_team_dubai_target_vs_invoiced.png": {
+    "href": "/odoo/crm.team/7",
+    "tip": "Sales team: POS — Dubai — invoicing target vs invoiced (~70%)."
+  },
+  "screenshots/evidence_team_targets/03_crm_team_abu_dhabi_target_vs_invoiced.png": {
+    "href": "/odoo/crm.team/8",
+    "tip": "Sales team: POS — Abu Dhabi — target vs invoiced (~85%)."
+  },
+  "screenshots/evidence_team_targets/04_crm_team_northern_target_vs_invoiced.png": {
+    "href": "/odoo/crm.team/9",
+    "tip": "Sales team: POS — Northern UAE — target vs invoiced (~60%)."
+  },
+  "screenshots/evidence_team_targets/05_sale_orders_pos_wholesale.png": {
+    "href": "/odoo/sale.order",
+    "tip": "Sales orders: search DEMO-POS-INV (Phase G wholesale per region)."
+  },
+  "screenshots/evidence_team_targets/06_sales_reporting.png": {
+    "href": "/odoo/action-679",
+    "tip": "Sales → Reporting → Sales (invoiced amounts by team)."
+  },
+  "screenshots/evidence_team_targets/07_spreadsheet_sales_dashboard.png": {
+    "href": "/odoo/dashboards?dashboard_id=8",
+    "tip": "Dashboards → Sales spreadsheet (executive pivot)."
+  },
+  "screenshots/evidence_pos_hierarchy/12_crm_team_northern_form.png": {
+    "href": "/odoo/crm.team/9",
+    "tip": "Sales team: POS — Northern UAE (monthly target, members)."
+  },
+  "screenshots/evidence_pos_hierarchy/13_contacts_demo_customers.png": {
+    "href": "/odoo/res.partner",
+    "tip": "Contacts: search DEMO- for franchise, B2B, vendor demo partners."
+  },
+  "screenshots/evidence_pos_hierarchy/14_partner_tags_categories.png": {
+    "href": "/odoo/res.partner.category",
+    "tip": "Contacts → Configuration → Contact Tags (Demo B2B, VIP, Supplier…)."
+  },
+  "screenshots/evidence_pos_hierarchy/15_crm_team_corporate_direct.png": {
+    "href": "/odoo/crm.team/4",
+    "tip": "Sales team: Corporate Direct — Horizon Retail (Phase A target)."
+  },
+  "screenshots/evidence_pos_hierarchy/16_sale_order_corporate_fin_a.png": {
+    "href": "/odoo/sale.order",
+    "tip": "Sales order with client_order_ref FIN-A-NORTH-001 (corporate B2B)."
+  },
+  "screenshots/evidence_commercial_phases/g2_01_dashboard_dual_targets_kpi.png": {
+    "href": "/odoo/action-792",
+    "tip": "Commercial Demo dashboard — B2B invoiced vs target and POS sales vs target KPIs."
+  },
+  "screenshots/evidence_commercial_phases/g2_02_team_dubai_pos_sales_target.png": {
+    "href": "/odoo/crm.team/7",
+    "tip": "POS — Dubai: pos_sales_target, pos_sales_month, achievement % (custom fields)."
+  },
+  "screenshots/evidence_commercial_phases/h_01_prep_displays_list.png": {
+    "href": "/odoo/action-722",
+    "tip": "Point of Sale: Preparation Displays list (Kitchen, Bar, Expo)."
+  },
+  "screenshots/evidence_commercial_phases/h_05_prep_display_kitchen_form.png": {
+    "href": "/odoo/pos.prep.display/8",
+    "tip": "Kitchen — Hot Prep display: categories, POS configs, stages."
+  },
+  "screenshots/evidence_commercial_phases/h_04_pos_dxb_restaurant_config.png": {
+    "href": "/odoo/pos.config/5",
+    "tip": "POS-DXB-01: restaurant mode, floor plan, preparation display link."
+  },
+  "screenshots/evidence_commercial_phases/h_02_kitchen_display_hot_prep.png": {
+    "href": "/pos_preparation_display/web?display_id=8",
+    "tip": "Kitchen preparation display front-end (tickets by stage)."
+  },
+  "screenshots/evidence_commercial_phases/h_03_bar_display_beverages.png": {
+    "href": "/pos_preparation_display/web?display_id=9",
+    "tip": "Bar preparation display — Beverages category."
+  },
+  "screenshots/evidence_commercial_phases/h2_01_pos_restaurant_floor_tables.png": {
+    "href": "/pos/ui?config_id=5",
+    "tip": "POS restaurant floor — tables 1–6 with open orders (Table-2, 4, 6)."
+  },
+  "screenshots/evidence_commercial_phases/h2_03_pos_orders_table_prep.png": {
+    "href": "/odoo/pos.order",
+    "tip": "POS orders filtered Table-* — draft and paid table service tickets."
+  },
+  "screenshots/evidence_commercial_phases/h2_02_kitchen_table_tickets.png": {
+    "href": "/pos_preparation_display/web?display_id=8",
+    "tip": "Kitchen display showing table preparation tickets (T1, T2, …)."
   }
 }
   </script>

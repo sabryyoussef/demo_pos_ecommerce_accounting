@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Saved favorites (Favorites column on search bar) -->
+
+    <record id="favorite_pos_config_demo_five" model="ir.filters">
+        <field name="name">Demo - 5 walkthrough shops</field>
+        <field name="model_id">pos.config</field>
+        <field name="user_ids" eval="False"/>
+        <field name="domain">[('name', 'in', ['POS-DXB-01', 'POS-RET-04', 'POS-RET-11', 'POS-RET-16', 'POS-RET-24'])]</field>
+    </record>
+
+    <record id="favorite_pos_config_region_dubai" model="ir.filters">
+        <field name="name">Region - Dubai (all shops)</field>
+        <field name="model_id">pos.config</field>
+        <field name="user_ids" eval="False"/>
+        <field name="domain" eval="[('crm_team_id', '=', ref('commercial_demo_story.demo_crm_team_pos_dubai'))]"/>
+    </record>
+
+    <record id="favorite_pos_config_group_team" model="ir.filters">
+        <field name="name">Group by Sales Team</field>
+        <field name="model_id">pos.config</field>
+        <field name="user_ids" eval="False"/>
+        <field name="context">{'group_by': ['crm_team_id']}</field>
+    </record>
+
+    <record id="favorite_pos_config_group_warehouse" model="ir.filters">
+        <field name="name">Group by regional warehouse</field>
+        <field name="model_id">pos.config</field>
+        <field name="user_ids" eval="False"/>
+        <field name="context">{'group_by': ['demo_regional_warehouse_id']}</field>
+    </record>
+
+    <record id="favorite_pos_config_group_format" model="ir.filters">
+        <field name="name">Group by store format</field>
+        <field name="model_id">pos.config</field>
+        <field name="user_ids" eval="False"/>
+        <field name="context">{'group_by': ['demo_store_format']}</field>
+    </record>
+
+    <record id="favorite_pos_config_group_cluster" model="ir.filters">
+        <field name="name">Group by cluster manager</field>
+        <field name="model_id">pos.config</field>
+        <field name="user_ids" eval="False"/>
+        <field name="context">{'group_by': ['demo_cluster_manager_id']}</field>
+    </record>
+
+    <record id="favorite_pos_order_demo_five" model="ir.filters">
+        <field name="name">Demo - 5 shops (by POS)</field>
+        <field name="model_id">pos.order</field>
+        <field name="user_ids" eval="False"/>
+        <field name="domain">[('config_id.name', 'in', ['POS-DXB-01', 'POS-RET-04', 'POS-RET-11', 'POS-RET-16', 'POS-RET-24'])]</field>
+        <field name="context">{'group_by': ['config_id']}</field>
+    </record>
+
+    <record id="favorite_pos_order_demo_cashiers" model="ir.filters">
+        <field name="name">Demo PIN cashiers</field>
+        <field name="model_id">pos.order</field>
+        <field name="user_ids" eval="False"/>
+        <field name="domain">[('employee_id.name', 'ilike', 'Demo Cashier%')]</field>
+        <field name="context">{'group_by': ['employee_id', 'config_id']}</field>
+    </record>
+
+    <record id="favorite_pos_order_region_dubai" model="ir.filters">
+        <field name="name">Dubai region - by shop</field>
+        <field name="model_id">pos.order</field>
+        <field name="user_ids" eval="False"/>
+        <field name="domain" eval="[('config_id.crm_team_id', '=', ref('commercial_demo_story.demo_crm_team_pos_dubai'))]"/>
+        <field name="context">{'group_by': ['config_id']}</field>
+    </record>
+
+    <record id="favorite_report_pos_demo_five" model="ir.filters">
+        <field name="name">Demo - 5 shops (analysis)</field>
+        <field name="model_id">report.pos.order</field>
+        <field name="user_ids" eval="False"/>
+        <field name="domain">[('config_id.name', 'in', ['POS-DXB-01', 'POS-RET-04', 'POS-RET-11', 'POS-RET-16', 'POS-RET-24'])]</field>
+        <field name="context">{'group_by': ['config_id']}</field>
+    </record>
+
+    <record id="favorite_report_pos_by_employee" model="ir.filters">
+        <field name="name">By cashier (employee)</field>
+        <field name="model_id">report.pos.order</field>
+        <field name="user_ids" eval="False"/>
+        <field name="context">{'group_by': ['employee_id', 'config_id']}</field>
+    </record>
+
+    <record id="favorite_report_pos_by_region" model="ir.filters">
+        <field name="name">By Sales Team (region)</field>
+        <field name="model_id">report.pos.order</field>
+        <field name="user_ids" eval="False"/>
+        <field name="context">{'group_by': ['config_crm_team_id', 'config_id']}</field>
+    </record>
+
+    <record id="favorite_pos_order_by_region" model="ir.filters">
+        <field name="name">By Sales Team (region)</field>
+        <field name="model_id">pos.order</field>
+        <field name="user_ids" eval="False"/>
+        <field name="context">{'group_by': ['config_crm_team_id', 'config_id']}</field>
+    </record>
+</odoo>

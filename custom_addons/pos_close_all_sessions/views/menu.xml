@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_pos_close_all_sessions"
+              name="Close all open sessions"
+              parent="point_of_sale.menu_pos_session_all"
+              action="action_pos_close_all_sessions_wizard"
+              sequence="50"
+              groups="point_of_sale.group_pos_manager"/>
+</odoo>

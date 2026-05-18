@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+  <record id="demo_crm_team_pos_dubai" model="crm.team">
+    <field name="name">POS — Dubai</field>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="invoiced_target" eval="850000.0"/>
+    <field name="pos_sales_target" eval="40000.0"/>
+  </record>
+  <record id="demo_crm_team_pos_abu_dhabi" model="crm.team">
+    <field name="name">POS — Abu Dhabi</field>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="invoiced_target" eval="620000.0"/>
+    <field name="pos_sales_target" eval="30000.0"/>
+  </record>
+  <record id="demo_crm_team_pos_northern" model="crm.team">
+    <field name="name">POS — Northern UAE</field>
+    <field name="company_id" ref="base.main_company"/>
+    <field name="invoiced_target" eval="480000.0"/>
+    <field name="pos_sales_target" eval="25000.0"/>
+  </record>
+</odoo>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- My scope (logged-in regional / cluster manager) -->
+    <record id="action_pos_config_my_hierarchy" model="ir.actions.server">
+        <field name="name">My POS shops</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">action = model.action_open_my_pos_shops()</field>
+    </record>
+
+    <record id="action_pos_orders_my_hierarchy" model="ir.actions.server">
+        <field name="name">My POS orders</field>
+        <field name="model_id" ref="point_of_sale.model_pos_order"/>
+        <field name="state">code</field>
+        <field name="code">
+domain = model._domain_for_pos_manager_user()
+action = {
+    'type': 'ir.actions.act_window',
+    'name': 'My POS orders',
+    'res_model': 'pos.order',
+    'view_mode': 'list,form',
+    'domain': domain,
+    'context': {'search_default_group_by_config_cluster': 1},
+}
+        </field>
+    </record>
+
+    <!-- Regional managers (full region) -->
+    <record id="action_pos_config_region_team_dxb" model="ir.actions.server">
+        <field name="name">Dubai — all shops</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">
+action = model.action_open_pos_hierarchy_window(
+    name='Dubai — regional',
+    domain=model._config_domain_for_region_team('dxb'),
+    group_by_cluster=True,
+)
+        </field>
+    </record>
+
+    <record id="action_pos_config_region_team_auh" model="ir.actions.server">
+        <field name="name">Abu Dhabi — all shops</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">
+action = model.action_open_pos_hierarchy_window(
+    name='Abu Dhabi — regional',
+    domain=model._config_domain_for_region_team('auh'),
+    group_by_cluster=True,
+)
+        </field>
+    </record>
+
+    <record id="action_pos_config_region_team_shj" model="ir.actions.server">
+        <field name="name">Northern UAE — all shops</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">
+action = model.action_open_pos_hierarchy_window(
+    name='Northern UAE — regional',
+    domain=model._config_domain_for_region_team('shj'),
+    group_by_cluster=True,
+)
+        </field>
+    </record>
+
+    <!-- Cluster managers — generated per region -->
+    <record id="action_pos_config_cluster_dxb_1" model="ir.actions.server">
+        <field name="name">Cluster DXB 1</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">
+action = model.action_open_pos_hierarchy_window(
+    name='Cluster Manager DXB 1',
+    domain=model._config_domain_for_cluster_name('Cluster Manager DXB 1'),
+)
+        </field>
+    </record>
+    <record id="action_pos_config_cluster_dxb_2" model="ir.actions.server">
+        <field name="name">Cluster DXB 2</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">
+action = model.action_open_pos_hierarchy_window(
+    name='Cluster Manager DXB 2',
+    domain=model._config_domain_for_cluster_name('Cluster Manager DXB 2'),
+)
+        </field>
+    </record>
+    <record id="action_pos_config_cluster_dxb_3" model="ir.actions.server">
+        <field name="name">Cluster DXB 3</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">
+action = model.action_open_pos_hierarchy_window(
+    name='Cluster Manager DXB 3',
+    domain=model._config_domain_for_cluster_name('Cluster Manager DXB 3'),
+)
+        </field>
+    </record>
+    <record id="action_pos_config_cluster_dxb_4" model="ir.actions.server">
+        <field name="name">Cluster DXB 4</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">
+action = model.action_open_pos_hierarchy_window(
+    name='Cluster Manager DXB 4',
+    domain=model._config_domain_for_cluster_name('Cluster Manager DXB 4'),
+)
+        </field>
+    </record>
+
+    <record id="action_pos_config_cluster_auh_1" model="ir.actions.server">
+        <field name="name">Cluster AUH 1</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">
+action = model.action_open_pos_hierarchy_window(
+    name='Cluster Manager AUH 1',
+    domain=model._config_domain_for_cluster_name('Cluster Manager AUH 1'),
+)
+        </field>
+    </record>
+    <record id="action_pos_config_cluster_auh_2" model="ir.actions.server">
+        <field name="name">Cluster AUH 2</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">
+action = model.action_open_pos_hierarchy_window(
+    name='Cluster Manager AUH 2',
+    domain=model._config_domain_for_cluster_name('Cluster Manager AUH 2'),
+)
+        </field>
+    </record>
+    <record id="action_pos_config_cluster_auh_3" model="ir.actions.server">
+        <field name="name">Cluster AUH 3</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">
+action = model.action_open_pos_hierarchy_window(
+    name='Cluster Manager AUH 3',
+    domain=model._config_domain_for_cluster_name('Cluster Manager AUH 3'),
+)
+        </field>
+    </record>
+    <record id="action_pos_config_cluster_auh_4" model="ir.actions.server">
+        <field name="name">Cluster AUH 4</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">
+action = model.action_open_pos_hierarchy_window(
+    name='Cluster Manager AUH 4',
+    domain=model._config_domain_for_cluster_name('Cluster Manager AUH 4'),
+)
+        </field>
+    </record>
+
+    <record id="action_pos_config_cluster_shj_1" model="ir.actions.server">
+        <field name="name">Cluster SHJ 1</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">
+action = model.action_open_pos_hierarchy_window(
+    name='Cluster Manager SHJ 1',
+    domain=model._config_domain_for_cluster_name('Cluster Manager SHJ 1'),
+)
+        </field>
+    </record>
+    <record id="action_pos_config_cluster_shj_2" model="ir.actions.server">
+        <field name="name">Cluster SHJ 2</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">
+action = model.action_open_pos_hierarchy_window(
+    name='Cluster Manager SHJ 2',
+    domain=model._config_domain_for_cluster_name('Cluster Manager SHJ 2'),
+)
+        </field>
+    </record>
+    <record id="action_pos_config_cluster_shj_3" model="ir.actions.server">
+        <field name="name">Cluster SHJ 3</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">
+action = model.action_open_pos_hierarchy_window(
+    name='Cluster Manager SHJ 3',
+    domain=model._config_domain_for_cluster_name('Cluster Manager SHJ 3'),
+)
+        </field>
+    </record>
+    <record id="action_pos_config_cluster_shj_4" model="ir.actions.server">
+        <field name="name">Cluster SHJ 4</field>
+        <field name="model_id" ref="point_of_sale.model_pos_config"/>
+        <field name="state">code</field>
+        <field name="code">
+action = model.action_open_pos_hierarchy_window(
+    name='Cluster Manager SHJ 4',
+    domain=model._config_domain_for_cluster_name('Cluster Manager SHJ 4'),
+)
+        </field>
+    </record>
+</odoo>

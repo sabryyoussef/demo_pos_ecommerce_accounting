@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_commercial_demo_presentation_form" model="ir.ui.view">
+        <field name="name">commercial.demo.presentation.form</field>
+        <field name="model">commercial.demo.presentation</field>
+        <field name="arch" type="xml">
+            <form string="Demo Presentation" create="false" edit="false" delete="false" class="o_commercial_demo_presentation_form">
+                <sheet class="p-0 border-0" style="max-width: none;">
+                    <iframe
+                        src="/commercial_demo_story/static/description/presentation.html"
+                        title="Horizon Retail demo presentation"
+                        style="display: block; width: 100%; min-height: calc(100vh - 11rem); height: calc(100vh - 11rem); border: 0;"
+                    />
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

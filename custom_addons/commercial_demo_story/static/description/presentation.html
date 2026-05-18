@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Horizon Retail — Live Demo Presentation</title>
+  <style>
+    :root {
+      --bg: #0c1118;
+      --surface: #151d28;
+      --surface2: #1e2836;
+      --text: #eef4fa;
+      --muted: #94a8bc;
+      --accent: #4da3ff;
+      --accent2: #3dd9a7;
+      --warn: #f0b429;
+      --border: #2a3848;
+      --radius: 12px;
+      --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      font-size: 17px;
+    }
+    a { color: var(--accent); }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+    header {
+      padding: 2.5rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(160deg, #122033 0%, var(--bg) 70%);
+    }
+    header h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.75rem, 4vw, 2.35rem);
+      font-weight: 650;
+      letter-spacing: -0.02em;
+    }
+    header .lead { color: var(--muted); margin: 0; max-width: 42rem; }
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: rgba(12, 17, 24, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    nav .inner {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0.6rem 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1rem;
+    }
+    nav a {
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    nav a:hover { color: var(--accent2); }
+    main { padding: 2rem 0 4rem; }
+    section {
+      margin-bottom: 3.5rem;
+      scroll-margin-top: 4rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin: 0 0 1rem;
+      color: var(--accent2);
+      font-weight: 650;
+    }
+    h3 { font-size: 1.05rem; margin: 0 0 0.5rem; color: var(--text); }
+    p { margin: 0.5rem 0; color: var(--muted); }
+    p strong, li strong { color: var(--text); }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .card.highlight {
+      border-color: var(--accent2);
+      box-shadow: 0 0 0 1px rgba(61, 217, 167, 0.15);
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .channel-card {
+      background: var(--surface2);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .channel-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      background: #0a0e14;
+    }
+    .channel-card .body { padding: 1rem 1.1rem; }
+    .channel-card h3 { margin: 0 0 0.35rem; font-size: 1rem; color: var(--accent2); }
+    .channel-card p { margin: 0; font-size: 0.92rem; }
+    .btn {
+      display: inline-block;
+      margin: 0.35rem 0.5rem 0.35rem 0;
+      padding: 0.55rem 1.1rem;
+      border-radius: 8px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #061018;
+    }
+    .btn-primary:hover { filter: brightness(1.08); text-decoration: none; }
+    .btn-secondary {
+      background: var(--surface2);
+      color: var(--text);
+      border-color: var(--border);
+    }
+    .btn-secondary:hover { border-color: var(--accent); text-decoration: none; }
+    .btn-accent {
+      background: var(--accent2);
+      color: #062018;
+    }
+    .btn-lg {
+      padding: 0.75rem 1.35rem;
+      font-size: 1rem;
+    }
+    .meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem 1.5rem;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .meta-row span { color: var(--muted); }
+    .meta-row strong { color: var(--text); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 0;
+      font-size: 0.92rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.75rem;
+      text-align: left;
+      vertical-align: middle;
+    }
+    th {
+      background: var(--surface2);
+      color: var(--accent2);
+      font-weight: 600;
+    }
+    td code {
+      font-size: 1.05em;
+      color: var(--warn);
+      font-weight: 600;
+    }
+    .badge-no {
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      background: rgba(61, 217, 167, 0.15);
+      color: var(--accent2);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .flow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 0.75rem;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .flow span.step {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.75rem;
+      border-radius: 8px;
+      color: var(--text);
+    }
+    .flow .arrow { color: var(--accent); font-weight: bold; }
+    .shot-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.85rem;
+      margin-top: 1rem;
+    }
+    .shot-row figure {
+      margin: 0;
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--surface2);
+    }
+    .shot-row img { width: 100%; display: block; }
+    .shot-row figcaption {
+      padding: 0.45rem 0.6rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .scale-stat {
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      font-weight: 700;
+      color: var(--accent);
+      line-height: 1;
+      margin: 0.5rem 0 0;
+    }
+    .appendix {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 1px dashed var(--border);
+    }
+    ol.steps { margin: 0.75rem 0 0; padding-left: 1.25rem; color: var(--muted); }
+    ol.steps li { margin: 0.4rem 0; }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>Horizon Retail Group</h1>
+      <p class="lead">Live demo — one UAE company, corporate sales, eCommerce, and retail POS. Approx. 5–10 minutes.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Presentation sections">
+    <div class="inner">
+      <a href="#start">Start</a>
+      <a href="#channels">Channels</a>
+      <a href="#pin-cashiers">PIN cashiers</a>
+      <a href="#pos-scale">POS scale</a>
+      <a href="#kitchen">Kitchen</a>
+      <a href="#targets">Targets</a>
+      <a href="#appendix">Evidence</a>
+    </div>
+  </nav>
+
+  <main class="wrap">
+
+    <section id="start">
+      <h2>1. Start here</h2>
+      <div class="card">
+        <div class="meta-row">
+          <span>Company <strong>Horizon Retail Group (UAE)</strong></span>
+          <span>Currency <strong>AED</strong></span>
+          <span>Demo URL <strong>http://localhost:8025</strong></span>
+        </div>
+        <p>
+          <strong>Business objective:</strong> Show how a multi-channel retailer runs B2B, online shop, and hundreds of
+          stores on one Odoo database — with clear cashier accountability and management visibility, without giving every
+          till operator a full system login.
+        </p>
+        <p>
+          <strong>Presenter login (backend):</strong> open
+          <a href="/web/login?db=demo_pos_accounting">Odoo backend</a> as <strong>admin</strong>
+          (use your install password). Cashiers do <em>not</em> use this login — see section 3.
+        </p>
+        <a class="btn btn-primary btn-lg" href="/odoo/action-792/1" target="_parent">Open Commercial Demo Dashboard</a>
+      </div>
+    </section>
+
+    <section id="channels">
+      <h2>2. One company, three channels</h2>
+      <p>All revenue flows through the same chart of accounts, tax rules, and inventory — different front ends, one truth.</p>
+      <div class="grid-3">
+        <article class="channel-card">
+          <img src="screenshots/evidence_pos_hierarchy/16_sale_order_corporate_fin_a.png" alt="Corporate B2B sale order" loading="lazy" />
+          <div class="body">
+            <h3>Corporate sales (B2B)</h3>
+            <p>Key accounts, quotations, deliveries, invoicing, and salesperson attribution.</p>
+          </div>
+        </article>
+        <article class="channel-card">
+          <img src="screenshots/evidence_gateD4/01_website_shop.png" alt="Website shop" loading="lazy" />
+          <div class="body">
+            <h3>Website / eCommerce</h3>
+            <p>Online catalog and checkout into the same stock and accounting engine.</p>
+          </div>
+        </article>
+        <article class="channel-card">
+          <img src="screenshots/evidence_pos_hierarchy/11_pos_orders_list.png" alt="POS orders" loading="lazy" />
+          <div class="body">
+            <h3>POS / retail</h3>
+            <p>Store tills, sessions, cashiers, and real-time sales at every location.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="pin-cashiers">
+      <h2>3. PIN cashiers — no backend user required</h2>
+      <div class="card highlight">
+        <p>
+          <strong>Key message:</strong> Shift cashiers are <strong>employees only</strong> (<code>hr.employee</code>).
+          They select their name on the POS and enter a <strong>PIN</strong>. They never receive an Odoo user, email, or
+          backend password — reducing licences, IT overhead, and security risk. Managers use <strong>admin</strong> (or
+          POS Manager) in the backend to see who sold what, where.
+        </p>
+        <ol class="steps">
+          <li>Click <strong>Open POS</strong> for a shop (table below).</li>
+          <li>Choose the <strong>employee name</strong> on the till login screen.</li>
+          <li>Enter the <strong>PIN</strong>.</li>
+          <li>On <strong>Opening Control</strong>, tap <strong>Open Register</strong> (0.00 is fine).</li>
+          <li>Sell → pay. Admin reviews <strong>Point of Sale → Orders</strong> by employee and shop.</li>
+        </ol>
+
+        <table>
+          <thead>
+            <tr>
+              <th>POS location</th>
+              <th>Employee (on till)</th>
+              <th>PIN</th>
+              <th>Backend user?</th>
+              <th>Open POS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>POS-DXB-01 — Dubai Flagship</td>
+              <td>Demo Cashier — Dubai Flagship</td>
+              <td><code>3001</code></td>
+              <td><span class="badge-no">No</span></td>
+              <td><a class="btn btn-accent" href="/pos/ui?config_id=5" target="_blank" rel="noopener">Open POS</a></td>
+            </tr>
+            <tr>
+              <td>POS-RET-04 — Dubai Hills</td>
+              <td>Demo Cashier — Dubai Hills</td>
+              <td><code>3002</code></td>
+              <td><span class="badge-no">No</span></td>
+              <td><a class="btn btn-accent" href="/pos/ui?config_id=8" target="_blank" rel="noopener">Open POS</a></td>
+            </tr>
+            <tr>
+              <td>POS-RET-11 — Abu Dhabi Mall</td>
+              <td>Demo Cashier — Abu Dhabi Mall</td>
+              <td><code>3003</code></td>
+              <td><span class="badge-no">No</span></td>
+              <td><a class="btn btn-accent" href="/pos/ui?config_id=15" target="_blank" rel="noopener">Open POS</a></td>
+            </tr>
+            <tr>
+              <td>POS-RET-16 — Sharjah City Centre</td>
+              <td>Demo Cashier — Sharjah City Centre</td>
+              <td><code>3004</code></td>
+              <td><span class="badge-no">No</span></td>
+              <td><a class="btn btn-accent" href="/pos/ui?config_id=20" target="_blank" rel="noopener">Open POS</a></td>
+            </tr>
+            <tr>
+              <td>POS-RET-24 — Madinat Jumeirah</td>
+              <td>Demo Cashier — Madinat Jumeirah</td>
+              <td><code>3005</code></td>
+              <td><span class="badge-no">No</span></td>
+              <td><a class="btn btn-accent" href="/pos/ui?config_id=28" target="_blank" rel="noopener">Open POS</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="pos-scale">
+      <h2>4. POS at scale</h2>
+      <div class="card">
+        <p class="scale-stat">390</p>
+        <p><strong>Point-of-sale locations</strong> configured for Horizon Retail in this demo — one database, regional teams, consolidated reporting.</p>
+        <p>Today’s walkthrough uses <strong>five flagship malls</strong> (section 3). The full estate remains available for management dashboards and analysis.</p>
+        <div class="shot-row">
+          <figure>
+            <img src="screenshots/evidence_pos_hierarchy/09_pos_configs_list.png" alt="POS configurations list" loading="lazy" />
+            <figcaption>POS estate — configurations at a glance</figcaption>
+          </figure>
+        </div>
+        <p style="margin-top:1rem;">
+          <strong>Example shops:</strong>
+          <a href="/pos/ui?config_id=5" target="_blank" rel="noopener">Dubai Flagship</a> ·
+          <a href="/pos/ui?config_id=8" target="_blank" rel="noopener">Dubai Hills</a> ·
+          <a href="/pos/ui?config_id=15" target="_blank" rel="noopener">Abu Dhabi Mall</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="kitchen">
+      <h2>5. Restaurant &amp; kitchen (Dubai flagship)</h2>
+      <p>At <strong>POS-DXB-01</strong> — table service, kitchen display, and bar flow on one site.</p>
+      <div class="flow">
+        <span class="step">Order on floor</span>
+        <span class="arrow">→</span>
+        <span class="step">Kitchen / bar screens</span>
+        <span class="arrow">→</span>
+        <span class="step">Payment</span>
+        <span class="arrow">→</span>
+        <span class="step">Close session</span>
+      </div>
+      <div class="shot-row">
+        <figure>
+          <img src="screenshots/evidence_commercial_phases/h2_01_pos_restaurant_floor_tables.png" alt="Restaurant floor" loading="lazy" />
+          <figcaption>Table floor plan</figcaption>
+        </figure>
+        <figure>
+          <img src="screenshots/evidence_commercial_phases/h_02_kitchen_display_hot_prep.png" alt="Kitchen display" loading="lazy" />
+          <figcaption>Kitchen display</figcaption>
+        </figure>
+        <figure>
+          <img src="screenshots/evidence_commercial_phases/h2_03_pos_orders_table_prep.png" alt="Table orders" loading="lazy" />
+          <figcaption>Orders &amp; payment</figcaption>
+        </figure>
+      </div>
+      <a class="btn btn-secondary" href="/pos/ui?config_id=5" target="_blank" rel="noopener">Open POS-DXB-01 (restaurant)</a>
+    </section>
+
+    <section id="targets">
+      <h2>6. Targets &amp; admin control</h2>
+      <div class="card">
+        <p>
+          Leadership monitors live KPIs: channel mix, top stores, top cashiers, regional POS teams vs
+          <strong>sales targets</strong> (B2B invoiced and POS sales).
+        </p>
+        <div class="shot-row">
+          <figure>
+            <img src="screenshots/evidence_commercial_phases/g2_01_dashboard_dual_targets_kpi.png" alt="Dashboard KPIs" loading="lazy" />
+            <figcaption>Regional targets on demo dashboard</figcaption>
+          </figure>
+          <figure>
+            <img src="screenshots/evidence_pos_hierarchy/02_crm_teams_pos_list.png" alt="POS sales teams" loading="lazy" />
+            <figcaption>POS sales teams by region</figcaption>
+          </figure>
+        </div>
+        <a class="btn btn-primary btn-lg" href="/odoo/action-792/1" target="_parent">Open Commercial Demo Dashboard</a>
+        <a class="btn btn-secondary" href="/odoo/point-of-sale" target="_parent">Point of Sale app</a>
+      </div>
+    </section>
+
+    <section id="appendix">
+      <h2>7. Appendix</h2>
+      <div class="appendix">
+        <h3 style="margin-top:0;">Full technical evidence</h3>
+        <p>
+          Gates, bootstrap scripts, SQL checks, and the complete screenshot archive for auditors and project teams.
+          Not needed for a client walkthrough.
+        </p>
+        <a class="btn btn-secondary btn-lg" href="/odoo/action-799/1" target="_parent">Full Technical Evidence / Build Story</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    Horizon Retail demo · database <code>demo_pos_accounting</code> · port <strong>8025</strong>
+  </footer>
+</body>
+</html>

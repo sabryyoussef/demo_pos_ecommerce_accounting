@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo noupdate="1">
+  <record id="demo_partner_tag_b2b" model="res.partner.category">
+    <field name="name">Demo B2B</field>
+    <field name="color" eval="2"/>
+  </record>
+  <record id="demo_partner_tag_vip" model="res.partner.category">
+    <field name="name">Demo VIP</field>
+    <field name="color" eval="3"/>
+  </record>
+  <record id="demo_partner_tag_supplier" model="res.partner.category">
+    <field name="name">Demo Supplier</field>
+    <field name="color" eval="4"/>
+  </record>
+  <record id="demo_partner_tag_ecom" model="res.partner.category">
+    <field name="name">Demo eCommerce</field>
+    <field name="color" eval="5"/>
+  </record>
+  <record id="demo_partner_tag_franchise" model="res.partner.category">
+    <field name="name">Demo Franchise</field>
+    <field name="color" eval="6"/>
+  </record>
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_pos_close_all_sessions_wizard_form" model="ir.ui.view">
+        <field name="name">pos.close.all.sessions.wizard.form</field>
+        <field name="model">pos.close.all.sessions.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Close all POS sessions">
+                <group invisible="log">
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="open_session_count"/>
+                    <field name="cancel_draft_orders"/>
+                    <field name="abandon_opening_control"/>
+                </group>
+                <group invisible="not log">
+                    <field name="log" nolabel="1" colspan="2"/>
+                </group>
+                <footer invisible="log">
+                    <button name="action_close_all_sessions"
+                            string="Close all open sessions"
+                            type="object"
+                            class="btn-primary"
+                            confirm="This will close every open POS session for the selected company. Continue?"/>
+                    <button string="Cancel" special="cancel" class="btn-secondary"/>
+                </footer>
+                <footer invisible="not log">
+                    <button string="Close" special="cancel" class="btn-primary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_pos_close_all_sessions_wizard" model="ir.actions.act_window">
+        <field name="name">Close all open sessions</field>
+        <field name="res_model">pos.close.all.sessions.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

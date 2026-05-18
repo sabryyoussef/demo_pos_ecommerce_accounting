@@ -1,0 +1,34 @@
+POS_MANAGER_EMPLOYEE id=6 name=POS Manager
+SKIP_EMPLOYEES_ALREADY_DONE
+SESSION_REUSE POS-DXB-01/00409 id=413
+ORDER_CREATED DEMO-PHASEI-POS-DXB-01 id=439 cfg='POS-DXB-01' cashier='Demo Cashier — Dubai Flagship' total=4.2 employee_id=92
+SESSION_LEFT_OPEN cfg='POS-DXB-01' draft_orders=3 (Phase H table prep)
+SESSION_REUSE POS-RET-04/00024 id=27
+ORDER_CREATED DEMO-PHASEI-POS-RET-04 id=440 cfg='POS-RET-04' cashier='Demo Cashier — Dubai Hills' total=12.08 employee_id=93
+SESSION_CLOSED_AFTER_ORDER cfg='POS-RET-04'
+SESSION_REUSE POS-RET-11/00021 id=24
+ORDER_CREATED DEMO-PHASEI-POS-RET-11 id=441 cfg='POS-RET-11' cashier='Demo Cashier — Abu Dhabi Mall' total=5.04 employee_id=94
+SESSION_CLOSED_AFTER_ORDER cfg='POS-RET-11'
+SESSION_REUSE POS-RET-16/00022 id=25
+ORDER_CREATED DEMO-PHASEI-POS-RET-16 id=442 cfg='POS-RET-16' cashier='Demo Cashier — Sharjah City Centre' total=6.3 employee_id=95
+SESSION_CLOSED_AFTER_ORDER cfg='POS-RET-16'
+SESSION_REUSE POS-RET-24/00023 id=26
+ORDER_CREATED DEMO-PHASEI-POS-RET-24 id=443 cfg='POS-RET-24' cashier='Demo Cashier — Madinat Jumeirah' total=5.04 employee_id=96
+SESSION_CLOSED_AFTER_ORDER cfg='POS-RET-24'
+COMMIT_OK_PHASE_I_ORDERS
+--- VERIFICATION ---
+VERIFY employee='Demo Cashier — Dubai Flagship' pin=3001 user_id=False config='POS-DXB-01' id=5 allowed_minimal=['Demo Cashier — Dubai Flagship']
+VERIFY employee='Demo Cashier — Dubai Hills' pin=3002 user_id=False config='POS-RET-04' id=8 allowed_minimal=['Demo Cashier — Dubai Hills']
+VERIFY employee='Demo Cashier — Abu Dhabi Mall' pin=3003 user_id=False config='POS-RET-11' id=15 allowed_minimal=['Demo Cashier — Abu Dhabi Mall']
+VERIFY employee='Demo Cashier — Sharjah City Centre' pin=3004 user_id=False config='POS-RET-16' id=20 allowed_minimal=['Demo Cashier — Sharjah City Centre']
+VERIFY employee='Demo Cashier — Madinat Jumeirah' pin=3005 user_id=False config='POS-RET-24' id=28 allowed_minimal=['Demo Cashier — Madinat Jumeirah']
+VERIFY no_user_id_count=0 (expect 0)
+VERIFY_OK Demo Cashier — Dubai Flagship -> POS-DXB-01
+VERIFY_OK Demo Cashier — Dubai Hills -> POS-RET-04
+VERIFY_OK Demo Cashier — Abu Dhabi Mall -> POS-RET-11
+VERIFY_OK Demo Cashier — Sharjah City Centre -> POS-RET-16
+VERIFY_OK Demo Cashier — Madinat Jumeirah -> POS-RET-24
+VERIFY admin=admin group_field_sample=['Sales / Administrator', 'Project / Administrator', 'Accounting / Bookkeeper', 'Accounting / Administrator', 'Purchase / Administrator']
+VERIFY phase_i_orders=5
+VERIFY port=8025 (see odoo_demo_pos_accounting.conf http_port)
+DONE_PHASE_I
